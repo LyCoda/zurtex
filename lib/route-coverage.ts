@@ -121,7 +121,7 @@ export const countries = [
     code: 'JP',
     name: 'Japan',
     tier: 'manual_only',
-    note: 'Advance notice, testing and waiting-period rules require manual review.',
+    note: 'Advance notice, laboratory checks and waiting-period rules require manual review.',
     source: 'https://www.maff.go.jp/aqs/english/animal/dog/',
   },
   {
