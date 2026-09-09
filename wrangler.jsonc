@@ -2,10 +2,12 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "zurtex-site",
   "main": "vinext/server/fetch-handler",
+  "workers_dev": true,
   "compatibility_date": "2026-05-15",
   "compatibility_flags": ["nodejs_compat"],
   "vars": {
     "STRIPE_MODE": "test",
-    "ZURTEX_LIVE_READY": "false"
+    "ZURTEX_LIVE_READY": "false",
+    "ZURTEX_SITE_URL": "https://zurtex-site.natechu65.workers.dev"
   }
 }
