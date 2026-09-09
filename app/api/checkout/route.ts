@@ -83,7 +83,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          'This route needs our team to confirm scope before payment. Email help@zurtex.org with your basic itinerary.',
+          'This route needs our team to confirm scope before a reservation. Email help@zurtex.org with your basic itinerary.',
       },
       { status: 400 },
     );
@@ -123,7 +123,7 @@ export async function POST(request: Request) {
     launch: 'zurtex_2026',
     policy_version: POLICY_VERSION,
     early_service_request: 'accepted',
-    workflow: 'paid_awaiting_manual_review',
+    workflow: 'authorization_awaiting_manual_review',
   };
   try {
     const session = await stripe.checkout.sessions.create(
@@ -139,8 +139,8 @@ export async function POST(request: Request) {
               currency: 'usd',
               unit_amount: PRICE_USD_CENTS,
               product_data: {
-                name: 'Zurtex pet travel readiness check',
-                description: 'US$7 launch offer. ' + WAIT_MESSAGE,
+                name: 'Zurtex refundable readiness-check reservation',
+                description: WAIT_MESSAGE,
               },
             },
             quantity: 1,
@@ -148,15 +148,16 @@ export async function POST(request: Request) {
         ],
         metadata,
         payment_intent_data: {
+          capture_method: 'manual',
           metadata,
-          description: 'Zurtex readiness check. ' + WAIT_MESSAGE,
+          description: 'Zurtex refundable reservation. ' + WAIT_MESSAGE,
         },
         custom_text: {
           submit: { message: WAIT_MESSAGE },
           after_submit: { message: WAIT_MESSAGE },
         },
         consent_collection: { terms_of_service: 'required' },
-        submit_type: 'pay',
+        submit_type: 'book',
       },
       { idempotencyKey: `zurtex-checkout-${attempt}` },
     );

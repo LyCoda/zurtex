@@ -3,7 +3,7 @@ import Stripe from 'stripe';
 export const PRICE_USD_CENTS = 700;
 export const POLICY_VERSION = '2026-09-09';
 export const WAIT_MESSAGE =
-  'Payment is not acceptance. Stop and wait for our team. Do not send documents until a Zurtex representative sends your separate secure upload link. Never attach records to an ordinary email.';
+  'This is a temporary US$7 card authorization. Zurtex will not capture the funds, and the hold will be released. Stop and wait for our team before sending documents.';
 export function stripeMode() {
   return process.env.STRIPE_MODE === 'live' ? 'live' : 'test';
 }

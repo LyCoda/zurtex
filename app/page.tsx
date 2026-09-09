@@ -80,7 +80,7 @@ export default function Home() {
   const [checkoutLoading, setCheckoutLoading] = useState(false);
 
   const [paymentState, setPaymentState] = useState<
-    'idle' | 'verifying' | 'paid' | 'pending' | 'cancelled' | 'error'
+    'idle' | 'verifying' | 'reserved' | 'pending' | 'cancelled' | 'error'
   >('idle');
 
   const [consent, setConsent] = useState(false);
@@ -108,7 +108,8 @@ export default function Home() {
       fetch(`/api/checkout-status?session_id=${encodeURIComponent(sessionId)}`)
         .then(async (response) => {
           const data = (await response.json()) as {
-            paid?: boolean;
+            authorized?: boolean;
+            released?: boolean;
 
             pending?: boolean;
           };
@@ -118,10 +119,10 @@ export default function Home() {
             return;
           }
 
-          if (!response.ok || !data.paid)
-            throw new Error('Payment not confirmed');
+          if (!response.ok || !data.authorized || !data.released)
+            throw new Error('Reservation not confirmed');
 
-          setPaymentState('paid');
+          setPaymentState('reserved');
         })
 
         .catch(() => setPaymentState('error'));
@@ -437,9 +438,9 @@ export default function Home() {
                       rules.
                     </span>
                     <p className="checkout-disclosure">
-                      Payment is not acceptance. Wait for our team and your
-                      separate secure upload link. Never email pet or identity
-                      records.
+                      Stripe will place a temporary US$7 authorization on your
+                      card. Zurtex will not capture the funds and will release
+                      the hold. This reservation is not case acceptance.
                     </p>
                     <label className="checkout-consent">
                       <input
@@ -472,7 +473,7 @@ export default function Home() {
                       <CreditCard size={18} />
                       {checkoutLoading
                         ? 'Opening Stripe…'
-                        : 'Continue to Stripe · US$7'}
+                        : 'Reserve through Stripe · US$7 hold'}
                     </button>
                   </>
                 )}
@@ -503,7 +504,7 @@ export default function Home() {
               <output className="payment-message verifying">
                 <Clock3 size={20} />
                 <span>
-                  <strong>Confirming your Stripe payment…</strong> Please keep
+                  <strong>Confirming your Stripe reservation…</strong> Please keep
                   this page open.
                 </span>
               </output>
@@ -518,14 +519,14 @@ export default function Home() {
                 </span>
               </output>
             )}
-            {paymentState === 'paid' && (
+            {paymentState === 'reserved' && (
               <output className="payment-message paid">
                 <CheckCircle2 size={20} />
                 <span>
-                  <strong>Payment confirmed. Please wait for our team.</strong>{' '}
+                  <strong>Reservation confirmed and card hold released.</strong>{' '}
                   A representative from our team will contact you soon
                   {' using the email entered at checkout '}
-                  after a manual route review. Payment is not acceptance. Do not
+                  after a manual route review. No funds were captured. Do not
                   send documents until we provide your separate secure upload
                   link. Never attach records to an ordinary email.
                 </span>

@@ -1,13 +1,13 @@
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext RSC Link runtime failure. */
 import type { Metadata } from 'next';
 import { PolicyPage, WaitNotice } from '@/components/marketing-shell';
-export const metadata: Metadata = { title: 'Payments & Refunds | Zurtex' };
+export const metadata: Metadata = { title: 'Reservations | Zurtex' };
 export default function PaymentsPage() {
   return (
     <PolicyPage
-      title="Payments & refunds. A fair promise."
-      intro="One readiness check, one payment. And if we can’t responsibly help with your route, your full service fee comes back to you."
-      summary="US$7 launch price. No subscription. A full refund if our team cannot review your paid case."
+      title="Reservations. No funds captured."
+      intro="Reserve a readiness check with a temporary US$7 card authorization. Zurtex releases the hold without capturing the funds."
+      summary="US$7 temporary authorization. No completed charge. No subscription."
       sections={[
         ['price', 'Price & payment'],
         ['after-payment', 'After checkout'],
@@ -17,12 +17,11 @@ export default function PaymentsPage() {
       ]}
     >
       <section id="price">
-        <h2>What you pay</h2>
+        <h2>What Stripe authorizes</h2>
         <p>
-          The initial readiness check costs{' '}
-          <strong>US$7 at launch, reduced from US$14</strong>. The total price
-          and currency are shown before you pay. There is no subscription or
-          automatic renewal.
+          Stripe places a temporary <strong>US$7 authorization</strong> on your
+          card to confirm the reservation. Zurtex does not capture the funds.
+          There is no subscription or automatic renewal.
         </p>
         <p>
           You enter payment details on Stripe’s hosted checkout page. Zurtex
@@ -35,8 +34,8 @@ export default function PaymentsPage() {
         <h2>After checkout, wait for us.</h2>
         <WaitNotice />
         <p>
-          We receive limited order, contact and payment-confirmation information
-          so we can identify your purchase and get in touch. A team member
+          We receive limited reservation, contact and authorization information
+          so we can identify your request and get in touch. A team member
           manually reviews your basic route details. Only if we accept the case
           will we send a separate secure upload link and tell you which records
           we need.
@@ -47,46 +46,39 @@ export default function PaymentsPage() {
         </p>
       </section>
       <section id="refunds">
-        <h2>If we can’t help, we refund you.</h2>
+        <h2>We release the authorization.</h2>
         <p>
-          If our manual review shows that we cannot responsibly deliver a
-          substantive readiness check for your route, we approve and initiate a{' '}
-          <strong>full refund within 24 hours of that decision</strong>.
+          Zurtex cancels the authorization without capturing it. Your bank may
+          continue showing a pending hold until it processes the release.
         </p>
         <div className="refund-timeline">
           <div>
             <strong>Within 24 hours</strong>
             <span>
-              Zurtex initiates the refund after deciding the case is outside
-              scope.
+              Zurtex cancels the card authorization without capturing funds.
             </span>
           </div>
           <div>
             <strong>Usually 5–10 business days</strong>
             <span>
-              Your bank or card issuer credits the original payment method.
+              Your bank or card issuer removes the pending hold. Timing varies.
             </span>
           </div>
         </div>
         <p>
-          The refund goes through Stripe to your original payment method. A card
-          refund cannot be redirected to a different card or bank account. A
-          recent charge may disappear as a reversal instead of appearing as a
-          separate credit. Bank timing varies; see{' '}
-          <a href="https://docs.stripe.com/refunds">Stripe’s refund guidance</a>
-          .
+          Because Zurtex does not capture the funds, there is normally no charge
+          to refund. Contact your card issuer if a released hold remains visible.
         </p>
         <p>
           We’re sorry when we can’t help a pet owner. We’ll explain the
-          boundary, return the full service fee and, where practical, point you
+          boundary and, where practical, point you
           toward the relevant authority or specialist.
         </p>
       </section>
       <section id="other-requests">
         <h2>Something else went wrong?</h2>
         <p>
-          We also provide a full refund for a duplicate charge or confirmed
-          payment error. If the delivered service wasn’t as described, email{' '}
+          If you see a completed charge rather than a pending authorization, email{' '}
           <a href="mailto:help@zurtex.org?subject=Refund%20request">
             help@zurtex.org
           </a>{' '}

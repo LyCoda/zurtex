@@ -37,21 +37,41 @@ export async function GET(request: Request) {
       { status: 403, headers: { 'Cache-Control': 'no-store' } },
     );
   try {
-    const session = await stripe.checkout.sessions.retrieve(sessionId);
-    const paid =
+    const session = await stripe.checkout.sessions.retrieve(sessionId, {
+      expand: ['payment_intent'],
+    });
+    const paymentIntent =
+      typeof session.payment_intent === 'object' ? session.payment_intent : null;
+    const validReservation =
       session.livemode === (stripeMode() === 'live') &&
       session.mode === 'payment' &&
-      session.payment_status === 'paid' &&
       session.status === 'complete' &&
       session.amount_total === 700 &&
       session.currency === 'usd' &&
-      session.metadata?.launch === 'zurtex_2026';
+      session.metadata?.launch === 'zurtex_2026' &&
+      session.metadata?.workflow === 'authorization_awaiting_manual_review';
+    const authorizationReady =
+      validReservation && paymentIntent?.status === 'requires_capture';
+    const alreadyReleased =
+      validReservation &&
+      paymentIntent?.status === 'canceled' &&
+      paymentIntent.cancellation_reason === 'abandoned';
+
+    if (authorizationReady) {
+      await stripe.paymentIntents.cancel(
+        paymentIntent.id,
+        { cancellation_reason: 'abandoned' },
+        { idempotencyKey: `zurtex-release-${session.id}` },
+      );
+    }
 
     return NextResponse.json(
       {
-        paid,
+        authorized: authorizationReady || alreadyReleased,
+        released: authorizationReady || alreadyReleased,
         pending:
-          !paid &&
+          !authorizationReady &&
+          !alreadyReleased &&
           session.status === 'complete' &&
           session.payment_status === 'unpaid',
       },

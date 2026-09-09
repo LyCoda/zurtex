@@ -34,7 +34,7 @@ export default function ServicesPage() {
       aside={
         <div className="service-ticket">
           <div>
-            <span>One journey. One payment.</span>
+            <span>One journey. One refundable reservation.</span>
             <strong>
               <small>US$</small>7
             </strong>
@@ -68,7 +68,7 @@ export default function ServicesPage() {
             <div>
               <FileCheck2 size={24} />
               <strong>Your readiness brief</strong>
-              <span>Fictional example · not travel advice</span>
+              <span>Illustrative example · not travel advice</span>
             </div>
             <dl>
               <div>
@@ -119,10 +119,10 @@ export default function ServicesPage() {
             </p>
           </li>
           <li>
-            <h3>Pay, then pause</h3>
+            <h3>Reserve, then pause</h3>
             <p>
-              Pay through Stripe. A person checks your route before accepting
-              the case. If we can’t help, we refund the full fee.
+              Authorize a temporary US$7 card hold through Stripe. We do not
+              capture the funds, and the hold is released after confirmation.
             </p>
           </li>
           <li>

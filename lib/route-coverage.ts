@@ -379,7 +379,7 @@ export function airlineByCode(code: string) {
 }
 
 // These entries in the existing research need specialist/cargo coordination.
-// They remain visible in the selectors, but must be checked by a person before payment.
+// They remain visible in the selectors, but must be checked by a person before reservation.
 export function needsManualScopeCheck(
   origin: string,
   destination: string,
