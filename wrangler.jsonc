@@ -4,10 +4,22 @@
   "main": "vinext/server/fetch-handler",
   "workers_dev": true,
   "compatibility_date": "2026-05-15",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "routes": [
+    {
+      "pattern": "zurtex.org",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.zurtex.org",
+      "custom_domain": true
+    }
+  ],
   "vars": {
     "STRIPE_MODE": "test",
     "ZURTEX_LIVE_READY": "false",
-    "ZURTEX_SITE_URL": "https://zurtex-site.natechu65.workers.dev"
+    "ZURTEX_SITE_URL": "https://zurtex.org"
   }
 }
