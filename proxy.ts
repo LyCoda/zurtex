@@ -1,5 +1,5 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -13,21 +13,30 @@ const contentSecurityPolicy = [
   "connect-src 'self' https://*.stripe.com",
   "frame-src https://*.stripe.com https://*.link.com",
   "form-action 'self' https://checkout.stripe.com",
-].join('; ');
+].join("; ");
 
 export function proxy(request: NextRequest) {
   const response = NextResponse.next();
-  response.headers.set('Content-Security-Policy', contentSecurityPolicy);
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-  if (request.nextUrl.pathname.startsWith('/api/')) {
-    response.headers.set('Cache-Control', 'no-store');
+  const privateResponse =
+    request.nextUrl.pathname.startsWith("/api/") ||
+    request.nextUrl.pathname.startsWith("/consultation/booking");
+  response.headers.set("Content-Security-Policy", contentSecurityPolicy);
+  // Proxy headers can override route headers in the deployed Worker. Preserve
+  // the stronger policy on booking references and private API responses here.
+  response.headers.set(
+    "Referrer-Policy",
+    privateResponse ? "no-referrer" : "strict-origin-when-cross-origin",
+  );
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("X-Frame-Options", "DENY");
+  response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+  if (privateResponse) {
+    response.headers.set("Cache-Control", "no-store");
+    response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
   }
   return response;
 }
 
 export const config = {
-  matcher: '/:path*',
+  matcher: "/:path*",
 };
