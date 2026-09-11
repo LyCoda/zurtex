@@ -10,6 +10,8 @@
 
 **Current offer:** Section 18 supersedes earlier Ready Pack sales, enquiry-first and no-payment proposals. The implemented offer is US$5 for one journey, with a call without a fixed time limit and a recap without a fixed delivery deadline. Booking uses a Stripe hold pending human review. Credentials are not connected in this local preview, so real checkout remains unavailable. Earlier dated sections are retained as decision history, not current sales promises.
 
+**Publication update (12 September 2026):** The revised site is deployed to the existing Cloudflare Worker and zurtex.org. The hosted environment has Test checkout connected; live payments and detailed research publication remain gated. See docs/audits/2026-09-12-cloudflare-release.md for the release and rollback record.
+
 ## 1. Purpose and authority
 
 This document turns the approved decisions in `ZURTEX_DECISIONS.md` into one implementation-facing product definition. It defines what Zurtex 2.0 is, who it serves, what is available in each operating mode, and what must remain unavailable.

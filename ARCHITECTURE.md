@@ -10,6 +10,8 @@
 
 **Current implementation:** Section 24 supersedes earlier paid-pack and no-payment architecture proposals. Free travel tools remain available; consultation booking is enabled in policy but requires connected Stripe credentials. Approval and collection are manual operator actions, not automated application features. Uploads remain unavailable. The baseline and earlier dated sections below are retained as migration history.
 
+**Publication update (12 September 2026):** The existing zurtex-site Worker and both custom domains now serve this implementation. Hosted checkout is test-only using the existing secret. Production research and live-payment gates remain unchanged. The proxy applies no-referrer/no-store/noindex to booking and API responses because it can override route headers. Release evidence is in docs/audits/2026-09-12-cloudflare-release.md.
+
 ## 1. Purpose and authority
 
 This document defines the technical boundaries, core contracts, trust controls, and migration path for Zurtex 2.0. It preserves the working React/Vinext/Cloudflare delivery stack while replacing the current pay-first scope checker with a source-governed, deterministic route-information system.

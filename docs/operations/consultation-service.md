@@ -2,6 +2,8 @@
 
 Decision date: 12 September 2026. Source: the supplied zurtex-consultation-service-draft.pdf plus the user's subsequent explicit override. This is an operating runbook, not evidence that staffing, payments or records intake are live.
 
+Deployment update: the revised site is now on the existing Cloudflare Worker and custom domains. The hosted environment retains an existing matching Stripe test key and shows Test checkout; live payments remain disabled. This supersedes the initial local-only connection state below, not the operational launch dependencies. See [the release record](../audits/2026-09-12-cloudflare-release.md).
+
 ## Confirmed offer
 
 - US$5 for one planned journey, with a personal review, one call without a fixed time limit, and a written recap without a fixed delivery deadline.
