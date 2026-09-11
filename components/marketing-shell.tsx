@@ -1,8 +1,8 @@
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext RSC Link runtime failure. */
-import { ArrowRight, Heart, PawPrint } from 'lucide-react';
-import type { ReactNode } from 'react';
-import { MarketingHeader } from './site-header';
-export { MarketingHeader } from './site-header';
+import { ArrowRight, Heart, PawPrint } from "lucide-react";
+import type { ReactNode } from "react";
+import { MarketingHeader } from "./site-header";
+export { MarketingHeader } from "./site-header";
 export function MarketingFooter() {
   return (
     <footer className="zurtex-footer">
@@ -14,8 +14,9 @@ export function MarketingFooter() {
           Zurtex
         </a>
         <p>
-          A small team of animal lovers.
-          <br />A little more clarity for the journey ahead.
+          A little preparation for a big journey.
+          <br />
+          Helping you travel with your dog or cat.
         </p>
         <a className="contact-link" href="mailto:help@zurtex.org">
           help@zurtex.org <ArrowRight size={16} />
@@ -25,20 +26,21 @@ export function MarketingFooter() {
         <div>
           <strong>Meet Zurtex</strong>
           <a href="/">Home</a>
+          <a href="/methodology">How it works</a>
           <a href="/about">Who we are</a>
-          <a href="/services">Our services</a>
-          <a href="/contact">Contact our team</a>
+          <a href="/contact">Contact</a>
         </div>
         <div>
           <strong>The useful details</strong>
+          <a href="/consultation">Pet Travel Consultation</a>
           <a href="/payments-refunds">Payments & refunds</a>
           <a href="/privacy">Privacy notice</a>
           <a href="/terms">Terms of service</a>
-          <a href="/#route-screen">Check my route</a>
+          <a href="/">Free route guide</a>
         </div>
       </nav>
       <div className="footer-bottom">
-        <span>© 2026 Zurtex · Administrative research & organisation</span>
+        <span>© 2026 Zurtex · Free route guide in private beta</span>
         <span>
           <Heart size={15} aria-hidden="true" /> For the ones who come with us.
         </span>
@@ -53,7 +55,7 @@ export function TeamNote() {
       <p>
         They’re family.
         <br />
-        <strong>We keep that in mind with every review.</strong>
+        <strong>Let’s help you get there together.</strong>
       </p>
       <a className="text-link" href="/about">
         The story behind Zurtex <ArrowRight size={17} />
@@ -64,14 +66,11 @@ export function TeamNote() {
 export function WaitNotice() {
   return (
     <aside className="wait-notice">
-      <span className="notice-heading">
-        Just paid? Leave the next step to us.
-      </span>
+      <span className="notice-heading">Private beta, with clear boundaries.</span>
       <p>
-        Payment is not acceptance. Wait for our team to review your route and
-        contact you. Send documents only after a Zurtex representative provides
-        your separate secure upload link. Never attach records to an ordinary
-        email.
+        The route guide and preparation tools are free. A consultation is optional, with human
+        approval before payment is collected. A beta request is only a request for early-access
+        news.
       </p>
     </aside>
   );
@@ -80,7 +79,7 @@ export function MarketingPage({
   title,
   intro,
   children,
-  variant = '',
+  variant = "",
   aside,
 }: {
   title: string;
@@ -128,7 +127,7 @@ export function PolicyPage({
         <div className="policy-summary">
           <span>The short version</span>
           <p>{summary}</p>
-          <small>Draft for launch · 9 September 2026</small>
+          <small>Service-policy draft · 12 September 2026</small>
         </div>
       }
     >

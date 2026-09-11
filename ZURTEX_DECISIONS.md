@@ -620,20 +620,22 @@ The result should feel warm and memorable without becoming childish, whimsical, 
 Use:
 
 - Real pet-and-traveller photography.
-- Route-map and airport-display elements.
+- Restrained route notation where it helps someone understand their journey.
 - A mostly clean interface with minimal decorative imagery.
 
 ## 14.4 Identity scope — CONFIRMED
 
-The project may undertake a complete redesign, including new logo direction.
+User revision on 11 September 2026 supersedes the earlier permission to replace the identity. Preserve the earlier zurtex.org presentation: white and pale aqua, deep teal text, muted crimson actions, Afacad, circular paw mark, and pet-owner photography.
 
-The existing identity does not need to be preserved, but the redesign must retain product clarity, accessibility, factual trust, and implementation practicality.
+The user explicitly rejected the navy/chart-grid local redesign as visually worse and impersonal. Do not reintroduce that direction or start a new logo exercise without a new user request. Improve the route questions and results within the restored Zurtex identity.
 
 ## 14.5 Interaction inspiration — CONFIRMED
 
 Retain the useful principle of a concise selection interface that gathers only the minimum information needed and displays the result clearly.
 
 PetCleared may inspire the selection and information-display experience, but Zurtex must not copy its design or use it as regulatory authority.
+
+The user reaffirmed this reference on 11 September 2026: use short route questions and a readable, ordered answer/dashboard. Keep product limitations truthful; visual similarity does not authorise copying competitor requirements or claims of verification.
 
 ## 14.6 Avoid — CONFIRMED
 
@@ -767,3 +769,7 @@ The following interpretations reconcile answers that would otherwise conflict:
 10. Do not collect documents without a defined reviewer, purpose, security process, and deletion process.
 11. Do not create artificial manual-review outcomes as a conversion tactic.
 12. Keep the existing site live until the private-beta replacement passes preview and release checks.
+
+## Consultation decision, 12 September 2026
+
+The user's consultation PDF and subsequent answer replace the earlier paid-pack offer: US$5, one call with no fixed duration, a written recap with no fixed deadline, and a Stripe hold pending human review before capture. The user explicitly rejects an enquiry-preparation flow. Free guidance/tools stay free; the original Who We Are story is retained. Booking is implemented locally with the existing Stripe architecture, not publicly deployed or presented as live without credentials. Detailed scope and operations are recorded in PRODUCT.md section 18 and docs/operations/consultation-service.md.

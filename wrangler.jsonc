@@ -20,6 +20,15 @@
   "vars": {
     "STRIPE_MODE": "test",
     "ZURTEX_LIVE_READY": "false",
-    "ZURTEX_SITE_URL": "https://zurtex.org"
+    "ZURTEX_SITE_URL": "https://zurtex.org",
+    "FREE_ROUTE_GUIDE_ENABLED": "true",
+    "PRIVATE_BETA_ENABLED": "true",
+    "CONSULTATION_BOOKING_ENABLED": "true",
+    "READY_PACK_WAITLIST_ENABLED": "true",
+    "READY_PACK_SALES_ENABLED": "false",
+    "MANUAL_REVIEW_ENABLED": "false",
+    "DOCUMENT_UPLOADS_ENABLED": "false",
+    "PAYMENT_CAPTURE_ENABLED": "false",
+    "REFUNDABLE_RESERVATION_ENABLED": "false"
   }
 }

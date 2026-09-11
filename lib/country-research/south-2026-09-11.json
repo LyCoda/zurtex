@@ -1,0 +1,1731 @@
+[
+  {
+    "code": "AU",
+    "name": "Australia",
+    "overview": "Draft import workflow separates New Zealand, approved rabies-free origins and approved rabies-risk origins. Country selection alone does not establish residence, identity or permit eligibility.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "au-import-eligibility",
+        "title": "Check approved-country history and prohibited animals",
+        "kind": "planning",
+        "timing": "Before vaccinations, testing or booking",
+        "bullets": [
+          "Use the applicable DAFF country guide and agreed export certificate; an unapproved departure country needs an approved-country preparation and residence pathway.",
+          "Check breed and hybrid controls first. Wolf–dog hybrids and specified purebred dogs are prohibited; Bengal-cat import exemptions no longer provide an arrival pathway after 28 February 2026."
+        ],
+        "sourceIds": [
+          "au-approved",
+          "au-g2-dog",
+          "au-bengal"
+        ]
+      },
+      {
+        "id": "au-import-identification",
+        "title": "Arrange identity checks before the preparation clock",
+        "kind": "conditional",
+        "timing": "Group 2 normally at least 180 days before export; Group 3 before RNATT if seeking shorter quarantine",
+        "bullets": [
+          "Use a readable compliant microchip on every veterinary record; have it scanned at each procedure.",
+          "Group 2 requires official identity verification and qualifying residence; since-birth, young-animal and direct-return cases have specific exceptions.",
+          "Group 3 official verification before the blood sample can reduce minimum quarantine from 30 to 10 days. Keep an Australian export certificate for a returning pet."
+        ],
+        "sourceIds": [
+          "au-g2-cat",
+          "au-g3-cat"
+        ],
+        "originCodes": [
+          "JP",
+          "SG",
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW"
+        ],
+        "retainForUnconfirmedHistory": true
+      },
+      {
+        "id": "au-import-rabies",
+        "title": "Complete the Group 3 rabies sequence",
+        "kind": "conditional",
+        "timing": "180 days from laboratory receipt of a passing sample; RNATT valid 12 months from sampling",
+        "bullets": [
+          "Vaccinate after identification, at age 84 days or older, and keep rabies protection current. Use a government-recognised laboratory in an approved country for FAVN/RFFIT at least 0.5 IU/ml.",
+          "Obtain the official RNATT declaration. Complete the approved-country waiting/residence conditions; permit validity cannot extend the blood test's arrival deadline."
+        ],
+        "sourceIds": [
+          "au-g3-cat",
+          "au-rabies"
+        ],
+        "originCodes": [
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW"
+        ],
+        "retainForUnconfirmedHistory": true
+      },
+      {
+        "id": "au-import-permit",
+        "title": "Obtain the permit and quarantine reservation",
+        "kind": "conditional",
+        "timing": "Before confirming flights; allow processing and quarantine availability",
+        "bullets": [
+          "Apply through BICON with the identity and rabies documents applicable to the group. Read the issued permit before ordering remaining procedures.",
+          "After approval, reserve Mickleham quarantine and arrange manifested air cargo to Melbourne. Group 2 has a minimum 10-day stay; ordinary Group 3 has a minimum 30-day stay unless its shorter-stay conditions are satisfied."
+        ],
+        "sourceIds": [
+          "au-g2-cat",
+          "au-g3-cat"
+        ],
+        "originCodes": [
+          "JP",
+          "SG",
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW"
+        ],
+        "retainForUnconfirmedHistory": true
+      },
+      {
+        "id": "au-import-dog-tests",
+        "title": "Complete the dog's disease-specific preparation",
+        "kind": "conditional",
+        "timing": "Most specified blood tests within 45 days of export; some preparations start earlier",
+        "bullets": [
+          "Arrange Leishmania testing; intact dogs also need Brucella testing and mating restrictions. Meet the Leptospira canicola vaccination or testing option.",
+          "Maintain vet-administered external parasite protection from at least 30 days before export. Apply canine-influenza conditions to dogs with relevant residence history, including Singapore, Canada and the USA.",
+          "Tell the vet about any mainland-African residence: Babesia rossi treatment requirements may apply. Use the exact permit for test methods and vaccination deadlines."
+        ],
+        "sourceIds": [
+          "au-vet-guidance",
+          "au-g2-dog"
+        ],
+        "species": "dog",
+        "originCodes": [
+          "JP",
+          "SG",
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW"
+        ],
+        "retainForUnconfirmedHistory": true
+      },
+      {
+        "id": "au-import-final-certification",
+        "title": "Finish parasite treatment and official certification",
+        "kind": "conditional",
+        "timing": "Final examination within 5 days before export",
+        "bullets": [
+          "Cats need continuous qualifying external parasite treatment beginning at least 21 days before export. Dogs and cats need two internal treatments within 45 days, at least 14 days apart; the last is within 5 days.",
+          "Use a government-approved vet, then the exporting authority's endorsement process. Follow the group-specific rules for originals, signatures, seals and laboratory reports; Group 2 dogs require the specified crate seal."
+        ],
+        "sourceIds": [
+          "au-vet-guidance",
+          "au-g2-dog",
+          "au-g3-cat"
+        ],
+        "originCodes": [
+          "JP",
+          "SG",
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW"
+        ],
+        "retainForUnconfirmedHistory": true
+      },
+      {
+        "id": "au-import-new-zealand",
+        "title": "Use the New Zealand-specific entry pathway",
+        "kind": "conditional",
+        "timing": "Final examination and parasite treatments within 5 days; notify DAFF at least 3 days before arrival",
+        "bullets": [
+          "Document residence in New Zealand since birth, direct export from Australia, or the required preceding 180 days. Previously imported dogs have additional disease-test conditions.",
+          "Have an eligible New Zealand veterinarian complete the correct MPI certificate. Compliant pets need neither an Australian import permit nor routine quarantine under this pathway."
+        ],
+        "sourceIds": [
+          "au-nz"
+        ],
+        "originCodes": [
+          "NZ"
+        ]
+      },
+      {
+        "id": "au-import-transport",
+        "title": "Preserve the approved route through arrival",
+        "kind": "required",
+        "timing": "When booking and on arrival",
+        "bullets": [
+          "For Groups 2 and 3, use Melbourne as the first Australian entry point and transfer into booked quarantine. Group 2 transhipment is limited to its approved countries and named airports.",
+          "For New Zealand departures, arrange the direct pathway and entry inspection before any domestic transfer. Keep the pet isolated during any authorised transit and carry the original required records."
+        ],
+        "sourceIds": [
+          "au-g2-dog",
+          "au-g3-cat",
+          "au-nz"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "au-export-destination",
+        "title": "Obtain the destination conditions and lodge notice",
+        "kind": "required",
+        "timing": "At least 10 working days before departure or commencement of isolation",
+        "bullets": [
+          "Get the destination's current import permit and veterinary certificate conditions before arranging tests.",
+          "Send the Notice of Intention and supporting destination requirements to the relevant DAFF regional office; book its pre-export document assessment."
+        ],
+        "sourceIds": [
+          "au-export"
+        ]
+      },
+      {
+        "id": "au-export-certify",
+        "title": "Complete veterinary examination and government certification",
+        "kind": "required",
+        "timing": "Examination within 72 hours of departure, or the destination's specified period",
+        "bullets": [
+          "Have the private veterinarian complete the examination and health/welfare declaration; provide the owner's declaration and required test records.",
+          "At the DAFF appointment, obtain the official health certificate and export permit. Departure must occur within 72 hours after the export permit is issued."
+        ],
+        "sourceIds": [
+          "au-export"
+        ]
+      },
+      {
+        "id": "au-export-return",
+        "title": "Prepare a possible Australian return before leaving",
+        "kind": "planning",
+        "timing": "Before outward departure, if a return is possible",
+        "bullets": [
+          "Retain the Australian export certificate as identity evidence and check the approved-country return route.",
+          "Discuss rabies preparation before departure; a return is not automatically exempt from import conditions simply because the pet originated in Australia."
+        ],
+        "sourceIds": [
+          "au-return"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "Potential Group 1 pathway — New Zealand",
+        "countryCodes": [
+          "NZ"
+        ],
+        "condition": "Requires the New Zealand guide's residence, certification and disease-history conditions; departure location alone is insufficient.",
+        "sourceIds": [
+          "au-nz"
+        ]
+      },
+      {
+        "label": "Potential Group 2 pathway",
+        "countryCodes": [
+          "JP",
+          "SG"
+        ],
+        "condition": "Rabies-free approved origins subject to official identity and qualifying residence. Hawaii and Guam are regional Group 2 exceptions within US, not a nationwide US classification.",
+        "sourceIds": [
+          "au-approved",
+          "au-g2-cat"
+        ]
+      },
+      {
+        "label": "Potential Group 3 pathway",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW"
+        ],
+        "condition": "Requires approved-country history, rabies preparation, official documentation and permit. Mainland US is Group 3; regional exceptions need manual handling.",
+        "sourceIds": [
+          "au-approved",
+          "au-g3-cat"
+        ]
+      },
+      {
+        "label": "No direct approved-country pathway in the published list",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "MY",
+          "PH"
+        ],
+        "condition": "A move to an approved country and its preparation/residence pathway is necessary; do not present a direct-import checklist as eligible.",
+        "sourceIds": [
+          "au-approved"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft research, not human-approved or a permit assessment.",
+      "Group 2 and Group 3 certificate endorsement and transhipment rules are not interchangeable.",
+      "Minimum quarantine can be extended for compliance or health issues. Carrier acceptance remains separate."
+    ],
+    "gaps": [
+      "No pet-specific BICON permit was inspected; its conditions, test-method alternatives and returning/young-pet exceptions require case review.",
+      "Breed, pregnancy, territory, transit and commercial consignment exceptions are not exhaustive.",
+      "Some Group 3 dog pages failed direct fetching; official indexed text and the accessible veterinary guidance were used."
+    ],
+    "sources": [
+      {
+        "id": "au-approved",
+        "title": "Step-by-step guides and approved-country list",
+        "authority": "Australian Department of Agriculture, Fisheries and Forestry",
+        "url": "https://www.agriculture.gov.au/biosecurity-trade/cats-dogs/how-to-import/step-by-step-guides",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Approved origin groups and unapproved-country pathway."
+        ]
+      },
+      {
+        "id": "au-g2-dog",
+        "title": "Group 2: step-by-step guide for dogs",
+        "authority": "DAFF",
+        "url": "https://www.agriculture.gov.au/biosecurity-trade/cats-dogs/how-to-import/step-by-step-guides/category-2-step-by-step-guide-for-dogs",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Dog tests, official certification, sealing and routing."
+        ]
+      },
+      {
+        "id": "au-g2-cat",
+        "title": "Group 2: step-by-step guide for cats",
+        "authority": "DAFF",
+        "url": "https://www.agriculture.gov.au/biosecurity-trade/cats-dogs/how-to-import/step-by-step-guides/category2-step-by-step-guide-for-cats",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identity, residence, permits and quarantine."
+        ]
+      },
+      {
+        "id": "au-g3-cat",
+        "title": "Group 3: step-by-step guide for cats",
+        "authority": "DAFF",
+        "url": "https://www.agriculture.gov.au/biosecurity-trade/cats-dogs/how-to-import/step-by-step-guides/category-3-step-by-step-guide-for-cats",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Rabies, waiting periods, quarantine and certification."
+        ]
+      },
+      {
+        "id": "au-rabies",
+        "title": "Rabies neutralising antibody titre test",
+        "authority": "DAFF",
+        "url": "https://www.agriculture.gov.au/biosecurity-trade/cats-dogs/rabies-neutralising-antibody",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "RNATT sequence and recognised testing."
+        ]
+      },
+      {
+        "id": "au-vet-guidance",
+        "title": "Guidance for government-approved veterinarians preparing dogs and cats for export to Australia",
+        "authority": "DAFF",
+        "url": "https://www.agriculture.gov.au/sites/default/files/sitecollectiondocuments/cats-dogs/guidance-gav-dogs-cats.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identification, disease tests, parasite treatment and final examination."
+        ]
+      },
+      {
+        "id": "au-nz",
+        "title": "Group 1: cats and dogs from New Zealand",
+        "authority": "DAFF",
+        "url": "https://www.agriculture.gov.au/biosecurity-trade/cats-dogs/how-to-import/step-by-step-guides/category-1-new-zealand",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "New Zealand residence, certificate, notification and entry conditions."
+        ]
+      },
+      {
+        "id": "au-bengal",
+        "title": "Live Import List — Bengal-cat transition",
+        "authority": "Australian DCCEEW",
+        "url": "https://www.dcceew.gov.au/environment/wildlife-trade/live-import-list",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Existing exemption arrival deadline was 28 February 2026."
+        ]
+      },
+      {
+        "id": "au-export",
+        "title": "Companion animals — export from Australia",
+        "authority": "DAFF",
+        "url": "https://www.agriculture.gov.au/export/controlled-goods/live-animals/companion",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Notice, examination, official certificate and export-permit timing."
+        ]
+      },
+      {
+        "id": "au-return",
+        "title": "Cats and dogs returning to Australia",
+        "authority": "DAFF",
+        "url": "https://www.agriculture.gov.au/biosecurity-trade/cats-dogs/cats-dogs-returning-to-australia",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Pre-departure return planning and original export evidence."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "NZ",
+    "name": "New Zealand",
+    "overview": "Draft 2026-standard pathway with an explicit transition warning: MPI also accepts the 2021 standard until 1 April 2027. Keep each pet on a coherent standard and certificate set.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "nz-import-standard",
+        "title": "Select the standard and verify origin history",
+        "kind": "planning",
+        "timing": "Before starting official identification or blood testing",
+        "bullets": [
+          "The 2026 standard took effect on 1 July 2026; the 2021 standard remains an alternative until 1 April 2027. Obtain the forms for the chosen pathway.",
+          "Check MPI's categorised-country list against residence and travel history. China, Thailand and the Philippines are not direct categorised origins in the reviewed list."
+        ],
+        "sourceIds": [
+          "nz-transition",
+          "nz-approvals"
+        ]
+      },
+      {
+        "id": "nz-import-animal",
+        "title": "Check identity and animal eligibility",
+        "kind": "required",
+        "timing": "Before veterinary preparations",
+        "bullets": [
+          "Use the pet's microchip consistently in every examination, vaccination, treatment and test record.",
+          "Resolve prohibited dog breeds and hybrid-cat eligibility before booking; pregnancy must not exceed 42 days at shipment."
+        ],
+        "sourceIds": [
+          "nz-2026-guide",
+          "nz-ihs"
+        ]
+      },
+      {
+        "id": "nz-import-official-id",
+        "title": "Complete the applicable official identity sequence",
+        "kind": "conditional",
+        "timing": "Timing depends on category, age and RNATT age",
+        "bullets": [
+          "Category 2 normally requires an official scan at least 6 months before shipment; animals younger than 6 months have a specific pre-preparation exception.",
+          "Category 3: if RNATT is 6–12 months old, official identification precedes sampling; if 3–under 6 months old, two scans are required, the first at least 6 months before shipment and the second before sampling.",
+          "The exporting authority sends verification directly to MPI. NZ-origin pets may use the original NZ export certificate/AWEC exemption."
+        ],
+        "sourceIds": [
+          "nz-ihs"
+        ],
+        "originCodes": [
+          "JP",
+          "SG",
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW",
+          "MY"
+        ],
+        "retainForUnconfirmedHistory": true
+      },
+      {
+        "id": "nz-import-rabies",
+        "title": "Meet Category 3 rabies requirements",
+        "kind": "conditional",
+        "timing": "Primary vaccination at least 6 months before shipment; RNATT 3–12 calendar months before shipment",
+        "bullets": [
+          "Rabies vaccination must follow identification, start no earlier than 12 weeks of age and remain valid through shipment.",
+          "Use the prescribed laboratory test with a result of at least 0.5 IU/ml. The 2026 standard's calendar-month windows must not be replaced with an assumed 90-day rule."
+        ],
+        "sourceIds": [
+          "nz-ihs"
+        ],
+        "originCodes": [
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW",
+          "MY"
+        ],
+        "retainForUnconfirmedHistory": true
+      },
+      {
+        "id": "nz-import-permit",
+        "title": "Book quarantine and apply for the import permit",
+        "kind": "conditional",
+        "timing": "Apply at least 30 working days before the permit is needed",
+        "bullets": [
+          "Reserve an MPI-approved quarantine facility and include its confirmation with the permit application.",
+          "Category 2 and 3 pets ordinarily undergo at least 10 days of quarantine. Category 2 residence must meet the guide's 6-month, since-birth or qualifying-return conditions unless its rabies alternative applies."
+        ],
+        "sourceIds": [
+          "nz-2026-guide"
+        ],
+        "originCodes": [
+          "JP",
+          "SG",
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW",
+          "MY"
+        ],
+        "retainForUnconfirmedHistory": true
+      },
+      {
+        "id": "nz-import-veterinary",
+        "title": "Complete the chosen standard's treatments and tests",
+        "kind": "required",
+        "timing": "Work backwards from shipment using the selected certificate",
+        "bullets": [
+          "Under the ordinary 2026 pathway, give two veterinary internal-parasite treatments: first within 30 days, at least 14 days before the second; second within 5 days of shipment. Qualifying NZ-origin pets overseas for 30 days or less have a separate single-treatment provision.",
+          "For dogs, have the certifying vet select the applicable Babesia, Brucella, Leishmania, heartworm, leptospirosis and influenza requirements using age, vaccination and country history. Complete external-parasite treatment exactly as the chosen standard specifies."
+        ],
+        "sourceIds": [
+          "nz-ihs",
+          "nz-approvals"
+        ]
+      },
+      {
+        "id": "nz-import-certificate",
+        "title": "Obtain the official export certificate",
+        "kind": "required",
+        "timing": "2026-standard final inspection within 2 days before shipment",
+        "bullets": [
+          "Have the authorised veterinarian complete the destination certificate and arrange official endorsement through the exporting authority.",
+          "Carry the correct standard's certificate, permit where required, laboratory reports and identification evidence; do not combine old and new certificate clauses."
+        ],
+        "sourceIds": [
+          "nz-ihs",
+          "nz-forms",
+          "nz-transition"
+        ]
+      },
+      {
+        "id": "nz-import-entry",
+        "title": "Arrange the entry inspection and handover",
+        "kind": "required",
+        "timing": "Australia pathway: notify MPI at least 5 working days before arrival",
+        "bullets": [
+          "Air arrivals are through Auckland or Christchurch. For quarantine arrivals, coordinate notification and collection with the booked facility.",
+          "Compliant pets from Australia generally need no import permit or routine quarantine. Present them for MPI inspection and declare medication with its supporting prescription."
+        ],
+        "sourceIds": [
+          "nz-2026-guide"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "nz-export-destination",
+        "title": "Plan against the destination's import standard",
+        "kind": "required",
+        "timing": "Before arranging vaccinations, tests or travel",
+        "bullets": [
+          "Obtain the destination requirements and import permit, using the current MPI Overseas Market Access Requirements where available.",
+          "Use a New Zealand registered veterinarian to prepare the pet and retain microchip, vaccine and test records. Confirm whether the carrier requires a pet exporter."
+        ],
+        "sourceIds": [
+          "nz-export"
+        ]
+      },
+      {
+        "id": "nz-export-official",
+        "title": "Arrange MPI certification and welfare documentation",
+        "kind": "conditional",
+        "timing": "Book before departure; examination/test windows depend on destination",
+        "bullets": [
+          "Provide the veterinarian's and owner's supporting declarations and destination documents to MPI for official certification.",
+          "Obtain the required export certificate and, when applicable, Animal Welfare Export Certificate through the appropriate departure office. Do not assume all countries use one universal validity period."
+        ],
+        "sourceIds": [
+          "nz-export"
+        ],
+        "excludedDestinationCodes": [
+          "AU"
+        ]
+      },
+      {
+        "id": "nz-export-australia",
+        "title": "Use the special New Zealand-to-Australia certificate process",
+        "kind": "conditional",
+        "timing": "Final examination and parasite treatment within 5 days; Australian notification at least 3 days before arrival",
+        "bullets": [
+          "Use the current Australia OMAR and an eligible MPI-listed practice or MPI official veterinarian for the applicable AUPET certificate.",
+          "Check residence and previously imported-dog testing conditions, and arrange the direct Australian entry inspection; retain original export records for any return."
+        ],
+        "sourceIds": [
+          "nz-au-omar",
+          "nz-au-entry"
+        ],
+        "destinationCodes": [
+          "AU"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "Potential Category 1 — Australia",
+        "countryCodes": [
+          "AU"
+        ],
+        "condition": "Use the Australia certificate pathway and document the pet's history; not a general exemption based solely on the last flight.",
+        "sourceIds": [
+          "nz-approvals",
+          "nz-2026-guide"
+        ]
+      },
+      {
+        "label": "Potential Category 2",
+        "countryCodes": [
+          "JP",
+          "SG"
+        ],
+        "condition": "Qualifying residence and official identity conditions apply. Hawaii and Guam are separate regional entries, not all of the US.",
+        "sourceIds": [
+          "nz-approvals",
+          "nz-ihs"
+        ]
+      },
+      {
+        "label": "Potential Category 3",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "TW",
+          "MY"
+        ],
+        "condition": "Eligibility depends on the chosen standard, history, rabies sequence and certificate. Malaysia's approved geographical scope must match the actual location.",
+        "sourceIds": [
+          "nz-approvals",
+          "nz-ihs"
+        ]
+      },
+      {
+        "label": "No direct categorised-country pathway reviewed",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "Do not infer that a short stay in a listed country establishes eligibility. Obtain an MPI-approved preparation pathway.",
+        "sourceIds": [
+          "nz-approvals"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft research; 2026-standard steps are not a human-approved assessment.",
+      "The 2021 and 2026 pathways coexist until the transition deadline. Rules cannot be mixed to obtain the shortest apparent timeline.",
+      "Dog breed/hybrid restrictions and special short-return cases require individual review."
+    ],
+    "gaps": [
+      "MPI document downloads returned 403 errors; final-standard clauses and government guide text were read through official indexed content. Re-open the final IHS and certificates before approval.",
+      "All dog-panel sampling windows, external-parasite details and category-specific attestations are not reproduced here.",
+      "The MPI general webpage simplifies identification to 6 months; the final IHS contains the category, RNATT-age and young-pet exceptions retained above."
+    ],
+    "sources": [
+      {
+        "id": "nz-transition",
+        "title": "Proposed changes to the import health standard — final decision and transition",
+        "authority": "New Zealand MPI",
+        "url": "https://www.mpi.govt.nz/consultations/proposed-changes-to-the-import-health-standard-for-importing-cats-and-dogs",
+        "publishedOn": "2026-05-15",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "2026 commencement and acceptance of the earlier standard during transition."
+        ]
+      },
+      {
+        "id": "nz-ihs",
+        "title": "Cats and Dogs 2026 — Import Health Standard",
+        "authority": "New Zealand MPI",
+        "url": "https://www.mpi.govt.nz/dmsdocument/71909/direct",
+        "publishedOn": "2026-05-12",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Final identification, rabies, treatment and certification clauses; direct download inaccessible."
+        ]
+      },
+      {
+        "id": "nz-approvals",
+        "title": "Specified Approvals for Animal Import Health Standards — MPI-STD-SAA",
+        "authority": "New Zealand MPI",
+        "url": "https://www.mpi.govt.nz/dmsdocument/2040/direct",
+        "publishedOn": "2026-05-13",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Categorised countries and specified disease-test approvals."
+        ]
+      },
+      {
+        "id": "nz-2026-guide",
+        "title": "Step-by-step guide to bringing cats and dogs to NZ — 2026",
+        "authority": "New Zealand MPI",
+        "url": "https://www.mpi.govt.nz/bring-send-to-nz/pets-travelling-to-nz/bringing-cats-and-dogs-to-nz/bringing-cats-and-dogs-to-nz-using-the-2026-import-health-standard/step-by-step-guide-to-bringing-cats-and-dogs-to-nz-2026",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Permit, quarantine, residence, entry and animal eligibility guidance."
+        ]
+      },
+      {
+        "id": "nz-forms",
+        "title": "Forms and templates for bringing pets to New Zealand",
+        "authority": "New Zealand MPI",
+        "url": "https://www.mpi.govt.nz/bring-send-to-nz/pets-travelling-to-nz/forms-and-templates-for-bringing-pets-to-nz",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Standard-specific certification forms."
+        ]
+      },
+      {
+        "id": "nz-export",
+        "title": "All pets leaving NZ except cats and dogs to Australia",
+        "authority": "New Zealand MPI",
+        "url": "https://www.mpi.govt.nz/take-or-send-from-nz/pets-leaving-nz/all-pets-leaving-nz-except-cats-and-dogs-to-australia",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Destination preparation, official certification and welfare documentation."
+        ]
+      },
+      {
+        "id": "nz-au-omar",
+        "title": "Cats and Dogs to Australia — OMAR No. 2 2026",
+        "authority": "New Zealand MPI",
+        "url": "https://www.mpi.govt.nz/dmsdocument/237/direct",
+        "publishedOn": "2026-05-01",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Special Australia export certification pathway."
+        ]
+      },
+      {
+        "id": "nz-au-entry",
+        "title": "Group 1: cats and dogs from New Zealand",
+        "authority": "Australian DAFF",
+        "url": "https://www.agriculture.gov.au/biosecurity-trade/cats-dogs/how-to-import/step-by-step-guides/category-1-new-zealand",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Australian arrival and New Zealand certification conditions."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "SG",
+    "name": "Singapore",
+    "overview": "Draft workflow uses AVS Schedules I, II and III and the current dog-and-cat licensing process. Residency and the owner's travel history can change the quarantine pathway.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "sg-import-eligibility",
+        "title": "Check pet, housing and microchip eligibility",
+        "kind": "required",
+        "timing": "Before preparations or reservations",
+        "bullets": [
+          "Identify the pet with an ISO 11784/11785 Annex A microchip and use that number throughout its records; it must be at least 12 weeks old at export.",
+          "Check AVS prohibited breeds and the intended home's pet rules. Early-generation Bengal and Savannah cats require separate eligibility review; do not assume every hybrid is allowed."
+        ],
+        "sourceIds": [
+          "sg-import",
+          "sg-schedule-i"
+        ]
+      },
+      {
+        "id": "sg-import-schedule",
+        "title": "Document the correct schedule and residence history",
+        "kind": "required",
+        "timing": "Document the preceding 6 months, or since birth when applicable",
+        "bullets": [
+          "For Schedule I, establish qualifying residence in Schedule I countries; for Schedule II, establish qualifying residence in Schedule I/II countries.",
+          "Use the applicable AVS conditions and certificate. An airport connection or recent relocation does not automatically confer the departure country's lower-risk treatment."
+        ],
+        "sourceIds": [
+          "sg-schedule-i",
+          "sg-schedule-ii"
+        ]
+      },
+      {
+        "id": "sg-import-rabies",
+        "title": "Complete rabies vaccination and antibody testing",
+        "kind": "conditional",
+        "timing": "Sample at least 28 days after vaccination; at least 90 days and within 12 months before export",
+        "bullets": [
+          "Keep rabies vaccination current and obtain a titre of at least 0.5 IU/ml.",
+          "Use a WOAH reference laboratory or an approved laboratory in a Schedule I/II country, with the microchip recorded on the report."
+        ],
+        "sourceIds": [
+          "sg-schedule-ii",
+          "sg-schedule-iii"
+        ],
+        "originCodes": [
+          "US",
+          "CA",
+          "FR",
+          "DE",
+          "HK",
+          "IT",
+          "JP",
+          "NO",
+          "PT",
+          "ES",
+          "CH",
+          "NL",
+          "AE",
+          "CN",
+          "TW",
+          "TH",
+          "MY",
+          "PH"
+        ],
+        "retainForUnconfirmedHistory": true
+      },
+      {
+        "id": "sg-import-core-vaccines",
+        "title": "Complete the species-specific vaccination course",
+        "kind": "required",
+        "timing": "Finish the required primary course at least 2 weeks before export",
+        "bullets": [
+          "Dogs need distemper, adenovirus type 1 and parvovirus protection; cats need calicivirus, herpesvirus type 1 and panleukopenia protection.",
+          "Follow the manufacturer's primary/booster schedule and the certificate's age-specific requirements; very young pets need the specified two-dose course."
+        ],
+        "sourceIds": [
+          "sg-schedule-i",
+          "sg-schedule-ii",
+          "sg-schedule-iii"
+        ]
+      },
+      {
+        "id": "sg-import-quarantine",
+        "title": "Secure the applicable quarantine arrangement",
+        "kind": "conditional",
+        "timing": "Before import; reserve after a qualifying titre result when quarantine is needed",
+        "bullets": [
+          "Schedule III pets require at least 30 days at the Animal Quarantine Centre and rabies vaccination on arrival.",
+          "A personal Schedule II pet qualifies for no quarantine only with the specified more-than-6-month same-address ownership history and arrival less than 5 days from the owner's entry. Otherwise seek approved home quarantine of at least 10 days; commercial imports use AQC.",
+          "Schedule I pets do not routinely require quarantine when their conditions are met."
+        ],
+        "sourceIds": [
+          "sg-import",
+          "sg-schedule-ii",
+          "sg-schedule-iii"
+        ]
+      },
+      {
+        "id": "sg-import-licences",
+        "title": "License the pet and obtain the import licence",
+        "kind": "required",
+        "timing": "Before arrival; import licence valid 90 days",
+        "bullets": [
+          "Apply for the dog or cat licence through PALS first.",
+          "Obtain the AVS import licence through the current import service. Published normal processing is 2 working days, but leave time for missing information and quarantine coordination."
+        ],
+        "sourceIds": [
+          "sg-import"
+        ]
+      },
+      {
+        "id": "sg-import-certificate",
+        "title": "Complete final treatments and official certification",
+        "kind": "required",
+        "timing": "Veterinary certificate within 7 days; parasite treatments 2–7 days before export",
+        "bullets": [
+          "Have the government-approved veterinarian examine the pet and record internal and external parasite treatments.",
+          "Have the government veterinary authority endorse the correct AVS certificate, and carry original vaccination records. For Schedules I/II, prepare the required route/transport declaration."
+        ],
+        "sourceIds": [
+          "sg-schedule-i",
+          "sg-schedule-ii",
+          "sg-schedule-iii"
+        ]
+      },
+      {
+        "id": "sg-import-arrival",
+        "title": "Book inspection and prepare border documents",
+        "kind": "required",
+        "timing": "Book inspection at least 5 days before arrival",
+        "bullets": [
+          "Arrange inspection at CAPQ for air entry or Tuas for land entry, and bring the licence, certificate and supporting records.",
+          "Use a suitable rigid transport crate for required transfers. Check whether a Customs/GST permit is needed for the specific accompanied or relocation arrangement."
+        ],
+        "sourceIds": [
+          "sg-import"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "sg-export-destination",
+        "title": "Arrange destination veterinary preparation",
+        "kind": "required",
+        "timing": "Before booking; tests and waiting periods are destination-specific",
+        "bullets": [
+          "Obtain the destination's current import permit and health requirements and arrange the required veterinary work.",
+          "Have a private veterinarian examine the pet and complete the destination certificate where required."
+        ],
+        "sourceIds": [
+          "sg-export"
+        ]
+      },
+      {
+        "id": "sg-export-licence",
+        "title": "Obtain the AVS export licence",
+        "kind": "required",
+        "timing": "Before departure; licence valid 90 days",
+        "bullets": [
+          "Apply through the stated AVS/GoBusiness service and enter the correct animal and journey details.",
+          "Allow the published 2-working-day normal processing period plus time for corrections; express service is a separate option."
+        ],
+        "sourceIds": [
+          "sg-export"
+        ]
+      },
+      {
+        "id": "sg-export-endorsement",
+        "title": "Obtain government endorsement when required",
+        "kind": "conditional",
+        "timing": "After veterinary certification and within the destination's validity window",
+        "bullets": [
+          "Apply for AVS endorsement if the destination requires it, submitting the application and required original veterinary, vaccine and laboratory records.",
+          "Follow AVS's collection or verifiable-certificate process and carry the destination-required originals. Government endorsement is not asserted as mandatory for every destination."
+        ],
+        "sourceIds": [
+          "sg-export"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "Potential Schedule I pathway",
+        "countryCodes": [
+          "AU",
+          "NZ",
+          "IE",
+          "GB"
+        ],
+        "condition": "Requires Schedule I residence and certification, not merely a departure from a listed airport.",
+        "sourceIds": [
+          "sg-schedule-i"
+        ]
+      },
+      {
+        "label": "Potential Schedule II pathway",
+        "countryCodes": [
+          "US",
+          "CA",
+          "FR",
+          "DE",
+          "HK",
+          "IT",
+          "JP",
+          "NO",
+          "PT",
+          "ES",
+          "CH",
+          "NL"
+        ],
+        "condition": "Requires qualifying residence and rabies preparation. Spain excludes Ceuta and Melilla; quarantine also depends on ownership and owner-entry timing.",
+        "sourceIds": [
+          "sg-import",
+          "sg-schedule-ii"
+        ]
+      },
+      {
+        "label": "Schedule III pathway for these listed origins",
+        "countryCodes": [
+          "AE",
+          "CN",
+          "TW",
+          "TH",
+          "MY",
+          "PH"
+        ],
+        "condition": "Other-origin conditions include rabies preparation and minimum 30-day AQC quarantine; history can require case-specific assessment.",
+        "sourceIds": [
+          "sg-import",
+          "sg-schedule-iii"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft research, not human-approved. Minimum quarantine can be extended.",
+      "A pet's entry close to its owner is not sufficient alone for the Schedule II quarantine exemption.",
+      "Carrier transport acceptance and customs tax treatment require separate confirmation."
+    ],
+    "gaps": [
+      "No issued import licence, home-quarantine approval or pet-specific residence evidence was inspected.",
+      "The complete breed/hybrid list and housing occupancy limits are not reproduced.",
+      "Current web licence guidance was preferred to older service-platform wording embedded in veterinary PDFs."
+    ],
+    "sources": [
+      {
+        "id": "sg-import",
+        "title": "Importing dogs and cats",
+        "authority": "Singapore AVS / NParks",
+        "url": "https://avs.nparks.gov.sg/pets/importing-exporting-a-pet/import/dogs-and-cats/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Schedules, licences, quarantine and arrival arrangements; page updated 5 August 2026."
+        ]
+      },
+      {
+        "id": "sg-schedule-i",
+        "title": "Veterinary conditions for dogs and cats — Schedule I",
+        "authority": "Singapore AVS",
+        "url": "https://isomer-user-content.by.gov.sg/30/6161412c-8923-4a95-bf7f-a79517738cc9/DOGCAT%2083-1%20(w_feeattd1)%2001042026.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current linked conditions for residence, vaccines, certificate and treatments."
+        ]
+      },
+      {
+        "id": "sg-schedule-ii",
+        "title": "Veterinary conditions for dogs and cats — Schedule II",
+        "authority": "Singapore AVS",
+        "url": "https://isomer-user-content.by.gov.sg/30/9cf4fc30-87af-4ab9-a39a-044c52933230/DOGCAT%2083-2%20(w_feeattd1)%2001042026.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Rabies, residence, quarantine exceptions and certification."
+        ]
+      },
+      {
+        "id": "sg-schedule-iii",
+        "title": "Veterinary conditions for dogs and cats — Schedule III",
+        "authority": "Singapore AVS",
+        "url": "https://isomer-user-content.by.gov.sg/30/09b135c8-00b2-4859-8d90-9ee700d2b67b/DOGCAT%2083-3%20(w_feeattd1)%2001042026.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Rabies preparation and minimum quarantine."
+        ]
+      },
+      {
+        "id": "sg-export",
+        "title": "Exporting dogs and cats",
+        "authority": "Singapore AVS / NParks",
+        "url": "https://avs.nparks.gov.sg/pets/importing-exporting-a-pet/export/dogs-and-cats/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Export licence, veterinary certificate and official endorsement; page updated 5 August 2026."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "MY",
+    "name": "Peninsular Malaysia",
+    "overview": "Draft applies only to Peninsular Malaysia. DVS publishes separate Australia, Singapore and Canada protocols plus scheduled/non-scheduled rules; a December 2025 notice changes the older scheduled-country list.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "my-import-jurisdiction",
+        "title": "Confirm Peninsular jurisdiction and the applicable protocol",
+        "kind": "planning",
+        "timing": "Before paying for preparations or transport",
+        "bullets": [
+          "Use Peninsular Malaysia's MAQIS/DVS process; Sabah and Sarawak have separate authorities and are outside this workflow.",
+          "Submit the pet's origin and 6-month movement history for protocol confirmation. The 11 December 2025 notice adds countries including Germany and Portugal; older DVS index labels are stale."
+        ],
+        "sourceIds": [
+          "my-service",
+          "my-notice"
+        ]
+      },
+      {
+        "id": "my-import-breed",
+        "title": "Resolve prohibited or restricted dog status",
+        "kind": "conditional",
+        "timing": "Before applying for the import permit",
+        "bullets": [
+          "Check DVS's prohibited breeds, including pit-bull types, Akita, American Bulldog, Dogo Argentino, Fila Brasileiro, Japanese Tosa and Neapolitan Mastiff.",
+          "Restricted breeds require prior written approval from the MAQIS Director General, pedigree/microchip evidence and the prescribed premises/owner checks."
+        ],
+        "sourceIds": [
+          "my-nonscheduled"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "my-import-identification",
+        "title": "Prepare the microchip and vaccination record",
+        "kind": "required",
+        "timing": "Before veterinary certification",
+        "bullets": [
+          "Use an ISO-compliant microchip and records identifying the animal's breed, age, sex, colour and origin.",
+          "Have the vet apply the selected protocol's rabies and species-specific core vaccination clauses; several published protocols require core vaccination within the previous 12 months."
+        ],
+        "sourceIds": [
+          "my-scheduled",
+          "my-nonscheduled"
+        ]
+      },
+      {
+        "id": "my-import-residence",
+        "title": "Obtain certifiable residence and rabies-history evidence",
+        "kind": "required",
+        "timing": "Review the preceding 6 months before shipment",
+        "bullets": [
+          "Ask the exporting authority to verify every residence and rabies-status declaration on the chosen Malaysian certificate; do not sign a country-wide rabies-free declaration using only the pet's vaccination history.",
+          "The Canada protocol permits a country-or-part rabies-status declaration. Singapore has its own residence and official-certification requirements; simple transit through Singapore does not establish them."
+        ],
+        "sourceIds": [
+          "my-canada",
+          "my-singapore",
+          "my-nonscheduled"
+        ]
+      },
+      {
+        "id": "my-import-australia",
+        "title": "Complete the special Australia-origin conditions",
+        "kind": "conditional",
+        "timing": "Health certificate within 7 days; Hendra sample within 14 days before export",
+        "bullets": [
+          "Document 6-month Australian residence or since birth, minimum age 3 months, and the protocol's rabies/premises-health attestations.",
+          "Arrange the specified negative Hendra serum-neutralisation test and vaccinations. This published protocol provides at least 10 clear days of Malaysian quarantine, not a blanket Australian-origin exemption."
+        ],
+        "sourceIds": [
+          "my-australia"
+        ],
+        "originCodes": [
+          "AU"
+        ]
+      },
+      {
+        "id": "my-import-permit",
+        "title": "Obtain the MAQIS import permit and quarantine arrangement",
+        "kind": "required",
+        "timing": "Before shipment; do not assume an unverified permit-validity period",
+        "bullets": [
+          "Apply through Dagang Net ePermit personally or through a MAQIS-registered agent; arrange quarantine space with MAQIS where required.",
+          "Published non-scheduled and Canadian protocols require at least 7 days of quarantine, extendable up to 6 months. Scheduled and Singapore documents omit that routine clause, but obtain written confirmation for the actual permit."
+        ],
+        "sourceIds": [
+          "my-service",
+          "my-nonscheduled",
+          "my-canada",
+          "my-scheduled",
+          "my-singapore"
+        ]
+      },
+      {
+        "id": "my-import-government-certificate",
+        "title": "Have the exporting authority issue the correct certificate",
+        "kind": "required",
+        "timing": "Final examination within 7 days before export",
+        "bullets": [
+          "Have the government veterinarian certify health, vaccination, identification and the protocol-specific disease/residence statements.",
+          "Carry the official veterinary health certificate, vaccination/microchip records and Malaysian import permit; check that the animal remains clinically healthy at shipment."
+        ],
+        "sourceIds": [
+          "my-scheduled",
+          "my-nonscheduled",
+          "my-australia",
+          "my-canada",
+          "my-singapore"
+        ]
+      },
+      {
+        "id": "my-import-entry",
+        "title": "Confirm the approved entry and inspection arrangements",
+        "kind": "required",
+        "timing": "Before departure and at the Malaysian border",
+        "bullets": [
+          "Match the flight or road route to the selected protocol and the permit's entry point; Singapore has a specific direct air/road pathway.",
+          "Present the pet and documents to MAQIS for inspection and transfer to the agreed quarantine arrangement when required."
+        ],
+        "sourceIds": [
+          "my-singapore",
+          "my-nonscheduled",
+          "my-service"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "my-export-destination",
+        "title": "Prepare the destination-specific health requirements",
+        "kind": "required",
+        "timing": "Before arranging tests or booking travel",
+        "bullets": [
+          "Obtain the destination import conditions and any import permit; schedule vaccines, blood tests and treatments in its required order.",
+          "Arrange the state DVS examination and provide the pet's identification and veterinary records for the official Veterinary Health Certificate."
+        ],
+        "sourceIds": [
+          "my-service"
+        ]
+      },
+      {
+        "id": "my-export-permits",
+        "title": "Obtain DVS certification and the MAQIS export permit",
+        "kind": "required",
+        "timing": "Before departure; validity must match the destination and issued documents",
+        "bullets": [
+          "Apply for the Veterinary Health Certificate and MAQIS export permit through the stated Dagang Net process.",
+          "Carry the official certificate, export permit and destination documents for exit inspection. This Peninsular workflow must not be reused for Sabah or Sarawak without their authority's rules."
+        ],
+        "sourceIds": [
+          "my-service"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "Potential scheduled-country pathway under December 2025 notice",
+        "countryCodes": [
+          "GB",
+          "IE",
+          "NZ",
+          "JP",
+          "DE",
+          "PT"
+        ],
+        "condition": "Notice classification is not proof that the pet meets 6-month residence/rabies declarations. Older index and protocol lists conflict; written DVS/MAQIS confirmation is required.",
+        "sourceIds": [
+          "my-notice",
+          "my-scheduled"
+        ]
+      },
+      {
+        "label": "Australia-specific published protocol",
+        "countryCodes": [
+          "AU"
+        ],
+        "condition": "Includes residence, Hendra testing and at least 10 clear days of quarantine; do not map to a generic no-quarantine group.",
+        "sourceIds": [
+          "my-australia"
+        ]
+      },
+      {
+        "label": "Singapore-specific published protocol",
+        "countryCodes": [
+          "SG"
+        ],
+        "condition": "A dedicated protocol exists. The 2025 notice includes Singapore as scheduled but omits it from a repeated exclusion list; resolve the inconsistency with MAQIS.",
+        "sourceIds": [
+          "my-singapore",
+          "my-notice"
+        ]
+      },
+      {
+        "label": "Canada-specific published protocol",
+        "countryCodes": [
+          "CA"
+        ],
+        "condition": "Uses country-or-part rabies declarations and minimum 7-day quarantine, subject to the permit.",
+        "sourceIds": [
+          "my-canada"
+        ]
+      },
+      {
+        "label": "Potential non-scheduled pathway",
+        "countryCodes": [
+          "US",
+          "FR",
+          "NL",
+          "ES",
+          "IT",
+          "CH",
+          "NO",
+          "AE",
+          "HK",
+          "CN",
+          "TW",
+          "TH",
+          "PH"
+        ],
+        "condition": "Published protocol contains demanding country-level rabies and previous-import declarations. Availability is not established merely by selecting an origin on this list.",
+        "sourceIds": [
+          "my-notice",
+          "my-nonscheduled"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft research, not human-approved. Only Peninsular Malaysia is covered.",
+      "The 2013-era PDFs remain linked by DVS; their continuing publication does not resolve conflicts with the newer notice or a pet-specific permit.",
+      "Do not advertise universal no-quarantine, universal titre exemptions or a 7-day maximum stay."
+    ],
+    "gaps": [
+      "Written DVS/MAQIS reconciliation is needed for the updated scheduled list, Singapore inconsistency and old country-specific protocols.",
+      "The non-scheduled protocol's country-wide rabies-free declaration may be impossible for some listed departure countries; no substitute wording or exemption was verified.",
+      "Current permit validity, authorised entry ports, quarantine availability and any outbreak-specific restrictions remain unverified.",
+      "Exact species-specific vaccine clauses and restricted-breed approvals must be checked in the selected certificate."
+    ],
+    "sources": [
+      {
+        "id": "my-service",
+        "title": "Import dan Eksport — companion animals",
+        "authority": "Malaysia Department of Veterinary Services",
+        "url": "https://www.dvs.gov.my/index.php/pages/view/1941",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "MAQIS permits, DVS certification and Peninsular process."
+        ]
+      },
+      {
+        "id": "my-notice",
+        "title": "Cats and dogs non-scheduled protocol with scheduled-country notice dated 11 December 2025",
+        "authority": "Malaysia DVS",
+        "url": "https://www.dvs.gov.my/dvs/resources/user_1/2026/BKPBV/IMPORT%20EKSPORT/(R2)-CatsNdogs-NONSCHEDULED_COUNTRIES-revised131213_-_notis.pdf",
+        "publishedOn": "2025-12-11",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Expanded country notice; internal Singapore inconsistency."
+        ]
+      },
+      {
+        "id": "my-scheduled",
+        "title": "Regulations for importation of dogs and cats from scheduled countries",
+        "authority": "Malaysia DVS",
+        "url": "https://www.dvs.gov.my/dvs/resources/auto%20download%20images/560b98c4b97f6.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Scheduled protocol certification, identity and vaccination clauses."
+        ]
+      },
+      {
+        "id": "my-nonscheduled",
+        "title": "Regulations for importation of dogs and cats from non-scheduled countries",
+        "authority": "Malaysia DVS",
+        "url": "https://www.dvs.gov.my/dvs/resources/auto%20download%20images/560b98c54e1e8.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Rabies/residence declarations, quarantine and breed controls."
+        ]
+      },
+      {
+        "id": "my-australia",
+        "title": "Regulations for importation of dogs and cats from Australia",
+        "authority": "Malaysia DVS",
+        "url": "https://www.dvs.gov.my/dvs/resources/auto%20download%20images/560b98c35fdbf.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Australian residence, Hendra testing and quarantine."
+        ]
+      },
+      {
+        "id": "my-singapore",
+        "title": "Regulations for importation of dogs and cats from Singapore",
+        "authority": "Malaysia DVS",
+        "url": "https://www.dvs.gov.my/dvs/resources/auto%20download%20images/560b98c3eaacd.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Singapore residence, certification and direct transport."
+        ]
+      },
+      {
+        "id": "my-canada",
+        "title": "Regulations for importation of dogs and cats from Canada",
+        "authority": "Malaysia DVS",
+        "url": "https://www.dvs.gov.my/dvs/resources/auto%20download%20images/560b98c46c468.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Country-or-part disease declaration and quarantine."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "AE",
+    "name": "United Arab Emirates",
+    "overview": "Draft follows the current MOCCAE Arabic service and flags older conflicting English guidance. Risk classification does not establish unrestricted origin eligibility.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "ae-import-eligibility",
+        "title": "Check animal and origin eligibility",
+        "kind": "planning",
+        "timing": "Before preparations",
+        "bullets": [
+          "Check MOCCAE's prohibited-dog list and hybrid-cat pedigree conditions before booking.",
+          "Confirm origin restrictions separately from rabies risk; the linked approved-country page was inaccessible."
+        ],
+        "sourceIds": [
+          "ae-import"
+        ]
+      },
+      {
+        "id": "ae-import-permit",
+        "title": "Obtain the MOCCAE import permit",
+        "kind": "required",
+        "timing": "Before shipment; current service states 90-day validity",
+        "bullets": [
+          "Apply online and keep the issued permit valid for arrival.",
+          "Personal imports are normally limited to two pets per person annually; returning-resident exceptions apply."
+        ],
+        "sourceIds": [
+          "ae-import",
+          "ae-resolution"
+        ]
+      },
+      {
+        "id": "ae-import-vaccination",
+        "title": "Complete identification and required vaccinations",
+        "kind": "required",
+        "timing": "Rabies vaccination from 12 weeks of age; maintain validity",
+        "bullets": [
+          "Match the permanent microchip across the official certificate and vaccination passport, including vaccine dates and batch details.",
+          "Dogs: rabies, distemper, parvovirus, infectious hepatitis and leptospirosis; the latter has a specified testing alternative.",
+          "Cats: rabies, panleukopenia, rhinotracheitis and calicivirus."
+        ],
+        "sourceIds": [
+          "ae-resolution",
+          "ae-import"
+        ]
+      },
+      {
+        "id": "ae-import-rabies-titre",
+        "title": "Obtain the high-risk-origin antibody test",
+        "kind": "conditional",
+        "timing": "At least 21 days after first or lapsed rabies vaccination",
+        "bullets": [
+          "Use an exporting-authority-approved laboratory; result must be at least 0.5 IU/ml.",
+          "A current booster can avoid that sampling wait. The stated 365-day report validity has continuing-vaccination and subsequent-booster conditions."
+        ],
+        "sourceIds": [
+          "ae-import"
+        ],
+        "originCodes": [
+          "US",
+          "CA",
+          "FR",
+          "DE",
+          "IT",
+          "NO",
+          "CN",
+          "TW",
+          "TH",
+          "MY",
+          "PH"
+        ]
+      },
+      {
+        "id": "ae-import-final-health",
+        "title": "Complete treatments and official health certification",
+        "kind": "required",
+        "timing": "Parasite treatments within 14 days before shipment",
+        "bullets": [
+          "Record internal and external parasite treatment in the health certificate or passport.",
+          "Obtain the exporting veterinary authority's certified health certificate with the required examination and health declarations."
+        ],
+        "sourceIds": [
+          "ae-resolution",
+          "ae-import"
+        ]
+      },
+      {
+        "id": "ae-import-transport",
+        "title": "Meet age and transit controls",
+        "kind": "required",
+        "timing": "At shipment",
+        "bullets": [
+          "Minimum import age: 12 weeks for low-risk origins, 15 weeks for high-risk origins.",
+          "Use IATA-compliant transport; prevent contact with other animals during transit."
+        ],
+        "sourceIds": [
+          "ae-import"
+        ]
+      },
+      {
+        "id": "ae-import-release",
+        "title": "Present the pet for border release",
+        "kind": "required",
+        "timing": "On arrival",
+        "bullets": [
+          "Submit the release application and present permit, certified health certificate, vaccination record and required titre evidence.",
+          "Supply customs/air-waybill details and make the pet available for inspection before release."
+        ],
+        "sourceIds": [
+          "ae-import"
+        ]
+      },
+      {
+        "id": "ae-import-return",
+        "title": "Use returning-resident evidence when applicable",
+        "kind": "conditional",
+        "timing": "Before departure from UAE and again before return",
+        "bullets": [
+          "Retain the MOCCAE export health certificate and microchip record, and maintain rabies protection without lapse.",
+          "Obtain a return import permit and exporting-country official health certificate; a vaccination lapse triggers first-import treatment."
+        ],
+        "sourceIds": [
+          "ae-resolution",
+          "ae-import"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "ae-export-destination",
+        "title": "Prepare the destination's veterinary requirements",
+        "kind": "required",
+        "timing": "Before arranging departure",
+        "bullets": [
+          "Obtain destination import conditions and arrange their vaccination, testing and treatment sequence.",
+          "Collect veterinary records and any additional destination-specific declarations for the MOCCAE application."
+        ],
+        "sourceIds": [
+          "ae-export"
+        ]
+      },
+      {
+        "id": "ae-export-certify",
+        "title": "Obtain the MOCCAE export or re-export health certificate",
+        "kind": "required",
+        "timing": "Before departure; MOCCAE certificate valid 30 days, subject to shorter destination limits",
+        "bullets": [
+          "Apply and pay online, then present the animal for the required examination and any laboratory testing.",
+          "Obtain the official certificate and carry the destination's required documents. Keep this UAE certificate if planning a return."
+        ],
+        "sourceIds": [
+          "ae-export",
+          "ae-resolution"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "Potential low-rabies-risk pathway in current Arabic service",
+        "countryCodes": [
+          "AU",
+          "GB",
+          "IE",
+          "JP",
+          "HK",
+          "SG",
+          "NZ",
+          "PT",
+          "CH",
+          "NL",
+          "ES"
+        ],
+        "condition": "Spain excludes Ceuta and Melilla. This classification is not confirmation of residence, origin approval or permit eligibility.",
+        "sourceIds": [
+          "ae-import"
+        ]
+      },
+      {
+        "label": "Not listed as low risk in current Arabic service",
+        "countryCodes": [
+          "US",
+          "CA",
+          "FR",
+          "DE",
+          "IT",
+          "NO",
+          "CN",
+          "TW",
+          "TH",
+          "MY",
+          "PH"
+        ],
+        "condition": "Use the high-risk titre pathway provisionally and confirm against the issued permit; older lists differ.",
+        "sourceIds": [
+          "ae-import"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft, not human-approved. Current Arabic service was readable; English and linked-document access was incomplete.",
+      "No routine quarantine duration is promised: release depends on inspection and compliance.",
+      "Official low-risk lists have changed; do not classify all EU countries together."
+    ],
+    "gaps": [
+      "Current MOCCAE says 90-day import-permit validity; USDA's page updated 30 July 2025 still says 30 days. Confirm the issued permit.",
+      "The service's approved-country link failed and its downloadable form was rejected; outbreak suspensions and origin-specific restrictions are unresolved.",
+      "The current Arabic titre-validity wording calls for retesting after a subsequent booster; obtain written clarification before relying on an older report.",
+      "The service's minimum-age wording and older primary-vaccination waiting guidance need reconciliation for very young animals.",
+      "Full prohibited-breed and hybrid-lineage determinations, entry-point acceptance and destination-specific certificate windows require individual review."
+    ],
+    "sources": [
+      {
+        "id": "ae-import",
+        "title": "Import companion animals — dogs and cats (Arabic service)",
+        "authority": "UAE Ministry of Climate Change and Environment",
+        "url": "https://www.moccae.gov.ae/ar/services/import-permit-pets",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current risk classification, 90-day permit, titre, age and release rules."
+        ]
+      },
+      {
+        "id": "ae-resolution",
+        "title": "Ministerial Resolution No. 109 of 2021 — import of cats and dogs",
+        "authority": "UAE MOCCAE",
+        "url": "https://site.moccae.gov.ae/assets/download/2025/M109-21.pdf.aspx",
+        "publishedOn": "2021-04-28",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official vaccination, parasite and returning-resident requirements; direct PDF retrieval failed, indexed official clauses used."
+        ]
+      },
+      {
+        "id": "ae-usda",
+        "title": "Pet travel from the United States to the United Arab Emirates",
+        "authority": "USDA APHIS",
+        "url": "https://www.aphis.usda.gov/pet-travel/us-to-another-country-export/pet-travel-us-united-arab-emirates",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official exporting-authority guidance still states 30-day import-permit validity; page updated 30 July 2025."
+        ]
+      },
+      {
+        "id": "ae-export",
+        "title": "Animal health certificate for export/re-export of live animals (Arabic service)",
+        "authority": "UAE MOCCAE",
+        "url": "https://moccae.gov.ae/ar/services/animal-health-certificate-for-export-re-export-of-live-animals",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Online application, examination, official certification and 30-day certificate validity."
+        ]
+      }
+    ]
+  }
+]

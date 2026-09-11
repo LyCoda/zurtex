@@ -1,0 +1,1640 @@
+[
+  {
+    "code": "HK",
+    "name": "Hong Kong",
+    "overview": "Draft personal-pet pathway. AFCD permission, the animal's eligible origin/history and the permit's individual terms determine admission; quarantine exemption is not automatic.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "HK-import-classify",
+        "title": "Establish the applicable AFCD origin group",
+        "kind": "required",
+        "timing": "Before vaccines, tests and travel bookings",
+        "bullets": [
+          "Match the exporting jurisdiction and the animal's residence and movement history to the current AFCD group; a departure airport alone does not establish Group I or II eligibility.",
+          "Group I normally requires 180 continuous days' residence, residence since birth, or continuous residence since direct import from Hong Kong. Group II requires 180 days or since birth plus the required local rabies-history declaration.",
+          "Use the permit pathway for the actual movement purpose; traders require the applicable Animal Trader Licence before applying."
+        ],
+        "sourceIds": [
+          "HK-main",
+          "HK-g1terms",
+          "HK-g2terms"
+        ]
+      },
+      {
+        "id": "HK-import-permit",
+        "title": "Obtain the Special Permit and any quarantine reservation",
+        "kind": "required",
+        "timing": "Before shipment; follow the allocated arrival date",
+        "bullets": [
+          "Apply using AF240 and the required identity/declaration documents; use AF301 where the Mainland China application route requires it.",
+          "For Group IIIA or IIIB, arrange an approved quarantine place first and submit the reservation documentation with the application.",
+          "Do not ship before permission is granted. Group IIIA ordinarily requires at least 30 days' quarantine and Group IIIB at least 120 days; detention can be extended."
+        ],
+        "sourceIds": [
+          "HK-main",
+          "HK-g3a",
+          "HK-g3b"
+        ]
+      },
+      {
+        "id": "HK-import-identify",
+        "title": "Identify the animal and check age and breed restrictions",
+        "kind": "required",
+        "timing": "Before certification and, for Group IIIA, before rabies vaccination and blood sampling",
+        "bullets": [
+          "Use the microchip identification accepted by the applicable permit and ensure every certificate carries the same number; arrange a suitable reader for a non-standard chip if accepted.",
+          "Group I animals must be at least 60 days old; Group II animals at least five months old. Check pregnancy and other eligibility conditions on the issued permit.",
+          "Pit Bull Terrier including American Staffordshire Terrier, Japanese Tosa, Dogo Argentino, Fila Brasileiro and their crosses are prohibited; Staffordshire Bull Terriers require the specified breed declaration."
+        ],
+        "sourceIds": [
+          "HK-main",
+          "HK-g1terms",
+          "HK-g2terms",
+          "HK-g3aterms"
+        ]
+      },
+      {
+        "id": "HK-import-rabies",
+        "title": "Complete the group's rabies vaccination and testing conditions",
+        "kind": "conditional",
+        "timing": "Group II/IIIA vaccination: 30 days–1 year before export; IIIA blood sample: 90 days–1 year before export",
+        "bullets": [
+          "For Group II and IIIA, use an accepted inactivated or recombinant rabies vaccine; the primary dose must be administered at age 90 days or older.",
+          "Group IIIA additionally requires an approved-laboratory FAVN or RFFIT result of at least 0.5 IU/ml. After a primary vaccination, wait at least 30 days before sampling.",
+          "For Group IIIA, chip implantation must precede vaccination and sampling, and those procedures must be performed by a registered veterinarian in Hong Kong or an AFCD Group I, II or IIIA jurisdiction."
+        ],
+        "sourceIds": [
+          "HK-g2terms",
+          "HK-g3aterms"
+        ]
+      },
+      {
+        "id": "HK-import-dog-core",
+        "title": "Complete the required canine core vaccinations",
+        "kind": "required",
+        "timing": "At least 14 days and no more than 1 year before export, subject to the permit's full-course conditions",
+        "bullets": [
+          "Document vaccination against canine distemper, infectious canine hepatitis and canine parvovirus.",
+          "Have the veterinarian confirm the required course is complete and record vaccine details against the dog's microchip; rabies is a separate group-dependent condition."
+        ],
+        "sourceIds": [
+          "HK-g1terms",
+          "HK-g2terms",
+          "HK-g3aterms",
+          "HK-g3b"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "HK-import-cat-core",
+        "title": "Complete the required feline core vaccinations",
+        "kind": "required",
+        "timing": "At least 14 days and no more than 1 year before export, subject to the permit's full-course conditions",
+        "bullets": [
+          "Document vaccination against feline panleukopenia and the feline respiratory disease complex.",
+          "Have the veterinarian confirm the full required course and match the vaccination record to the cat's microchip. Obtain separate AFCD confirmation for hybrid cats; Bengal F5-or-later evidence is relevant, while Savannah cats are not covered by ordinary dog/cat permit terms."
+        ],
+        "sourceIds": [
+          "HK-main",
+          "HK-g1terms",
+          "HK-g2terms",
+          "HK-g3aterms",
+          "HK-g3b"
+        ],
+        "species": "cat"
+      },
+      {
+        "id": "HK-import-certificate",
+        "title": "Obtain the permit-specific animal health certificate",
+        "kind": "required",
+        "timing": "Group I/II: within 14 days before export; Group IIIA: within 7 days; Group IIIB: within 14 days",
+        "bullets": [
+          "Use the certificate and declarations specified in the Special Permit, recording the animal's identity, health, vaccination and applicable residence/test history.",
+          "Group I, II and IIIA certificates require issuance or endorsement by the exporting government's veterinary authority. Follow Group IIIB's stated government or registered-veterinarian certification terms.",
+          "Carry the originals required by the permit, including the Special Permit, vaccination records and any antibody-test report."
+        ],
+        "sourceIds": [
+          "HK-g1terms",
+          "HK-g2terms",
+          "HK-g3aterms",
+          "HK-g3b"
+        ]
+      },
+      {
+        "id": "HK-import-arrival",
+        "title": "Arrange approved transport and AFCD arrival inspection",
+        "kind": "required",
+        "timing": "Notify AFCD at least 24 hours before arrival during office hours",
+        "bullets": [
+          "The ordinary air-import route is manifested cargo using the most direct routing; obtain advance approval for stopovers or conveyances that the permit restricts.",
+          "Obtain the required airline declaration, including crate, transit-area and contact controls. For Mainland land entry, use the designated control point and operating hours authorized by AFCD.",
+          "Present the animal and original documents for inspection and any quarantine transfer. Dogs aged five months or above need the Hong Kong licensing and rabies arrangements required at arrival."
+        ],
+        "sourceIds": [
+          "HK-main",
+          "HK-g1terms",
+          "HK-g2terms",
+          "HK-g3aterms"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "HK-export-prepare",
+        "title": "Arrange the destination's import documents and veterinary work",
+        "kind": "required",
+        "timing": "Before fixing the veterinary and flight dates",
+        "bullets": [
+          "Obtain the destination's permit, certificate template and current entry conditions, including requirements based on the animal's earlier residence and travel.",
+          "Book vaccinations, laboratory tests and treatments to meet that destination's sequence and validity periods; consider Hong Kong re-entry requirements before leaving."
+        ],
+        "sourceIds": [
+          "HK-export"
+        ]
+      },
+      {
+        "id": "HK-export-endorse",
+        "title": "Obtain AFCD certification or endorsement",
+        "kind": "conditional",
+        "timing": "Private-vet certificate normally within 10 days before departure, unless the destination specifies otherwise",
+        "bullets": [
+          "Where official certification is required, submit the original private-vet health certificate, supporting vaccination/test records, import permit and dog licence as applicable with the AFCD application and fee.",
+          "If the destination specifically requires a government-veterinarian examination, arrange the AFCD appointment at least 10 working days before the expected examination.",
+          "AFCD describes ordinary endorsement as one working day and government certificate issue as two working days after complete processing; these are service estimates, not a guarantee or the destination's validity period."
+        ],
+        "sourceIds": [
+          "HK-export"
+        ]
+      },
+      {
+        "id": "HK-export-hybrids",
+        "title": "Resolve hybrid-cat and wildlife export controls",
+        "kind": "conditional",
+        "timing": "Before applying for export certification",
+        "bullets": [
+          "For Bengal, Savannah or similar hybrid cats, supply the ancestry documentation required to establish the applicable domestic-cat or controlled-wildlife pathway.",
+          "Obtain any required CITES or other permits separately; an ordinary pet health certificate does not replace wildlife authorization."
+        ],
+        "sourceIds": [
+          "HK-export"
+        ],
+        "species": "cat"
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "AFCD Group I",
+        "countryCodes": [
+          "AU",
+          "IE",
+          "JP",
+          "NZ",
+          "GB"
+        ],
+        "condition": "Quarantine exemption remains conditional on the applicable residence/history, health and permit requirements. Hawaii is a separate eligible region of US, not a country-wide US classification.",
+        "sourceIds": [
+          "HK-main",
+          "HK-g1terms"
+        ]
+      },
+      {
+        "label": "AFCD Group II",
+        "countryCodes": [
+          "CA",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "SG",
+          "TW",
+          "US"
+        ],
+        "condition": "US entry here means continental USA, not every US territory. Eligibility requires the permit's residence and local rabies-history conditions; all other requirements must also be satisfied.",
+        "sourceIds": [
+          "HK-main",
+          "HK-g2terms"
+        ]
+      },
+      {
+        "label": "AFCD Group IIIA",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "MY"
+        ],
+        "condition": "Mainland China entered this group on 3 June 2025. The current rabies/test procedure-location rules and a minimum 30-day quarantine pathway apply; departure from this group alone does not validate prior procedures.",
+        "sourceIds": [
+          "HK-main",
+          "HK-g3aterms"
+        ]
+      },
+      {
+        "label": "AFCD Group IIIB",
+        "countryCodes": [
+          "AE",
+          "PH"
+        ],
+        "condition": "Ordinary pathway requires a booked quarantine place and at least 120 days' quarantine, subject to the issued permit and inspection.",
+        "sourceIds": [
+          "HK-main",
+          "HK-g3b"
+        ]
+      }
+    ],
+    "caveats": [
+      "All records are draft and pending human approval; none constitutes AFCD approval or a quarantine-release guarantee.",
+      "Assistance-dog concessions are a separate approval scheme; emotional-support status is not a general exemption.",
+      "The September 2026 Group IIIA PDF is newer than earlier cached permit terms and must take precedence.",
+      "The MY catalogue is limited to Peninsular Malaysia; obtain confirmation for any wider Malaysian origin or transit history."
+    ],
+    "gaps": [
+      "Case-specific residence exceptions, re-import concessions and unusual transit histories need AFCD confirmation.",
+      "Exact quarantine availability, charges, arrival slot, pregnancy eligibility outside the cited Group I/II terms and non-standard species/breed cases must be checked on the issued permit.",
+      "Commercial transfers and assistance-dog cases are not exhaustively modelled."
+    ],
+    "sources": [
+      {
+        "id": "HK-main",
+        "title": "Import of Dogs and Cats",
+        "authority": "AFCD",
+        "url": "https://www.afcd.gov.hk/english/quarantine/qua_ie/qua_ie_ipab/qua_ie_ipab_idc/qua_ie_ipab_idc.html",
+        "publishedOn": "2026-09-04",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current jurisdiction groups and Mainland change; Special Permit; breed and hybrid restrictions; arrival licensing."
+        ]
+      },
+      {
+        "id": "HK-g1terms",
+        "title": "Group I permit terms, June 2025",
+        "authority": "AFCD",
+        "url": "https://www.afcd.gov.hk/english/quarantine/qua_ie/qua_ie_ipab/qua_ie_ipab_idc/files/DC_01v05_Terms_for_import_G1_Jun25B.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Group I residence, age, chip, health certification, vaccination and transport conditions."
+        ]
+      },
+      {
+        "id": "HK-g2terms",
+        "title": "Group II permit terms, June 2025",
+        "authority": "AFCD",
+        "url": "https://www.afcd.gov.hk/english/quarantine/qua_ie/qua_ie_ipab/qua_ie_ipab_idc/files/DC_02v05_Terms_for_import_G2_Jun25B.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Group II residence and local rabies history; age; rabies/core vaccines; certification and transit."
+        ]
+      },
+      {
+        "id": "HK-g3a",
+        "title": "Group IIIA import application guidance",
+        "authority": "AFCD",
+        "url": "https://www.afcd.gov.hk/english/quarantine/qua_ie/qua_ie_ipab/qua_ie_ipab_idc/qua_ie_ipab_idc_Group_IIIA.html",
+        "publishedOn": "2026-09-08",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Quarantine booking, applications, certification and Group IIIA pathway."
+        ]
+      },
+      {
+        "id": "HK-g3aterms",
+        "title": "Group IIIA permit terms, September 2026",
+        "authority": "AFCD",
+        "url": "https://www.afcd.gov.hk/english/quarantine/qua_ie/qua_ie_ipab/qua_ie_ipab_idc/files/DC_06v03_Permit_Terms_for_import_dog_cat_from_Gp3A_Sep26B.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current vaccination and sampling locations; chip sequence; rabies titer timing; minimum 30-day quarantine; health certificate and conveyance conditions."
+        ]
+      },
+      {
+        "id": "HK-g3b",
+        "title": "Group IIIB import guidance",
+        "authority": "AFCD",
+        "url": "https://www.afcd.gov.hk/english/quarantine/qua_ie/qua_ie_ipab/qua_ie_ipab_idc/qua_ie_ipab_idc_Group_IIIB.html",
+        "publishedOn": "2026-09-08",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "At least 120 days' quarantine; reservation; core vaccines; Group IIIB certification."
+        ]
+      },
+      {
+        "id": "HK-export",
+        "title": "Issue of Animal Health Certificates",
+        "authority": "AFCD",
+        "url": "https://www.afcd.gov.hk/english/quarantine/qua_ie/qua_ie_eapao/qua_ie_eapao_ioahc/qua_ie_eapao_ioahc.html",
+        "publishedOn": "2026-01-26",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Destination conditions; private-veterinarian certification; AFCD endorsement and appointments; hybrid-cat export documentation."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "overview": "Draft AQS personal dog/cat import pathway. Designated-region eligibility depends on continuous residence and transit history; all animals undergo import inspection.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "JP-import-history",
+        "title": "Establish designated-region residence eligibility",
+        "kind": "required",
+        "timing": "Before selecting the preparation pathway",
+        "bullets": [
+          "The designated regions are Australia, New Zealand, Iceland, Fiji, Hawaii and Guam. Other parts of the United States are not designated.",
+          "For the designated pathway, establish residence since birth, continuously for the 180 days immediately before export, or continuously since direct export from Japan; otherwise use AQS's non-designated pathway."
+        ],
+        "sourceIds": [
+          "JP-free"
+        ]
+      },
+      {
+        "id": "JP-import-chip",
+        "title": "Microchip the animal before rabies preparation",
+        "kind": "required",
+        "timing": "Before the first qualifying rabies vaccination; same-day implantation before vaccination is accepted",
+        "bullets": [
+          "Use an ISO 11784/11785 15-digit microchip and have the veterinarian verify it when recording each procedure.",
+          "Consult AQS before using a non-ISO chip and arrange its reader if accepted. AQS has special notices concerning invalid or duplicate chip numbers; obtain an identity review if affected."
+        ],
+        "sourceIds": [
+          "JP-other",
+          "JP-main"
+        ]
+      },
+      {
+        "id": "JP-import-rabies",
+        "title": "Complete qualifying rabies vaccinations",
+        "kind": "conditional",
+        "timing": "First dose at age 91 days or older; second at least 30 days later and within the first dose's validity",
+        "bullets": [
+          "Required for the non-designated pathway, including animals departing a designated region without its required residence history.",
+          "Use accepted inactivated or recombinant rabies vaccines after microchipping; live and RNA vaccines are not accepted. Keep vaccinations continuously valid through arrival; a lapse can require restarting the sequence."
+        ],
+        "sourceIds": [
+          "JP-other"
+        ]
+      },
+      {
+        "id": "JP-import-titer",
+        "title": "Obtain the antibody result and complete the waiting period",
+        "kind": "conditional",
+        "timing": "Sample after the second qualifying dose; arrival at least 180 days after sampling, with sampling day counted as day zero",
+        "bullets": [
+          "For the non-designated pathway, use an AQS-designated laboratory and obtain a result of at least 0.5 IU/ml; arrival must remain within the test's two-year validity and valid rabies coverage.",
+          "If arriving before the 180-day wait is complete, quarantine can cover the shortfall. Retesting and return-to-Japan exceptions require AQS assessment rather than an automatic new date calculation."
+        ],
+        "sourceIds": [
+          "JP-other"
+        ]
+      },
+      {
+        "id": "JP-import-notify",
+        "title": "Notify the arrival Animal Quarantine Service",
+        "kind": "required",
+        "timing": "At least 40 days before arrival",
+        "bullets": [
+          "Submit the advance notification through NACCS or the applicable AQS office, with the animal, route and preparation details.",
+          "Obtain the Approval of Import Inspection and report changes; an earlier arrival or different port may not be accepted merely by changing the flight booking."
+        ],
+        "sourceIds": [
+          "JP-free",
+          "JP-other"
+        ]
+      },
+      {
+        "id": "JP-import-certify",
+        "title": "Obtain the government-endorsed health certificate",
+        "kind": "required",
+        "timing": "Clinical examination within 10 days before boarding",
+        "bullets": [
+          "Have a veterinarian examine dogs and cats for rabies and dogs additionally for leptospirosis; use the applicable AQS certificate, normally Form AC for non-designated movements.",
+          "Obtain issuance or endorsement by the exporting government's veterinary authority and ensure chip, vaccine, blood-test and residence details are complete. Send a draft to AQS in advance as a planning check."
+        ],
+        "sourceIds": [
+          "JP-free",
+          "JP-other"
+        ]
+      },
+      {
+        "id": "JP-import-transport",
+        "title": "Preserve eligible transit conditions and use an accepted port",
+        "kind": "required",
+        "timing": "Before confirming the itinerary and during transit",
+        "bullets": [
+          "For the designated-region pathway transiting a non-designated region, arrange the required sealed transport or official transit certificate; an ordinary connection does not preserve eligibility automatically.",
+          "Dogs must enter through a designated dog-import port. Ask AQS about the intended port and transport arrangements, especially for cats using another port."
+        ],
+        "sourceIds": [
+          "JP-free",
+          "JP-other"
+        ]
+      },
+      {
+        "id": "JP-import-inspect",
+        "title": "Present the animal and documents for import inspection",
+        "kind": "required",
+        "timing": "On arrival; dog registration within 30 days after import",
+        "bullets": [
+          "Present the animal for microchip verification and inspection with the required original or officially accepted electronic certificates, approval and application documents.",
+          "AQS says compliant inspections can finish within 12 hours, but deficiencies can lead to extended quarantine or return; do not treat this as a guaranteed release time. Register an imported dog with the municipality and follow Japanese rabies requirements."
+        ],
+        "sourceIds": [
+          "JP-main",
+          "JP-free",
+          "JP-other"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "JP-export-prepare",
+        "title": "Complete the destination's import preparation",
+        "kind": "required",
+        "timing": "Before arranging the AQS examination",
+        "bullets": [
+          "Obtain the destination's current import conditions, permit and official certificate template, including any history-dependent rabies rules.",
+          "Complete the destination's required vaccination, tests and treatment and plan Japanese re-entry separately if the animal will return."
+        ],
+        "sourceIds": [
+          "JP-export"
+        ]
+      },
+      {
+        "id": "JP-export-apply",
+        "title": "Apply to AQS for export inspection",
+        "kind": "required",
+        "timing": "At least 14 days before the desired inspection date",
+        "bullets": [
+          "Apply through NACCS or the responsible AQS office and submit the supporting vaccination, test and destination documents.",
+          "Arrange the inspection appointment after applying; the current AQS instruction is 14 days, not the seven-day period in older guidance."
+        ],
+        "sourceIds": [
+          "JP-export"
+        ]
+      },
+      {
+        "id": "JP-export-certify",
+        "title": "Attend the export examination and collect the AQS certificate",
+        "kind": "required",
+        "timing": "Within 10 days before departure, unless the destination specifies a different examination window",
+        "bullets": [
+          "Bring the animal and original supporting documents; provide a power of attorney if a representative attends.",
+          "After a satisfactory examination and document review, obtain the AQS export quarantine certificate and any destination-specific certification; carry these for the journey."
+        ],
+        "sourceIds": [
+          "JP-export"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "Designated region, subject to residence and transit proof",
+        "countryCodes": [
+          "AU",
+          "NZ"
+        ],
+        "condition": "These country flags are insufficient alone: the designated-region residence and transit conditions must be met. Hawaii and Guam are additional regional exceptions within US.",
+        "sourceIds": [
+          "JP-free"
+        ]
+      },
+      {
+        "label": "Non-designated jurisdiction pathway",
+        "countryCodes": [
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "SG",
+          "HK",
+          "CN",
+          "TW",
+          "TH",
+          "MY",
+          "PH",
+          "US"
+        ],
+        "condition": "US excludes Hawaii and Guam when their designated-region conditions are met. Rabies vaccination, approved testing and the waiting period apply unless AQS confirms a specific return exception.",
+        "sourceIds": [
+          "JP-other"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft pending human approval; no arrival or quarantine outcome is guaranteed.",
+      "Both dogs and cats require inspection, including assistance dogs.",
+      "Biobest reports issued from 27 November 2024 through 25 June 2025 require AQS review following the laboratory's removal from the approved list.",
+      "Personal and commercial movements can have additional customs or ownership requirements beyond this animal-quarantine workflow."
+    ],
+    "gaps": [
+      "Prior Japan export, repeated titer tests, interrupted vaccination histories and flagged microchip series require individual AQS review.",
+      "Current airline breed restrictions, municipal dog rules and commercial transfer requirements are not exhaustively covered."
+    ],
+    "sources": [
+      {
+        "id": "JP-main",
+        "title": "Import and export of dogs and cats",
+        "authority": "MAFF Animal Quarantine Service",
+        "url": "https://www.maff.go.jp/aqs/english/animal/dog/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Mandatory inspection; quarantine outcomes; laboratory and chip notices."
+        ]
+      },
+      {
+        "id": "JP-free",
+        "title": "Import from designated regions",
+        "authority": "MAFF Animal Quarantine Service",
+        "url": "https://www.maff.go.jp/aqs/english/animal/dog/import-free.html",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Designated regions, residence and transit eligibility, notification, certificate and arrival procedures."
+        ]
+      },
+      {
+        "id": "JP-other",
+        "title": "Import from non-designated regions",
+        "authority": "MAFF Animal Quarantine Service",
+        "url": "https://www.maff.go.jp/aqs/english/animal/dog/import-other.html",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Microchip, rabies series, approved titer, 180-day wait, 40-day notification and certification."
+        ]
+      },
+      {
+        "id": "JP-export",
+        "title": "Export of dogs and cats",
+        "authority": "MAFF Animal Quarantine Service",
+        "url": "https://www.maff.go.jp/aqs/english/animal/dog/export.html",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Apply at least 14 days before inspection; examination and official export certificate."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CN",
+    "name": "Mainland China",
+    "overview": "Draft personal-entry pathway under GACC's one-pet-per-traveller regime. Designated-origin status, identity, certificates and inspection determine whether the ordinary 30-day quarantine requirement can be waived.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "CN-import-purpose",
+        "title": "Confirm the personal-pet entry pathway and origin status",
+        "kind": "required",
+        "timing": "Before booking transport",
+        "bullets": [
+          "The personal-entry rule permits one dog or cat per person per entry; match the traveller's name and passport details with the animal's certificate.",
+          "Establish the actual originating jurisdiction and movement history before claiming a designated-origin exemption. Cargo, multiple animals, sale or ownership-transfer movements require separate customs review."
+        ],
+        "sourceIds": [
+          "CN-gacc",
+          "CN-shanghai",
+          "CN-aphis"
+        ]
+      },
+      {
+        "id": "CN-import-chip",
+        "title": "Identify the animal with a readable microchip",
+        "kind": "required",
+        "timing": "Before preparing the final certificates",
+        "bullets": [
+          "Use an ISO 11784/11785 chip or provide a compatible reader for an accepted non-standard chip.",
+          "Record the chip number and required implantation details on the official certificate and ensure the animal, vaccination and laboratory records can be linked consistently."
+        ],
+        "sourceIds": [
+          "CN-shanghai"
+        ]
+      },
+      {
+        "id": "CN-import-rabies",
+        "title": "Document accepted rabies vaccination",
+        "kind": "required",
+        "timing": "Vaccination must remain valid on entry; follow the exporting authority's China certificate",
+        "bullets": [
+          "Obtain the official rabies vaccination documentation and use the manufacturer's stated validity rather than imposing an unsupported universal interval.",
+          "For the non-designated pathway, prepare the vaccination history needed for the antibody test. The U.S. certificate pathway specifies two lifetime doses and a currently valid dose; obtain confirmation for another origin's exact certificate terms."
+        ],
+        "sourceIds": [
+          "CN-gacc",
+          "CN-shanghai",
+          "CN-aphis"
+        ]
+      },
+      {
+        "id": "CN-import-titer",
+        "title": "Obtain approved antibody evidence for a non-designated origin",
+        "kind": "conditional",
+        "timing": "Sample no earlier than the second rabies vaccination; report valid for 1 year",
+        "bullets": [
+          "To seek exemption from quarantine for a non-designated origin, use a GACC-recognized laboratory and carry the original report with the animal's microchip identity.",
+          "Official English sources disagree between 'above 0.5' and 'at least 0.5 IU/ml'; have the receiving authority confirm acceptance of an exact 0.5 result instead of automatically marking it eligible."
+        ],
+        "sourceIds": [
+          "CN-gacc",
+          "CN-shanghai",
+          "CN-aphis"
+        ]
+      },
+      {
+        "id": "CN-import-certificate",
+        "title": "Obtain the exporting government's quarantine certificate",
+        "kind": "required",
+        "timing": "Clinical examination within 14 days before arrival",
+        "bullets": [
+          "Arrange the required health examination and official certificate, including chip details, rabies records and applicable laboratory information.",
+          "Carry the original documents or the officially accepted printed electronic certificate for that exporting authority; private veterinary records alone do not replace government certification."
+        ],
+        "sourceIds": [
+          "CN-gacc",
+          "CN-shanghai",
+          "CN-aphis"
+        ]
+      },
+      {
+        "id": "CN-import-port",
+        "title": "Choose a port that can handle the animal's quarantine outcome",
+        "kind": "required",
+        "timing": "Before confirming the flight",
+        "bullets": [
+          "If the animal will require quarantine, use a port with designated quarantine facilities; using an unsuitable port can lead to return or disposal under GACC rules.",
+          "Book for a possible 30-day quarantine if the exemption criteria are not met. Confirm the port's documentary and cargo arrangements directly rather than assuming an antibody report guarantees release."
+        ],
+        "sourceIds": [
+          "CN-gacc",
+          "CN-shanghai",
+          "CN-aphis"
+        ]
+      },
+      {
+        "id": "CN-import-inspect",
+        "title": "Declare the pet and complete entry inspection",
+        "kind": "required",
+        "timing": "On arrival; subsequent dog registration according to local rules",
+        "bullets": [
+          "Declare the animal, present its official health and rabies documents and any antibody report, and make the microchip available for inspection.",
+          "After entry, check the destination city's dog registration, breed and size restrictions; national border admission does not establish that keeping the dog is lawful in every city."
+        ],
+        "sourceIds": [
+          "CN-gacc",
+          "CN-shanghai",
+          "CN-aphis"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "CN-export-prepare",
+        "title": "Complete the destination's conditions and confirm the local Customs procedure",
+        "kind": "required",
+        "timing": "Before booking the export inspection",
+        "bullets": [
+          "Obtain the destination's import permit and certificate requirements and complete any required chip, vaccination, titer and treatment sequence.",
+          "Contact the exporting Customs office about personal versus cargo/commercial handling. The detailed online workflow verified here is Shanghai's and is not a universal national appointment deadline."
+        ],
+        "sourceIds": [
+          "CN-export"
+        ]
+      },
+      {
+        "id": "CN-export-apply",
+        "title": "Apply for the official pet export quarantine service",
+        "kind": "required",
+        "timing": "Shanghai planning guidance: apply about 10–14 days before departure, adjusted to the destination's certificate window",
+        "bullets": [
+          "For Shanghai personal exports, apply through Internet + Customs under the non-commercial pet export quarantine service with owner and pet details, pet photo and vaccination/test records.",
+          "Prepare the original passport or ID and locally required documents, including dog registration where applicable; a representative needs the required authorization."
+        ],
+        "sourceIds": [
+          "CN-export"
+        ]
+      },
+      {
+        "id": "CN-export-certify",
+        "title": "Attend the Customs inspection and obtain the export certificate",
+        "kind": "required",
+        "timing": "Within the destination's examination and certificate-validity windows",
+        "bullets": [
+          "Bring the animal and original supporting documents to the appointed Customs veterinary inspection.",
+          "Collect the official animal health certificate after approval and check the destination's validity period. Shanghai's suggested appointment and processing periods are planning estimates, not permission to depart without the certificate."
+        ],
+        "sourceIds": [
+          "CN-export"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "GACC designated jurisdictions in the catalogue",
+        "countryCodes": [
+          "GB",
+          "IE",
+          "PT",
+          "CH",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ"
+        ],
+        "condition": "Requires accepted originating-jurisdiction evidence, readable chip, official documents and satisfactory inspection. Hawaii and Guam are designated US regions; the rest of US is not.",
+        "sourceIds": [
+          "CN-shanghai",
+          "CN-gacc"
+        ]
+      },
+      {
+        "label": "Non-designated-origin titer or quarantine pathway",
+        "countryCodes": [
+          "US",
+          "CA",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "NO",
+          "AE",
+          "TW",
+          "TH",
+          "MY",
+          "PH"
+        ],
+        "condition": "US excludes qualifying Hawaii and Guam movements. A recognized laboratory report, appropriate vaccination history and inspection are needed for a quarantine exemption.",
+        "sourceIds": [
+          "CN-shanghai",
+          "CN-gacc",
+          "CN-aphis"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft pending human approval; GACC's Chinese announcement prevails over an inconsistent English summary.",
+      "The Shanghai FAQ suggests an Australian rabies-vaccination exemption, while the general GACC rule requires rabies documentation; no automatic Australian vaccine waiver is coded.",
+      "A later Shanghai FAQ's port wording appears broader than GACC's quarantine-port rule; confirm the actual port for each exemption case.",
+      "Assistance-dog exemptions require the specified documentary evidence and inspection; they are not inferred from an owner's description."
+    ],
+    "gaps": [
+      "The underlying GACC Chinese attachment was unavailable during this check; its official government republication and newer Shanghai/APHIS guidance were used.",
+      "Exact originating-country/residence proof, the 0.5 IU/ml boundary and any Australian vaccination waiver require direct confirmation.",
+      "Export procedures outside Shanghai, commercial shipments, local breed prohibitions and hybrid-cat wildlife controls require separate verification."
+    ],
+    "sources": [
+      {
+        "id": "CN-gacc",
+        "title": "GACC Announcement No. 5 of 2019: quarantine of incoming pets",
+        "authority": "GACC, republished by Beijing Government",
+        "url": "https://english.beijing.gov.cn/latest/lawsandpolicies/202104/t20210407_2346645.html",
+        "publishedOn": "2019-01-02",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Effective 1 May 2019; one dog/cat per person; official certificates; quarantine and exemption categories; quarantine ports."
+        ]
+      },
+      {
+        "id": "CN-shanghai",
+        "title": "Bringing pets into China: customs guidance",
+        "authority": "Shanghai Government / Shanghai Customs",
+        "url": "https://english.shanghai.gov.cn/en-KeepingAPetInShanghai/20240927/988d600b49964546b41d3c342e4ebdb2.html",
+        "publishedOn": "2025-10-16",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Designated jurisdictions, chip, certificate examination, antibody timing/validity and conflicting FAQ qualifications."
+        ]
+      },
+      {
+        "id": "CN-aphis",
+        "title": "Pet travel from the United States to China",
+        "authority": "USDA APHIS",
+        "url": "https://www.aphis.usda.gov/pet-travel/us-to-another-country-export/pet-travel-us-china",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "U.S.-specific China certificate; two lifetime rabies doses; at least 0.5 threshold; 14-day arrival window; port and inspection conditions."
+        ]
+      },
+      {
+        "id": "CN-export",
+        "title": "Taking pets out of China: Shanghai procedure",
+        "authority": "Shanghai Government / Shanghai Customs",
+        "url": "https://english.shanghai.gov.cn/en-Individuals-DailyLife-Pets/20260813/c1956c47aeb3469b98e172b3f49274d3.html",
+        "publishedOn": "2025-09-09",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Non-commercial online application, supporting documents, local registration, in-person inspection and official certificate; body update date differs from URL date."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "TW",
+    "name": "Taiwan",
+    "overview": "Draft APHIA import pathway. Recognized rabies-free residence, other-origin quarantine and the separately approved quarantine-waiver route have different evidence and timing requirements.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "TW-import-history",
+        "title": "Establish the animal's rabies-status and residence pathway",
+        "kind": "required",
+        "timing": "Before choosing vaccination, testing and travel dates",
+        "bullets": [
+          "For a recognized rabies-free jurisdiction, document the required continuous residence: since birth for a young animal, the preceding 180 days for an older animal, or the applicable continuous residence since Taiwan export.",
+          "If the residence or transit conditions are not met, use the rabies-infected-origin pathway even when the departure airport is in a recognized jurisdiction. Retain prior Taiwan export documents for any return exception."
+        ],
+        "sourceIds": [
+          "TW-faq"
+        ]
+      },
+      {
+        "id": "TW-import-chip-rabies",
+        "title": "Microchip and document the required rabies vaccination",
+        "kind": "required",
+        "timing": "Rabies vaccination at age 90 days or older; 30 days–1 year before import",
+        "bullets": [
+          "Record a readable microchip consistently across the vaccination, test and official health documents.",
+          "Use an inactivated vaccine or another vaccine specifically accepted by Taiwan, and keep the required vaccination valid for the planned import date."
+        ],
+        "sourceIds": [
+          "TW-faq",
+          "TW-aphis"
+        ]
+      },
+      {
+        "id": "TW-import-titer",
+        "title": "Prepare antibody evidence for the infected-origin pathway",
+        "kind": "conditional",
+        "timing": "Ordinary pathway: blood sampling 90 days–1 year before import",
+        "bullets": [
+          "Use an accepted laboratory and obtain a rabies antibody result of at least 0.5 IU/ml with matching animal identification.",
+          "Prepare for the ordinary seven-day quarantine pathway unless APHIA approves a waiver. Repeat-test chains and animals previously exported from Taiwan have separate evidence rules; do not automatically restart or waive the wait."
+        ],
+        "sourceIds": [
+          "TW-faq",
+          "TW-aphis"
+        ]
+      },
+      {
+        "id": "TW-import-waiver",
+        "title": "Apply for a quarantine waiver if its additional conditions are met",
+        "kind": "conditional",
+        "timing": "Ordinary waiver evidence: sample 180 days–1 year before import; apply at least 120 days ahead, or use the approved direct-report route with at least 20 days",
+        "bullets": [
+          "For the standard waiver route, submit the qualifying test and complete vaccination/history evidence to APHIA with the early application.",
+          "For an application closer than 120 days but at least 20 days before import, arrange the specified direct verification from the laboratory or exporting authority. Taiwan pre-export tests and continuous repeat-test histories have separate waiver rules.",
+          "Wait for APHIA's actual waiver decision; a passing result or long wait alone is not a quarantine exemption."
+        ],
+        "sourceIds": [
+          "TW-faq"
+        ]
+      },
+      {
+        "id": "TW-import-mainland",
+        "title": "Obtain the additional Mainland China import authorization",
+        "kind": "conditional",
+        "timing": "Before the animal-quarantine permit application",
+        "bullets": [
+          "For an animal from Mainland China without the qualifying Taiwan export documentation, obtain the additional Ministry of Economic Affairs / International Trade Administration authorization.",
+          "Confirm the required project-consent and import-permit sequence with the trade authority and match the animal's chip and identity across both permissions; the FAQ restricts this special route to eligible residents."
+        ],
+        "sourceIds": [
+          "TW-faq",
+          "TW-mainland"
+        ],
+        "originCodes": [
+          "CN"
+        ]
+      },
+      {
+        "id": "TW-import-permit",
+        "title": "Obtain APHIA permission and a quarantine place where required",
+        "kind": "required",
+        "timing": "Apply at least 20 days before import; earlier for waiver verification or special cases",
+        "bullets": [
+          "Apply through the pet e-permit system with identity, vaccination and applicable laboratory/history documents, choosing the appropriate quarantine or waiver pathway.",
+          "Secure any required quarantine reservation and travel within the dates on the approved permit. Do not infer availability or permit validity from a proposed flight."
+        ],
+        "sourceIds": [
+          "TW-faq",
+          "TW-portal",
+          "TW-aphis"
+        ]
+      },
+      {
+        "id": "TW-import-certificate",
+        "title": "Obtain the official export health certificate",
+        "kind": "required",
+        "timing": "Within the destination certificate's applicable validity window",
+        "bullets": [
+          "Have the exporting government's veterinary authority issue or endorse the required Taiwan certificate with chip, vaccination, test and eligible-origin declarations.",
+          "Carry the original certificate, import permit and supporting records. Verify the currently accepted certificate/permit version with APHIA, especially during the 2026 form transition."
+        ],
+        "sourceIds": [
+          "TW-faq",
+          "TW-aphis"
+        ]
+      },
+      {
+        "id": "TW-import-entry",
+        "title": "Preserve transit eligibility and present the animal for inspection",
+        "kind": "required",
+        "timing": "During transit and on arrival",
+        "bullets": [
+          "If a rabies-free-route animal transits an infected jurisdiction, use APHIA's accepted sealed-crate or official/airline transit certification procedure proving the required airport and animal-contact controls.",
+          "Declare the animal to APHIA on arrival, present the original documents and attend chip/document inspection and any ordered quarantine.",
+          "American Pit Bull Terrier, American Pit Bull and American Staffordshire Terrier are prohibited. Bengal cats need accepted F5-or-later ancestry evidence for the ordinary domestic-cat route; earlier generations are not ordinary pet imports."
+        ],
+        "sourceIds": [
+          "TW-faq"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "TW-export-prepare",
+        "title": "Check destination certification and Taiwan re-entry needs",
+        "kind": "required",
+        "timing": "Before scheduling vaccines, testing or export inspection",
+        "bullets": [
+          "Obtain the destination's import permit, certificate template and health conditions, and complete its vaccination, test and treatment sequence.",
+          "If a return to Taiwan is possible, retain export proof and discuss pre-export rabies testing and re-entry eligibility before leaving."
+        ],
+        "sourceIds": [
+          "TW-export",
+          "TW-faq"
+        ]
+      },
+      {
+        "id": "TW-export-apply",
+        "title": "Arrange APHIA export quarantine certification when required",
+        "kind": "conditional",
+        "timing": "Plan an examination within about 1 week before export, but follow the destination's exact window",
+        "bullets": [
+          "APHIA's current guidance calls for export quarantine where the destination requires Taiwan's official certificate or the animal may return to Taiwan; contact a branch or inspection station, not the head office, for the examination.",
+          "Bring the animal, owner identification, original vaccination and other destination evidence, import permit/template and transport details. A representative needs the required authorization and identification."
+        ],
+        "sourceIds": [
+          "TW-export"
+        ]
+      },
+      {
+        "id": "TW-export-certify",
+        "title": "Collect and check the official export certificate",
+        "kind": "conditional",
+        "timing": "After a satisfactory APHIA examination and before departure",
+        "bullets": [
+          "Obtain the official certificate needed for the destination or later Taiwan re-entry, checking the animal's identification and endorsements.",
+          "APHIA states that its export certificate has no single universal expiry; the destination's time limit controls. Older guidance that presents seven days as an absolute universal deadline should not override the updated page."
+        ],
+        "sourceIds": [
+          "TW-export"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "Recognized rabies-free jurisdictions in the catalogue",
+        "countryCodes": [
+          "AU",
+          "JP",
+          "NZ",
+          "NO",
+          "SG",
+          "GB"
+        ],
+        "condition": "Norway excludes Svalbard; residence and controlled-transit criteria must also be met. Hawaii and Guam are qualifying US regions, not a US-wide exemption.",
+        "sourceIds": [
+          "TW-faq"
+        ]
+      },
+      {
+        "label": "Other-origin quarantine or separately approved waiver route",
+        "countryCodes": [
+          "US",
+          "CA",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "AE",
+          "HK",
+          "CN",
+          "TH",
+          "MY",
+          "PH"
+        ],
+        "condition": "US excludes qualifying Hawaii/Guam cases. Rabies-free departure without the required history also falls into this route; Mainland China has additional trade permission.",
+        "sourceIds": [
+          "TW-faq"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft pending human approval. The 90-day sampling baseline and the 180-day waiver pathway are distinct and must not be combined into a single waiting rule.",
+      "The current APHIA FAQ identifies additional medical and special-project procedures; these are not ordinary household-pet exemptions.",
+      "APHIS's U.S. summary describes the seven-day quarantine route but does not fully describe the newer APHIA waiver options; APHIA's current conditions control."
+    ],
+    "gaps": [
+      "Some APHIA canonical pages timed out. The official e-permit FAQ PDF was readable; the current export page was read on APHIA's faw subdomain.",
+      "The 2026 certificate/permit transition was identified in APHIA search results, but the underlying revised form could not be fully inspected; verify the actual accepted version before issuing documents.",
+      "Mainland's additional trade procedure was corroborated by the current FAQ and official search text, but its dedicated page was not fully accessible.",
+      "Species/breed ancestry, special medical quarantine and commercial/ownership-transfer cases need direct APHIA review."
+    ],
+    "sources": [
+      {
+        "id": "TW-faq",
+        "title": "Frequently asked questions for importing dogs and cats, March 2026 file",
+        "authority": "APHIA pet e-permit service",
+        "url": "https://pet-epermit.aphia.gov.tw/files/other/information_146asfiledownload0_14721c.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current linked FAQ file identified as 1150310 (10 March 2026); residence, vaccines, sampling, waiver, permits, transit, breeds and Mainland conditions."
+        ]
+      },
+      {
+        "id": "TW-portal",
+        "title": "Pet import permit application",
+        "authority": "APHIA",
+        "url": "https://pet-epermit.aphia.gov.tw/Entry?Command=Apply_Addnew&sLang=2",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official application pathway and eligibility declarations."
+        ]
+      },
+      {
+        "id": "TW-mainland",
+        "title": "Importing dogs and cats from Mainland China",
+        "authority": "APHIA",
+        "url": "https://www.aphia.gov.tw/ws.php?id=16183",
+        "publishedOn": "2025-10-08",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official search text describes additional trade-consent and permit sequence; full page access failed, so detailed procedure remains a gap."
+        ]
+      },
+      {
+        "id": "TW-aphis",
+        "title": "Pet travel from the United States to Taiwan",
+        "authority": "USDA APHIS",
+        "url": "https://www.aphis.usda.gov/pet-travel/us-to-another-country-export/pet-travel-us-taiwan",
+        "publishedOn": "2025-07-30",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "U.S.-specific certificate and endorsement, antibody threshold, 90-day baseline, 20-day application and arrival originals."
+        ]
+      },
+      {
+        "id": "TW-export",
+        "title": "Dog and cat export quarantine procedure",
+        "authority": "APHIA",
+        "url": "https://faw.aphia.gov.tw/ws.php?id=13033",
+        "publishedOn": "2026-05-22",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current export triggers, branch examination, supporting documents, one-week planning recommendation and destination-controlled certificate validity."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "TH",
+    "name": "Thailand",
+    "overview": "Draft DLD dog/cat import pathway. The issued DLD conditions and transport mode govern permission, official certification and arrival inspection; permission on arrival is not available for every shipment.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "TH-import-permission",
+        "title": "Arrange DLD import permission for the transport mode",
+        "kind": "required",
+        "timing": "Advance applications generally need at least 7 working days; permit normally valid for 60 days",
+        "bullets": [
+          "Apply to the responsible Animal Quarantine Station using R1/1 and the required passport, animal photo, identity, vaccination and transport documents; Suvarnabhumi publishes its own submission channel.",
+          "Cargo requires advance permission. Current guidance allows eligible accompanied in-cabin or checked-pet applications at arrival when the full original documentation is present, but obtain station confirmation before relying on that route."
+        ],
+        "sourceIds": [
+          "TH-dld",
+          "TH-moac",
+          "TH-airport"
+        ]
+      },
+      {
+        "id": "TH-import-chip",
+        "title": "Identify the pet and assemble consistent records",
+        "kind": "required",
+        "timing": "Before the permit application and health certificate",
+        "bullets": [
+          "Provide the microchip details and English vaccination records showing the animal's breed, sex, date of birth and identifying features.",
+          "Have the veterinarian include the required vaccine and professional details and match all records to the animal and traveller; submit one complete record set per animal."
+        ],
+        "sourceIds": [
+          "TH-moac"
+        ]
+      },
+      {
+        "id": "TH-import-rabies",
+        "title": "Complete rabies vaccination and resolve the primary-dose interval",
+        "kind": "required",
+        "timing": "Primary rabies vaccination at age 12 weeks or older; confirm the 21-day deadline with the issuing station",
+        "bullets": [
+          "DLD's ministry-hosted guidance places the primary/discontinuous vaccination wait at least 21 days before departure; the Thai Consulate Los Angeles page instead says 21 days before starting the permit application.",
+          "Obtain the station's written instruction for the specific application before calculating the earliest flight. Continuously valid boosters may avoid the primary wait when the vaccination history is supplied."
+        ],
+        "sourceIds": [
+          "TH-moac",
+          "TH-la"
+        ]
+      },
+      {
+        "id": "TH-import-dog-vaccines",
+        "title": "Complete the canine vaccination and leptospirosis conditions",
+        "kind": "required",
+        "timing": "Core vaccination and primary-course timing per DLD; leptospirosis vaccine at least 21 days or negative test within 30 days before departure",
+        "bullets": [
+          "Document canine distemper, infectious hepatitis and parvovirus vaccination in addition to rabies.",
+          "Provide accepted leptospirosis vaccination, or the specified negative leptospirosis test within 30 days before departure; have DLD confirm any primary-course timing conflict with the application schedule."
+        ],
+        "sourceIds": [
+          "TH-moac",
+          "TH-la"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "TH-import-cat-vaccines",
+        "title": "Document the required feline vaccination",
+        "kind": "required",
+        "timing": "Complete the primary vaccination interval required by the issuing station",
+        "bullets": [
+          "Provide feline panleukopenia vaccination evidence in addition to rabies.",
+          "Keep the vaccination record and any continuous booster history available for the permit review; do not assume that a recently administered first dose meets the travel requirement."
+        ],
+        "sourceIds": [
+          "TH-moac",
+          "TH-la"
+        ],
+        "species": "cat"
+      },
+      {
+        "id": "TH-import-certify",
+        "title": "Obtain the official English health certificate",
+        "kind": "required",
+        "timing": "Before departure; use the validity window in DLD's approved conditions",
+        "bullets": [
+          "Have the exporting government's veterinary authority issue or endorse the health certificate and verify that it contains the required identity and health declarations.",
+          "Carry the required original official certificate, vaccination records, passport and printed permission. For U.S. exports, the current consular instruction requires arrival within 10 days of USDA endorsement; do not generalize that interval to every origin without confirmation."
+        ],
+        "sourceIds": [
+          "TH-moac",
+          "TH-la"
+        ]
+      },
+      {
+        "id": "TH-import-inspect",
+        "title": "Present the pet to the Animal Quarantine Station and Customs",
+        "kind": "required",
+        "timing": "On arrival, during the applicable passenger or cargo service hours",
+        "bullets": [
+          "Take the pet and original documents to the arrival Animal Quarantine Station for inspection and the applicable R6/R7 processing.",
+          "Complete Customs declaration and charges where applicable. Cargo clearance hours differ from accompanied-pet service; plan the itinerary with the station and do not assume release without inspection or further quarantine."
+        ],
+        "sourceIds": [
+          "TH-airport",
+          "TH-la"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "TH-export-prepare",
+        "title": "Complete the destination's import conditions",
+        "kind": "required",
+        "timing": "Before reserving the export inspection",
+        "bullets": [
+          "Obtain the destination's permit and official certificate requirements and complete the required chip, vaccinations, laboratory tests and treatments.",
+          "Contact the DLD Animal Quarantine Station handling departure about its application and examination arrangements, particularly for cargo or ownership-transfer movements."
+        ],
+        "sourceIds": [
+          "TH-airport"
+        ]
+      },
+      {
+        "id": "TH-export-apply",
+        "title": "Arrange the DLD examination and export documentation",
+        "kind": "required",
+        "timing": "For Suvarnabhumi accompanied pets: no more than 3 days before departure; confirm other ports separately",
+        "bullets": [
+          "Bring the pet, passport and vaccination evidence, with all additional destination documents, to the responsible station's export health check.",
+          "At Suvarnabhumi, the official airport guidance directs the traveller to the Animal Quarantine Station for the health certificate and export permit; do not treat the three-day instruction as a nationwide deadline."
+        ],
+        "sourceIds": [
+          "TH-airport"
+        ]
+      },
+      {
+        "id": "TH-export-depart",
+        "title": "Carry the official certificate and export permit",
+        "kind": "required",
+        "timing": "Before airline acceptance and departure",
+        "bullets": [
+          "Check that the DLD health certificate/export permit and any required destination form identify the animal consistently and remain valid on arrival.",
+          "Complete the airline and Customs departure formalities applicable to the movement, keeping original certification available for transit and destination inspection."
+        ],
+        "sourceIds": [
+          "TH-airport"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "DLD permit and origin-specific certificate review",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "CN",
+          "TW",
+          "MY",
+          "PH"
+        ],
+        "condition": "No automatic country-wide exemption is coded. The responsible station must assess the origin, residence/travel history, animal and transport mode against its issued conditions.",
+        "sourceIds": [
+          "TH-dld",
+          "TH-moac"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft pending human approval; no quarantine exemption or same-day release is promised.",
+      "The current Los Angeles consular page says no dog breeds are banned from importation, contradicting older commonly repeated Pit Bull/AmStaff bans; airline restrictions remain separate.",
+      "The detailed consular ten-day health-certificate instruction is U.S.-specific, not a verified global rule.",
+      "Sale, adoption/ownership transfer and commercial cargo may require additional trade handling beyond this personal-pet workflow."
+    ],
+    "gaps": [
+      "The official 21-day primary vaccination instructions conflict on application versus departure; the permit-issuing station must resolve the case.",
+      "A current universal non-U.S. health-certificate validity period and national export application deadline were not verified.",
+      "Nationwide breed legislation, station-specific arrival quarantine decisions and non-Suvarnabhumi export procedures require confirmation."
+    ],
+    "sources": [
+      {
+        "id": "TH-dld",
+        "title": "Animal import/export procedures",
+        "authority": "Department of Livestock Development, Animal Quarantine and Inspection",
+        "url": "https://aqi-new.dld.go.th/index.php/th/news-head/importexportthai",
+        "publishedOn": "2025-10-02",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current general R1/1 import process, advance application and entry inspection."
+        ]
+      },
+      {
+        "id": "TH-moac",
+        "title": "Guidelines for bringing dogs and cats into Thailand",
+        "authority": "Thailand Ministry of Agriculture / DLD",
+        "url": "https://www.opsmoac.go.th/dceng-regulation-files-471891791805",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "General Suvarnabhumi import instructions, identity, vaccine/test conditions, 21 days before departure, certificate, 60-day permit and transport-mode differences."
+        ]
+      },
+      {
+        "id": "TH-la",
+        "title": "Bringing pets to Thailand",
+        "authority": "Royal Thai Consulate-General Los Angeles",
+        "url": "https://thaiconsulatela.thaiembassy.org/en/publicservice/bringing-pets-to-thailand",
+        "publishedOn": "2026-02-02",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current U.S.-specific process; conflicting pre-application vaccine wait; 10-day endorsed certificate; arrival arrangements; statement on dog breeds."
+        ]
+      },
+      {
+        "id": "TH-airport",
+        "title": "Pet Travel at Suvarnabhumi",
+        "authority": "Airports of Thailand",
+        "url": "https://suvarnabhumi.airportthai.co.th/service/airport-guide/detail/Pet_Travel_BKK",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Passenger/cargo arrival permission and Customs; Suvarnabhumi export examination within three days and official export documents."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PH",
+    "name": "Philippines",
+    "overview": "Draft BAI personal-pet import pathway. Approved SPSIC terms, animal age and preparation at application, official export certification and arrival inspection all matter; several exceptions on BAI's public page need case-specific clarification.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "PH-import-scope",
+        "title": "Confirm personal-pet eligibility and animal age",
+        "kind": "required",
+        "timing": "Before applying for the SPSIC",
+        "bullets": [
+          "The personal one-time SPSIC pathway covers up to three dogs/cats combined; the animal count must match the official health certificate. Obtain the correct BAI importer authorization for commercial or ownership-transfer cases.",
+          "BAI states a minimum age of 120 days at application and excludes animals pregnant at application; a dam must have given birth at least 12 weeks before travel and have fitness certification.",
+          "The same page lists younger-animal exceptions accompanying a vaccinated mother. These conflict with its minimum-age rule: obtain BAI's written acceptance before relying on an exception."
+        ],
+        "sourceIds": [
+          "PH-import",
+          "PH-aphis",
+          "PH-charter"
+        ]
+      },
+      {
+        "id": "PH-import-chip",
+        "title": "Microchip the animal and prepare identity evidence",
+        "kind": "required",
+        "timing": "Before the import application",
+        "bullets": [
+          "Provide proof of microchip identification and a current animal photograph, with passport/owner details where required.",
+          "Use a compatible ISO chip or bring an accepted reader for a non-standard chip, and ensure identity matches the vaccine, treatment, permit and certificate records."
+        ],
+        "sourceIds": [
+          "PH-import"
+        ]
+      },
+      {
+        "id": "PH-import-rabies",
+        "title": "Complete rabies vaccination before applying",
+        "kind": "required",
+        "timing": "First vaccination at age 84 days or older and at least 14 days before SPSIC application",
+        "bullets": [
+          "Keep rabies vaccination valid through arrival and provide the vaccination evidence required by BAI. The page allows immediate travel after an annual booster when the applicable previous protection is documented.",
+          "Only use a rabies-free-origin or non-vaccinating-country exception with the official government attestation accepted by BAI; a country flag alone does not establish a waiver."
+        ],
+        "sourceIds": [
+          "PH-import"
+        ]
+      },
+      {
+        "id": "PH-import-dog-vaccines",
+        "title": "Document the required canine vaccinations",
+        "kind": "required",
+        "timing": "At least one dose at least 14 days before SPSIC application",
+        "bullets": [
+          "Provide vaccination evidence for canine distemper, infectious hepatitis, parvovirus, parainfluenza and leptospirosis.",
+          "Ensure the licensed veterinarian records the vaccine details and animal identity, and check any additional conditions printed on the approved SPSIC."
+        ],
+        "sourceIds": [
+          "PH-import"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "PH-import-cat-vaccines",
+        "title": "Document the required feline vaccinations",
+        "kind": "required",
+        "timing": "At least one dose at least 14 days before SPSIC application",
+        "bullets": [
+          "Provide vaccination evidence for feline panleukopenia, rhinotracheitis and calicivirus.",
+          "Ensure the licensed veterinarian records the vaccine details and animal identity, and check any additional conditions printed on the approved SPSIC."
+        ],
+        "sourceIds": [
+          "PH-import"
+        ],
+        "species": "cat"
+      },
+      {
+        "id": "PH-import-treatment",
+        "title": "Complete parasite treatment and obtain the SPSIC",
+        "kind": "required",
+        "timing": "Internal and external treatment 7–91 days before application; SPSIC valid for 60 days",
+        "bullets": [
+          "Have a licensed veterinarian administer and record the required internal and external parasite treatment within BAI's stated application-based window.",
+          "Apply through the official linked import-permit service with vaccination, treatment, microchip and identity evidence, and obtain approval before entry.",
+          "Read the approved SPSIC's actual dates and conditions before finalizing travel; the application is not itself permission."
+        ],
+        "sourceIds": [
+          "PH-import",
+          "PH-aphis"
+        ]
+      },
+      {
+        "id": "PH-import-certificate",
+        "title": "Obtain the exporting government's health certificate",
+        "kind": "required",
+        "timing": "Issued within 10 calendar days before export/departure",
+        "bullets": [
+          "Obtain the official Veterinary Health Certificate / Export Permit issued or endorsed by the exporting government's veterinary authority, in English or with the accepted translation.",
+          "Include the animal and owner/importer/exporter details, purpose, origin, expected arrival and the required vaccine/treatment declarations; match the SPSIC and all animal counts.",
+          "For a U.S. departure, use the APHIS-accredited veterinarian and USDA endorsement process currently specified for the Philippines."
+        ],
+        "sourceIds": [
+          "PH-import",
+          "PH-aphis"
+        ]
+      },
+      {
+        "id": "PH-import-arrival",
+        "title": "Present the original documents for entry inspection",
+        "kind": "required",
+        "timing": "On arrival",
+        "bullets": [
+          "Carry a printed approved SPSIC and original official health/export certificate and present the animal for BAI veterinary quarantine inspection.",
+          "Provide cargo airway-bill information where applicable and complete Customs and fee formalities; missing or non-compliant documentation can result in refusal or other enforcement, not automatic release."
+        ],
+        "sourceIds": [
+          "PH-import",
+          "PH-customs"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "PH-export-prepare",
+        "title": "Complete the destination's import conditions",
+        "kind": "required",
+        "timing": "Before arranging BAI export certification",
+        "bullets": [
+          "Obtain the destination's current import permit, required certificate and vaccination/test/treatment conditions, including rules dependent on earlier residence or travel.",
+          "Use a readable 15-digit chip and prepare original vaccination and destination-specific test records. Do not use the Citizen's Charter's older broad country/test table as a substitute for current destination rules."
+        ],
+        "sourceIds": [
+          "PH-export",
+          "PH-charter"
+        ]
+      },
+      {
+        "id": "PH-export-apply",
+        "title": "Apply to BAI NVQSD for official export certification",
+        "kind": "required",
+        "timing": "Before departure, within the destination's certificate window",
+        "bullets": [
+          "Submit the original licensed-veterinarian health certificate, updated vaccination records, chip details and any required antibody or other supporting results to BAI's National Veterinary Quarantine Services Division.",
+          "Use the current appointment/submission channel confirmed by BAI; the charter provides an in-person or official-email route. Arrange animal/chip verification and supply any additional destination declarations."
+        ],
+        "sourceIds": [
+          "PH-export",
+          "PH-charter"
+        ]
+      },
+      {
+        "id": "PH-export-certify",
+        "title": "Collect the BAI-endorsed export health documents",
+        "kind": "required",
+        "timing": "After document review and required verification, before travel",
+        "bullets": [
+          "Obtain the signed and officially sealed veterinary health/export documentation from BAI; a private veterinary certificate alone is not the BAI export permission.",
+          "Check the destination's validity window and carry the originals for departure, transit and arrival inspection. Published processing targets are estimates rather than a guaranteed departure clearance."
+        ],
+        "sourceIds": [
+          "PH-export",
+          "PH-charter"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "SPSIC and official origin-attestation review",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "CN",
+          "TW",
+          "TH",
+          "MY"
+        ],
+        "condition": "No automatic rabies-vaccination exemption is assigned to a country flag. BAI must accept any origin-status attestation and any relevant history under the actual SPSIC.",
+        "sourceIds": [
+          "PH-import"
+        ]
+      }
+    ],
+    "caveats": [
+      "Draft pending human approval; the SPSIC's actual terms and BAI inspection control admission.",
+      "BAI's minimum-age statement and young animals accompanying their mother provisions conflict internally; the application must not automatically approve those young animals.",
+      "The public import page is undated. APHIS's U.S.-specific Philippines page was updated on 9 September 2026, but it does not resolve all BAI-page contradictions.",
+      "Sale, adoption/ownership transfer, repeat travel, breeding and commercial movements may require a different authorization from the one-time personal-pet pathway."
+    ],
+    "gaps": [
+      "BAI must confirm any younger-animal exception and whether the intended ownership-transfer or repeat-travel purpose qualifies for a one-time SPSIC.",
+      "The accepted rabies-free origin list and required residence/history evidence were not established sufficiently to encode country-wide exemptions.",
+      "The current export page's destination-specific dynamic checklist was not fully retrievable; the 2024 Citizen's Charter supports the certification procedure but its broad destination-test table is not treated as current.",
+      "Breed-specific, hybrid/wildlife and carrier restrictions require separate confirmation."
+    ],
+    "sources": [
+      {
+        "id": "PH-import",
+        "title": "Bringing pets to the Philippines: pet import requirements",
+        "authority": "Bureau of Animal Industry",
+        "url": "https://www.bai.gov.ph/Stakeholders/PetImport",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "SPSIC, personal limits, age/pregnancy, rabies and species vaccination, application-based treatment window, certificates, arrival and conflicting young-animal exceptions."
+        ]
+      },
+      {
+        "id": "PH-aphis",
+        "title": "Pet travel from the United States to the Philippines",
+        "authority": "USDA APHIS",
+        "url": "https://www.aphis.usda.gov/pet-travel/us-to-another-country-export/pet-travel-us-philippines",
+        "publishedOn": "2026-09-09",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current U.S. certification and endorsement; personal maximum three, count consistency, permit terms and separate commercial importers."
+        ]
+      },
+      {
+        "id": "PH-export",
+        "title": "Pet export requirements",
+        "authority": "Bureau of Animal Industry",
+        "url": "https://www.bai.gov.ph/Stakeholders/PetExport",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "BAI export authority and destination-specific requirements."
+        ]
+      },
+      {
+        "id": "PH-charter",
+        "title": "BAI Citizen's Charter 2024, third edition",
+        "authority": "Bureau of Animal Industry",
+        "url": "https://www.bai.gov.ph/cc/2024%20bai%20citizen%27s%20charter.pdf",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Pet export certificate application, veterinary records, chip verification, NVQSD submission and signed/sealed certification; personal-import categories."
+        ]
+      },
+      {
+        "id": "PH-customs",
+        "title": "Pet animals and household plants",
+        "authority": "Bureau of Customs",
+        "url": "https://customs.gov.ph/pet-animals-household-plants/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Pet import SPSIC and official certificate requirements and consequences of missing documents."
+        ]
+      }
+    ]
+  }
+]

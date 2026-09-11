@@ -6,7 +6,9 @@
 
 **Target runtime:** TypeScript, React/Vinext, Cloudflare Workers
 
-**Operating mode:** Private beta with payment, review, and uploads disabled
+**Operating mode:** Local private beta; consultation manual-capture flow implemented, Stripe connection and live launch pending
+
+**Current implementation:** Section 24 supersedes earlier paid-pack and no-payment architecture proposals. Free travel tools remain available; consultation booking is enabled in policy but requires connected Stripe credentials. Approval and collection are manual operator actions, not automated application features. Uploads remain unavailable. The baseline and earlier dated sections below are retained as migration history.
 
 ## 1. Purpose and authority
 
@@ -30,6 +32,20 @@ The audited repository is a small Vinext application with:
 - Direct Cloudflare configuration for `zurtex.org` and `www.zurtex.org`, plus an unregistered local Sites configuration with no D1 or R2 binding.
 
 This stack can remain. The current product logic, content model, and operational gating cannot.
+
+### 2.1 Local implementation update — 11 September 2026
+
+The audit baseline above remains historical. The feature-branch preview now contains:
+
+- A two-stage client route form and separate in-page journey dashboard, with focus management and explicit editing that removes the obsolete result.
+- A no-store POST assessment endpoint, validated optional operating-carrier/transit/US-region fields, and fail-closed paid-feature defaults.
+- A supplied ledger snapshot at `docs/data/verification-ledger-2026-09-11.json`; `lib/route-research.ts` projects its source metadata into route-specific research questions.
+- Species-aware question/source filtering; held AE/NZ/MY/CX details withheld; operating and marketing carriers kept distinct.
+- Current-page-only state. No database, persistence, automatic email subscription, upload, personalised deadline calculation or approved regulatory rule execution.
+
+This is a research-question guide, not completion of the target deterministic rules engine below. Every current result remains `more_information_needed`. Source effective dates and human approval are explicitly absent rather than fabricated. Original `lib/route-coverage.ts` remains for compatibility and coarse preparation categorisation; its notes are no longer published by the guide.
+
+Visual implementation is governed by `DESIGN.md` and the user-directed surface brief. The live public site remains unchanged.
 
 ## 3. Architectural principles
 
@@ -462,3 +478,50 @@ The target architecture is ready for implementation when:
 7. Validation mode proves sales, review, uploads, reservations, and capture are unavailable.
 8. The Vinext and Cloudflare builds pass without replatforming.
 9. Every release has bounded scope, preview evidence, and a tested rollback.
+
+## 21. Development-only researched answer and package workspace
+
+`lib/route-answer-drafts.ts` contains the typed, versioned, **draft** corridor illustration. `getDraftRouteAnswer` scopes it to GB → FR/NL, personal movement, owner accompanying, no transit and non-cargo mode. Assumptions cover residence and one-pet context explicitly; this matcher does not prove eligibility. Sources are independent official references. `approvedBy` remains null.
+
+`app/api/assess/route.ts` attaches this separate optional object only when `draftAnswersAllowed(process.env.NODE_ENV)` is true; that function accepts only `development`. The core evaluator never adds it. Production-build API probing verified no draft field and an unchanged `more_information_needed` status. This is not a replacement for the target approved-rule publication contract.
+
+The route dashboard renders either the illustrative research answer or the existing bounded question guide. Its Ready Pack workspace consumes the same assessment. React memory holds tab and document-preparation state; neither itinerary nor preparation selections enter URLs, browser storage or additional API requests. A changed assessment remounts the workspace. Returning between guide and workspace preserves its state.
+
+Browser printing uses a separate all-sections representation, with visible source URLs, research version, assumptions, open facts and unreviewed status. It is not a server PDF generator or fulfillment service. Pagination remains to be verified in a print-capable environment before describing export as production-ready.
+
+No feature flags, payment paths, data providers, external service accounts or deployment configuration were activated by this extension. Live publishing is a separate authorized action.
+
+## 22. Dated country library and conditional checklist composition
+
+This supersedes section 21's GB/FR/NL matcher limit. Four dated JSON datasets under `lib/country-research/` contain 23 country dossiers with import and export actions, species and country applicability, origin groups, caveats, gaps and source records. Each source preserves its accessed date, publication date when known and supported claims. The library is research, not the target publication-approved rules store.
+
+`getDraftRouteAnswer` composes personal/relocation answers for known, distinct countries. It filters species, origin, destination and US arrival region; direct-only treatment exemptions do not survive an unassessed connection. History-dependent alternatives stay conditional when residence is unknown. AU/NZ unsupported direct origins produce a blocking pathway instruction rather than an eligible-looking standard checklist. Transfer/sale/adoption remain outside this composer.
+
+Entry and departure arrays stay separate. `blockingNotes` travel into both free and package/print views. `calendarRule` permits only explicitly implemented date-only calculations: primary EU rabies minimum, direct GB-issued AHC planning window and target arrival. `shiftCalendarDate` uses validated UTC calendar dates, including leap/month/year boundaries. Hour-based treatments, permit duration, calendar-month waits, earliest feasibility and actual overdue status are not calculated.
+
+The development-only API gate remains unchanged. No incoming flag can enable research in production. Core status stays `more_information_needed`, earliest feasibility stays null, and `approvedBy` stays null. Dataset tests cover all 506 ordered pairs for both species as composition tests, not regulatory validation. Additional tests cover evidence resolution, direct-only exceptions, US cat isolation, unsupported origin stops and date boundaries.
+
+The dated research documentation is the readable snapshot of these datasets. Changes require updated dossiers, conflict notes and tests; never silently relabel an automated research pass as human approval. No production deployment is authorised by this extension.
+
+
+## 23. Intent-aware preview composition — 12 September 2026
+
+MovementPurpose now additionally accepts breeding and event. Optional petCount (integer 1–20, default one for legacy requests) and ownerTravelTiming are strictly validated. Legacy minimum requests retain their parse shape. Accompaniment changes reset timing in the UI; contradictory owner-accompanied/separated timing is rejected. Assessment route facts preserve these values.
+
+lib/journey-purpose.ts separates user-friendly labels, conservative guide selection and source-backed jurisdiction notes. needsPurposeReview is not a commercial-classification engine. The development composer returns guideKind personal or purpose-review. The latter uses three planning actions and no medical deadlines or inherited personal entry sequence. The core status, null feasibility and development-only publication gate are unchanged.
+
+The GB/EU AHC origin instruction is merged into the destination certificate action with both bullet/source sets retained. Return preparation is conditional for a visit and absent for a relocation. Raw dated dossiers remain untouched historical research records.
+
+RequirementList is shared by the free plan and interactive Ready Pack. Native disclosures retain action/timing while hiding supporting paragraphs. Ready Pack printing continues to use a separate expanded representation, so collapsed interaction state cannot omit medical/source details from the printed draft. Result tabs use the installed accessible Tabs primitive. No URL, persistent storage, third-party transmission or new payment behaviour was added.
+
+## 24. Consultation booking and manual capture, 12 September 2026
+
+This revision supersedes the previous no-payment UI and paid-pack proposition. lib/consultation.ts owns the server price (500 USD cents), workflow/version, purpose labels and strict bounded booking parser. /consultation exposes the service and booking form; /consultation/booking reads verified server payment state. The free assessment, development-only research gate and in-memory tools remain unchanged.
+
+POST /api/checkout checks the dedicated CONSULTATION_BOOKING_ENABLED policy, same-origin JSON, request size, country/date/pet/purpose/availability/consent and attempt UUID. It creates a Stripe-hosted Checkout Session with capture_method manual, server-owned amount, explicit consent and journey metadata. BNPL methods that may collect upfront instalments are excluded. The attempt UUID remains stable across retries and changes when the form changes. The callback uses the requesting origin, constrained to the configured HTTPS site in live mode. An HTTP-only, same-site checkout-reference cookie supports the return status. No credentials are serialized into the page.
+
+GET /api/checkout-status requires the return reference to match that cookie. This proves reference possession, not authenticated customer identity. New consultation states validate session and PaymentIntent amount/currency/mode/workflow, manual capture, capturable/received amount and refund state. It returns only lifecycle state, test mode and card expiry where available. It never captures, approves, schedules or cancels new consultation holds. Captured payment is not displayed as a confirmed call time.
+
+The signed webhook retains automatic release only for the exact historical US$7 reservation workflow. It does not cancel or capture new consultation holds. The existing Stripe Dashboard is the operator workflow: a person checks suitability, records approval, captures or cancels, and arranges the call/recap manually. There is no public capture endpoint, automatic email sender, booking calendar, customer account, document store or invented approval flag.
+
+Production defaults remain Stripe test mode with ZURTEX_LIVE_READY false. Legacy paid flags remain disabled; the new consultation booking flag does not activate those old flows. An unavailable Stripe client produces a clear disabled-checkout state and API 503, never a simulated success. Live verification and hosting are separate steps requiring the existing account connection and launch controls.

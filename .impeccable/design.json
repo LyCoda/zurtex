@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-11T16:20:41Z",
+  "title": "Design System: Zurtex",
+  "extensions": {
+    "colorMeta": {
+      "coral": {
+        "role": "primary",
+        "displayName": "Muted Crimson"
+      },
+      "teal": {
+        "role": "secondary",
+        "displayName": "Deep Teal"
+      },
+      "sky": {
+        "role": "neutral",
+        "displayName": "Pale Aqua"
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "White"
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient",
+        "value": "0 16px 45px rgba(12, 63, 62, 0.1)",
+        "purpose": "Integrated search panel and mobile navigation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "document-scroll",
+        "value": "smooth",
+        "purpose": "CSS document scrolling; reduced-motion preferences switch scrolling to auto."
+      },
+      {
+        "name": "reduced-motion-scroll",
+        "value": "auto",
+        "purpose": "Scrolling when prefers-reduced-motion is reduce."
+      },
+      {
+        "name": "reduced-motion-duration",
+        "value": "0.01ms",
+        "purpose": "Transition and animation duration under reduced motion; animations run once."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1080px"
+      },
+      {
+        "name": "tablet",
+        "value": "820px"
+      },
+      {
+        "name": "phone",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Crimson next-step action with visible keyboard focus.",
+      "html": "<button class=\"ds-primary\" type=\"button\">Continue</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:10px 23px;border:0;border-radius:8px;background:var(--coral);color:var(--canvas);font-family:var(--font-body);font-size:1.05rem;font-weight:600;line-height:1.5;cursor:pointer}.ds-primary:hover{background:var(--coral-dark)}.ds-primary:focus-visible{outline:3px solid var(--teal);outline-offset:4px;box-shadow:none}.ds-primary:active{transform:translateY(1px)}.ds-primary:disabled{opacity:.6;cursor:wait}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined teal action for editing an existing journey.",
+      "html": "<button class=\"ds-secondary\" type=\"button\">Edit journey</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:10px 23px;border:1px solid var(--line-dark);border-radius:8px;background:var(--canvas);color:var(--teal);font-family:var(--font-body);font-size:1.05rem;font-weight:600;line-height:1.5;cursor:pointer}.ds-secondary:hover{background:var(--sky)}.ds-secondary:focus-visible{outline:3px solid var(--teal);outline-offset:4px;box-shadow:none}.ds-secondary:active{transform:translateY(1px)}.ds-secondary:disabled{opacity:.6;cursor:wait}.ds-secondary:hover{color:var(--teal-dark)}"
+    },
+    {
+      "name": "Country field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Visible label and native country selection; country fields occupy the full phone row.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-country\">Travelling from</label><select id=\"ds-country\" required><option value=\"\">Choose a country</option><option value=\"GB\">Great Britain</option><option value=\"US\">United States</option></select></div>",
+      "css": ".ds-field{width:100%;min-width:0;font-family:var(--font-body)}.ds-field label{display:block;margin-bottom:8px;color:var(--ink);font-size:1rem;font-weight:550;line-height:1.5}.ds-field select{width:100%;height:48px;min-width:0;border:1px solid var(--line-dark);border-radius:8px;padding:10px 12px;background:var(--canvas);color:var(--ink);font-family:var(--font-body);font-size:1.04rem;line-height:1.5}.ds-field select:hover{border-color:var(--teal)}.ds-field select:focus-visible{outline:3px solid var(--teal);outline-offset:4px;box-shadow:none}.ds-field:has(select:disabled){opacity:.5}@media(max-width:600px){.ds-field{grid-column:1/-1}.ds-field label{font-size:.95rem}.ds-field select{font-size:1rem;padding-left:9px}}"
+    },
+    {
+      "name": "Route guide tabs",
+      "kind": "nav",
+      "refersTo": "guide-navigation",
+      "description": "Compact result navigation; the live application uses the installed accessible Tabs primitive.",
+      "html": "<div class=\"ds-route-tabs\" role=\"tablist\" aria-label=\"Route guide sections\"><button role=\"tab\" aria-selected=\"true\">Your plan</button><button role=\"tab\" aria-selected=\"false\">Flights</button><button role=\"tab\" aria-selected=\"false\">Sources</button></div>",
+      "css": ".ds-route-tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);font-family:var(--font-body)}.ds-route-tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:12px 4px;min-height:54px;color:var(--muted-ink);font:inherit;cursor:pointer}.ds-route-tabs button[aria-selected=true]{color:var(--teal);border-bottom-color:var(--teal);font-weight:600}.ds-route-tabs button:hover{color:var(--teal)}.ds-route-tabs button:focus-visible{outline:3px solid var(--teal);outline-offset:4px}"
+    },
+    {
+      "name": "Guide introduction and status",
+      "kind": "card",
+      "refersTo": "guide-welcome",
+      "description": "Flat pale aqua introduction with a textual information-needed status.",
+      "html": "<section class=\"ds-welcome\"><span class=\"ds-status\">More information needed</span><h2>Let’s get your dog ready for the United States.</h2><p>Your pet’s records and the rules for this exact journey need checking first. No personalised deadlines have been calculated.</p></section>",
+      "css": ".ds-welcome{padding:26px 30px;border-radius:var(--radius);background:var(--sky);color:var(--body);font-family:var(--font-body)}.ds-status{display:inline-flex;margin-bottom:13px;padding:3px 9px;border-radius:5px;background:var(--warning-bg);color:var(--warning);font-size:.9rem;line-height:1.5}.ds-welcome h2{margin:0 0 12px;color:var(--ink);font-size:1.9rem;font-weight:600;line-height:1.12;letter-spacing:-.025em;text-wrap:balance}.ds-welcome p{max-width:70ch;margin:0;font-size:1.05rem;line-height:1.5}@media(max-width:600px){.ds-welcome{padding:22px}.ds-welcome h2{font-size:1.65rem}.ds-welcome p{font-size:1rem}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "For the ones who come with us.",
+    "overview": "Zurtex feels familiar, caring and clear. Its established identity combines white and pale aqua surfaces, deep teal text, muted crimson actions, Afacad typography and a circular paw mark. Real photographs of pets and their people provide the emotional connection.\n\nThis documents the user-directed restoration of the earlier Zurtex identity. The rejected navy grid, cream and orange direction is not visual authority. Tokens come from `app/globals.css`; typography is loaded in `app/layout.tsx`. Surface composition and task flow belong in `.impeccable/surfaces/app-page-tsx.md`.",
+    "keyCharacteristics": [
+      "Spacious white and pale aqua surfaces.",
+      "Friendly Afacad typography and a circular paw mark.",
+      "Crimson primary actions with teal navigation and selection.",
+      "Real pet-owner photography.",
+      "Readable questions, visible sources and honest uncertainty."
+    ],
+    "rules": [
+      {
+        "name": "The Meaningful State Rule",
+        "body": "Preserve readable state labels alongside color. A reading mark must never look or read like travel approval.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do preserve white, pale aqua, deep teal, crimson, Afacad and the circular paw identity.",
+      "Do use the existing airport pet-owner photograph and real supporting pet imagery.",
+      "Do keep both country fields full-width on phones.",
+      "Do retain visible labels, keyboard focus and reduced-motion support.",
+      "Do distinguish reading progress from confirmed requirements."
+    ],
+    "donts": [
+      "Don't restore the rejected navy grid, cream and orange identity.",
+      "Don't replace pet-owner imagery with decorative technical graphics.",
+      "Don't add fabricated palette ramps or unsupported status colors.",
+      "Don't imply that a polished result supplies travel approval, verified requirements or calculated deadlines."
+    ]
+  }
+}

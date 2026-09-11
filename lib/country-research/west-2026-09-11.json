@@ -1,0 +1,1644 @@
+[
+  {
+    "code": "US",
+    "name": "United States",
+    "overview": "DRAFT pending owner review. Federal dog entry depends on the previous six months of travel and where rabies vaccination was given. Cats follow a separate federal pathway; state and territory requirements remain additional.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "us-import-scope",
+        "title": "Identify the state or territory and the dog's travel history",
+        "kind": "planning",
+        "timing": "Before booking",
+        "bullets": [
+          "Record the final state or territory, species, age, purpose and every country visited in the preceding six months.",
+          "For dogs, any CDC high-risk-country stay changes the pathway even when the last departure airport is in a low-risk country."
+        ],
+        "sourceIds": [
+          "us-cdc-overview",
+          "us-cdc-risk"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "us-import-dog-basics",
+        "title": "Check the minimum federal dog conditions",
+        "kind": "required",
+        "timing": "Before booking; satisfied on arrival",
+        "bullets": [
+          "Every dog must be at least six months old, appear healthy and have a microchip detectable by a universal scanner.",
+          "A dog with high-risk history must have a valid rabies vaccination; an unvaccinated dog with that history cannot enter."
+        ],
+        "sourceIds": [
+          "us-cdc-low",
+          "us-cdc-overview"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "us-import-dog-low",
+        "title": "Complete the low-risk CDC form pathway if eligible",
+        "kind": "conditional",
+        "timing": "Before travel; receipt normally valid for six months",
+        "bullets": [
+          "If the dog has been only in CDC low-risk or rabies-free places throughout the preceding six months, complete its own free CDC Dog Import Form.",
+          "Carry the receipt and ensure its departure country is correct; a change of departure country or high-risk travel can require a new form. This is only the CDC document requirement."
+        ],
+        "sourceIds": [
+          "us-cdc-low"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "us-import-dog-us-vacc",
+        "title": "Use the U.S.-vaccinated high-risk return pathway if documented",
+        "kind": "conditional",
+        "timing": "Certification completed and USDA-endorsed before leaving the U.S.",
+        "bullets": [
+          "Carry the CDC Dog Import Form receipt and the specific Certification of U.S.-issued Rabies Vaccination completed by a USDA-accredited veterinarian and endorsed by USDA.",
+          "A routine rabies certificate is insufficient. Export certificates issued after 31 July 2025 cannot substitute; without qualifying pre-departure certification, CDC directs the dog to the foreign-vaccinated pathway."
+        ],
+        "sourceIds": [
+          "us-cdc-us-vacc"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "us-import-dog-foreign",
+        "title": "Prepare foreign-vaccinated dogs with high-risk history",
+        "kind": "conditional",
+        "timing": "Begin at least 60 days ahead; foreign certification within 30 days of travel",
+        "bullets": [
+          "Microchip before rabies vaccination; the first accepted dose is at age 12 weeks or older and at least 28 days before entry.",
+          "Arrange government endorsement of the Certification of Foreign Rabies Vaccination and Microchip and carry its printed version.",
+          "For a qualifying titre, sample at least 30 days after the first valid dose and at least 28 days before entry; use a CDC-approved laboratory. Continuous booster histories have a specified sampling exception.",
+          "Reserve a CDC-registered facility for examination and revaccination, plus 28-day quarantine if no valid titre; fly into its associated airport and await release before onward travel."
+        ],
+        "sourceIds": [
+          "us-cdc-foreign"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "us-import-agriculture",
+        "title": "Check APHIS animal-disease conditions",
+        "kind": "conditional",
+        "timing": "Before departure; screwworm examination within five days before shipment",
+        "bullets": [
+          "For dogs from screwworm-affected areas, obtain the prescribed government-veterinarian certificate confirming recent examination and freedom from infestation or completed treatment.",
+          "For FMD-affected origins, remove excessive dirt, hay and straw from fur and bedding; bathe at destination and separate from livestock for five days. Check current affected-area lists."
+        ],
+        "sourceIds": [
+          "us-aphis-dog"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "us-import-cat",
+        "title": "Use the separate cat pathway",
+        "kind": "required",
+        "timing": "Before departure and on arrival",
+        "bullets": [
+          "Cats must appear healthy and are subject to port inspection; illness can trigger a veterinary examination at the owner's cost.",
+          "CDC does not require a cat rabies certificate or general pet health certificate. State, territory and carrier requirements can still require vaccination or veterinary paperwork."
+        ],
+        "sourceIds": [
+          "us-cdc-animals"
+        ],
+        "species": "cat"
+      },
+      {
+        "id": "us-import-hawaii",
+        "title": "Arrange Hawaii’s island-specific entry and quarantine process",
+        "kind": "conditional",
+        "timing": "Before booking; Hawaii/Guam preparation can take months",
+        "bullets": [
+          "For Hawaii, select the actual island checklist; direct release is conditional on complete preparation, testing and paperwork. The current authority page also requires a New World Screwworm-freedom statement on required CVIs.",
+          "Use the actual island’s current checklist and confirm document, testing and arrival-inspection requirements before booking. This preview does not assess eligibility for airport release."
+        ],
+        "sourceIds": [
+          "us-hawaii",
+          "us-hawaii-checklist"
+        ],
+        "arrivalRegions": [
+          "hawaii"
+        ]
+      },
+      {
+        "id": "us-import-guam",
+        "title": "Obtain Guam’s entry permit and quarantine arrangements",
+        "kind": "conditional",
+        "timing": "Before booking; Hawaii/Guam preparation can take months",
+        "bullets": [
+          "For Guam, obtain an entry permit and the applicable origin-specific quarantine arrangements; submit the application package at least 30 days ahead and schedule the final certificate within its short validity window.",
+          "Obtain the authority’s origin-specific conditions and actual permit before fixing the flight. This preview does not establish a quarantine exemption."
+        ],
+        "sourceIds": [
+          "us-guam"
+        ],
+        "arrivalRegions": [
+          "guam"
+        ]
+      },
+      {
+        "id": "us-import-state",
+        "title": "Check the destination state’s arrival requirements",
+        "kind": "conditional",
+        "timing": "Before booking; Hawaii/Guam preparation can take months",
+        "bullets": [
+          "For other destinations, verify state/local vaccination, health-certificate and breed rules and carry all documents for inspection. Airline acceptance is a separate check.",
+          "Check the actual state or territory’s authority, not only federal entry rules. State-specific certification is not yet assessed here."
+        ],
+        "sourceIds": [
+          "us-cdc-animals",
+          "us-aphis-export"
+        ],
+        "arrivalRegions": [
+          "mainland",
+          "other"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "us-export-prepare",
+        "title": "Build the destination-specific veterinary plan",
+        "kind": "planning",
+        "timing": "As soon as travel is considered",
+        "bullets": [
+          "Contact a USDA-accredited veterinarian and obtain current destination and transit requirements.",
+          "Schedule identification, vaccines, tests, treatments and any destination import permit in the required order."
+        ],
+        "sourceIds": [
+          "us-aphis-export"
+        ]
+      },
+      {
+        "id": "us-export-endorse",
+        "title": "Obtain any required USDA-endorsed export certificate",
+        "kind": "conditional",
+        "timing": "Within the destination's certificate window; before departure",
+        "bullets": [
+          "The accredited veterinarian completes the destination certificate and submits the required evidence for USDA endorsement, normally through VEHCS.",
+          "Carry the endorsed paper certificate; allow return-shipping time where digital endorsement is not accepted. There is no single validity window for all destinations."
+        ],
+        "sourceIds": [
+          "us-aphis-export"
+        ]
+      },
+      {
+        "id": "us-export-return",
+        "title": "Preserve the dog's high-risk return option",
+        "kind": "conditional",
+        "timing": "Before the dog leaves the United States",
+        "bullets": [
+          "If high-risk-country travel is planned, have the specific U.S.-issued rabies certification completed and USDA-endorsed before departure.",
+          "Keep vaccination coverage continuous and reassess the six-month travel history for return; the export certificate alone is not the current CDC return document."
+        ],
+        "sourceIds": [
+          "us-cdc-us-vacc"
+        ],
+        "species": "dog"
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "CDC high-risk origins among the selected countries",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "MY",
+          "PH"
+        ],
+        "condition": "Any presence in one of these places within the preceding six months invokes the high-risk dog branch. Mainland China excludes Hong Kong, Macau and Taiwan.",
+        "sourceIds": [
+          "us-cdc-risk"
+        ]
+      },
+      {
+        "label": "CDC low-risk or rabies-free selected origins",
+        "countryCodes": [
+          "CA",
+          "GB",
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW"
+        ],
+        "condition": "The simpler dog branch applies only if the entire preceding six months were spent in low-risk/rabies-free places. Spain's Ceuta and Melilla are separately listed high-risk places.",
+        "sourceIds": [
+          "us-cdc-risk",
+          "us-cdc-low"
+        ]
+      }
+    ],
+    "caveats": [
+      "DRAFT pending owner review; researched guidance is not route approval.",
+      "Cargo carriage alone does not mean a commercial sale or resale movement.",
+      "Federal dog requirements must never be copied onto cats.",
+      "Hawaii and Guam require their own itinerary assessment; no local quarantine exemption is inferred from country code alone."
+    ],
+    "gaps": [
+      "State and municipal rules, breed restrictions, carrier acceptance and every bilateral/transit itinerary have not been assessed.",
+      "CDC registered-facility capacity, APHIS affected-region lists and local permit conditions must be rechecked for the actual date.",
+      "Hawaii's older FAQ contains inconsistent waiting-period statements; use the current landing page and route checklist, and obtain authority confirmation for an exemption or conflicting timing."
+    ],
+    "sources": [
+      {
+        "id": "us-cdc-overview",
+        "title": "Bringing a Dog into the U.S.",
+        "authority": "CDC",
+        "url": "https://www.cdc.gov/importation/dogs/index.html",
+        "publishedOn": "2024-08-01",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Six-month history and vaccination location determine the dog branch; unvaccinated high-risk-history dogs cannot enter."
+        ]
+      },
+      {
+        "id": "us-cdc-risk",
+        "title": "High-Risk Countries for Dog Rabies",
+        "authority": "CDC",
+        "url": "https://www.cdc.gov/importation/dogs/high-risk-countries.html",
+        "publishedOn": "2026-04-15",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current high-risk list and territorial exceptions."
+        ]
+      },
+      {
+        "id": "us-cdc-low",
+        "title": "Entry Requirements for Dogs from Dog-Rabies Free or Low-Risk Countries",
+        "authority": "CDC",
+        "url": "https://www.cdc.gov/importation/dogs/rabies-free-low-risk-countries.html",
+        "publishedOn": "2024-07-22",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Dog age, identification, health and simplified form pathway."
+        ]
+      },
+      {
+        "id": "us-cdc-us-vacc",
+        "title": "Entry Requirements for U.S.-Vaccinated Dogs from High-Risk Countries",
+        "authority": "CDC",
+        "url": "https://www.cdc.gov/importation/dogs/us-vaccinated-high-risk-countries.html",
+        "publishedOn": "2026-04-28",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Specific pre-departure USDA-endorsed certification; export-certificate substitution cutoff."
+        ]
+      },
+      {
+        "id": "us-cdc-foreign",
+        "title": "Entry Requirements for Foreign-Vaccinated Dogs from High-Risk Countries",
+        "authority": "CDC",
+        "url": "https://www.cdc.gov/importation/dogs/foreign-vaccinated-high-risk-countries.html",
+        "publishedOn": "2024-07-22",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Foreign vaccine, titre, endorsement, facility and arrival-airport requirements."
+        ]
+      },
+      {
+        "id": "us-aphis-dog",
+        "title": "Bring a Pet Dog into the United States",
+        "authority": "USDA APHIS",
+        "url": "https://www.aphis.usda.gov/pet-travel/another-country-to-us-import/dogs",
+        "publishedOn": "2026-04-01",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Screwworm and FMD conditions supplement CDC."
+        ]
+      },
+      {
+        "id": "us-cdc-animals",
+        "title": "Bringing an Animal into the U.S.",
+        "authority": "CDC",
+        "url": "https://www.cdc.gov/importation/bringing-an-animal-into-the-us/index.html",
+        "publishedOn": "2025-08-22",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Separate cat health inspection and federal rabies/certificate position; local requirements."
+        ]
+      },
+      {
+        "id": "us-hawaii",
+        "title": "Animal Quarantine Information Page",
+        "authority": "Hawaii Department of Agriculture and Biosecurity",
+        "url": "https://dab.hawaii.gov/ai/aqs/aqs-info/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Local dog/cat programs, current screwworm statement and island-specific checklists."
+        ]
+      },
+      {
+        "id": "us-hawaii-checklist",
+        "title": "Checklist 1: Direct Airport Release and 5 Day Or Less Program",
+        "authority": "Hawaii Department of Agriculture",
+        "url": "https://dab.hawaii.gov/ai/files/2023/06/Checklist-1-06.13.2023.pdf",
+        "publishedOn": "2023-06-13",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Honolulu preparation, vaccination, FAVN, waiting and document requirements."
+        ]
+      },
+      {
+        "id": "us-guam",
+        "title": "Animal Health and Animal Control: Animal Entry Permit Process and Requirements",
+        "authority": "Guam Department of Agriculture",
+        "url": "https://doag.guam.gov/animal-health-animal-control/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Entry permit, origin-specific requirements and advance submission."
+        ]
+      },
+      {
+        "id": "us-aphis-export",
+        "title": "Pet Travel Process Overview",
+        "authority": "USDA APHIS",
+        "url": "https://www.aphis.usda.gov/pet-travel/pet-travel-process-overview",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Accredited veterinarian, destination-specific preparations and USDA endorsement process."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CA",
+    "name": "Canada",
+    "overview": "DRAFT pending owner review. Personal dogs and domestic cats are assessed by age, purpose and origin. Unaccompanied young dogs have extra certification; high-risk commercial dog imports face a separate ban.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "ca-import-scope",
+        "title": "Choose the correct CFIA import scenario",
+        "kind": "planning",
+        "timing": "Before booking",
+        "bullets": [
+          "Record species, exact age on arrival, origin, ownership purpose and whether the owner accompanies the dog.",
+          "Use CFIA's pet selector and AIRS for the actual journey, including temporary visits, transit and returning Canadian pets."
+        ],
+        "sourceIds": [
+          "ca-import-selector",
+          "ca-travel"
+        ]
+      },
+      {
+        "id": "ca-import-purpose",
+        "title": "Resolve any ownership-transfer or commercial purpose",
+        "kind": "conditional",
+        "timing": "Before acquiring or booking the animal",
+        "bullets": [
+          "Adoption, fostering, resale, breeding, shows and research can fall within CFIA's commercial dog definition.",
+          "Commercial dogs from designated high-risk dog-rabies countries are prohibited regardless of age. An unaccompanied personal pet is not automatically commercial."
+        ],
+        "sourceIds": [
+          "ca-ban",
+          "ca-import-selector"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "ca-import-age",
+        "title": "Document young-animal age",
+        "kind": "conditional",
+        "timing": "At entry",
+        "bullets": [
+          "For dogs and domestic cats younger than three months, obtain veterinary proof of age; the ordinary rabies-certification requirement does not apply.",
+          "Do not infer transport fitness or an unaccompanied-puppy exemption from the rabies age exemption."
+        ],
+        "sourceIds": [
+          "ca-reference",
+          "ca-tool-detail"
+        ]
+      },
+      {
+        "id": "ca-import-rabies",
+        "title": "Arrange the applicable rabies evidence",
+        "kind": "conditional",
+        "timing": "Before departure; valid at entry",
+        "bullets": [
+          "From three months of age, prepare a current veterinarian-signed rabies certificate; CFIA-designated rabies-free origins can offer a qualifying veterinary country-status certificate instead.",
+          "Check the origin-status certificate's residence conditions, including six months or since birth for dogs. Do not substitute another country's rabies-risk list."
+        ],
+        "sourceIds": [
+          "ca-reference",
+          "ca-tool-detail"
+        ]
+      },
+      {
+        "id": "ca-import-puppy",
+        "title": "Arrange the extra certificate for an unaccompanied young dog",
+        "kind": "conditional",
+        "timing": "Veterinary examination no more than 72 hours before Canadian import",
+        "bullets": [
+          "For a personal dog under eight months travelling without its owner, obtain the additional veterinary certificate.",
+          "It must document age of at least eight weeks at examination, clinical health, transport fitness and the required distemper, hepatitis, parvovirus and parainfluenza vaccination details."
+        ],
+        "sourceIds": [
+          "ca-reference"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "ca-import-documents",
+        "title": "Check certificate detail and any special permit case",
+        "kind": "planning",
+        "timing": "Before final veterinary appointment",
+        "bullets": [
+          "Use legible English or French documents, or the accepted official translation; include identifying details, vaccine name/serial number, administration date and validity.",
+          "If vaccination is medically contraindicated or the animal has recent wild-hybrid ancestry, request CFIA's case-specific decision before travel. Do not assume that a titre or ordinary pet certificate grants an exemption."
+        ],
+        "sourceIds": [
+          "ca-tool-detail"
+        ]
+      },
+      {
+        "id": "ca-import-border",
+        "title": "Carry the records and complete arrival checks",
+        "kind": "required",
+        "timing": "On arrival; coordinate special inspections beforehand",
+        "bullets": [
+          "Present the pet and required original documents when requested for border inspection.",
+          "Check the carrier's transport rules and the destination province or municipality for additional vaccination and breed conditions before travel."
+        ],
+        "sourceIds": [
+          "ca-import-selector",
+          "ca-tool-detail"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "ca-export-prepare",
+        "title": "Obtain the destination and transit certificate requirements",
+        "kind": "planning",
+        "timing": "Well before travel",
+        "bullets": [
+          "Find the applicable negotiated CFIA export certificate and compare it with current destination requirements.",
+          "If no prescribed certificate exists, ask whether the Canadian International Health Certificate is accepted; a new negotiated certificate can take months."
+        ],
+        "sourceIds": [
+          "ca-export"
+        ]
+      },
+      {
+        "id": "ca-export-endorse",
+        "title": "Book and complete any required CFIA endorsement",
+        "kind": "conditional",
+        "timing": "Before leaving Canada; within destination timing",
+        "bullets": [
+          "Arrange required tests and treatments with the private veterinarian and book the official CFIA endorsement appointment early.",
+          "CFIA cannot endorse the export certificate after the animal has left Canada. Carry the completed destination documents and any import permit."
+        ],
+        "sourceIds": [
+          "ca-export"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "CFIA-designated rabies-free choices in the selected list",
+        "countryCodes": [
+          "AU",
+          "GB",
+          "IE",
+          "JP",
+          "NZ"
+        ],
+        "condition": "May support the prescribed country-status certificate instead of rabies vaccination evidence where that age/purpose pathway permits it; residence and certificate wording still matter.",
+        "sourceIds": [
+          "ca-import-selector",
+          "ca-reference"
+        ]
+      },
+      {
+        "label": "Other selected origins",
+        "countryCodes": [
+          "US",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO",
+          "AE",
+          "SG",
+          "HK",
+          "CN",
+          "TW",
+          "TH",
+          "MY",
+          "PH"
+        ],
+        "condition": "Use the non-rabies-free personal-pet branch and verify the separate commercial high-risk ban if purpose changes.",
+        "sourceIds": [
+          "ca-import-selector",
+          "ca-ban"
+        ]
+      }
+    ],
+    "caveats": [
+      "DRAFT pending owner review; the adult personal-pet pathway cannot be used to approve a commercial or young-unaccompanied case.",
+      "Air cargo does not by itself determine CFIA commercial status.",
+      "Domestic cats and dogs have different age and document branches; hybrid animals require separate review."
+    ],
+    "gaps": [
+      "AIRS was not executed for every bilateral origin, age, purpose and transport scenario.",
+      "The Import Reference Document mentions titre alternatives, while current pet-tool guidance sets out specific medical-exemption conditions; a titre-only case remains subject to CFIA confirmation.",
+      "Provincial/municipal breed rules, exact inspection fees and each carrier's conditions have not been assessed."
+    ],
+    "sources": [
+      {
+        "id": "ca-travel",
+        "title": "Travelling with a pet",
+        "authority": "Canadian Food Inspection Agency",
+        "url": "https://inspection.canada.ca/en/travelling-pets-food-plants/travelling-pets",
+        "publishedOn": "2026-08-14",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Import applies to transit, visits and returns; export is destination-specific."
+        ]
+      },
+      {
+        "id": "ca-import-selector",
+        "title": "Bringing animals to Canada: Importing and travelling with pets",
+        "authority": "Canadian Food Inspection Agency",
+        "url": "https://inspection.canada.ca/en/importing-food-plants-animals/pets",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Personal/commercial, age, accompaniment and origin selector; rabies-free choices."
+        ]
+      },
+      {
+        "id": "ca-reference",
+        "title": "Import Reference Document: Domestic cats and domestic dogs",
+        "authority": "Canadian Food Inspection Agency",
+        "url": "https://inspection.canada.ca/en/animal-health/terrestrial-animals/imports/import-policies/general/reference-document",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Rabies age thresholds and extra unaccompanied-dog health certification."
+        ]
+      },
+      {
+        "id": "ca-tool-detail",
+        "title": "Pet import tool content (French): personal dogs and domestic cats",
+        "authority": "Canadian Food Inspection Agency",
+        "url": "https://inspection.canada.ca/fr/importation-aliments-vegetaux-ou-animaux/animaux-compagnie/robots-test-fr",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Detailed certificate content, age proof, medical exemptions and hybrid restrictions; translated from official French text."
+        ]
+      },
+      {
+        "id": "ca-ban",
+        "title": "New measure prohibiting entry of commercial dogs from high-risk countries",
+        "authority": "Canadian Food Inspection Agency",
+        "url": "https://inspection.canada.ca/en/animal-health/terrestrial-animals/diseases/reportable/rabies/notice-industry-2022-06-28",
+        "publishedOn": "2022-06-28",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Ban effective 28 September 2022; includes adoption and applies regardless of age."
+        ]
+      },
+      {
+        "id": "ca-export",
+        "title": "Pets (dogs, cats and ferrets): Export certificates",
+        "authority": "Canadian Food Inspection Agency",
+        "url": "https://inspection.canada.ca/en/animal-health/terrestrial-animals/exports/pets",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Destination certificates, advance appointments and no endorsement after departure."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "GB",
+    "name": "Great Britain",
+    "overview": "DRAFT pending owner review. These steps cover England, Scotland and Wales, excluding Northern Ireland. Origin category, rabies preparation, approved routes and travel documents determine the personal-pet pathway.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "gb-import-scope",
+        "title": "Confirm personal travel and breed eligibility",
+        "kind": "planning",
+        "timing": "Before booking",
+        "bullets": [
+          "Keep the owner's travel within five days of the pet's journey and provide written authorisation if another person accompanies it.",
+          "Sale, rehoming, ownership transfer or more than five pets outside the event exception invoke extra rules. A banned dog type cannot enter without an existing valid Certificate of Exemption."
+        ],
+        "sourceIds": [
+          "gb-overview",
+          "gb-breeds"
+        ]
+      },
+      {
+        "id": "gb-import-route",
+        "title": "Book an approved pet route",
+        "kind": "required",
+        "timing": "Before booking; recheck shortly before departure",
+        "bullets": [
+          "Use an approved route and carrier; travel from Ireland has an approved-route exception.",
+          "Ordinary pets arriving by air travel as cargo, with separate exceptions for qualifying assistance dogs and chartered private aircraft. Confirm carrier acceptance and handling arrangements."
+        ],
+        "sourceIds": [
+          "gb-routes"
+        ]
+      },
+      {
+        "id": "gb-import-chip-vaccine",
+        "title": "Microchip and complete rabies vaccination",
+        "kind": "required",
+        "timing": "Before travel; at least 21 full days after the primary course, potentially longer",
+        "bullets": [
+          "Have the microchip implanted before or with vaccination and confirm it reads correctly. The vet needs proof the pet is at least 12 weeks old for vaccination.",
+          "Follow the vaccine's complete primary course and immunity interval; 21 days is a minimum. Keep boosters in date, since a lapse can restart preparation."
+        ],
+        "sourceIds": [
+          "gb-rabies"
+        ]
+      },
+      {
+        "id": "gb-import-titre",
+        "title": "Complete a rabies blood test for unlisted origins",
+        "kind": "conditional",
+        "timing": "Sample at least 30 days after vaccination; wait three months from sampling",
+        "bullets": [
+          "For a non-EU, unlisted origin, use an approved laboratory and obtain a result of at least 0.5 IU/ml.",
+          "Carry the result and have the sampling date recorded in the travel document. Continuous vaccination preserves a satisfactory test; any return exemption must be demonstrated."
+        ],
+        "sourceIds": [
+          "gb-blood"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "gb-import-document",
+        "title": "Obtain the correct pet travel document",
+        "kind": "required",
+        "timing": "GB health certificate: enter within ten days of issue",
+        "bullets": [
+          "Use an accepted pet passport, qualifying GB-issued AHC for a return journey, or a Great Britain pet health certificate according to origin and history.",
+          "The GB health certificate requires signature, stamp and date from an official veterinarian authorised by the exporting government; carry original records."
+        ],
+        "sourceIds": [
+          "gb-document",
+          "gb-certificate",
+          "gb-passport"
+        ]
+      },
+      {
+        "id": "gb-import-origin-extra",
+        "title": "Add the Australian or Peninsular Malaysian health evidence",
+        "kind": "conditional",
+        "timing": "Australia: previous 60 days; Malaysia test within ten days before departure",
+        "bullets": [
+          "For cats from Australia, obtain the Australian authority's certificate that the cat had no Hendra-virus exposure in the preceding 60 days.",
+          "For dogs or cats from Peninsular Malaysia, obtain government certification of no relevant pig contact or Nipah-affected holding in the preceding 60 days and a negative approved-laboratory Nipah antibody test."
+        ],
+        "sourceIds": [
+          "gb-document"
+        ],
+        "originCodes": [
+          "AU",
+          "MY"
+        ]
+      },
+      {
+        "id": "gb-import-tapeworm",
+        "title": "Have the dog treated for tapeworm",
+        "kind": "conditional",
+        "timing": "24–120 hours before arrival",
+        "bullets": [
+          "Unless arriving directly from Ireland or Norway among the selected origins, have a vet administer an approved praziquantel or equivalent Echinococcus treatment.",
+          "The vet records the product, date, time, stamp and signature in the travel document. Recalculate the window after delays."
+        ],
+        "sourceIds": [
+          "gb-tapeworm"
+        ],
+        "species": "dog",
+        "excludedOriginCodes": [
+          "IE",
+          "NO"
+        ],
+        "directOnlyOriginExemption": true
+      },
+      {
+        "id": "gb-import-arrival",
+        "title": "Sign the declaration and complete entry checks",
+        "kind": "required",
+        "timing": "Before travel and at arrival",
+        "bullets": [
+          "Sign the non-commercial declaration and carry any authorisation and evidence of the owner's travel.",
+          "Present the pet for microchip/document checks; some checks occur before boarding. For arrivals from outside the EU, arrange customs clearance before collecting the pet."
+        ],
+        "sourceIds": [
+          "gb-overview",
+          "gb-arrival"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "gb-export-eu",
+        "title": "Prepare the EU journey and obtain an AHC",
+        "kind": "conditional",
+        "timing": "After vaccine immunity; enter the EU within ten days of AHC issue",
+        "bullets": [
+          "For a GB resident travelling to the EU, obtain a new AHC from an official veterinarian for each trip; current GOV.UK guidance says a pet passport cannot replace it even if EU-issued.",
+          "The AHC supports six months of onward EU travel and re-entry to GB, subject to continuing rabies validity. Check the destination's tapeworm and arrival-point requirements."
+        ],
+        "sourceIds": [
+          "gb-source-export-eu",
+          "gb-export-ahc"
+        ],
+        "destinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      },
+      {
+        "id": "gb-export-other",
+        "title": "Arrange the destination's export certificate process",
+        "kind": "conditional",
+        "timing": "Before departure; destination-specific validity",
+        "bullets": [
+          "For a non-EU destination, use the official EHC finder and its instructions; complete the export application where required and nominate the certifying official veterinarian.",
+          "Have the vet verify the pet's identity, preparation and certificate conditions, and obtain any destination import permit. Check the exact pathway for Switzerland and Norway rather than assuming EU membership."
+        ],
+        "sourceIds": [
+          "gb-source-export-other"
+        ],
+        "excludedDestinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "GB"
+        ]
+      },
+      {
+        "id": "gb-export-return",
+        "title": "Prepare the return journey before leaving",
+        "kind": "planning",
+        "timing": "Before departure; treatment can be needed 24–120 hours before return",
+        "bullets": [
+          "Check whether the countries visited alter the return blood-test or documentation pathway.",
+          "If travelling with a dog, schedule return tapeworm treatment unless a direct-origin exception applies; keep the return document and rabies cover valid."
+        ],
+        "sourceIds": [
+          "gb-source-export-other",
+          "gb-tapeworm"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU and accepted passport-country origins",
+        "countryCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "condition": "A qualifying passport, return AHC or GB health certificate can be accepted; pet identity, vaccination, owner timing and treatment still apply.",
+        "sourceIds": [
+          "gb-document",
+          "gb-passport"
+        ]
+      },
+      {
+        "label": "Listed non-EU origins",
+        "countryCodes": [
+          "US",
+          "CA",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW",
+          "MY"
+        ],
+        "condition": "Ordinary first entry uses the GB health certificate without the unlisted-origin rabies test. Australian cats and Peninsular Malaysian dogs/cats have additional certificates.",
+        "sourceIds": [
+          "gb-document"
+        ]
+      },
+      {
+        "label": "Unlisted selected origins",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "GB health certificate plus satisfactory rabies blood test and the prescribed wait, unless a documented return exception applies.",
+        "sourceIds": [
+          "gb-document",
+          "gb-blood"
+        ]
+      }
+    ],
+    "caveats": [
+      "DRAFT pending owner review. Northern Ireland is a different jurisdiction and excluded.",
+      "Cargo carriage can remain a non-commercial personal-pet movement when the legal purpose and owner-travel conditions are met.",
+      "An EU-issued passport is not automatically valid for a GB resident's outbound EU trip under current GOV.UK guidance."
+    ],
+    "gaps": [
+      "The actual airline, approved arrival route, cargo handling and any transit-country requirements need journey-specific verification.",
+      "Banned-type assessment, exemption validity and Scotland-specific dog controls require individual review; breed labels alone do not establish eligibility.",
+      "Vaccine-brand courses, first-time versus returning travel documents and special origin certificates require document review."
+    ],
+    "sources": [
+      {
+        "id": "gb-overview",
+        "title": "Bringing your pet dog, cat or ferret to Great Britain: What you need to do",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/bring-pet-to-great-britain",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Non-commercial scope, five-day rule, declarations and banned-type entry restriction."
+        ]
+      },
+      {
+        "id": "gb-routes",
+        "title": "Travel routes for pets",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/bring-pet-to-great-britain/travel-routes-pets",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Approved routes, Ireland exception and air cargo rule."
+        ]
+      },
+      {
+        "id": "gb-rabies",
+        "title": "Rabies vaccination and boosters",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/bring-pet-to-great-britain/rabies-vaccination-and-boosters",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Microchip order, age, vaccine-specific primary courses and minimum immunity wait."
+        ]
+      },
+      {
+        "id": "gb-blood",
+        "title": "Blood tests for rabies",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/bring-pet-to-great-britain/rabies-blood-tests",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Unlisted-origin titre and three-month wait."
+        ]
+      },
+      {
+        "id": "gb-document",
+        "title": "Which pet travel document you need",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/bring-pet-to-great-britain/which-pet-travel-document",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Origin lists and Australian Hendra/Peninsular Malaysian Nipah certificate branches."
+        ]
+      },
+      {
+        "id": "gb-certificate",
+        "title": "Great Britain pet health certificate",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/bring-pet-to-great-britain/great-britain-pet-health-certificate",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official certification and ten-day entry window."
+        ]
+      },
+      {
+        "id": "gb-passport",
+        "title": "Pet passports",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/bring-pet-to-great-britain/pet-passport",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Accepted passport issuers and original documents."
+        ]
+      },
+      {
+        "id": "gb-tapeworm",
+        "title": "Tapeworm treatment for dogs",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/bring-pet-to-great-britain/tapeworm-treatment-dogs",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "24–120-hour treatment window and direct-origin exceptions."
+        ]
+      },
+      {
+        "id": "gb-arrival",
+        "title": "Arriving in Great Britain",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/bring-pet-to-great-britain/coming-back-to-great-britain",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identity/document checks and non-EU customs clearance."
+        ]
+      },
+      {
+        "id": "gb-breeds",
+        "title": "Controlling your dog in public: Banned dogs",
+        "authority": "UK Government",
+        "url": "https://www.gov.uk/control-dog-public/banned-dogs",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Banned dog types and exemption context."
+        ]
+      },
+      {
+        "id": "gb-source-export-eu",
+        "title": "Taking your pet dog, cat or ferret abroad: Travelling to an EU country",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current GB-resident AHC requirement and six-month validity."
+        ]
+      },
+      {
+        "id": "gb-export-ahc",
+        "title": "Getting an animal health certificate",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad/getting-an-animal-health-certificate",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official veterinarian, ten-day entry window and new certificate for each trip."
+        ]
+      },
+      {
+        "id": "gb-source-export-other",
+        "title": "Travelling to a non-EU country",
+        "authority": "DEFRA/APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad/travelling-to-a-noneu-country",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "EHC, export application, official veterinarian and return preparation."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CH",
+    "name": "Switzerland",
+    "overview": "DRAFT pending owner review. Switzerland distinguishes recognised European pet-passport origins, low-rabies-risk third countries and rabies-risk third countries. Direct air entry from a rabies-risk origin adds an FSVO import licence.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "ch-import-scope",
+        "title": "Confirm the personal-pet and origin pathway",
+        "kind": "planning",
+        "timing": "Before booking",
+        "bullets": [
+          "Record ownership, origin and transit history, pet count and the owner's travel dates; transfer to another person requires a different process.",
+          "An authorised companion needs the owner's written declaration, with owner travel within five days. Use FSVO's entry check and current rabies-country list."
+        ],
+        "sourceIds": [
+          "ch-main",
+          "ch-prepare",
+          "ch-list"
+        ]
+      },
+      {
+        "id": "ch-import-type",
+        "title": "Check cropped, docked and restricted animals",
+        "kind": "conditional",
+        "timing": "Before booking",
+        "bullets": [
+          "Dogs with docked tails or cropped ears are subject to an import prohibition; ask FSVO to determine any applicable temporary-visit or relocation exception before travel.",
+          "Check the destination canton's dog rules and any CITES requirements for protected species or hybrids."
+        ],
+        "sourceIds": [
+          "ch-main",
+          "ch-prepare"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "ch-import-chip",
+        "title": "Confirm identification before rabies preparation",
+        "kind": "required",
+        "timing": "Before vaccination or verification of an existing vaccination",
+        "bullets": [
+          "Have the pet's microchip scanned and match the number to vaccination and travel records.",
+          "Identification must precede the rabies vaccination relied on for entry; a document alone does not establish the required order."
+        ],
+        "sourceIds": [
+          "ch-main",
+          "ch-certificate"
+        ]
+      },
+      {
+        "id": "ch-import-vaccine",
+        "title": "Complete rabies vaccination or obtain a specific exception",
+        "kind": "required",
+        "timing": "Ordinary primary dose from 12 weeks; at least 21 days before valid entry",
+        "bullets": [
+          "Keep rabies vaccination valid throughout entry and check the completed primary course.",
+          "FSVO describes young-animal declaration pathways and narrowly justified medical permits. These are conditional exceptions, not automatic permission for an unvaccinated animal."
+        ],
+        "sourceIds": [
+          "ch-main"
+        ]
+      },
+      {
+        "id": "ch-import-titre",
+        "title": "Complete rabies-risk blood testing and waiting",
+        "kind": "conditional",
+        "timing": "At least 30 days after primary vaccination; at least 90 days before certificate issue",
+        "bullets": [
+          "For rabies-risk origins, obtain a designated-laboratory result of at least 0.5 IU/ml and preserve uninterrupted booster cover.",
+          "The current FSVO-linked 2026 certificate measures the 90-day interval to certificate issue. Sampling during a continuously valid vaccine series has a specific exception to the post-primary interval; confirm with the official certifier."
+        ],
+        "sourceIds": [
+          "ch-main",
+          "ch-certificate"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "ch-import-permit",
+        "title": "Obtain the direct-air rabies-risk import licence",
+        "kind": "conditional",
+        "timing": "Before booking final air arrangements and before entry",
+        "bullets": [
+          "For direct air entry from a rabies-risk country, apply to FSVO for the required import licence.",
+          "Confirm the permitted entry airport and licence conditions; entry through an EU country also requires compliance at that first border."
+        ],
+        "sourceIds": [
+          "ch-main"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "ch-import-document",
+        "title": "Obtain the accepted passport or official certificate",
+        "kind": "required",
+        "timing": "Third-country certificate: documentary/identity check within ten days of issue or endorsement",
+        "bullets": [
+          "Use the recognised pet passport when that pathway applies; a first-time third-country entry generally needs the official exporting-country veterinary certificate.",
+          "Use the current FSVO-linked model and required owner declaration, with certified identification, vaccination and any laboratory evidence."
+        ],
+        "sourceIds": [
+          "ch-main",
+          "ch-certificate"
+        ]
+      },
+      {
+        "id": "ch-import-arrival",
+        "title": "Use the permitted airport and declare the pet",
+        "kind": "required",
+        "timing": "On arrival; arrange handling beforehand",
+        "bullets": [
+          "For direct air travel, FSVO lists accompanied pets at Basel, Geneva or Zurich, and unaccompanied air-waybill movements at Geneva or Zurich; permit-dependent cases need specific airport confirmation.",
+          "Present third-country pets and documents at the red customs exit for the mandatory entry control."
+        ],
+        "sourceIds": [
+          "ch-main",
+          "ch-prepare"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "ch-export-prepare",
+        "title": "Check the destination and return requirements",
+        "kind": "planning",
+        "timing": "Before booking",
+        "bullets": [
+          "Obtain the destination's identification, vaccination, permit, testing and certificate requirements and include any transit country.",
+          "Prepare return requirements before leaving, especially rabies-risk testing and any direct-air re-entry licence."
+        ],
+        "sourceIds": [
+          "ch-prepare",
+          "ch-main"
+        ]
+      },
+      {
+        "id": "ch-export-certificate",
+        "title": "Arrange the passport or cantonal veterinary certificate",
+        "kind": "conditional",
+        "timing": "Within the destination's document window; before departure",
+        "bullets": [
+          "For destinations accepting it, have a Swiss-authorised veterinary practice complete the pet passport and relevant vaccination records.",
+          "If an official veterinary export certificate is needed, obtain it through the responsible cantonal veterinary service and follow the destination's format and timing."
+        ],
+        "sourceIds": [
+          "ch-main"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU and recognised European passport origins",
+        "countryCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "NO"
+        ],
+        "condition": "Recognised-passport pathway, subject to identification, rabies validity and the personal-movement rules.",
+        "sourceIds": [
+          "ch-list",
+          "ch-main"
+        ]
+      },
+      {
+        "label": "Low-risk third-country origins",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW",
+          "MY"
+        ],
+        "condition": "Current FSVO June 2026 list places these in the low-risk category; first-entry certification and route controls still apply.",
+        "sourceIds": [
+          "ch-list",
+          "ch-main"
+        ]
+      },
+      {
+        "label": "Rabies-risk selected origins",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "Not listed among low-risk origins; titre/wait and direct-air licence branches apply, subject to documented exemptions and transit history.",
+        "sourceIds": [
+          "ch-list",
+          "ch-main",
+          "ch-certificate"
+        ]
+      }
+    ],
+    "caveats": [
+      "DRAFT pending owner review; entry-check and permit decisions remain individual.",
+      "Switzerland is not an EU member; the current FSVO certificate and Swiss airport/licence conditions must be used.",
+      "Cargo mode does not alone determine commercial purpose, but air-waybill entry affects permitted Swiss airports."
+    ],
+    "gaps": [
+      "Cropped/docked-dog exceptions, all cantonal breed controls, individual medical/young-animal exemptions and licence processing times are not fully assessed.",
+      "Exact bilateral transit paths and airline acceptance have not been assessed.",
+      "FSVO's general page describes under-seven-month rabies-risk entry as prohibited; use the current certificate's date arithmetic and confirm any apparent age-boundary discrepancy with FSVO."
+    ],
+    "sources": [
+      {
+        "id": "ch-main",
+        "title": "Travelling with dogs, cats and ferrets",
+        "authority": "Swiss Federal Food Safety and Veterinary Office",
+        "url": "https://www.blv.admin.ch/en/travelling-with-dogs-cats-and-ferrets",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Swiss import branches, owner timing, documents, direct-air licence, airports and cantonal export certification."
+        ]
+      },
+      {
+        "id": "ch-prepare",
+        "title": "Preparing to travel with pets",
+        "authority": "Swiss Federal Food Safety and Veterinary Office",
+        "url": "https://www.blv.admin.ch/en/preparing-to-travel-with-pets",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Private-pet scope, destination rules, return preparation and protected-species checks."
+        ]
+      },
+      {
+        "id": "ch-list",
+        "title": "List of countries with their status regarding rabies: June 2026",
+        "authority": "Swiss Federal Food Safety and Veterinary Office",
+        "url": "https://www.blv.admin.ch/dam/en/sd-web/rGF02-RRaF0f/liste-laender-tollwut-en.pdf",
+        "publishedOn": "2026-06-12",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Recognised passport, low-risk third-country and other-country categories; full PDF retrieved and read."
+        ]
+      },
+      {
+        "id": "ch-certificate",
+        "title": "Health certificate and additional documents: non-commercial pet movements (EU 2026/705 model)",
+        "authority": "Swiss Federal Food Safety and Veterinary Office / European Commission",
+        "url": "https://www.blv.admin.ch/dam/en/sd-web/FYRakDNcIAbq/EU%202026_705%20-%20Model%20of%20health%20certificate%20-%20owners%20authorisation%20and%20declaration%20-%20non-commercial%20movements%20of%20pet%20dogs%20-%20pet%20cats%20-%20pet%20ferrets.pdf",
+        "publishedOn": "2026-04-22",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current FSVO-linked model: identification, 90 days before issue for applicable titre, ten-day certificate validity and owner declarations."
+        ]
+      }
+    ]
+  },
+  {
+    "code": "NO",
+    "name": "Norway",
+    "overview": "DRAFT pending owner review. Mainland Norway uses a non-commercial personal-pet pathway with origin-specific documents, dog tapeworm treatment and restricted entry points for many third countries. Its official 2026 notice says the new EU framework is not yet automatically applicable.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "no-import-scope",
+        "title": "Confirm ownership, history and mainland destination",
+        "kind": "planning",
+        "timing": "Before booking",
+        "bullets": [
+          "Confirm mainland Norway, pet count, no ownership transfer, and owner travel within five days of the animal; carry written authority when a companion transports it.",
+          "Former stray dogs or cats need evidence of ownership and control for at least six months. Unknown background or a shelter history requires separate scrutiny."
+        ],
+        "sourceIds": [
+          "no-eu",
+          "no-third",
+          "no-strays"
+        ]
+      },
+      {
+        "id": "no-import-breed",
+        "title": "Check dog breed and type restrictions",
+        "kind": "conditional",
+        "timing": "Before booking",
+        "bullets": [
+          "Norway bans Pit Bull Terrier, American Staffordshire Terrier, Fila Brasileiro, Tosa Inu, Dogo Argentino and Czechoslovakian Wolfdog, including crosses; wolf-dog hybrids also require special attention.",
+          "Ask the police about any suspected restricted type or exceptional case before travel. Ordinary veterinary compliance does not establish breed eligibility."
+        ],
+        "sourceIds": [
+          "no-breeds"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "no-import-chip",
+        "title": "Confirm identity before vaccination",
+        "kind": "required",
+        "timing": "Before rabies vaccination",
+        "bullets": [
+          "Use an ISO-compatible microchip or bring a reader capable of reading a non-standard chip.",
+          "A clearly readable tattoo is accepted only if applied before 3 July 2011; the identity marking must precede the rabies vaccination."
+        ],
+        "sourceIds": [
+          "no-eu"
+        ]
+      },
+      {
+        "id": "no-import-rabies",
+        "title": "Complete and document rabies vaccination",
+        "kind": "required",
+        "timing": "First vaccination at 12 weeks or older; at least 21 days after the primary course",
+        "bullets": [
+          "Have an authorised veterinarian vaccinate and document the vaccine's validity in the travel document.",
+          "A booster given within existing validity avoids a new primary waiting period; a lapse restarts it. The Sweden-only exception is outside the selected origins."
+        ],
+        "sourceIds": [
+          "no-eu"
+        ]
+      },
+      {
+        "id": "no-import-titre",
+        "title": "Resolve the third-country titre branch",
+        "kind": "conditional",
+        "timing": "When required: sample at least 30 days after vaccination and at least three months before entry",
+        "bullets": [
+          "For an unlisted third-country journey, obtain an approved-laboratory rabies antibody result of at least 0.5 IU/ml and carry the report.",
+          "Listed-origin and protected-transit exceptions exist. Confirm the actual origin/transit category using Norway's current guide; missing travel or vaccine history does not establish an exception."
+        ],
+        "sourceIds": [
+          "no-third"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH"
+        ]
+      },
+      {
+        "id": "no-import-document",
+        "title": "Obtain the correct passport or official certificate",
+        "kind": "required",
+        "timing": "Before departure; within the accepted document's validity window",
+        "bullets": [
+          "From the EU, use a qualifying pet passport; third-country travel normally needs the approved health certificate. Switzerland and qualifying returning EEA pets have passport alternatives.",
+          "Obtain government issuance or endorsement when a third-country health certificate is required and attach the owner declaration and supporting veterinary records."
+        ],
+        "sourceIds": [
+          "no-eu",
+          "no-third",
+          "no-certificate"
+        ]
+      },
+      {
+        "id": "no-import-tapeworm",
+        "title": "Schedule the dog's tapeworm treatment",
+        "kind": "conditional",
+        "timing": "24–120 hours before entry; alternative recurring regime only if fully established",
+        "bullets": [
+          "Have a veterinarian administer and record the required Echinococcus treatment; direct travel from Ireland among the selected origins is exempt.",
+          "Frequent EU travellers may use the documented 28-day regime: two preparatory treatments, continued maximum 28-day intervals and a final treatment after the last return. Cats do not require this treatment."
+        ],
+        "sourceIds": [
+          "no-tapeworm"
+        ],
+        "species": "dog",
+        "excludedOriginCodes": [
+          "IE"
+        ],
+        "directOnlyOriginExemption": true
+      },
+      {
+        "id": "no-import-arrival",
+        "title": "Use the right border crossing and present the pet",
+        "kind": "required",
+        "timing": "Before booking; notify the veterinary border point preferably at least 48 hours ahead",
+        "bullets": [
+          "For EU arrivals and Switzerland, use the applicable border route and present the pet and records to customs; use the red channel.",
+          "Most other third-country arrivals must enter through Oslo Airport or Storskog and undergo Norwegian Food Safety Authority checks. Ask about safeguards and notify the entry point in advance to avoid waiting."
+        ],
+        "sourceIds": [
+          "no-third",
+          "no-customs"
+        ]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "no-export-plan",
+        "title": "Obtain the destination-specific departure instructions",
+        "kind": "planning",
+        "timing": "Well before booking veterinary appointments",
+        "bullets": [
+          "Contact the Norwegian Food Safety Authority and the destination veterinary authority about the required passport, export certificate, endorsements, tests and permits.",
+          "Give the vet the complete itinerary and prepare the destination requirements and Norwegian return requirements together."
+        ],
+        "sourceIds": [
+          "no-customs",
+          "no-export-health"
+        ]
+      },
+      {
+        "id": "no-export-document",
+        "title": "Complete the document and treatments accepted by the destination",
+        "kind": "conditional",
+        "timing": "Before departure; destination-specific vaccine and certificate deadlines",
+        "bullets": [
+          "Where the destination accepts a Norwegian pet passport, have an authorised vet check identification, vaccine validity and any timed treatments.",
+          "Where an official export certificate is required, confirm its format and issuance appointment with the Norwegian Food Safety Authority before the final examination; no universal export deadline is established by this draft."
+        ],
+        "sourceIds": [
+          "no-eu",
+          "no-customs",
+          "no-export-health"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU selected origins",
+        "countryCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ],
+        "condition": "Norway's EU-origin personal-pet passport pathway applies, subject to identity, vaccination, ownership timing and dog treatment; Ireland's treatment exemption requires direct travel.",
+        "sourceIds": [
+          "no-eu",
+          "no-tapeworm"
+        ]
+      },
+      {
+        "label": "Switzerland",
+        "countryCodes": [
+          "CH"
+        ],
+        "condition": "Accepted passport alternative and all-border-crossings exception are specifically listed by Norway; vaccination and dog treatment still apply.",
+        "sourceIds": [
+          "no-third"
+        ]
+      },
+      {
+        "label": "Other selected third-country origins",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "CN",
+          "TW",
+          "TH",
+          "MY",
+          "PH"
+        ],
+        "condition": "Use Norway's country guide to determine listed versus unlisted status, certificate exceptions and transit conditions. Most direct entries use Oslo Airport or Storskog. No automatic titre exemption is assigned from this grouping.",
+        "sourceIds": [
+          "no-third",
+          "no-transition"
+        ]
+      }
+    ],
+    "caveats": [
+      "DRAFT pending owner review. Svalbard is excluded and has separate rules.",
+      "The 23 April 2026 official notice says Norway's existing private-pet requirements remain in force while EU-rule incorporation is considered; anticipated autumn timing is not proof of implementation.",
+      "Commercial/ownership-transfer movements and more-than-five-pet cases outside the event exception are not covered by the ordinary pathway."
+    ],
+    "gaps": [
+      "A final date-specific check of Norwegian EEA incorporation is required before publication or travel; the retrieved official notice anticipates autumn 2026.",
+      "Norway's linked European country list now redirects to the EU 2026 list while Norwegian guidance still cites 577/2013; exact listed/unlisted mapping must be confirmed in the current Norwegian country guide.",
+      "The approved certificate's complete visual fields and validity instructions need checking with the issuing authority; the older official example contains image-based pages.",
+      "The exact Norwegian non-EEA export-certificate booking/endorsement workflow was not established for each destination; the draft requires NFSA coordination rather than inventing a universal deadline.",
+      "Airline acceptance, police exemptions, specific former-stray evidence and every transit itinerary have not been assessed."
+    ],
+    "sources": [
+      {
+        "id": "no-eu",
+        "title": "Travelling with dogs, cats and ferrets from EU-countries to Norway",
+        "authority": "Norwegian Food Safety Authority",
+        "url": "https://www.mattilsynet.no/en/animals/travelling-with-dogs-cats-and-ferrets-from-eu-countries-to-norway",
+        "publishedOn": "2023-08-03",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Personal movement, owner timing, identification, rabies and passport."
+        ]
+      },
+      {
+        "id": "no-third",
+        "title": "Travelling with dogs, cats and ferrets from third countries and territories to Norway",
+        "authority": "Norwegian Food Safety Authority",
+        "url": "https://www.mattilsynet.no/en/animals/travelling-with-dogs-cats-and-ferrets-from-third-countries-and-territories-to-norway",
+        "publishedOn": "2023-12-06",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Third-country titre, documents, passport alternatives and limited arrival points."
+        ]
+      },
+      {
+        "id": "no-tapeworm",
+        "title": "Mandatory treatment for echinococcosis for dogs imported to Norway",
+        "authority": "Norwegian Food Safety Authority",
+        "url": "https://www.mattilsynet.no/en/animals/mandatory-treatment-for-echinococcosis-for-dogs-imported-to-norway",
+        "publishedOn": "2023-12-05",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Dog-only treatment, direct-origin exemptions and 28-day regime."
+        ]
+      },
+      {
+        "id": "no-breeds",
+        "title": "Banned dogs (breeds) in Norway",
+        "authority": "Norwegian Food Safety Authority",
+        "url": "https://www.mattilsynet.no/en/animals/banned-dogs",
+        "publishedOn": "2024-09-27",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Prohibited breeds, crosses, wolf hybrids and police authority."
+        ]
+      },
+      {
+        "id": "no-strays",
+        "title": "Tough requirements for the import of stray cats and dogs",
+        "authority": "Norwegian Food Safety Authority",
+        "url": "https://www.mattilsynet.no/en/animals/tough-requirements-for-the-import-of-stray-cats-and-dogs",
+        "publishedOn": "2023-04-04",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Former-stray ownership/control evidence for at least six months; full HTML retrieved directly."
+        ]
+      },
+      {
+        "id": "no-transition",
+        "title": "New EU rules currently have no consequences for people travelling with their pets to Norway",
+        "authority": "Norwegian Food Safety Authority",
+        "url": "https://www.mattilsynet.no/dyr/kjaeledyr/reise-med-kjaeledyr/nye-eu-regler-far-forelopig-ingen-konsekvenser-for-personer-som-reiser-med-kjaeledyrene-sine-mellom-norge-og-eu",
+        "publishedOn": "2026-04-23",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Norwegian requirements unchanged pending EEA incorporation; possible autumn 2026 adoption."
+        ]
+      },
+      {
+        "id": "no-certificate",
+        "title": "EU-approved health certificate for dogs, cats and ferrets: example",
+        "authority": "Norwegian Food Safety Authority",
+        "url": "https://www.mattilsynet.no/skjemaer/eu-godkjent-helsesertifikat-for-hund-katt-og-ilder-eksempel-pdf",
+        "publishedOn": "2024-05-28",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official linked model specifies issuance by government veterinarian or subsequent competent-authority endorsement."
+        ]
+      },
+      {
+        "id": "no-customs",
+        "title": "Travelling with pets to and from Norway",
+        "authority": "Norwegian Customs",
+        "url": "https://www.toll.no/en/goods/animals/travelling-with-pets-to-and-from-norway",
+        "publishedOn": "2025-11-27",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Contact NFSA for outward and inward travel; red-channel declaration."
+        ]
+      },
+      {
+        "id": "no-export-health",
+        "title": "Foreign travel with pets and bringing pets into Norway",
+        "authority": "Norwegian Veterinary Institute",
+        "url": "https://www.vetinst.no/dyr/smadyr/utenlandsreise-med-kjaeledyr-og-innforsel-av-kjaeledyr-til-norge",
+        "publishedOn": "2026-07-07",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Destination testing, treatment, documentation and return preparation; veterinarian and authority coordination."
+        ]
+      }
+    ]
+  }
+]

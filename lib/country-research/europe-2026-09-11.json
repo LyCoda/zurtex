@@ -1,0 +1,2892 @@
+[
+  {
+    "code": "IE",
+    "name": "Ireland",
+    "overview": "Personal dog and cat travel under the current EU framework, with national arrival procedures and export-certification contacts. Origin group and residence must be confirmed; choosing a departure country does not prove eligibility.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "IE-chip",
+        "title": "Microchip your pet before the rabies vaccination",
+        "kind": "required",
+        "timing": "Before the qualifying rabies vaccination",
+        "bullets": [
+          "Use an ISO 11784/11785-compatible chip, normally a 15-digit number; if it cannot be read by the standard scanner, arrange the permitted reader alternative.",
+          "The chip must be implanted or read before the vaccination relied on for travel. On the same day, identification must come first.",
+          "Keep the chip number and date on the vaccination and travel documents. An old, clearly readable tattoo made before 3 July 2011 has a narrow exception."
+        ],
+        "sourceIds": [
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "id": "IE-rabies",
+        "title": "Make sure the rabies vaccination is valid",
+        "kind": "required",
+        "timing": "At least 21 days after a first completed vaccination course",
+        "bullets": [
+          "Your pet must be at least 12 weeks old when vaccinated against rabies.",
+          "A first course needs at least 21 days before it becomes valid for travel. A booster given within the previous dose’s validity does not restart that wait.",
+          "Use the valid-from and expiry dates in the vet’s record; protection must still be valid at entry and for any onward journey."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-passports-2026"
+        ],
+        "calendarRule": "eu-primary-rabies"
+      },
+      {
+        "id": "IE-titre",
+        "title": "Arrange the rabies blood test and waiting period",
+        "kind": "required",
+        "timing": "Sample after the qualifying vaccination; at least 90 days before certificate issue",
+        "bullets": [
+          "For an unlisted-country pathway, use a laboratory approved by the EU and a result of at least 0.5 IU/ml.",
+          "For a primary course, sampling is at least 30 days after completion; the current EU rule also provides for sampling within a continuously valid vaccination series.",
+          "The sample must be at least 90 days before the animal health certificate is issued. Do not count only to the flight date.",
+          "Keep the certified lab report. A documented successful test before leaving the EU may remove the return wait if vaccinations remain continuously valid."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-groups-2026"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "IE-book",
+        "title": "Book the official veterinary certificate appointment",
+        "kind": "planning",
+        "timing": "Start arranging this several weeks ahead",
+        "bullets": [
+          "Tell the practice the first EU country you will enter and the intended arrival date.",
+          "Confirm that an official veterinarian can issue the document, or that the authorised vet’s certificate can receive the required official endorsement.",
+          "Bring the chip record, vaccination history and any required blood-test report. Booking early is planning advice, not an extra legal waiting period."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "IE-certificate",
+        "title": "Get the Animal Health Certificate issued",
+        "kind": "conditional",
+        "timing": "Within 10 days before EU entry; issue day counts as day 1",
+        "bullets": [
+          "For a first non-EU entry without a qualifying passport or return-document exception, obtain the official non-commercial animal health certificate. A qualifying existing document may replace a new certificate; GB residents still need an AHC for a new EU trip.",
+          "The certificate must cover the first EU entry point. A document signed by an unauthorised practice is not a substitute for official issue or endorsement.",
+          "For issue from 1 October 2026, use the new EU model. Onward EU validity is up to six months from the entry check, or rabies expiry if earlier.",
+          "Carry the signed non-commercial declaration; an authorised traveller also needs the owner’s written authority and evidence of the owner’s journey within five days."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-model-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "eu-certificate"
+      },
+      {
+        "id": "IE-passport",
+        "title": "Carry the accepted pet passport or onward travel document",
+        "kind": "required",
+        "timing": "Before departure and at every border check",
+        "bullets": [
+          "For a qualifying EU or passport-equivalent origin, use a valid passport issued by an authorised veterinarian.",
+          "Check the recorded chip, owner, rabies valid-from and expiry entries. EU passport issue is tied to the owner’s residence; merely possessing a passport does not prove eligibility.",
+          "A valid entry AHC may support onward EU travel within its validity. If vaccination or ownership circumstances have changed, confirm the correct document instead of assuming the old one still works."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "originCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "IE-tapeworm",
+        "title": "Have a vet give your dog the required tapeworm treatment",
+        "kind": "required",
+        "timing": "24 to 120 hours before arrival in Ireland",
+        "bullets": [
+          "A vet must administer a treatment effective against Echinococcus multilocularis, containing praziquantel or an equivalent effective substance.",
+          "Have the product, date and exact time recorded and signed in the travel document.",
+          "Direct arrival from Norway is exempt within the available country list. A cat does not need this dog-specific treatment."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "species": "dog",
+        "excludedOriginCodes": [
+          "NO"
+        ],
+        "directOnlyOriginExemption": true
+      },
+      {
+        "id": "IE-notice",
+        "title": "Arrange the Irish arrival compliance check",
+        "kind": "required",
+        "timing": "In advance of arrival, before finalising transport",
+        "bullets": [
+          "Send advance notice and arrange the required compliance check with DAFM.",
+          "Use an approved airport or port and confirm that the pet-check service can receive your journey.",
+          "An airline reservation does not book the veterinary compliance check, and cargo arrivals need specific handling arrangements."
+        ],
+        "sourceIds": [
+          "IE-entry"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "IE-entry",
+        "title": "Present your pet and documents at the EU entry check",
+        "kind": "required",
+        "timing": "On arrival at the first EU entry point",
+        "bullets": [
+          "Enter through a designated travellers’ point of entry and present the pet for the identity and document check.",
+          "Carry the original certificate, supporting vaccination and test records, and owner declaration; use the customs declaration channel where required.",
+          "The ordinary non-commercial framework is for a pet travelling with its owner, or within five days through an authorised person, without sale or transfer. Larger groups have separate rules and exceptions."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-entry-points",
+          "IE-entry"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "arrival"
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "IE-export",
+        "title": "Contact the Regional Veterinary Office about export certification",
+        "kind": "conditional",
+        "timing": "Before departure; follow the destination’s certificate and permit windows",
+        "bullets": [
+          "For destinations requiring official certification, send the current destination requirements to your Regional Veterinary Office well ahead of travel.",
+          "DAFM warns that it may be unable to sign documents without at least two months’ advance contact. Treat this as certification-service lead time, not a universal entry wait.",
+          "For qualifying EU travel, arrange an EU pet passport through an authorised vet and keep rabies entries current."
+        ],
+        "sourceIds": [
+          "IE-export"
+        ],
+        "excludedDestinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      },
+      {
+        "id": "IE-eu-departure",
+        "title": "Check the passport before travelling to another EU country",
+        "kind": "required",
+        "timing": "Before departure",
+        "bullets": [
+          "Use the pet passport or a still-valid entry certificate that supports the onward movement.",
+          "Keep the identification and rabies record consistent; the destination may also require a dog-specific tapeworm treatment.",
+          "Plan your return before leaving, especially if visiting an unlisted rabies country; a pre-departure antibody test can matter for the return pathway."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "destinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU or passport-equivalent origin",
+        "countryCodes": [
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "condition": "A qualifying passport pathway is available; owner residence, document validity and earlier movements still matter.",
+        "sourceIds": [
+          "EU-passports-2026"
+        ]
+      },
+      {
+        "label": "Listed non-EU origin",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW",
+          "MY"
+        ],
+        "condition": "For the qualifying direct pathway, an EU rabies antibody test is not required. The official certificate, chip and valid rabies vaccination remain required; residence and transit can change the pathway.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "label": "Unlisted non-EU origin",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "Plan for an approved rabies antibody test and its waiting period unless a documented return exception applies.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      }
+    ],
+    "caveats": [
+      "One personally owned dog or cat; no sale or ownership transfer. Commercial consignments and unusual animal categories require separate handling.",
+      "The selected arrival date is not evidence that vaccinations, residence, tests or permits are satisfied.",
+      "Norway and Switzerland are passport-equivalent origins for EU entry; this does not make their own import rules identical to the EU."
+    ],
+    "gaps": [
+      "DAFM pages were indexed but direct retrieval returned access errors; central EU rules verified independently. Exact arrival portal procedure, fees, current opening hours and cropped-ear conditions remain held.",
+      "Ireland means the Republic of Ireland, not Northern Ireland."
+    ],
+    "sources": [
+      {
+        "id": "EU-entry-2026",
+        "title": "Bringing a pet into the EU from a non-EU country",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/bringing-pet-eu-non-eu-country_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identification before rabies; minimum 12 weeks; primary wait 21 days",
+          "Unlisted origins: approved laboratory ≥0.5 IU/ml; sample ≥30 days after primary course and ≥90 days before certificate issue",
+          "Official certificate, entry checks, owner declaration and movement within five days; onward validity six months or rabies expiry if earlier"
+        ]
+      },
+      {
+        "id": "EU-groups-2026",
+        "title": "Listed territories and non-EU countries",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/listing-territories-and-non-eu-countries_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current Annex I and II groupings; CN TH PH absent from listed countries"
+        ]
+      },
+      {
+        "id": "EU-passports-2026",
+        "title": "EU rules on travelling with pets",
+        "authority": "Your Europe / European Union",
+        "url": "https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_en.htm",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Passport pathway for EU and specified equivalent origins; residence requirement",
+          "Dogs entering Ireland need tapeworm treatment; cats do not"
+        ]
+      },
+      {
+        "id": "EU-model-2026",
+        "title": "Implementing Regulation (EU) 2026/705",
+        "authority": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/705/oj/eng",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "New certificate model; transition for certificates issued before 1 October 2026"
+        ]
+      },
+      {
+        "id": "EU-gb-ahc",
+        "title": "Getting an animal health certificate",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad/getting-an-animal-health-certificate",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official veterinarian; bring identification and vaccination records",
+          "Ten-day entry window counts issue day as day one"
+        ]
+      },
+      {
+        "id": "EU-gb-resident",
+        "title": "New EU rules for pet travel for GB residents",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/government/news/new-eu-rules-for-pet-travel-for-gb-residents",
+        "publishedOn": "2026-04-21",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "GB-resident travellers need AHC even if holding an EU pet passport"
+        ]
+      },
+      {
+        "id": "EU-entry-points",
+        "title": "Travellers' points of entry",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/travellers-points-entry_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "National lists of designated pet entry points"
+        ]
+      },
+      {
+        "id": "IE-entry",
+        "title": "Pet travel from other countries",
+        "authority": "Department of Agriculture, Food and the Marine",
+        "url": "https://www.pettravel.gov.ie/pets/dogscatsferrets/other/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Advance notice and compliance-check appointment; designated entry points"
+        ]
+      },
+      {
+        "id": "IE-export",
+        "title": "Pet travel: imports and exports",
+        "authority": "Department of Agriculture, Food and the Marine",
+        "url": "https://www.gov.ie/en/department-of-agriculture-food-and-the-marine/publications/pet-travel/",
+        "publishedOn": "2026-05-13",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Contact Regional Veterinary Office early for export certification; department warns about less than two months notice"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "overview": "Personal dog and cat travel under the current EU framework, with national arrival procedures and export-certification contacts. Origin group and residence must be confirmed; choosing a departure country does not prove eligibility.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "FR-breed",
+        "title": "Resolve any restricted-dog conditions before booking",
+        "kind": "conditional",
+        "timing": "Before choosing transport or a travel date",
+        "bullets": [
+          "France prohibits imports of category 1 attack dogs; category 2 dogs have additional conditions.",
+          "Have the dog’s classification and any evidence of pedigree checked. A breed name alone is not a clearance decision.",
+          "Resolve applicable permits and keeping obligations before booking."
+        ],
+        "sourceIds": [
+          "FR-breeds"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "FR-chip",
+        "title": "Microchip your pet before the rabies vaccination",
+        "kind": "required",
+        "timing": "Before the qualifying rabies vaccination",
+        "bullets": [
+          "Use an ISO 11784/11785-compatible chip, normally a 15-digit number; if it cannot be read by the standard scanner, arrange the permitted reader alternative.",
+          "The chip must be implanted or read before the vaccination relied on for travel. On the same day, identification must come first.",
+          "Keep the chip number and date on the vaccination and travel documents. An old, clearly readable tattoo made before 3 July 2011 has a narrow exception."
+        ],
+        "sourceIds": [
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "id": "FR-rabies",
+        "title": "Make sure the rabies vaccination is valid",
+        "kind": "required",
+        "timing": "At least 21 days after a first completed vaccination course",
+        "bullets": [
+          "Your pet must be at least 12 weeks old when vaccinated against rabies.",
+          "A first course needs at least 21 days before it becomes valid for travel. A booster given within the previous dose’s validity does not restart that wait.",
+          "Use the valid-from and expiry dates in the vet’s record; protection must still be valid at entry and for any onward journey."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-passports-2026"
+        ],
+        "calendarRule": "eu-primary-rabies"
+      },
+      {
+        "id": "FR-titre",
+        "title": "Arrange the rabies blood test and waiting period",
+        "kind": "required",
+        "timing": "Sample after the qualifying vaccination; at least 90 days before certificate issue",
+        "bullets": [
+          "For an unlisted-country pathway, use a laboratory approved by the EU and a result of at least 0.5 IU/ml.",
+          "For a primary course, sampling is at least 30 days after completion; the current EU rule also provides for sampling within a continuously valid vaccination series.",
+          "The sample must be at least 90 days before the animal health certificate is issued. Do not count only to the flight date.",
+          "Keep the certified lab report. A documented successful test before leaving the EU may remove the return wait if vaccinations remain continuously valid."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-groups-2026"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "FR-book",
+        "title": "Book the official veterinary certificate appointment",
+        "kind": "planning",
+        "timing": "Start arranging this several weeks ahead",
+        "bullets": [
+          "Tell the practice the first EU country you will enter and the intended arrival date.",
+          "Confirm that an official veterinarian can issue the document, or that the authorised vet’s certificate can receive the required official endorsement.",
+          "Bring the chip record, vaccination history and any required blood-test report. Booking early is planning advice, not an extra legal waiting period."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "FR-certificate",
+        "title": "Get the Animal Health Certificate issued",
+        "kind": "conditional",
+        "timing": "Within 10 days before EU entry; issue day counts as day 1",
+        "bullets": [
+          "For a first non-EU entry without a qualifying passport or return-document exception, obtain the official non-commercial animal health certificate. A qualifying existing document may replace a new certificate; GB residents still need an AHC for a new EU trip.",
+          "The certificate must cover the first EU entry point. A document signed by an unauthorised practice is not a substitute for official issue or endorsement.",
+          "For issue from 1 October 2026, use the new EU model. Onward EU validity is up to six months from the entry check, or rabies expiry if earlier.",
+          "Carry the signed non-commercial declaration; an authorised traveller also needs the owner’s written authority and evidence of the owner’s journey within five days."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-model-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "eu-certificate"
+      },
+      {
+        "id": "FR-passport",
+        "title": "Carry the accepted pet passport or onward travel document",
+        "kind": "required",
+        "timing": "Before departure and at every border check",
+        "bullets": [
+          "For a qualifying EU or passport-equivalent origin, use a valid passport issued by an authorised veterinarian.",
+          "Check the recorded chip, owner, rabies valid-from and expiry entries. EU passport issue is tied to the owner’s residence; merely possessing a passport does not prove eligibility.",
+          "A valid entry AHC may support onward EU travel within its validity. If vaccination or ownership circumstances have changed, confirm the correct document instead of assuming the old one still works."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "originCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "FR-entry",
+        "title": "Present your pet and documents at the EU entry check",
+        "kind": "required",
+        "timing": "On arrival at the first EU entry point",
+        "bullets": [
+          "Enter through a designated travellers’ point of entry and present the pet for the identity and document check.",
+          "Carry the original certificate, supporting vaccination and test records, and owner declaration; use the customs declaration channel where required.",
+          "The ordinary non-commercial framework is for a pet travelling with its owner, or within five days through an authorised person, without sale or transfer. Larger groups have separate rules and exceptions."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-entry-points",
+          "FR-entry"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "arrival"
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "FR-export",
+        "title": "Arrange destination paperwork with your vet and DDPP",
+        "kind": "conditional",
+        "timing": "Before departure; follow the destination’s certificate and permit windows",
+        "bullets": [
+          "Give your vet the destination’s current certificate model and import permit conditions.",
+          "If official endorsement is required, arrange it with the competent DDPP for where your pet lives; a routine practice signature is not automatically enough.",
+          "For qualifying travel within the EU, use a correctly completed pet passport with valid rabies records."
+        ],
+        "sourceIds": [
+          "FR-export"
+        ],
+        "excludedDestinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      },
+      {
+        "id": "FR-eu-departure",
+        "title": "Check the passport before travelling to another EU country",
+        "kind": "required",
+        "timing": "Before departure",
+        "bullets": [
+          "Use the pet passport or a still-valid entry certificate that supports the onward movement.",
+          "Keep the identification and rabies record consistent; the destination may also require a dog-specific tapeworm treatment.",
+          "Plan your return before leaving, especially if visiting an unlisted rabies country; a pre-departure antibody test can matter for the return pathway."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "destinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU or passport-equivalent origin",
+        "countryCodes": [
+          "IE",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "condition": "A qualifying passport pathway is available; owner residence, document validity and earlier movements still matter.",
+        "sourceIds": [
+          "EU-passports-2026"
+        ]
+      },
+      {
+        "label": "Listed non-EU origin",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW",
+          "MY"
+        ],
+        "condition": "For the qualifying direct pathway, an EU rabies antibody test is not required. The official certificate, chip and valid rabies vaccination remain required; residence and transit can change the pathway.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "label": "Unlisted non-EU origin",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "Plan for an approved rabies antibody test and its waiting period unless a documented return exception applies.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      }
+    ],
+    "caveats": [
+      "One personally owned dog or cat; no sale or ownership transfer. Commercial consignments and unusual animal categories require separate handling.",
+      "The selected arrival date is not evidence that vaccinations, residence, tests or permits are satisfied.",
+      "Norway and Switzerland are passport-equivalent origins for EU entry; this does not make their own import rules identical to the EU."
+    ],
+    "gaps": [
+      "Some French public guidance uses annual-booster wording; current EU and Customs instructions use the vaccine’s recorded validity, not a universal annual expiry.",
+      "Mainland France only; overseas territories, category classification and local keeping obligations need a separate review."
+    ],
+    "sources": [
+      {
+        "id": "EU-entry-2026",
+        "title": "Bringing a pet into the EU from a non-EU country",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/bringing-pet-eu-non-eu-country_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identification before rabies; minimum 12 weeks; primary wait 21 days",
+          "Unlisted origins: approved laboratory ≥0.5 IU/ml; sample ≥30 days after primary course and ≥90 days before certificate issue",
+          "Official certificate, entry checks, owner declaration and movement within five days; onward validity six months or rabies expiry if earlier"
+        ]
+      },
+      {
+        "id": "EU-groups-2026",
+        "title": "Listed territories and non-EU countries",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/listing-territories-and-non-eu-countries_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current Annex I and II groupings; CN TH PH absent from listed countries"
+        ]
+      },
+      {
+        "id": "EU-passports-2026",
+        "title": "EU rules on travelling with pets",
+        "authority": "Your Europe / European Union",
+        "url": "https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_en.htm",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Passport pathway for EU and specified equivalent origins; residence requirement",
+          "Dogs entering Ireland need tapeworm treatment; cats do not"
+        ]
+      },
+      {
+        "id": "EU-model-2026",
+        "title": "Implementing Regulation (EU) 2026/705",
+        "authority": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/705/oj/eng",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "New certificate model; transition for certificates issued before 1 October 2026"
+        ]
+      },
+      {
+        "id": "EU-gb-ahc",
+        "title": "Getting an animal health certificate",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad/getting-an-animal-health-certificate",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official veterinarian; bring identification and vaccination records",
+          "Ten-day entry window counts issue day as day one"
+        ]
+      },
+      {
+        "id": "EU-gb-resident",
+        "title": "New EU rules for pet travel for GB residents",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/government/news/new-eu-rules-for-pet-travel-for-gb-residents",
+        "publishedOn": "2026-04-21",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "GB-resident travellers need AHC even if holding an EU pet passport"
+        ]
+      },
+      {
+        "id": "EU-entry-points",
+        "title": "Travellers' points of entry",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/travellers-points-entry_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "National lists of designated pet entry points"
+        ]
+      },
+      {
+        "id": "FR-entry",
+        "title": "Travelling with a dog, cat or ferret",
+        "authority": "French Customs",
+        "url": "https://www.douane.gouv.fr/demarche/vous-voyagez-avec-un-chien-chat-ou-furet",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identification, rabies, blood test and six-month onward validity under current EU regime"
+        ]
+      },
+      {
+        "id": "FR-breeds",
+        "title": "Travelling with a pet from the United Kingdom",
+        "authority": "French Customs",
+        "url": "https://www.douane.gouv.fr/fiche/royaume-uni-voyageurs-quels-criteres-et-formalites-pour-voyager-avec-votre-animal-de",
+        "publishedOn": "2026-07-31",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Customs declaration and restrictions on category 1 and category 2 dogs"
+        ]
+      },
+      {
+        "id": "FR-export",
+        "title": "Travelling abroad with a pet",
+        "authority": "Service Public",
+        "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F21374?lang=fr",
+        "publishedOn": "2026-04-28",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Destination requirements and competent departmental veterinary certification"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "overview": "Personal dog and cat travel under the current EU framework, with national arrival procedures and export-certification contacts. Origin group and residence must be confirmed; choosing a departure country does not prove eligibility.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "DE-breed",
+        "title": "Resolve any restricted-dog conditions before booking",
+        "kind": "conditional",
+        "timing": "Before choosing transport or a travel date",
+        "bullets": [
+          "German rules restrict imports of Pitbull Terriers, American Staffordshire Terriers, Staffordshire Bull Terriers, Bull Terriers and their crosses.",
+          "The destination federal state can impose further restrictions; exemptions require the correct evidence or official permission.",
+          "Check the actual classification and any claimed exception with the competent authority before travel."
+        ],
+        "sourceIds": [
+          "DE-breeds"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "DE-chip",
+        "title": "Microchip your pet before the rabies vaccination",
+        "kind": "required",
+        "timing": "Before the qualifying rabies vaccination",
+        "bullets": [
+          "Use an ISO 11784/11785-compatible chip, normally a 15-digit number; if it cannot be read by the standard scanner, arrange the permitted reader alternative.",
+          "The chip must be implanted or read before the vaccination relied on for travel. On the same day, identification must come first.",
+          "Keep the chip number and date on the vaccination and travel documents. An old, clearly readable tattoo made before 3 July 2011 has a narrow exception."
+        ],
+        "sourceIds": [
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "id": "DE-rabies",
+        "title": "Make sure the rabies vaccination is valid",
+        "kind": "required",
+        "timing": "At least 21 days after a first completed vaccination course",
+        "bullets": [
+          "Your pet must be at least 12 weeks old when vaccinated against rabies.",
+          "A first course needs at least 21 days before it becomes valid for travel. A booster given within the previous dose’s validity does not restart that wait.",
+          "Use the valid-from and expiry dates in the vet’s record; protection must still be valid at entry and for any onward journey."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-passports-2026"
+        ],
+        "calendarRule": "eu-primary-rabies"
+      },
+      {
+        "id": "DE-titre",
+        "title": "Arrange the rabies blood test and waiting period",
+        "kind": "required",
+        "timing": "Sample after the qualifying vaccination; at least 90 days before certificate issue",
+        "bullets": [
+          "For an unlisted-country pathway, use a laboratory approved by the EU and a result of at least 0.5 IU/ml.",
+          "For a primary course, sampling is at least 30 days after completion; the current EU rule also provides for sampling within a continuously valid vaccination series.",
+          "The sample must be at least 90 days before the animal health certificate is issued. Do not count only to the flight date.",
+          "Keep the certified lab report. A documented successful test before leaving the EU may remove the return wait if vaccinations remain continuously valid."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-groups-2026"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "DE-book",
+        "title": "Book the official veterinary certificate appointment",
+        "kind": "planning",
+        "timing": "Start arranging this several weeks ahead",
+        "bullets": [
+          "Tell the practice the first EU country you will enter and the intended arrival date.",
+          "Confirm that an official veterinarian can issue the document, or that the authorised vet’s certificate can receive the required official endorsement.",
+          "Bring the chip record, vaccination history and any required blood-test report. Booking early is planning advice, not an extra legal waiting period."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "DE-certificate",
+        "title": "Get the Animal Health Certificate issued",
+        "kind": "conditional",
+        "timing": "Within 10 days before EU entry; issue day counts as day 1",
+        "bullets": [
+          "For a first non-EU entry without a qualifying passport or return-document exception, obtain the official non-commercial animal health certificate. A qualifying existing document may replace a new certificate; GB residents still need an AHC for a new EU trip.",
+          "The certificate must cover the first EU entry point. A document signed by an unauthorised practice is not a substitute for official issue or endorsement.",
+          "For issue from 1 October 2026, use the new EU model. Onward EU validity is up to six months from the entry check, or rabies expiry if earlier.",
+          "Carry the signed non-commercial declaration; an authorised traveller also needs the owner’s written authority and evidence of the owner’s journey within five days."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-model-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "eu-certificate"
+      },
+      {
+        "id": "DE-passport",
+        "title": "Carry the accepted pet passport or onward travel document",
+        "kind": "required",
+        "timing": "Before departure and at every border check",
+        "bullets": [
+          "For a qualifying EU or passport-equivalent origin, use a valid passport issued by an authorised veterinarian.",
+          "Check the recorded chip, owner, rabies valid-from and expiry entries. EU passport issue is tied to the owner’s residence; merely possessing a passport does not prove eligibility.",
+          "A valid entry AHC may support onward EU travel within its validity. If vaccination or ownership circumstances have changed, confirm the correct document instead of assuming the old one still works."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "originCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "DE-entry",
+        "title": "Present your pet and documents at the EU entry check",
+        "kind": "required",
+        "timing": "On arrival at the first EU entry point",
+        "bullets": [
+          "Enter through a designated travellers’ point of entry and present the pet for the identity and document check.",
+          "Carry the original certificate, supporting vaccination and test records, and owner declaration; use the customs declaration channel where required.",
+          "The ordinary non-commercial framework is for a pet travelling with its owner, or within five days through an authorised person, without sale or transfer. Larger groups have separate rules and exceptions."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-entry-points",
+          "DE-entry"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "arrival"
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "DE-export",
+        "title": "Arrange official certification with your local veterinary authority",
+        "kind": "conditional",
+        "timing": "Before departure; follow the destination’s certificate and permit windows",
+        "bullets": [
+          "Take the destination’s certificate model and any import permit to your vet before booking the final examination.",
+          "Where official certification is required, contact the Veterinäramt responsible for where the pet is kept.",
+          "Bring the vaccination record and any required test or examination reports. Berlin’s published process is a local example; appointment procedures vary by district."
+        ],
+        "sourceIds": [
+          "DE-export"
+        ],
+        "excludedDestinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      },
+      {
+        "id": "DE-eu-departure",
+        "title": "Check the passport before travelling to another EU country",
+        "kind": "required",
+        "timing": "Before departure",
+        "bullets": [
+          "Use the pet passport or a still-valid entry certificate that supports the onward movement.",
+          "Keep the identification and rabies record consistent; the destination may also require a dog-specific tapeworm treatment.",
+          "Plan your return before leaving, especially if visiting an unlisted rabies country; a pre-departure antibody test can matter for the return pathway."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "destinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU or passport-equivalent origin",
+        "countryCodes": [
+          "IE",
+          "FR",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "condition": "A qualifying passport pathway is available; owner residence, document validity and earlier movements still matter.",
+        "sourceIds": [
+          "EU-passports-2026"
+        ]
+      },
+      {
+        "label": "Listed non-EU origin",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW",
+          "MY"
+        ],
+        "condition": "For the qualifying direct pathway, an EU rabies antibody test is not required. The official certificate, chip and valid rabies vaccination remain required; residence and transit can change the pathway.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "label": "Unlisted non-EU origin",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "Plan for an approved rabies antibody test and its waiting period unless a documented return exception applies.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      }
+    ],
+    "caveats": [
+      "One personally owned dog or cat; no sale or ownership transfer. Commercial consignments and unusual animal categories require separate handling.",
+      "The selected arrival date is not evidence that vaccinations, residence, tests or permits are satisfied.",
+      "Norway and Switzerland are passport-equivalent origins for EU entry; this does not make their own import rules identical to the EU."
+    ],
+    "gaps": [
+      "German Customs text was available through the official search index but direct retrieval failed; breed rules were cross-checked with the Federal Foreign Office. Individual statutory exemptions were not exhaustively reviewed.",
+      "State-level dog restrictions, registration and tax are not exhaustively represented."
+    ],
+    "sources": [
+      {
+        "id": "EU-entry-2026",
+        "title": "Bringing a pet into the EU from a non-EU country",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/bringing-pet-eu-non-eu-country_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identification before rabies; minimum 12 weeks; primary wait 21 days",
+          "Unlisted origins: approved laboratory ≥0.5 IU/ml; sample ≥30 days after primary course and ≥90 days before certificate issue",
+          "Official certificate, entry checks, owner declaration and movement within five days; onward validity six months or rabies expiry if earlier"
+        ]
+      },
+      {
+        "id": "EU-groups-2026",
+        "title": "Listed territories and non-EU countries",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/listing-territories-and-non-eu-countries_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current Annex I and II groupings; CN TH PH absent from listed countries"
+        ]
+      },
+      {
+        "id": "EU-passports-2026",
+        "title": "EU rules on travelling with pets",
+        "authority": "Your Europe / European Union",
+        "url": "https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_en.htm",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Passport pathway for EU and specified equivalent origins; residence requirement",
+          "Dogs entering Ireland need tapeworm treatment; cats do not"
+        ]
+      },
+      {
+        "id": "EU-model-2026",
+        "title": "Implementing Regulation (EU) 2026/705",
+        "authority": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/705/oj/eng",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "New certificate model; transition for certificates issued before 1 October 2026"
+        ]
+      },
+      {
+        "id": "EU-gb-ahc",
+        "title": "Getting an animal health certificate",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad/getting-an-animal-health-certificate",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official veterinarian; bring identification and vaccination records",
+          "Ten-day entry window counts issue day as day one"
+        ]
+      },
+      {
+        "id": "EU-gb-resident",
+        "title": "New EU rules for pet travel for GB residents",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/government/news/new-eu-rules-for-pet-travel-for-gb-residents",
+        "publishedOn": "2026-04-21",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "GB-resident travellers need AHC even if holding an EU pet passport"
+        ]
+      },
+      {
+        "id": "EU-entry-points",
+        "title": "Travellers' points of entry",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/travellers-points-entry_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "National lists of designated pet entry points"
+        ]
+      },
+      {
+        "id": "DE-entry",
+        "title": "Travelling with animals",
+        "authority": "German Federal Foreign Office",
+        "url": "https://dublin.diplo.de/ie-en/2398582-2398582",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Pet identification and documents; dangerous-dog import restrictions"
+        ]
+      },
+      {
+        "id": "DE-breeds",
+        "title": "Dangerous dogs",
+        "authority": "German Customs",
+        "url": "https://www.zoll.de/DE/Privatpersonen/Reisen/Rueckkehr-aus-einem-Nicht-EU-Staat/Einschraenkungen/Gefaehrliche-Hunde/gefaehrliche_hunde.html",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Pitbull Terrier, American Staffordshire Terrier, Staffordshire Bull Terrier, Bull Terrier and crosses restricted; state rules additional"
+        ]
+      },
+      {
+        "id": "DE-export",
+        "title": "Animal health certificates",
+        "authority": "Service Portal Berlin",
+        "url": "https://service.berlin.de/dienstleistung/326275/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Competent authority where animal kept; destination certificate forms and vaccination/examination evidence; local service example"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands",
+    "overview": "Personal dog and cat travel under the current EU framework, with national arrival procedures and export-certification contacts. Origin group and residence must be confirmed; choosing a departure country does not prove eligibility.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "NL-chip",
+        "title": "Microchip your pet before the rabies vaccination",
+        "kind": "required",
+        "timing": "Before the qualifying rabies vaccination",
+        "bullets": [
+          "Use an ISO 11784/11785-compatible chip, normally a 15-digit number; if it cannot be read by the standard scanner, arrange the permitted reader alternative.",
+          "The chip must be implanted or read before the vaccination relied on for travel. On the same day, identification must come first.",
+          "Keep the chip number and date on the vaccination and travel documents. An old, clearly readable tattoo made before 3 July 2011 has a narrow exception."
+        ],
+        "sourceIds": [
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "id": "NL-rabies",
+        "title": "Make sure the rabies vaccination is valid",
+        "kind": "required",
+        "timing": "At least 21 days after a first completed vaccination course",
+        "bullets": [
+          "Your pet must be at least 12 weeks old when vaccinated against rabies.",
+          "A first course needs at least 21 days before it becomes valid for travel. A booster given within the previous dose’s validity does not restart that wait.",
+          "Use the valid-from and expiry dates in the vet’s record; protection must still be valid at entry and for any onward journey."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-passports-2026"
+        ],
+        "calendarRule": "eu-primary-rabies"
+      },
+      {
+        "id": "NL-titre",
+        "title": "Arrange the rabies blood test and waiting period",
+        "kind": "required",
+        "timing": "Sample after the qualifying vaccination; at least 90 days before certificate issue",
+        "bullets": [
+          "For an unlisted-country pathway, use a laboratory approved by the EU and a result of at least 0.5 IU/ml.",
+          "For a primary course, sampling is at least 30 days after completion; the current EU rule also provides for sampling within a continuously valid vaccination series.",
+          "The sample must be at least 90 days before the animal health certificate is issued. Do not count only to the flight date.",
+          "Keep the certified lab report. A documented successful test before leaving the EU may remove the return wait if vaccinations remain continuously valid."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-groups-2026"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "NL-book",
+        "title": "Book the official veterinary certificate appointment",
+        "kind": "planning",
+        "timing": "Start arranging this several weeks ahead",
+        "bullets": [
+          "Tell the practice the first EU country you will enter and the intended arrival date.",
+          "Confirm that an official veterinarian can issue the document, or that the authorised vet’s certificate can receive the required official endorsement.",
+          "Bring the chip record, vaccination history and any required blood-test report. Booking early is planning advice, not an extra legal waiting period."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "NL-nipah",
+        "title": "Get the Peninsular Malaysia Nipah evidence",
+        "kind": "required",
+        "timing": "Negative blood sample within 10 days before export",
+        "bullets": [
+          "The certificate must attest no contact with pigs during the previous 60 days and no residence on holdings with Nipah during that period.",
+          "Use the required negative IgG ELISA Nipah test at an approved laboratory.",
+          "Give the lab report and residence evidence to the certifying official vet; ordinary rabies paperwork does not replace these attestations."
+        ],
+        "sourceIds": [
+          "NL-entry"
+        ],
+        "originCodes": [
+          "MY"
+        ]
+      },
+      {
+        "id": "NL-hendra",
+        "title": "Document your cat’s Australian holding history",
+        "kind": "required",
+        "timing": "Cover the 60 days before export",
+        "bullets": [
+          "The official certificate must state that the cat has not been kept on a holding where Hendra disease was confirmed during the previous 60 days.",
+          "Give the certifying vet the necessary holding history; this is an additional cat condition, not a dog requirement."
+        ],
+        "sourceIds": [
+          "NL-entry"
+        ],
+        "originCodes": [
+          "AU"
+        ],
+        "species": "cat"
+      },
+      {
+        "id": "NL-certificate",
+        "title": "Get the Animal Health Certificate issued",
+        "kind": "conditional",
+        "timing": "Within 10 days before EU entry; issue day counts as day 1",
+        "bullets": [
+          "For a first non-EU entry without a qualifying passport or return-document exception, obtain the official non-commercial animal health certificate. A qualifying existing document may replace a new certificate; GB residents still need an AHC for a new EU trip.",
+          "The certificate must cover the first EU entry point. A document signed by an unauthorised practice is not a substitute for official issue or endorsement.",
+          "For issue from 1 October 2026, use the new EU model. Onward EU validity is up to six months from the entry check, or rabies expiry if earlier.",
+          "Carry the signed non-commercial declaration; an authorised traveller also needs the owner’s written authority and evidence of the owner’s journey within five days."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-model-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "eu-certificate"
+      },
+      {
+        "id": "NL-passport",
+        "title": "Carry the accepted pet passport or onward travel document",
+        "kind": "required",
+        "timing": "Before departure and at every border check",
+        "bullets": [
+          "For a qualifying EU or passport-equivalent origin, use a valid passport issued by an authorised veterinarian.",
+          "Check the recorded chip, owner, rabies valid-from and expiry entries. EU passport issue is tied to the owner’s residence; merely possessing a passport does not prove eligibility.",
+          "A valid entry AHC may support onward EU travel within its validity. If vaccination or ownership circumstances have changed, confirm the correct document instead of assuming the old one still works."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "originCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "NL-entry",
+        "title": "Present your pet and documents at the EU entry check",
+        "kind": "required",
+        "timing": "On arrival at the first EU entry point",
+        "bullets": [
+          "Enter through a designated travellers’ point of entry and present the pet for the identity and document check.",
+          "Carry the original certificate, supporting vaccination and test records, and owner declaration; use the customs declaration channel where required.",
+          "The ordinary non-commercial framework is for a pet travelling with its owner, or within five days through an authorised person, without sale or transfer. Larger groups have separate rules and exceptions."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-entry-points",
+          "NL-entry"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "arrival"
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "NL-export",
+        "title": "Arrange any required NVWA legalisation",
+        "kind": "conditional",
+        "timing": "Before departure; follow the destination’s certificate and permit windows",
+        "bullets": [
+          "Use NVWA’s Export Assistant to find the destination’s certificate and whether legalisation is required.",
+          "If required, request a legalisation appointment at least 14 working days before the appointment date; this is not a fourteen-day departure rule.",
+          "Have the vet complete and sign the necessary records before legalisation. Follow the destination’s validity window, not a universal certificate expiry."
+        ],
+        "sourceIds": [
+          "NL-export"
+        ],
+        "excludedDestinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      },
+      {
+        "id": "NL-eu-departure",
+        "title": "Check the passport before travelling to another EU country",
+        "kind": "required",
+        "timing": "Before departure",
+        "bullets": [
+          "Use the pet passport or a still-valid entry certificate that supports the onward movement.",
+          "Keep the identification and rabies record consistent; the destination may also require a dog-specific tapeworm treatment.",
+          "Plan your return before leaving, especially if visiting an unlisted rabies country; a pre-departure antibody test can matter for the return pathway."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "destinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU or passport-equivalent origin",
+        "countryCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "condition": "A qualifying passport pathway is available; owner residence, document validity and earlier movements still matter.",
+        "sourceIds": [
+          "EU-passports-2026"
+        ]
+      },
+      {
+        "label": "Listed non-EU origin",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW",
+          "MY"
+        ],
+        "condition": "For the qualifying direct pathway, an EU rabies antibody test is not required. The official certificate, chip and valid rabies vaccination remain required; residence and transit can change the pathway.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "label": "Unlisted non-EU origin",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "Plan for an approved rabies antibody test and its waiting period unless a documented return exception applies.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      }
+    ],
+    "caveats": [
+      "One personally owned dog or cat; no sale or ownership transfer. Commercial consignments and unusual animal categories require separate handling.",
+      "The selected arrival date is not evidence that vaccinations, residence, tests or permits are satisfied.",
+      "Norway and Switzerland are passport-equivalent origins for EU entry; this does not make their own import rules identical to the EU."
+    ],
+    "gaps": [
+      "NVWA's third-country page still says four months for onward EU travel; current Commission and 2026 rules say six months or earlier rabies expiry. Current EU rule takes precedence.",
+      "Overseas Dutch territories and individual long-stay registration circumstances are outside this mainland dossier."
+    ],
+    "sources": [
+      {
+        "id": "EU-entry-2026",
+        "title": "Bringing a pet into the EU from a non-EU country",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/bringing-pet-eu-non-eu-country_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identification before rabies; minimum 12 weeks; primary wait 21 days",
+          "Unlisted origins: approved laboratory ≥0.5 IU/ml; sample ≥30 days after primary course and ≥90 days before certificate issue",
+          "Official certificate, entry checks, owner declaration and movement within five days; onward validity six months or rabies expiry if earlier"
+        ]
+      },
+      {
+        "id": "EU-groups-2026",
+        "title": "Listed territories and non-EU countries",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/listing-territories-and-non-eu-countries_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current Annex I and II groupings; CN TH PH absent from listed countries"
+        ]
+      },
+      {
+        "id": "EU-passports-2026",
+        "title": "EU rules on travelling with pets",
+        "authority": "Your Europe / European Union",
+        "url": "https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_en.htm",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Passport pathway for EU and specified equivalent origins; residence requirement",
+          "Dogs entering Ireland need tapeworm treatment; cats do not"
+        ]
+      },
+      {
+        "id": "EU-model-2026",
+        "title": "Implementing Regulation (EU) 2026/705",
+        "authority": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/705/oj/eng",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "New certificate model; transition for certificates issued before 1 October 2026"
+        ]
+      },
+      {
+        "id": "EU-gb-ahc",
+        "title": "Getting an animal health certificate",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad/getting-an-animal-health-certificate",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official veterinarian; bring identification and vaccination records",
+          "Ten-day entry window counts issue day as day one"
+        ]
+      },
+      {
+        "id": "EU-gb-resident",
+        "title": "New EU rules for pet travel for GB residents",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/government/news/new-eu-rules-for-pet-travel-for-gb-residents",
+        "publishedOn": "2026-04-21",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "GB-resident travellers need AHC even if holding an EU pet passport"
+        ]
+      },
+      {
+        "id": "EU-entry-points",
+        "title": "Travellers' points of entry",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/travellers-points-entry_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "National lists of designated pet entry points"
+        ]
+      },
+      {
+        "id": "NL-entry",
+        "title": "Travelling from third countries to the Netherlands",
+        "authority": "NVWA",
+        "url": "https://english.nvwa.nl/topics/animal-health/travelling-to-the-netherlands-with-your-dog-or-cat/travelling-from-third-countries-to-the-netherlands",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Customs declaration and check; national identity and vaccination instructions",
+          "Malaysia Nipah and Australian cats Hendra attestations; long-stay dog registration"
+        ]
+      },
+      {
+        "id": "NL-export",
+        "title": "Legalisation of pet passports and documents",
+        "authority": "NVWA",
+        "url": "https://english.nvwa.nl/topics/animal-health/travelling-to-the-netherlands-with-your-dog-or-cat/legalisation-of-eu-pet-passports-and-other-documents-for-dogs-cats-and-ferrets",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Destination-specific Export Assistant; request legalisation appointment at least 14 working days before appointment date"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "overview": "Personal dog and cat travel under the current EU framework, with national arrival procedures and export-certification contacts. Origin group and residence must be confirmed; choosing a departure country does not prove eligibility.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "ES-chip",
+        "title": "Microchip your pet before the rabies vaccination",
+        "kind": "required",
+        "timing": "Before the qualifying rabies vaccination",
+        "bullets": [
+          "Use an ISO 11784/11785-compatible chip, normally a 15-digit number; if it cannot be read by the standard scanner, arrange the permitted reader alternative.",
+          "The chip must be implanted or read before the vaccination relied on for travel. On the same day, identification must come first.",
+          "Keep the chip number and date on the vaccination and travel documents. An old, clearly readable tattoo made before 3 July 2011 has a narrow exception."
+        ],
+        "sourceIds": [
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "id": "ES-rabies",
+        "title": "Make sure the rabies vaccination is valid",
+        "kind": "required",
+        "timing": "At least 21 days after a first completed vaccination course",
+        "bullets": [
+          "Your pet must be at least 12 weeks old when vaccinated against rabies.",
+          "A first course needs at least 21 days before it becomes valid for travel. A booster given within the previous dose’s validity does not restart that wait.",
+          "Use the valid-from and expiry dates in the vet’s record; protection must still be valid at entry and for any onward journey."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-passports-2026"
+        ],
+        "calendarRule": "eu-primary-rabies"
+      },
+      {
+        "id": "ES-titre",
+        "title": "Arrange the rabies blood test and waiting period",
+        "kind": "required",
+        "timing": "Sample after the qualifying vaccination; at least 90 days before certificate issue",
+        "bullets": [
+          "For an unlisted-country pathway, use a laboratory approved by the EU and a result of at least 0.5 IU/ml.",
+          "For a primary course, sampling is at least 30 days after completion; the current EU rule also provides for sampling within a continuously valid vaccination series.",
+          "The sample must be at least 90 days before the animal health certificate is issued. Do not count only to the flight date.",
+          "Keep the certified lab report. A documented successful test before leaving the EU may remove the return wait if vaccinations remain continuously valid."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-groups-2026"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "ES-book",
+        "title": "Book the official veterinary certificate appointment",
+        "kind": "planning",
+        "timing": "Start arranging this several weeks ahead",
+        "bullets": [
+          "Tell the practice the first EU country you will enter and the intended arrival date.",
+          "Confirm that an official veterinarian can issue the document, or that the authorised vet’s certificate can receive the required official endorsement.",
+          "Bring the chip record, vaccination history and any required blood-test report. Booking early is planning advice, not an extra legal waiting period."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "ES-certificate",
+        "title": "Get the Animal Health Certificate issued",
+        "kind": "conditional",
+        "timing": "Within 10 days before EU entry; issue day counts as day 1",
+        "bullets": [
+          "For a first non-EU entry without a qualifying passport or return-document exception, obtain the official non-commercial animal health certificate. A qualifying existing document may replace a new certificate; GB residents still need an AHC for a new EU trip.",
+          "The certificate must cover the first EU entry point. A document signed by an unauthorised practice is not a substitute for official issue or endorsement.",
+          "For issue from 1 October 2026, use the new EU model. Onward EU validity is up to six months from the entry check, or rabies expiry if earlier.",
+          "Carry the signed non-commercial declaration; an authorised traveller also needs the owner’s written authority and evidence of the owner’s journey within five days."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-model-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "eu-certificate"
+      },
+      {
+        "id": "ES-passport",
+        "title": "Carry the accepted pet passport or onward travel document",
+        "kind": "required",
+        "timing": "Before departure and at every border check",
+        "bullets": [
+          "For a qualifying EU or passport-equivalent origin, use a valid passport issued by an authorised veterinarian.",
+          "Check the recorded chip, owner, rabies valid-from and expiry entries. EU passport issue is tied to the owner’s residence; merely possessing a passport does not prove eligibility.",
+          "A valid entry AHC may support onward EU travel within its validity. If vaccination or ownership circumstances have changed, confirm the correct document instead of assuming the old one still works."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "originCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "ES-entry",
+        "title": "Present your pet and documents at the EU entry check",
+        "kind": "required",
+        "timing": "On arrival at the first EU entry point",
+        "bullets": [
+          "Enter through a designated travellers’ point of entry and present the pet for the identity and document check.",
+          "Carry the original certificate, supporting vaccination and test records, and owner declaration; use the customs declaration channel where required.",
+          "The ordinary non-commercial framework is for a pet travelling with its owner, or within five days through an authorised person, without sale or transfer. Larger groups have separate rules and exceptions."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-entry-points",
+          "ES-entry"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "arrival"
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "ES-export",
+        "title": "Ask your vet to arrange the export certificate through CEXGAN",
+        "kind": "conditional",
+        "timing": "Before departure; follow the destination’s certificate and permit windows",
+        "bullets": [
+          "Have your vet check the destination-specific export requirements and certificate available through MAPA/CEXGAN.",
+          "Complete the required vaccinations, tests and permit application before the final certificate appointment.",
+          "For qualifying EU travel, a valid pet passport is the document pathway; a non-EU destination may require separate official certification."
+        ],
+        "sourceIds": [
+          "ES-entry"
+        ],
+        "excludedDestinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      },
+      {
+        "id": "ES-eu-departure",
+        "title": "Check the passport before travelling to another EU country",
+        "kind": "required",
+        "timing": "Before departure",
+        "bullets": [
+          "Use the pet passport or a still-valid entry certificate that supports the onward movement.",
+          "Keep the identification and rabies record consistent; the destination may also require a dog-specific tapeworm treatment.",
+          "Plan your return before leaving, especially if visiting an unlisted rabies country; a pre-departure antibody test can matter for the return pathway."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "destinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU or passport-equivalent origin",
+        "countryCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "condition": "A qualifying passport pathway is available; owner residence, document validity and earlier movements still matter.",
+        "sourceIds": [
+          "EU-passports-2026"
+        ]
+      },
+      {
+        "label": "Listed non-EU origin",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW",
+          "MY"
+        ],
+        "condition": "For the qualifying direct pathway, an EU rabies antibody test is not required. The official certificate, chip and valid rabies vaccination remain required; residence and transit can change the pathway.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "label": "Unlisted non-EU origin",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "Plan for an approved rabies antibody test and its waiting period unless a documented return exception applies.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      }
+    ],
+    "caveats": [
+      "One personally owned dog or cat; no sale or ownership transfer. Commercial consignments and unusual animal categories require separate handling.",
+      "The selected arrival date is not evidence that vaccinations, residence, tests or permits are satisfied.",
+      "Norway and Switzerland are passport-equivalent origins for EU entry; this does not make their own import rules identical to the EU."
+    ],
+    "gaps": [
+      "MAPA's blood-test text anchors the 90-day wait to entry; the current Commission page anchors it to certificate issue. Use the stricter current certificate-issue anchor pending owner review.",
+      "Ceuta, Melilla and breed/local-registration requirements need a separate geographical or local review."
+    ],
+    "sources": [
+      {
+        "id": "EU-entry-2026",
+        "title": "Bringing a pet into the EU from a non-EU country",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/bringing-pet-eu-non-eu-country_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identification before rabies; minimum 12 weeks; primary wait 21 days",
+          "Unlisted origins: approved laboratory ≥0.5 IU/ml; sample ≥30 days after primary course and ≥90 days before certificate issue",
+          "Official certificate, entry checks, owner declaration and movement within five days; onward validity six months or rabies expiry if earlier"
+        ]
+      },
+      {
+        "id": "EU-groups-2026",
+        "title": "Listed territories and non-EU countries",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/listing-territories-and-non-eu-countries_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current Annex I and II groupings; CN TH PH absent from listed countries"
+        ]
+      },
+      {
+        "id": "EU-passports-2026",
+        "title": "EU rules on travelling with pets",
+        "authority": "Your Europe / European Union",
+        "url": "https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_en.htm",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Passport pathway for EU and specified equivalent origins; residence requirement",
+          "Dogs entering Ireland need tapeworm treatment; cats do not"
+        ]
+      },
+      {
+        "id": "EU-model-2026",
+        "title": "Implementing Regulation (EU) 2026/705",
+        "authority": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/705/oj/eng",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "New certificate model; transition for certificates issued before 1 October 2026"
+        ]
+      },
+      {
+        "id": "EU-gb-ahc",
+        "title": "Getting an animal health certificate",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad/getting-an-animal-health-certificate",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official veterinarian; bring identification and vaccination records",
+          "Ten-day entry window counts issue day as day one"
+        ]
+      },
+      {
+        "id": "EU-gb-resident",
+        "title": "New EU rules for pet travel for GB residents",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/government/news/new-eu-rules-for-pet-travel-for-gb-residents",
+        "publishedOn": "2026-04-21",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "GB-resident travellers need AHC even if holding an EU pet passport"
+        ]
+      },
+      {
+        "id": "EU-entry-points",
+        "title": "Travellers' points of entry",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/travellers-points-entry_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "National lists of designated pet entry points"
+        ]
+      },
+      {
+        "id": "ES-entry",
+        "title": "Travelling with dogs, cats and ferrets",
+        "authority": "MAPA",
+        "url": "https://www.mapa.gob.es/es/ganaderia/temas/comercio-exterior-ganadero/desplazamiento-animales-compania/viajar-perros-gatos-hurones",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Spanish-language certificate and declaration; authorised entry points; no entry before primary rabies waiting period",
+          "Destination export requirements and veterinarian application through CEXGAN"
+        ]
+      },
+      {
+        "id": "ES-export",
+        "title": "CEXGAN export certification",
+        "authority": "MAPA",
+        "url": "https://servicio.mapa.gob.es/cexgan/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official export-certification application portal; operational account flow not tested"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "overview": "Personal dog and cat travel under the current EU framework, with national arrival procedures and export-certification contacts. Origin group and residence must be confirmed; choosing a departure country does not prove eligibility.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "IT-chip",
+        "title": "Microchip your pet before the rabies vaccination",
+        "kind": "required",
+        "timing": "Before the qualifying rabies vaccination",
+        "bullets": [
+          "Use an ISO 11784/11785-compatible chip, normally a 15-digit number; if it cannot be read by the standard scanner, arrange the permitted reader alternative.",
+          "The chip must be implanted or read before the vaccination relied on for travel. On the same day, identification must come first.",
+          "Keep the chip number and date on the vaccination and travel documents. An old, clearly readable tattoo made before 3 July 2011 has a narrow exception."
+        ],
+        "sourceIds": [
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "id": "IT-rabies",
+        "title": "Make sure the rabies vaccination is valid",
+        "kind": "required",
+        "timing": "At least 21 days after a first completed vaccination course",
+        "bullets": [
+          "Your pet must be at least 12 weeks old when vaccinated against rabies.",
+          "A first course needs at least 21 days before it becomes valid for travel. A booster given within the previous dose’s validity does not restart that wait.",
+          "Use the valid-from and expiry dates in the vet’s record; protection must still be valid at entry and for any onward journey."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-passports-2026"
+        ],
+        "calendarRule": "eu-primary-rabies"
+      },
+      {
+        "id": "IT-titre",
+        "title": "Arrange the rabies blood test and waiting period",
+        "kind": "required",
+        "timing": "Sample after the qualifying vaccination; at least 90 days before certificate issue",
+        "bullets": [
+          "For an unlisted-country pathway, use a laboratory approved by the EU and a result of at least 0.5 IU/ml.",
+          "For a primary course, sampling is at least 30 days after completion; the current EU rule also provides for sampling within a continuously valid vaccination series.",
+          "The sample must be at least 90 days before the animal health certificate is issued. Do not count only to the flight date.",
+          "Keep the certified lab report. A documented successful test before leaving the EU may remove the return wait if vaccinations remain continuously valid."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-groups-2026"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "IT-book",
+        "title": "Book the official veterinary certificate appointment",
+        "kind": "planning",
+        "timing": "Start arranging this several weeks ahead",
+        "bullets": [
+          "Tell the practice the first EU country you will enter and the intended arrival date.",
+          "Confirm that an official veterinarian can issue the document, or that the authorised vet’s certificate can receive the required official endorsement.",
+          "Bring the chip record, vaccination history and any required blood-test report. Booking early is planning advice, not an extra legal waiting period."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "IT-certificate",
+        "title": "Get the Animal Health Certificate issued",
+        "kind": "conditional",
+        "timing": "Within 10 days before EU entry; issue day counts as day 1",
+        "bullets": [
+          "For a first non-EU entry without a qualifying passport or return-document exception, obtain the official non-commercial animal health certificate. A qualifying existing document may replace a new certificate; GB residents still need an AHC for a new EU trip.",
+          "The certificate must cover the first EU entry point. A document signed by an unauthorised practice is not a substitute for official issue or endorsement.",
+          "For issue from 1 October 2026, use the new EU model. Onward EU validity is up to six months from the entry check, or rabies expiry if earlier.",
+          "Carry the signed non-commercial declaration; an authorised traveller also needs the owner’s written authority and evidence of the owner’s journey within five days."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-model-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "eu-certificate"
+      },
+      {
+        "id": "IT-passport",
+        "title": "Carry the accepted pet passport or onward travel document",
+        "kind": "required",
+        "timing": "Before departure and at every border check",
+        "bullets": [
+          "For a qualifying EU or passport-equivalent origin, use a valid passport issued by an authorised veterinarian.",
+          "Check the recorded chip, owner, rabies valid-from and expiry entries. EU passport issue is tied to the owner’s residence; merely possessing a passport does not prove eligibility.",
+          "A valid entry AHC may support onward EU travel within its validity. If vaccination or ownership circumstances have changed, confirm the correct document instead of assuming the old one still works."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "originCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "IT-entry",
+        "title": "Present your pet and documents at the EU entry check",
+        "kind": "required",
+        "timing": "On arrival at the first EU entry point",
+        "bullets": [
+          "Enter through a designated travellers’ point of entry and present the pet for the identity and document check.",
+          "Carry the original certificate, supporting vaccination and test records, and owner declaration; use the customs declaration channel where required.",
+          "The ordinary non-commercial framework is for a pet travelling with its owner, or within five days through an authorised person, without sale or transfer. Larger groups have separate rules and exceptions."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-entry-points",
+          "IT-entry"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "arrival"
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "IT-export",
+        "title": "Arrange your pet’s passport or export certificate with the local ASL",
+        "kind": "conditional",
+        "timing": "Before departure; follow the destination’s certificate and permit windows",
+        "bullets": [
+          "Ask the veterinary service at your competent ASL which destination certificate and supporting records it needs.",
+          "Bring the pet for identification when required, together with the vaccination record and completed destination paperwork.",
+          "ASL Roma 1 publishes appointment and document requirements for its own residents; another ASL may use a different process."
+        ],
+        "sourceIds": [
+          "IT-export"
+        ],
+        "excludedDestinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      },
+      {
+        "id": "IT-eu-departure",
+        "title": "Check the passport before travelling to another EU country",
+        "kind": "required",
+        "timing": "Before departure",
+        "bullets": [
+          "Use the pet passport or a still-valid entry certificate that supports the onward movement.",
+          "Keep the identification and rabies record consistent; the destination may also require a dog-specific tapeworm treatment.",
+          "Plan your return before leaving, especially if visiting an unlisted rabies country; a pre-departure antibody test can matter for the return pathway."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "destinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU or passport-equivalent origin",
+        "countryCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "condition": "A qualifying passport pathway is available; owner residence, document validity and earlier movements still matter.",
+        "sourceIds": [
+          "EU-passports-2026"
+        ]
+      },
+      {
+        "label": "Listed non-EU origin",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW",
+          "MY"
+        ],
+        "condition": "For the qualifying direct pathway, an EU rabies antibody test is not required. The official certificate, chip and valid rabies vaccination remain required; residence and transit can change the pathway.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "label": "Unlisted non-EU origin",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "Plan for an approved rabies antibody test and its waiting period unless a documented return exception applies.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      }
+    ],
+    "caveats": [
+      "One personally owned dog or cat; no sale or ownership transfer. Commercial consignments and unusual animal categories require separate handling.",
+      "The selected arrival date is not evidence that vaccinations, residence, tests or permits are satisfied.",
+      "Norway and Switzerland are passport-equivalent origins for EU entry; this does not make their own import rules identical to the EU."
+    ],
+    "gaps": [
+      "The national Ministry site was blocked by JavaScript verification. Current EU baseline was verified, but Italy-specific operational exceptions and designated arrival arrangements remain held.",
+      "ASL Roma 1 is a local service example, not a national processing-time guarantee."
+    ],
+    "sources": [
+      {
+        "id": "EU-entry-2026",
+        "title": "Bringing a pet into the EU from a non-EU country",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/bringing-pet-eu-non-eu-country_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identification before rabies; minimum 12 weeks; primary wait 21 days",
+          "Unlisted origins: approved laboratory ≥0.5 IU/ml; sample ≥30 days after primary course and ≥90 days before certificate issue",
+          "Official certificate, entry checks, owner declaration and movement within five days; onward validity six months or rabies expiry if earlier"
+        ]
+      },
+      {
+        "id": "EU-groups-2026",
+        "title": "Listed territories and non-EU countries",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/listing-territories-and-non-eu-countries_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current Annex I and II groupings; CN TH PH absent from listed countries"
+        ]
+      },
+      {
+        "id": "EU-passports-2026",
+        "title": "EU rules on travelling with pets",
+        "authority": "Your Europe / European Union",
+        "url": "https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_en.htm",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Passport pathway for EU and specified equivalent origins; residence requirement",
+          "Dogs entering Ireland need tapeworm treatment; cats do not"
+        ]
+      },
+      {
+        "id": "EU-model-2026",
+        "title": "Implementing Regulation (EU) 2026/705",
+        "authority": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/705/oj/eng",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "New certificate model; transition for certificates issued before 1 October 2026"
+        ]
+      },
+      {
+        "id": "EU-gb-ahc",
+        "title": "Getting an animal health certificate",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad/getting-an-animal-health-certificate",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official veterinarian; bring identification and vaccination records",
+          "Ten-day entry window counts issue day as day one"
+        ]
+      },
+      {
+        "id": "EU-gb-resident",
+        "title": "New EU rules for pet travel for GB residents",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/government/news/new-eu-rules-for-pet-travel-for-gb-residents",
+        "publishedOn": "2026-04-21",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "GB-resident travellers need AHC even if holding an EU pet passport"
+        ]
+      },
+      {
+        "id": "EU-entry-points",
+        "title": "Travellers' points of entry",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/travellers-points-entry_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "National lists of designated pet entry points"
+        ]
+      },
+      {
+        "id": "IT-entry",
+        "title": "Transport of companion animals",
+        "authority": "Italian Ministry of Health",
+        "url": "https://www.salute.gov.it/new/it/tema/animali-daffezione/trasporto-degli-animali-da-compagnia/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "National guidance locator; current page blocked by JavaScript verification, not relied upon for detailed claims"
+        ]
+      },
+      {
+        "id": "IT-export",
+        "title": "Companion animals: passports and export certificates",
+        "authority": "ASL Roma 1",
+        "url": "https://www.aslroma1.it/animali",
+        "publishedOn": "2025-11-20",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Local ASL pet-passport and destination-certificate service; animal identity check and complete records required"
+        ]
+      }
+    ]
+  },
+  {
+    "code": "PT",
+    "name": "Portugal",
+    "overview": "Personal dog and cat travel under the current EU framework, with national arrival procedures and export-certification contacts. Origin group and residence must be confirmed; choosing a departure country does not prove eligibility.",
+    "checkedOn": "2026-09-11",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "PT-breed",
+        "title": "Resolve any restricted-dog conditions before booking",
+        "kind": "conditional",
+        "timing": "Before choosing transport or a travel date",
+        "bullets": [
+          "Portugal has additional entry and keeping rules for potentially dangerous dogs, including certain breeds and crosses.",
+          "Short visits and stays of four months or more have different conditions; owner accompaniment, licensing, muzzle and lead rules may apply.",
+          "Resolve the dog’s classification and your length of stay before relying on the ordinary pet pathway."
+        ],
+        "sourceIds": [
+          "PT-entry"
+        ],
+        "species": "dog"
+      },
+      {
+        "id": "PT-chip",
+        "title": "Microchip your pet before the rabies vaccination",
+        "kind": "required",
+        "timing": "Before the qualifying rabies vaccination",
+        "bullets": [
+          "Use an ISO 11784/11785-compatible chip, normally a 15-digit number; if it cannot be read by the standard scanner, arrange the permitted reader alternative.",
+          "The chip must be implanted or read before the vaccination relied on for travel. On the same day, identification must come first.",
+          "Keep the chip number and date on the vaccination and travel documents. An old, clearly readable tattoo made before 3 July 2011 has a narrow exception."
+        ],
+        "sourceIds": [
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "id": "PT-rabies",
+        "title": "Make sure the rabies vaccination is valid",
+        "kind": "required",
+        "timing": "At least 21 days after a first completed vaccination course",
+        "bullets": [
+          "Your pet must be at least 12 weeks old when vaccinated against rabies.",
+          "A first course needs at least 21 days before it becomes valid for travel. A booster given within the previous dose’s validity does not restart that wait.",
+          "Use the valid-from and expiry dates in the vet’s record; protection must still be valid at entry and for any onward journey."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-passports-2026"
+        ],
+        "calendarRule": "eu-primary-rabies"
+      },
+      {
+        "id": "PT-titre",
+        "title": "Arrange the rabies blood test and waiting period",
+        "kind": "required",
+        "timing": "Sample after the qualifying vaccination; at least 90 days before certificate issue",
+        "bullets": [
+          "For an unlisted-country pathway, use a laboratory approved by the EU and a result of at least 0.5 IU/ml.",
+          "For a primary course, sampling is at least 30 days after completion; the current EU rule also provides for sampling within a continuously valid vaccination series.",
+          "The sample must be at least 90 days before the animal health certificate is issued. Do not count only to the flight date.",
+          "Keep the certified lab report. A documented successful test before leaving the EU may remove the return wait if vaccinations remain continuously valid."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-groups-2026"
+        ],
+        "originCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ]
+      },
+      {
+        "id": "PT-book",
+        "title": "Book the official veterinary certificate appointment",
+        "kind": "planning",
+        "timing": "Start arranging this several weeks ahead",
+        "bullets": [
+          "Tell the practice the first EU country you will enter and the intended arrival date.",
+          "Confirm that an official veterinarian can issue the document, or that the authorised vet’s certificate can receive the required official endorsement.",
+          "Bring the chip record, vaccination history and any required blood-test report. Booking early is planning advice, not an extra legal waiting period."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "PT-certificate",
+        "title": "Get the Animal Health Certificate issued",
+        "kind": "conditional",
+        "timing": "Within 10 days before EU entry; issue day counts as day 1",
+        "bullets": [
+          "For a first non-EU entry without a qualifying passport or return-document exception, obtain the official non-commercial animal health certificate. A qualifying existing document may replace a new certificate; GB residents still need an AHC for a new EU trip.",
+          "The certificate must cover the first EU entry point. A document signed by an unauthorised practice is not a substitute for official issue or endorsement.",
+          "For issue from 1 October 2026, use the new EU model. Onward EU validity is up to six months from the entry check, or rabies expiry if earlier.",
+          "Carry the signed non-commercial declaration; an authorised traveller also needs the owner’s written authority and evidence of the owner’s journey within five days."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-model-2026",
+          "EU-gb-ahc"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "eu-certificate"
+      },
+      {
+        "id": "PT-passport",
+        "title": "Carry the accepted pet passport or onward travel document",
+        "kind": "required",
+        "timing": "Before departure and at every border check",
+        "bullets": [
+          "For a qualifying EU or passport-equivalent origin, use a valid passport issued by an authorised veterinarian.",
+          "Check the recorded chip, owner, rabies valid-from and expiry entries. EU passport issue is tied to the owner’s residence; merely possessing a passport does not prove eligibility.",
+          "A valid entry AHC may support onward EU travel within its validity. If vaccination or ownership circumstances have changed, confirm the correct document instead of assuming the old one still works."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "originCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "PT-notice",
+        "title": "Notify the Portuguese entry point before you arrive",
+        "kind": "required",
+        "timing": "At least 48 hours before arrival",
+        "bullets": [
+          "The owner or authorised traveller must send the arrival form to the designated entry point; do not assume the airline has done this.",
+          "Include the requested travel and pet documentation and use the entry point’s own contact address.",
+          "Lisbon and Porto have overnight inspection closures. Match your arrival to the confirmed checking arrangements."
+        ],
+        "sourceIds": [
+          "PT-notice"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ]
+      },
+      {
+        "id": "PT-entry",
+        "title": "Present your pet and documents at the EU entry check",
+        "kind": "required",
+        "timing": "On arrival at the first EU entry point",
+        "bullets": [
+          "Enter through a designated travellers’ point of entry and present the pet for the identity and document check.",
+          "Carry the original certificate, supporting vaccination and test records, and owner declaration; use the customs declaration channel where required.",
+          "The ordinary non-commercial framework is for a pet travelling with its owner, or within five days through an authorised person, without sale or transfer. Larger groups have separate rules and exceptions."
+        ],
+        "sourceIds": [
+          "EU-entry-2026",
+          "EU-entry-points",
+          "PT-entry"
+        ],
+        "excludedOriginCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT",
+          "CH",
+          "NO"
+        ],
+        "calendarRule": "arrival"
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "PT-export",
+        "title": "Arrange the destination certificate with DGAV",
+        "kind": "conditional",
+        "timing": "Before departure; follow the destination’s certificate and permit windows",
+        "bullets": [
+          "Use DGAV’s country-specific certificate library; select the correct species and destination model.",
+          "Contact the competent local veterinary unit (UVL) before the certification visit and send the requested information.",
+          "Keep the private vet’s records and any permit or lab reports together. The receiving country sets the examination, endorsement and arrival windows."
+        ],
+        "sourceIds": [
+          "PT-export"
+        ],
+        "excludedDestinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      },
+      {
+        "id": "PT-eu-departure",
+        "title": "Check the passport before travelling to another EU country",
+        "kind": "required",
+        "timing": "Before departure",
+        "bullets": [
+          "Use the pet passport or a still-valid entry certificate that supports the onward movement.",
+          "Keep the identification and rabies record consistent; the destination may also require a dog-specific tapeworm treatment.",
+          "Plan your return before leaving, especially if visiting an unlisted rabies country; a pre-departure antibody test can matter for the return pathway."
+        ],
+        "sourceIds": [
+          "EU-passports-2026",
+          "EU-entry-2026"
+        ],
+        "destinationCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "PT"
+        ]
+      }
+    ],
+    "originGroups": [
+      {
+        "label": "EU or passport-equivalent origin",
+        "countryCodes": [
+          "IE",
+          "FR",
+          "DE",
+          "NL",
+          "ES",
+          "IT",
+          "CH",
+          "NO"
+        ],
+        "condition": "A qualifying passport pathway is available; owner residence, document validity and earlier movements still matter.",
+        "sourceIds": [
+          "EU-passports-2026"
+        ]
+      },
+      {
+        "label": "Listed non-EU origin",
+        "countryCodes": [
+          "US",
+          "CA",
+          "GB",
+          "AE",
+          "SG",
+          "HK",
+          "JP",
+          "AU",
+          "NZ",
+          "TW",
+          "MY"
+        ],
+        "condition": "For the qualifying direct pathway, an EU rabies antibody test is not required. The official certificate, chip and valid rabies vaccination remain required; residence and transit can change the pathway.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      },
+      {
+        "label": "Unlisted non-EU origin",
+        "countryCodes": [
+          "CN",
+          "TH",
+          "PH"
+        ],
+        "condition": "Plan for an approved rabies antibody test and its waiting period unless a documented return exception applies.",
+        "sourceIds": [
+          "EU-groups-2026",
+          "EU-entry-2026"
+        ]
+      }
+    ],
+    "caveats": [
+      "One personally owned dog or cat; no sale or ownership transfer. Commercial consignments and unusual animal categories require separate handling.",
+      "The selected arrival date is not evidence that vaccinations, residence, tests or permits are satisfied.",
+      "Norway and Switzerland are passport-equivalent origins for EU entry; this does not make their own import rules identical to the EU."
+    ],
+    "gaps": [
+      "Potentially dangerous dogs, longer stays and local registration require additional individual facts.",
+      "No universal export-certificate expiry or processing time was inferred from country-specific forms."
+    ],
+    "sources": [
+      {
+        "id": "EU-entry-2026",
+        "title": "Bringing a pet into the EU from a non-EU country",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/bringing-pet-eu-non-eu-country_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Identification before rabies; minimum 12 weeks; primary wait 21 days",
+          "Unlisted origins: approved laboratory ≥0.5 IU/ml; sample ≥30 days after primary course and ≥90 days before certificate issue",
+          "Official certificate, entry checks, owner declaration and movement within five days; onward validity six months or rabies expiry if earlier"
+        ]
+      },
+      {
+        "id": "EU-groups-2026",
+        "title": "Listed territories and non-EU countries",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/listing-territories-and-non-eu-countries_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current Annex I and II groupings; CN TH PH absent from listed countries"
+        ]
+      },
+      {
+        "id": "EU-passports-2026",
+        "title": "EU rules on travelling with pets",
+        "authority": "Your Europe / European Union",
+        "url": "https://europa.eu/youreurope/citizens/travel/carry/pets-and-other-animals/index_en.htm",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Passport pathway for EU and specified equivalent origins; residence requirement",
+          "Dogs entering Ireland need tapeworm treatment; cats do not"
+        ]
+      },
+      {
+        "id": "EU-model-2026",
+        "title": "Implementing Regulation (EU) 2026/705",
+        "authority": "EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg_impl/2026/705/oj/eng",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "New certificate model; transition for certificates issued before 1 October 2026"
+        ]
+      },
+      {
+        "id": "EU-gb-ahc",
+        "title": "Getting an animal health certificate",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/taking-your-pet-abroad/getting-an-animal-health-certificate",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Official veterinarian; bring identification and vaccination records",
+          "Ten-day entry window counts issue day as day one"
+        ]
+      },
+      {
+        "id": "EU-gb-resident",
+        "title": "New EU rules for pet travel for GB residents",
+        "authority": "DEFRA / APHA",
+        "url": "https://www.gov.uk/government/news/new-eu-rules-for-pet-travel-for-gb-residents",
+        "publishedOn": "2026-04-21",
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "GB-resident travellers need AHC even if holding an EU pet passport"
+        ]
+      },
+      {
+        "id": "EU-entry-points",
+        "title": "Travellers' points of entry",
+        "authority": "European Commission",
+        "url": "https://food.ec.europa.eu/animals/live-animal-movements/dogs-cats-and-ferrets/travellers-points-entry_en",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "National lists of designated pet entry points"
+        ]
+      },
+      {
+        "id": "PT-entry",
+        "title": "Travelling in Europe",
+        "authority": "DGAV",
+        "url": "https://www.dgav.pt/vaiviajar/conteudo/conteudo-animais-de-companhia/na-europa/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Current EU 2026 framework; pet passport; registration and potentially dangerous dogs"
+        ]
+      },
+      {
+        "id": "PT-notice",
+        "title": "Arrival notice for dogs and cats",
+        "authority": "DGAV",
+        "url": "https://www.dgav.pt/vaiviajar/conteudo/conteudo-animais-de-companhia/entrar-em-portugal-a-partir-de-um-pais-fora-da-ue-inclui-o-reino-unido-exceto-a-irlanda-do-norte/caes-e-gatos/aviso-de-chegada-como-fazer/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Owner/authorised person must notify designated entry point at least 48 hours before arrival; limited overnight operating hours"
+        ]
+      },
+      {
+        "id": "PT-export",
+        "title": "Dogs, cats and ferrets leaving Portugal for a non-EU country",
+        "authority": "DGAV",
+        "url": "https://www.dgav.pt/vaiviajar/conteudo/conteudo-animais-de-companhia/sair-de-portugal-para-um-pais-fora-da-ue-inclui-o-reino-unido-exceto-a-irlanda-do-norte/caes-gatos-e-furoes/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "Destination-specific official certificate library"
+        ]
+      },
+      {
+        "id": "PT-faq",
+        "title": "Pet travel frequently asked questions",
+        "authority": "DGAV",
+        "url": "https://www.dgav.pt/faq/conteudo/vai-viajar/",
+        "publishedOn": null,
+        "accessedOn": "2026-09-11",
+        "claims": [
+          "UVL advance appointment and document process; six-month onward EU travel; chip-reader exception"
+        ]
+      }
+    ]
+  }
+]

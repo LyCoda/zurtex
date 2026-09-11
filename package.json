@@ -14,7 +14,8 @@
     "build:cloudflare": "node scripts/cloudflare.mjs build",
     "deploy:cloudflare": "node scripts/cloudflare.mjs deploy",
     "preview:cloudflare": "wrangler dev --config dist/server/wrangler.json",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

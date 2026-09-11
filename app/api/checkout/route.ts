@@ -1,146 +1,93 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+import { isFeatureEnabled } from "@/lib/feature-policy";
+import { createIntegrationIdentifier, createStripeClient, stripeMode } from "@/lib/stripe";
+import { countries } from "@/lib/route-coverage";
 import {
-  airlines,
-  countries,
-  needsManualScopeCheck,
-} from '@/lib/route-coverage';
-import {
-  createIntegrationIdentifier,
-  createStripeClient,
-  PRICE_USD_CENTS,
-  POLICY_VERSION,
-  WAIT_MESSAGE,
-  stripeMode,
-} from '@/lib/stripe';
-export const runtime = 'edge';
+  CONSULTATION_PRICE_CENTS,
+  CONSULTATION_CURRENCY,
+  CONSULTATION_WORKFLOW,
+  CONSULTATION_POLICY_VERSION,
+  CONSULTATION_HOLD_MESSAGE,
+  consultationPurposes,
+  parseConsultationBooking,
+} from "@/lib/consultation";
+
+export const runtime = "edge";
 export async function POST(request: Request) {
+  const failure = (error: string, status: number) =>
+    NextResponse.json({ error }, { status, headers: { "Cache-Control": "no-store" } });
+  if (!isFeatureEnabled("CONSULTATION_BOOKING_ENABLED"))
+    return failure("Consultation bookings are temporarily unavailable.", 404);
   const requestOrigin = new URL(request.url).origin;
-  if (
-    request.headers.get('origin') &&
-    request.headers.get('origin') !== requestOrigin
-  )
-    return NextResponse.json(
-      { error: 'Please start checkout from Zurtex.' },
-      { status: 403 },
-    );
-  if (Number(request.headers.get('content-length')) > 4096)
-    return NextResponse.json(
-      { error: 'Request is too large.' },
-      { status: 413 },
-    );
+  if (request.headers.get("origin") !== requestOrigin)
+    return failure("Please start checkout from Zurtex.", 403);
+  if (!request.headers.get("content-type")?.startsWith("application/json"))
+    return failure("Invalid checkout request.", 415);
+  if (Number(request.headers.get("content-length")) > 4096)
+    return failure("Request is too large.", 413);
   let raw: unknown;
   try {
     const body = await request.text();
-    if (body.length > 4096)
-      return NextResponse.json(
-        { error: 'Request is too large.' },
-        { status: 413 },
-      );
+    if (body.length > 4096) return failure("Request is too large.", 413);
     raw = JSON.parse(body);
   } catch {
-    return NextResponse.json(
-      { error: 'Invalid checkout request.' },
-      { status: 400 },
-    );
+    return failure("Check your booking details and try again.", 400);
   }
-  if (!raw || typeof raw !== 'object' || Array.isArray(raw))
-    return NextResponse.json(
-      { error: 'Invalid checkout request.' },
-      { status: 400 },
-    );
-  const input = raw as Record<string, unknown>;
-  const origin = countries.find((x) => x.code === input.origin);
-  const destination = countries.find((x) => x.code === input.destination);
-  const airline = airlines.find((x) => x.code === input.airline);
-  const departure = typeof input.departure === 'string' ? input.departure : '';
-  const date = new Date(departure + 'T00:00:00Z');
-  const attempt =
-    typeof input.checkoutAttemptId === 'string' ? input.checkoutAttemptId : '';
-  if (
-    !origin ||
-    !destination ||
-    origin.code === destination.code ||
-    !airline ||
-    !['dog', 'cat'].includes(String(input.pet)) ||
-    input.movement !== 'noncommercial' ||
-    input.consent !== true ||
-    !/^\d{4}-\d{2}-\d{2}$/.test(departure) ||
-    Number.isNaN(date.getTime()) ||
-    date.toISOString().slice(0, 10) !== departure ||
-    departure < new Date().toISOString().slice(0, 10) ||
-    !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
-      attempt,
-    )
-  )
-    return NextResponse.json(
-      {
-        error:
-          'Check your route details, departure date and agreement before continuing.',
-      },
-      { status: 400 },
-    );
-  if (needsManualScopeCheck(origin.code, destination.code, airline.code))
-    return NextResponse.json(
-      {
-        error:
-          'This route needs our team to confirm scope before a reservation. Email help@zurtex.org with your basic itinerary.',
-      },
-      { status: 400 },
-    );
+  const parsed = parseConsultationBooking(raw);
+  if (parsed.error) return failure(parsed.error, 400);
+  const input = parsed.value!;
   const stripe = createStripeClient();
   if (!stripe)
-    return NextResponse.json(
-      {
-        error:
-          'Online checkout is not open yet. Please contact help@zurtex.org about your route.',
-      },
-      { status: 503, headers: { 'Cache-Control': 'no-store' } },
+    return failure(
+      "Checkout is not connected yet. No payment or booking has been created. Please try again when checkout is available.",
+      503,
     );
-  let siteOrigin: string;
-  try {
-    siteOrigin = new URL(process.env.ZURTEX_SITE_URL?.trim() || request.url)
-      .origin;
-    if (
-      stripeMode() === 'live' &&
-      (!process.env.ZURTEX_SITE_URL || !siteOrigin.startsWith('https://'))
-    )
-      throw new Error('Missing production origin');
-  } catch {
-    return NextResponse.json(
-      {
-        error:
-          'Checkout is temporarily unavailable. Please contact help@zurtex.org.',
-      },
-      { status: 503 },
-    );
+  if (stripeMode() === "live") {
+    try {
+      const canonical = new URL(process.env.ZURTEX_SITE_URL || "");
+      const current = new URL(requestOrigin);
+      if (
+        canonical.protocol !== "https:" ||
+        current.protocol !== "https:" ||
+        ![canonical.hostname, "www." + canonical.hostname.replace(/^www\./, "")].includes(
+          current.hostname,
+        )
+      )
+        throw new Error("Untrusted origin");
+    } catch {
+      return failure("Checkout is unavailable at this address.", 503);
+    }
   }
   const metadata = {
-    origin: origin.name,
-    destination: destination.name,
-    departure,
-    airline: airline.name,
-    pet: String(input.pet),
-    launch: 'zurtex_2026',
-    policy_version: POLICY_VERSION,
-    early_service_request: 'accepted',
-    workflow: 'authorization_awaiting_manual_review',
+    workflow: CONSULTATION_WORKFLOW,
+    review_status: "awaiting_manual_review",
+    policy_version: CONSULTATION_POLICY_VERSION,
+    origin: countries.find((c) => c.code === input.origin)!.name,
+    destination: countries.find((c) => c.code === input.destination)!.name,
+    arrival: input.arrival,
+    pet: input.petCount + " " + input.species + (input.petCount > 1 ? "s" : ""),
+    purpose: consultationPurposes[input.purpose],
+    airline: input.airline || "Not decided",
+    transit: input.transit || "None supplied",
+    call_availability: input.availability,
   };
   try {
     const session = await stripe.checkout.sessions.create(
       {
-        mode: 'payment',
-        integration_identifier: createIntegrationIdentifier(attempt),
-        success_url: `${siteOrigin}/?checkout=success&session_id={CHECKOUT_SESSION_ID}#route-screen`,
-        cancel_url: `${siteOrigin}/?checkout=cancelled#route-screen`,
-        client_reference_id: attempt,
+        mode: "payment",
+        integration_identifier: createIntegrationIdentifier(input.checkoutAttemptId),
+        success_url: requestOrigin + "/consultation/booking?session_id={CHECKOUT_SESSION_ID}",
+        cancel_url: requestOrigin + "/consultation/booking?cancelled=true",
+        client_reference_id: input.checkoutAttemptId,
         line_items: [
           {
             price_data: {
-              currency: 'usd',
-              unit_amount: PRICE_USD_CENTS,
+              currency: CONSULTATION_CURRENCY,
+              unit_amount: CONSULTATION_PRICE_CENTS,
               product_data: {
-                name: 'Zurtex refundable readiness-check reservation',
-                description: WAIT_MESSAGE,
+                name: "Zurtex Pet Travel Consultation",
+                description:
+                  "One planned journey. No fixed call-length limit. Written recap with no fixed delivery deadline.",
               },
             },
             quantity: 1,
@@ -148,39 +95,45 @@ export async function POST(request: Request) {
         ],
         metadata,
         payment_intent_data: {
-          capture_method: 'manual',
+          capture_method: "manual",
           metadata,
-          description: 'Zurtex refundable reservation. ' + WAIT_MESSAGE,
+          description: "Zurtex Pet Travel Consultation. Human approval required before capture.",
         },
         custom_text: {
-          submit: { message: WAIT_MESSAGE },
-          after_submit: { message: WAIT_MESSAGE },
+          submit: { message: CONSULTATION_HOLD_MESSAGE },
+          after_submit: {
+            message:
+              "Please wait for Zurtex to review the journey and agree your call time. Do not email pet or identity records.",
+          },
         },
-        consent_collection: { terms_of_service: 'required' },
-        submit_type: 'book',
+        consent_collection: { terms_of_service: "required" },
+        submit_type: "book",
+        excluded_payment_method_types: ["affirm", "afterpay_clearpay", "klarna"],
       },
-      { idempotencyKey: `zurtex-checkout-${attempt}` },
+      { idempotencyKey: "zurtex-consultation-v1-" + input.checkoutAttemptId },
     );
-    if (!session.url) throw new Error('Missing checkout URL');
+    if (
+      !session.url ||
+      new URL(session.url).protocol !== "https:" ||
+      new URL(session.url).hostname !== "checkout.stripe.com"
+    )
+      throw new Error("Missing checkout URL");
     const response = NextResponse.json(
       { url: session.url },
-      { headers: { 'Cache-Control': 'no-store' } },
+      { headers: { "Cache-Control": "no-store" } },
     );
-    response.cookies.set('zurtex_checkout', session.id, {
+    response.cookies.set("zurtex_checkout", session.id, {
       httpOnly: true,
-      secure: siteOrigin.startsWith('https://'),
-      sameSite: 'lax',
-      path: '/',
-      maxAge: 86400,
+      secure: requestOrigin.startsWith("https://"),
+      sameSite: "lax",
+      path: "/",
+      maxAge: 60 * 60 * 24 * 30,
     });
     return response;
   } catch {
-    return NextResponse.json(
-      {
-        error:
-          'We could not open checkout. Try again, or email help@zurtex.org if it keeps happening.',
-      },
-      { status: 502 },
+    return failure(
+      "We could not open checkout. Your booking is not confirmed. Try again without changing the details, or contact help@zurtex.org.",
+      502,
     );
   }
 }

@@ -1,110 +1,83 @@
-/* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext RSC Link runtime failure. */
-import type { Metadata } from 'next';
-import { PolicyPage, WaitNotice } from '@/components/marketing-shell';
-export const metadata: Metadata = { title: 'Reservations | Zurtex' };
+import type { Metadata } from "next";
+import { PolicyPage } from "@/components/marketing-shell";
+export const metadata: Metadata = { title: "Payments, cancellations & refunds | Zurtex" };
+const sections: [string, string][] = [
+  ["price", "The consultation"],
+  ["hold", "Temporary payment hold"],
+  ["changes", "Cancellation and rescheduling"],
+  ["previous", "Previous purchases"],
+  ["questions", "Questions"],
+];
 export default function PaymentsPage() {
   return (
     <PolicyPage
-      title="Reservations. No funds captured."
-      intro="Reserve a readiness check with a temporary US$7 card authorization. Zurtex releases the hold without capturing the funds."
-      summary="US$7 temporary authorization. No completed charge. No subscription."
-      sections={[
-        ['price', 'Price & payment'],
-        ['after-payment', 'After checkout'],
-        ['refunds', 'Our refund promise'],
-        ['other-requests', 'Other requests'],
-        ['cancellation', 'Cancellation rights'],
-      ]}
+      title="Payments, cancellations and refunds"
+      intro="Travel information is free. A Pet Travel Consultation costs US$5 for one planned journey."
+      summary="A temporary payment hold comes first. A team member reviews the journey before payment is collected. The hold does not confirm an appointment."
+      sections={sections}
     >
       <section id="price">
-        <h2>What Stripe authorizes</h2>
+        <h2>The consultation</h2>
         <p>
-          Stripe places a temporary <strong>US$7 authorization</strong> on your
-          card to confirm the reservation. Zurtex does not capture the funds.
-          There is no subscription or automatic renewal.
+          US$5 covers a personal review of the journey details, one consultation call with no fixed
+          time limit, and a written recap. There is no fixed recap delivery deadline. This is not an
+          ongoing journey-management service or unlimited follow-up consultations.
         </p>
         <p>
-          You enter payment details on Stripe’s hosted checkout page. Zurtex
-          does not receive or store your full card number or card security code.
-          Stripe processes transaction, device and fraud-prevention information
-          under its <a href="https://stripe.com/privacy">own privacy policy</a>.
+          The call time is agreed directly with you after review. Secure record uploads, transport
+          bookings and certificates are not included in this website's booking flow.
         </p>
       </section>
-      <section id="after-payment">
-        <h2>After checkout, wait for us.</h2>
-        <WaitNotice />
+      <section id="hold">
+        <h2>Temporary payment hold</h2>
         <p>
-          We receive limited reservation, contact and authorization information
-          so we can identify your request and get in touch. A team member
-          manually reviews your basic route details. Only if we accept the case
-          will we send a separate secure upload link and tell you which records
-          we need.
+          Stripe handles checkout and authorises US$5 without collecting it immediately. We collect
+          the payment only after a person approves the consultation. If we cannot help, we explain
+          why and cancel the authorisation.
         </p>
         <p>
-          We never ask for certificates, veterinary records, passports or
-          identity documents through checkout or an ordinary email reply.
-        </p>
-      </section>
-      <section id="refunds">
-        <h2>We release the authorization.</h2>
-        <p>
-          Zurtex cancels the authorization without capturing it. Your bank may
-          continue showing a pending hold until it processes the release.
-        </p>
-        <div className="refund-timeline">
-          <div>
-            <strong>Within 24 hours</strong>
-            <span>
-              Zurtex cancels the card authorization without capturing funds.
-            </span>
-          </div>
-          <div>
-            <strong>Usually 5–10 business days</strong>
-            <span>
-              Your bank or card issuer removes the pending hold. Timing varies.
-            </span>
-          </div>
-        </div>
-        <p>
-          Because Zurtex does not capture the funds, there is normally no charge
-          to refund. Contact your card issuer if a released hold remains visible.
+          Holds have an expiry set by the payment network. If a hold expires uncaptured, it is
+          released; it cannot be kept open indefinitely. Any new authorisation requires you to
+          complete checkout again. Your bank controls when a released hold disappears from your
+          account.
         </p>
         <p>
-          We’re sorry when we can’t help a pet owner. We’ll explain the
-          boundary and, where practical, point you
-          toward the relevant authority or specialist.
+          When checkout is labelled as a test, it does not create a paid consultation. If the
+          payment connection is unavailable, the site cannot place a hold.
         </p>
       </section>
-      <section id="other-requests">
-        <h2>Something else went wrong?</h2>
+      <section id="changes">
+        <h2>Cancellation and rescheduling</h2>
         <p>
-          If you see a completed charge rather than a pending authorization, email{' '}
-          <a href="mailto:help@zurtex.org?subject=Refund%20request">
-            help@zurtex.org
-          </a>{' '}
-          with your checkout email, payment reference if available, and a short
-          explanation. We review requests fairly and respond promptly. Please
-          don’t attach pet records or full card details.
+          To cancel before payment is collected, email help@zurtex.org with your booking reference
+          and ask us to release the hold. Do not include card information.
+        </p>
+        <p>
+          After acceptance, contact us before the agreed call if you need to cancel or change the
+          time. We will discuss the available options with you. If Zurtex cannot deliver an accepted
+          consultation, we will arrange a refund. No automatic fee or response-time promise is
+          stated here.
+        </p>
+        <p>
+          Refunds and released authorisations are different: a refund returns a collected payment,
+          while release removes an uncaptured hold. Your bank's processing time can vary. Nothing
+          here limits rights that apply under consumer law.
         </p>
       </section>
-      <section id="cancellation">
-        <h2>Your cancellation rights</h2>
+      <section id="previous">
+        <h2>Previous purchases</h2>
         <p>
-          We honour statutory cancellation and withdrawal rights where they
-          apply. Nothing here limits consumer rights or remedies that cannot
-          lawfully be excluded.
+          This new offer does not replace an existing customer's agreed purchase terms. Contact us
+          with your previous order reference so we can honour the service or agree a resolution.
+          Historical test authorisations continue to be released under their original workflow.
         </p>
+      </section>
+      <section id="questions">
+        <h2>Questions</h2>
         <p>
-          Where you ask us to begin work during an applicable withdrawal period,
-          we request your express agreement. You acknowledge that any applicable
-          withdrawal right may end once the service is fully performed with your
-          prior agreement. Rights and any proportionate charge for work begun
-          depend on applicable law.
-        </p>
-        <p>
-          Read this policy alongside our{' '}
-          <a href="/terms">Terms of Service</a>. Contact our team if you
-          want to cancel.
+          Email <a href="mailto:help@zurtex.org">help@zurtex.org</a>. Operator identity,
+          jurisdiction-specific rights and final service policies require review before public
+          launch.
         </p>
       </section>
     </PolicyPage>

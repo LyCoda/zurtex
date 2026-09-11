@@ -2,11 +2,13 @@
 
 **Document status:** Canonical product specification
 
-**Product mode:** Private beta and demand validation
+**Product mode:** Local private beta; free travel tools and optional consultation booking
 
 **Decision owner:** Zurtex owner/operator
 
-**Last updated:** 11 September 2026
+**Last updated:** 12 September 2026
+
+**Current offer:** Section 18 supersedes earlier Ready Pack sales, enquiry-first and no-payment proposals. The implemented offer is US$5 for one journey, with a call without a fixed time limit and a recap without a fixed delivery deadline. Booking uses a Stripe hold pending human review. Credentials are not connected in this local preview, so real checkout remains unavailable. Earlier dated sections are retained as decision history, not current sales promises.
 
 ## 1. Purpose and authority
 
@@ -23,6 +25,8 @@ Precedence is:
 7. Existing code.
 
 This document does not approve a regulatory claim, settle an open legal question, or activate a blocked service.
+
+**Local preview scope (11 September 2026):** The implemented free beta is currently a two-stage route search and source-linked question dashboard. It supports editing flight details and US arrival region, but does not yet provide approved personalised requirements or calculated deadlines. The target requirements below remain the roadmap, not a claim of completed capability. The user-directed presentation restores the earlier zurtex.org identity; `DESIGN.md` and the home-route surface brief govern visual work.
 
 ## 2. Product definition
 
@@ -389,3 +393,50 @@ Zurtex 2.0 is product-complete for private beta only when a traveller can:
 8. Join the private beta without believing a purchase, review, upload, or delivery has begun.
 
 Nothing in the interface may imply government approval or an operational capability that does not exist.
+
+## 15. Local answer and Ready Pack preview — 11 September 2026
+
+The current development build includes an original answer-led demonstration based on independently checked official guidance. It is available only for the illustrated direct, personal, owner-accompanied, one-dog/cat pathway from Great Britain to France or the Netherlands. Assumptions and unapproved status are visible. It is not an expansion of publication-approved coverage; the production response continues to omit this research payload.
+
+Every free result now opens an in-memory Ready Pack workspace with Preparation, Vet brief, Documents and Sources sections. A browser-print layout contains all sections and an explicit unreviewed-draft notice. Document choices are personal preparation notes, not evidence of compliance; they survive tab changes and return to the free guide, but are cleared by journey edits or page navigation/refresh.
+
+This is a preview of the future US$5 product, not its commercial launch. It does not deliver a reviewed PDF, calculated reverse timeline, multi-pet intake, private six-month access, return checklist, calendar export, reminders, uploads, reviewer booking or payment. Existing launch gates and confirmed commercial scope remain unchanged. The free preview must not be represented as a purchased or reviewer-approved Ready Pack.
+
+Research and branch-level evidence: `docs/research/2026-09-11-petcleared-flows-and-ready-pack.md`.
+
+## 16. Country research and ordered answers — superseding the two-corridor preview
+
+The later 11 September 2026 iteration expands the development-only research library to all 23 selectable jurisdictions: each can be the starting country with 22 other destinations. This supersedes section 15's two-corridor display limit, not its publication or commercial gates.
+
+Personal travel and relocation results now compose a species-filtered destination checklist and a separate origin-export checklist. The free answer uses openly readable actions, requirement/conditional/planning badges, timing, practical bullets and adjacent official sources. Direct GB-to-EU AHC windows count issue day as day one; primary EU rabies dates describe only the 21-day wait and are not a personal readiness decision. Connecting journeys withhold date arithmetic. Unsupported direct AU/NZ origin pathways show a prominent stop before standard preparation instructions.
+
+Sale, adoption and ownership-transfer classifications continue to use the bounded question pathway; an ordinary personal-pet dossier is not a commercial certification engine. Recent history, age, breed, records, exact operating airline and permits remain uncollected or unreviewed. Country coverage does not mean every requirement for 506 ordered corridors has been individually confirmed.
+
+The Ready Pack preview preserves the same entry/departure separation, conditionality, planning dates, claim-level sources and blockers in its Preparation and print representations. Payment, review, uploads, reminders, account access and reviewed fulfillment remain unavailable.
+
+Permanent research index: `docs/research/README.md`. Dated overview and 23 country dossiers record sources, access dates, origin groupings, departure processes, contradictions and remaining gaps. Earlier research is retained as history. Owner approval remains required before these researched instructions are published.
+
+
+## 17. Journey intent and compact plan — 12 September 2026
+
+This supersedes section 16’s fully expanded display and purpose-selection description. The first form step exposes travel with an owned pet, same-owner relocation, and breeding/new-owner/event journeys. The third choice reveals sale, adoption, transfer, breeding and event subtypes. The form collects a species-specific pet count and, where another person accompanies the animal, owner-travel timing. These facts do not establish eligibility.
+
+Personal travel and relocation retain the dated personal-pet research. Other purposes, more than five pets, or an owner travelling more than five days apart receive an explicitly incomplete purpose-review preparation brief, not an automatic legal “commercial” label. Jurisdiction-specific evidence distinguishes animal-health, customs and licensing definitions. The conservative review boundary may include genuine personal journeys and event exceptions.
+
+Results now use a compact numbered plan, visible actions/timing and expandable bullets/sources. Flights and research sources sit in accessible tabs. Duplicate GB/EU AHC preparation is consolidated without dropping origin evidence; the GB return item is conditional for visits and omitted for relocation. This is an outbound guide, not a completed return assessment.
+
+The Ready Pack uses the same compact preparation component, retains its vet brief and in-memory document tracker, and prints a separate full-detail draft. Counts apply to one species; individual pet records, individual eligibility and mixed-species itineraries are not implemented. Publication approval and all paid-service gates remain unchanged.
+
+New research: docs/research/2026-09-12-journey-purpose.md. Implementation and browser evidence: docs/audits/2026-09-12-journey-purpose-and-compact-plan.md.
+
+## 18. Consultation offer replaces paid packs, 12 September 2026
+
+The user-supplied consultation proposal, followed by the user's explicit pricing/booking decision, supersedes earlier Ready Pack and readiness-check offers. Available information, compact plans, vet briefs, document notes, timing guidance and sources stay free. Publication-review holds are factual-safety gates, not purchase gates, and remain intact.
+
+Pet Travel Consultation costs US$5 for one planned journey. It includes a personal review, one call with no fixed time limit and a written recap with no fixed delivery deadline. It does not imply unlimited additional calls or ongoing journey management. The user explicitly rejected the proposal's enquiry-first flow: the website uses booking details and Stripe authorisation, followed by human suitability review before payment capture. Preferred availability is not a reserved appointment. The team agrees the call time directly.
+
+The original Who We Are hero, introduction, four story paragraphs and sign-off from commit 4808709 are preserved. The PDF's rewritten story is not adopted. Obsolete active-service, 24-hour-refund and secure-upload promises are not reinstated.
+
+The former Ready Pack workspace is now free travel tools. /ready-pack and /services redirect to /consultation. The consultation page, result offer, navigation, payment terms and privacy text reflect the new service. No enquiry draft, artificial approval, account, document intake or automatic scheduling was added.
+
+Consultation booking is enabled in application policy, but runtime Stripe credentials and live readiness remain required. This local environment has neither configured credentials nor an authenticated Stripe connector. Test-mode defaults remain; no public deployment, actual authorisation or capture has been performed. Operator identity, jurisdiction-specific terms, secure records handling and an actual staffed review/scheduling process are launch dependencies. See docs/operations/consultation-service.md.
