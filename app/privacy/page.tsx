@@ -67,9 +67,8 @@ export default function PrivacyPage() {
         <h2>Questions and requests</h2>
         <p>
           For privacy, correction or deletion requests, contact{" "}
-          <a href="mailto:help@zurtex.org">help@zurtex.org</a>. The legal operator, full provider
-          list, retention periods and applicable privacy rights must be finalised before public
-          launch. Some transaction records may need to be retained under applicable obligations.
+          <a href="mailto:help@zurtex.org">help@zurtex.org</a>. Some transaction records may need to
+          be retained under applicable obligations.
         </p>
       </section>
     </PolicyPage>
