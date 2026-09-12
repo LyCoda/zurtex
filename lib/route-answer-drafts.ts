@@ -6,6 +6,11 @@ import { needsPurposeReview, purposeEvidence, purposeLabels } from "./journey-pu
 export type DraftRequirement = ResearchRequirement & {
   calendar?: { from: string; to: string; note: string };
 };
+export type QuarantineAssessment = {
+  status: "not-normally-required" | "conditional" | "required";
+  label: string;
+  summary: string;
+};
 export type DraftRouteAnswer = {
   version: string;
   publicationStatus: "draft";
@@ -16,6 +21,7 @@ export type DraftRouteAnswer = {
   headline: string;
   summary: string;
   guideKind: "personal" | "purpose-review";
+  quarantine: QuarantineAssessment;
   assumptions: string[];
   routeFacts: string[];
   blockingNotes: string[];
@@ -25,8 +31,75 @@ export type DraftRouteAnswer = {
   sources: { id: string; title: string; authority: string; url: string }[];
 };
 
+const noRoutineQuarantine: QuarantineAssessment = {
+  status: "not-normally-required",
+  label: "Not normally required",
+  summary:
+    "Pets that meet this pathway are generally released after the required entry checks. Quarantine can still follow if the documents, eligibility or inspection requirements are not met.",
+};
+
+const conditionalQuarantine: QuarantineAssessment = {
+  status: "conditional",
+  label: "Depends on route conditions",
+  summary:
+    "Your pet's origin history, records or an authority decision will determine whether a quarantine stay is required.",
+};
+
+const requiredQuarantine: QuarantineAssessment = {
+  status: "required",
+  label: "Required on this pathway",
+  summary:
+    "The ordinary pathway for this origin includes a quarantine stay. Use the entry checklist for the booking and timing conditions.",
+};
+
+function quarantineAssessment(input: RouteGuideRequest, unsupportedDirect = false) {
+  if (unsupportedDirect) return conditionalQuarantine;
+
+  if (input.destination === "AU")
+    return input.origin === "NZ" ? noRoutineQuarantine : requiredQuarantine;
+  if (input.destination === "NZ")
+    return input.origin === "AU" ? noRoutineQuarantine : requiredQuarantine;
+  if (input.destination === "HK")
+    return ["CN", "TH", "MY", "AE", "PH"].includes(input.origin)
+      ? requiredQuarantine
+      : noRoutineQuarantine;
+  if (input.destination === "SG") {
+    if (["AE", "CN", "TW", "TH", "MY", "PH"].includes(input.origin)) return requiredQuarantine;
+    if (
+      ["US", "CA", "FR", "DE", "HK", "IT", "JP", "NO", "PT", "ES", "CH", "NL"].includes(
+        input.origin,
+      )
+    )
+      return conditionalQuarantine;
+    return noRoutineQuarantine;
+  }
+  if (input.destination === "MY")
+    return ["AU", "CA"].includes(input.origin) ? requiredQuarantine : conditionalQuarantine;
+  if (input.destination === "TW")
+    return ["AU", "JP", "NZ", "NO", "SG", "GB"].includes(input.origin)
+      ? noRoutineQuarantine
+      : conditionalQuarantine;
+  if (input.destination === "CN")
+    return ["GB", "IE", "PT", "CH", "SG", "HK", "JP", "AU", "NZ"].includes(input.origin)
+      ? noRoutineQuarantine
+      : conditionalQuarantine;
+  if (input.destination === "TH") return conditionalQuarantine;
+  if (
+    input.destination === "US" &&
+    (input.arrivalRegion === "hawaii" ||
+      input.arrivalRegion === "guam" ||
+      (input.species === "dog" && ["CN", "TH", "MY", "PH", "BR", "AE"].includes(input.origin)))
+  )
+    return conditionalQuarantine;
+
+  return noRoutineQuarantine;
+}
+
 // Only the server environment can enable unapproved research, never request fields.
-export function draftAnswersAllowed(environment: string | undefined, serverResearchPreview?: string) {
+export function draftAnswersAllowed(
+  environment: string | undefined,
+  serverResearchPreview?: string,
+) {
   return environment === "development" || serverResearchPreview === "true";
 }
 
@@ -118,6 +191,7 @@ export function getDraftRouteAnswer(input: RouteGuideRequest): DraftRouteAnswer 
       originName: origin.name,
       destinationName: destination.name,
       guideKind: "purpose-review",
+      quarantine: conditionalQuarantine,
       headline: "Start with the right travel process.",
       summary: [
         `${purposeLabels[input.movementPurpose]}.`,
@@ -303,6 +377,7 @@ export function getDraftRouteAnswer(input: RouteGuideRequest): DraftRouteAnswer 
     approvedBy: null,
     checkedOn: [origin.checkedOn, destination.checkedOn].sort().at(-1)!,
     guideKind: "personal",
+    quarantine: quarantineAssessment(input, unsupportedDirect || originNotClassified),
     originName: origin.name,
     destinationName: destination.name,
     headline:

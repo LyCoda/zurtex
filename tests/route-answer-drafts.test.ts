@@ -36,7 +36,8 @@ test("research never grants publication approval or changes core assessment", ()
 
 test("only an exact server-side opt-in exposes research previews outside development", () => {
   assert.equal(draftAnswersAllowed("production", "true"), true);
-  for (const flag of [undefined, "false", "TRUE", "1", ""]) assert.equal(draftAnswersAllowed("production", flag), false);
+  for (const flag of [undefined, "false", "TRUE", "1", ""])
+    assert.equal(draftAnswersAllowed("production", flag), false);
   const answer = getDraftRouteAnswer(trip)!;
   assert.equal(answer.approvedBy, null);
   assert.equal(answer.publicationStatus, "draft");
@@ -85,6 +86,7 @@ test("all 552 ordered country pairs compose for both species without orphaned ev
 });
 test("GB to NL has the five practical destination actions, not a blood-test task", () => {
   const answer = getDraftRouteAnswer(trip)!;
+  assert.equal(answer.quarantine.status, "not-normally-required");
   assert.deepEqual(
     answer.requirements.map((r) => r.id),
     ["NL-chip", "NL-rabies", "NL-book", "NL-certificate", "NL-entry"],
@@ -94,6 +96,46 @@ test("GB to NL has the five practical destination actions, not a blood-test task
   assert.ok(
     answer.requirements.find((r) => r.id === "NL-certificate")!.sourceIds.includes("gb-export-ahc"),
   );
+});
+test("quarantine is presented as a route outcome rather than a universal requirement", () => {
+  for (const [origin, destination] of [
+    ["GB", "FR"],
+    ["US", "CA"],
+    ["AE", "GB"],
+    ["NZ", "AU"],
+    ["AU", "NZ"],
+  ]) {
+    assert.equal(
+      getDraftRouteAnswer({ ...trip, origin, destination })!.quarantine.status,
+      "not-normally-required",
+      `${origin}-${destination}`,
+    );
+  }
+  for (const [origin, destination] of [
+    ["GB", "AU"],
+    ["GB", "NZ"],
+    ["CN", "HK"],
+    ["AE", "SG"],
+    ["CA", "MY"],
+  ]) {
+    assert.equal(
+      getDraftRouteAnswer({ ...trip, origin, destination })!.quarantine.status,
+      "required",
+      `${origin}-${destination}`,
+    );
+  }
+  for (const [origin, destination] of [
+    ["US", "CN"],
+    ["US", "TW"],
+    ["US", "MY"],
+    ["US", "TH"],
+  ]) {
+    assert.equal(
+      getDraftRouteAnswer({ ...trip, origin, destination })!.quarantine.status,
+      "conditional",
+      `${origin}-${destination}`,
+    );
+  }
 });
 test("unlisted origins receive titre steps; species-only rules stay scoped", () => {
   const unlisted = getDraftRouteAnswer({ ...trip, origin: "CN" })!;

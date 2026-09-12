@@ -18,6 +18,9 @@ import {
   Plane,
   Printer,
   Search,
+  ShieldCheck,
+  ShieldQuestion,
+  TriangleAlert,
 } from "lucide-react";
 import type { RouteGuideAssessment } from "@/lib/route-intelligence";
 import type { DraftRequirement } from "@/lib/route-answer-drafts";
@@ -381,12 +384,12 @@ function EvidenceLedger({
                   {!report
                     ? "Recorded source"
                     : check?.status === "fetched"
-                    ? "Page retrieved"
-                    : check?.status === "unsupported"
-                      ? "Format not read"
-                      : check?.status === "blocked"
-                        ? "Retrieval blocked"
-                        : "Not retrieved"}
+                      ? "Page retrieved"
+                      : check?.status === "unsupported"
+                        ? "Format not read"
+                        : check?.status === "blocked"
+                          ? "Retrieval blocked"
+                          : "Not retrieved"}
                   <ChevronDown size={17} aria-hidden="true" />
                 </span>
               </summary>
@@ -550,20 +553,39 @@ export function JourneyResults({
               <span>A return journey needs its own guide.</span>
             </div>
           </section>
+          {draft?.quarantine && (
+            <section
+              className={`journey-quarantine-status journey-quarantine-status--${draft.quarantine.status}`}
+              aria-label="Quarantine assessment"
+            >
+              {draft.quarantine.status === "not-normally-required" ? (
+                <ShieldCheck size={22} aria-hidden="true" />
+              ) : draft.quarantine.status === "required" ? (
+                <TriangleAlert size={22} aria-hidden="true" />
+              ) : (
+                <ShieldQuestion size={22} aria-hidden="true" />
+              )}
+              <div>
+                <span>Quarantine</span>
+                <strong>{draft.quarantine.label}</strong>
+                <p>{draft.quarantine.summary}</p>
+              </div>
+            </section>
+          )}
           <div className="journey-verification-line">
             <CircleHelp size={17} aria-hidden="true" />
             <p>
               {!report
                 ? "This guide was assembled from our maintained research library. Source links, research dates and known gaps are shown below."
                 : report.status === "supported"
-                ? "The automated comparison supports the checklist statements. Your pet’s records and eligibility still need checking."
-                : report?.status === "attention"
-                  ? "The source comparison found statements to clarify. The affected steps are marked below."
-                  : report.model.status === "failed"
-                    ? "Some live comparisons could not finish. Successful checks and unresolved statements are shown separately below."
-                    : report.model.status !== "available"
-                      ? "Live claim verification is unavailable. This is a source-linked research draft; current requirements need confirmation."
-                      : "The source check is incomplete. Unconfirmed statements remain marked in your guide."}{" "}
+                  ? "The automated comparison supports the checklist statements. Your pet’s records and eligibility still need checking."
+                  : report?.status === "attention"
+                    ? "The source comparison found statements to clarify. The affected steps are marked below."
+                    : report.model.status === "failed"
+                      ? "Some live comparisons could not finish. Successful checks and unresolved statements are shown separately below."
+                      : report.model.status !== "available"
+                        ? "Live claim verification is unavailable. This is a source-linked research draft; current requirements need confirmation."
+                        : "The source check is incomplete. Unconfirmed statements remain marked in your guide."}{" "}
               <a href="#journey-sources">See the evidence</a>
             </p>
           </div>

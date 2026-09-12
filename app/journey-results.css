@@ -132,6 +132,51 @@
   color: var(--muted-ink);
   font-size: 0.9375rem;
 }
+.journey-quarantine-status {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  margin-top: 16px;
+  padding: 15px 18px;
+  border: 1px solid var(--line-dark);
+  border-radius: 12px;
+  background: var(--paper);
+}
+.journey-quarantine-status > svg {
+  color: var(--teal);
+  margin-top: 2px;
+}
+.journey-quarantine-status > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  align-items: baseline;
+}
+.journey-quarantine-status span {
+  color: var(--muted-ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.journey-quarantine-status strong {
+  color: var(--ink);
+  font-size: 1.0625rem;
+  font-weight: 650;
+}
+.journey-quarantine-status p {
+  grid-column: 1 / -1;
+  margin: 3px 0 0;
+  max-width: 78ch;
+  color: var(--body);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+.journey-quarantine-status--required > svg {
+  color: var(--warning);
+}
+.journey-quarantine-status--conditional > svg {
+  color: var(--coral);
+}
 .journey-verification-line {
   display: flex;
   align-items: flex-start;
@@ -953,6 +998,14 @@
   .journey-verification-line {
     margin-top: 12px;
     line-height: 1.4;
+  }
+  .journey-quarantine-status {
+    margin-top: 12px;
+    padding: 13px 14px;
+  }
+  .journey-quarantine-status > div {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
   .journey-guide-layout {
     margin-top: 22px;
