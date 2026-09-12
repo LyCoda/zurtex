@@ -2,16 +2,14 @@
 import { ArrowRight, Heart, PawPrint } from "lucide-react";
 import type { ReactNode } from "react";
 import { MarketingHeader } from "./site-header";
+import { BrandLogo } from "./brand-logo";
 export { MarketingHeader } from "./site-header";
 export function MarketingFooter() {
   return (
     <footer className="zurtex-footer">
       <div className="footer-brand">
         <a className="brand" href="/">
-          <span className="brand-mark" aria-hidden="true">
-            <PawPrint size={20} />
-          </span>
-          Zurtex
+          <BrandLogo />
         </a>
         <p>
           A little preparation for a big journey.

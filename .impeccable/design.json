@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-11T16:20:41Z",
+  "generatedAt": "2026-09-12T14:58:57Z",
   "title": "Design System: Zurtex",
   "extensions": {
     "colorMeta": {
@@ -43,6 +43,11 @@
         "name": "reduced-motion-duration",
         "value": "0.01ms",
         "purpose": "Transition and animation duration under reduced motion; animations run once."
+      },
+      {
+        "name": "verification-stage-transition",
+        "value": "650ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Plane position changes only on actual source-check stage completion; transitions are removed under reduced motion. Native progress updates immediately from the same completed-stage count."
       }
     ],
     "breakpoints": [
@@ -58,7 +63,42 @@
         "name": "phone",
         "value": "600px"
       }
-    ]
+    ],
+    "brandAssets": {
+      "logo": {
+        "standard": "public/brand/zurtex-logo.svg",
+        "reversed": "public/brand/zurtex-logo-reversed.svg",
+        "mark": "public/brand/zurtex-mark.svg",
+        "component": "components/brand-logo.tsx",
+        "geometry": "Original filled paw with four rounded toe pads and a Z-shaped central pad; no enclosing circle.",
+        "wordmark": "Afacad weight 650, converted to SVG outlines.",
+        "viewBox": "0 0 261 72",
+        "displayWidths": "164px; 140px at max-width 600px; height auto.",
+        "usage": "Shared header and footer logo; standalone mark configured as the favicon."
+      },
+      "airportHero": {
+        "delivery": "public/images/zurtex-airport-companion-v2.webp",
+        "source": "public/images/zurtex-airport-companion-v2.png",
+        "dimensions": "1536 × 1024",
+        "origin": "New built-in ImageGen output, with no reference image; generated brand image in photographic style, not a real customer photograph.",
+        "composition": "Seated woman and adult golden retriever beside an airport window; no carrier or crate; woman's ankles outside the frame; preserve both faces and believable scale.",
+        "phoneCrop": "object-position: 50% 20% at max-width 600px.",
+        "provenance": "docs/design/2026-09-12-brand-photo-prompt.md",
+        "promptText": "docs/design/2026-09-12-brand-photo-prompt.txt",
+        "rasterProvenance": "Exact prompt embedded in the source PNG and stored in public/images/zurtex-airport-companion-v2.webp.json for the web asset.",
+        "authority": "Supersedes the former airport hero at the owner's request; does not establish airline eligibility."
+      }
+    },
+    "verificationJourney": {
+      "component": "components/route-guide/verification-loading.tsx",
+      "styles": "app/verification-loading.css",
+      "geometry": "Crimson plane over a pale aqua folded-map outline with teal route linework; no asserted geography.",
+      "layout": "1080px outer container; two columns with 64px gap; single column at 760px.",
+      "diagram": "216px wide; 180px in the single-column layout.",
+      "progress": "Plane position uses the same actual completed-stage count as native progress; no timer or repeating animation.",
+      "content": "All five stage rows, existing verification wording, dynamic server messages, cancellation, heading focus and polite activity announcement are preserved.",
+      "direction": "docs/design/2026-09-12-minimal-loading.md"
+    }
   },
   "components": [
     {
@@ -104,12 +144,12 @@
   ],
   "narrative": {
     "northStar": "For the ones who come with us.",
-    "overview": "Zurtex feels familiar, caring and clear. Its established identity combines white and pale aqua surfaces, deep teal text, muted crimson actions, Afacad typography and a circular paw mark. Real photographs of pets and their people provide the emotional connection.\n\nThis documents the user-directed restoration of the earlier Zurtex identity. The rejected navy grid, cream and orange direction is not visual authority. Tokens come from `app/globals.css`; typography is loaded in `app/layout.tsx`. Surface composition and task flow belong in `.impeccable/surfaces/app-page-tsx.md`.",
+    "overview": "Zurtex feels familiar, caring and clear. Its established identity combines white and pale aqua surfaces, deep teal text, muted crimson actions, Afacad typography and an original filled paw with a Z-shaped central pad. Natural pet-owner imagery provides the emotional connection; the current airport hero is a generated brand image in photographic style.\n\nThis documents the user-directed restoration of the earlier Zurtex identity and the subsequent requested logo, hero and minimal loader refresh on 12 September 2026. The rejected navy grid, cream and orange direction is not visual authority. Tokens come from `app/globals.css`; typography is loaded in `app/layout.tsx`. Surface composition and task flow belong in `.impeccable/surfaces/app-page-tsx.md`; the later asset and loading direction is recorded in `docs/design/2026-09-12-brand-refresh.md` and `docs/design/2026-09-12-minimal-loading.md`.",
     "keyCharacteristics": [
       "Spacious white and pale aqua surfaces.",
-      "Friendly Afacad typography and a circular paw mark.",
+      "Friendly Afacad typography and an original paw with a Z-shaped pad.",
       "Crimson primary actions with teal navigation and selection.",
-      "Real pet-owner photography.",
+      "Natural pet-owner imagery with recorded provenance, including the generated airport hero.",
       "Readable questions, visible sources and honest uncertainty."
     ],
     "rules": [
@@ -120,11 +160,12 @@
       }
     ],
     "dos": [
-      "Do preserve white, pale aqua, deep teal, crimson, Afacad and the circular paw identity.",
-      "Do use the existing airport pet-owner photograph and real supporting pet imagery.",
+      "Do preserve white, pale aqua, deep teal, crimson, Afacad and the new paw with its Z-shaped pad.",
+      "Do use the replacement airport hero and retain its generated-image provenance alongside credited supporting photography.",
       "Do keep both country fields full-width on phones.",
       "Do retain visible labels, keyboard focus and reduced-motion support.",
-      "Do distinguish reading progress from confirmed requirements."
+      "Do distinguish reading progress from confirmed requirements.",
+      "Do tie the loading plane to actual source-check stages and preserve all verification-process wording."
     ],
     "donts": [
       "Don't restore the rejected navy grid, cream and orange identity.",

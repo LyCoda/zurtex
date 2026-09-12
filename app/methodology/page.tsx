@@ -10,7 +10,7 @@ export default function MethodologyPage() {
   return (
     <MarketingPage
       title="A clearer guide starts with the source."
-      intro="We bring the official guidance together, check what we can read today, and show you what still needs confirming."
+      intro="We organise maintained research from official guidance around your journey and show you what still needs confirming."
       variant="methodology-page"
       aside={
         <div className="policy-summary">
@@ -27,23 +27,23 @@ export default function MethodologyPage() {
           <h2>Where the information comes from</h2>
           <p>
             Your guide starts with dated research from government authorities and airlines. When
-            you submit a journey, Zurtex tries to open the relevant official pages and find related
-            guidance. The progress screen follows those checks as they happen.
+            you submit a journey, Zurtex selects the relevant saved guidance and organises it around
+            the details you provided. The progress screen follows that assembly process.
           </p>
           <p>
-            An automated comparison checks the available source text against the checklist when
-            the evidence service is connected. Your result shows which pages could be read, what
-            the comparison found, and any gaps. Opening a page alone does not verify a rule.
+            Each result retains its official-source links, checked dates and known gaps. It does not
+            perform a new live source check for each search, so you should open the cited guidance
+            and confirm time-sensitive requirements before relying on them.
           </p>
         </article>
         <article>
           <h2>What the labels mean</h2>
           <dl className="definition-list">
             <div>
-              <dt>Supported by source</dt>
+              <dt>Recorded official source</dt>
               <dd>
-                The automated comparison found supporting text in a source read for this journey.
-                This is a research check, not human review or confirmation of your pet’s eligibility.
+                The guidance was researched from the cited authority on the displayed checked date.
+                This is not human review or confirmation of your pet’s eligibility.
               </dd>
             </div>
             <div>
@@ -54,10 +54,10 @@ export default function MethodologyPage() {
               </dd>
             </div>
             <div>
-              <dt>Not checked live</dt>
+              <dt>Not checked for this search</dt>
               <dd>
-                The evidence service could not complete this check. The research remains a starting
-                point, with its original source links available for you to inspect.
+                Zurtex assembled this result from its maintained research library. The original
+                source links remain available for you to inspect.
               </dd>
             </div>
           </dl>
@@ -74,10 +74,10 @@ export default function MethodologyPage() {
             </span>
           </li>
           <li>
-            <strong>Follow the source check</strong>
+            <strong>Follow your guide’s progress</strong>
             <span>
-              Watch the departure, arrival and evidence checks finish, then open your guide with
-              timing, practical tasks and official-source links.
+              Watch the departure, arrival and source-linked sections come together, then open your
+              guide with timing, practical tasks and official-source links.
             </span>
           </li>
           <li>

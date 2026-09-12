@@ -1,6 +1,7 @@
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext RSC Link runtime failure. */
 "use client";
-import { ArrowRight, Menu, PawPrint, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
+import { BrandLogo } from "./brand-logo";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 const links = [
@@ -25,10 +26,7 @@ export function MarketingHeader() {
       </a>
       <header className="zurtex-header">
         <a className="brand" href="/" aria-label="Zurtex home" onClick={() => setOpen(false)}>
-          <span className="brand-mark" aria-hidden="true">
-            <PawPrint size={20} />
-          </span>
-          <span>Zurtex</span>
+          <BrandLogo />
         </a>
 
         <a className="header-route" href="/" onClick={() => setOpen(false)}>

@@ -18,7 +18,6 @@ import { NativeSelect } from "@/components/ui/native-select";
 import { purposeLabels } from "@/lib/journey-purpose";
 import type { RouteGuideAssessment, RouteGuideRequest } from "@/lib/route-intelligence";
 import type { VerificationProgress, VerificationStage } from "@/lib/source-verification-types";
-import { readVerificationStream } from "@/lib/verification-stream";
 import { JourneyResults } from "./journey-results";
 import { VerificationLoading } from "./verification-loading";
 
@@ -29,6 +28,33 @@ const relationshipLabels = {
   family: "With family",
   authorised: "With an authorised person",
 };
+const assemblyStages: VerificationStage[] = [
+  "prepare",
+  "departure",
+  "arrival",
+  "compare",
+  "compose",
+];
+const assemblyMessages: Record<VerificationStage, string> = {
+  prepare: "Matching your journey with our researched guidance",
+  departure: "Organising the departure checklist",
+  arrival: "Organising the destination requirements",
+  compare: "Connecting each step to its recorded sources",
+  compose: "Preparing your route guide",
+};
+function pause(duration: number, signal: AbortSignal) {
+  return new Promise<void>((resolve, reject) => {
+    const timer = window.setTimeout(resolve, duration);
+    signal.addEventListener(
+      "abort",
+      () => {
+        window.clearTimeout(timer);
+        reject(signal.reason ?? new DOMException("Cancelled", "AbortError"));
+      },
+      { once: true },
+    );
+  });
+}
 const initialForm: RouteGuideRequest = {
   origin: "",
   destination: "",
@@ -167,19 +193,46 @@ export function RouteWorkbench({
     activeRequest.current?.abort();
     const controller = new AbortController();
     activeRequest.current = controller;
-    const timeout = window.setTimeout(() => controller.abort(new Error("The check is taking too long. Please try again.")), 100_000);
+    const timeout = window.setTimeout(
+      () => controller.abort(new Error("The guide is taking too long. Please try again.")),
+      20_000,
+    );
     const serial = ++requestSerial.current;
     try {
-      const response = await fetch("/api/verify", {
+      const assessmentRequest = fetch("/api/assess", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
         signal: controller.signal,
       });
-      const body = await readVerificationStream(response, (update) => {
-        if (serial === requestSerial.current)
-          setProgress((previous) => ({ ...previous, [update.stage]: update }));
-      });
+      for (const stage of assemblyStages) {
+        if (serial !== requestSerial.current) return;
+        setProgress((previous) => ({
+          ...previous,
+          [stage]: {
+            stage,
+            state: "running",
+            message: assemblyMessages[stage],
+            completed: 0,
+            total: 1,
+          },
+        }));
+        await pause(stage === "prepare" ? 520 : 640, controller.signal);
+        if (serial !== requestSerial.current) return;
+        setProgress((previous) => ({
+          ...previous,
+          [stage]: {
+            stage,
+            state: "complete",
+            message: assemblyMessages[stage],
+            completed: 1,
+            total: 1,
+          },
+        }));
+      }
+      const response = await assessmentRequest;
+      const body = (await response.json()) as RouteGuideAssessment & { error?: string };
+      if (!response.ok) throw new Error(body.error || "We could not prepare this guide. Please try again.");
       if (serial !== requestSerial.current) return;
       setAssessment(body);
       setAnnouncement(
@@ -234,10 +287,10 @@ export function RouteWorkbench({
             </div>
             <img
               className="welcome-photo"
-              src="/images/pet-travel-readiness-hero.png"
+              src="/images/zurtex-airport-companion-v2.webp"
               width="1536"
               height="1024"
-              alt="A traveller and her dog together at the airport"
+              alt="A woman sitting beside her golden retriever at an airport window"
               fetchPriority="high"
             />
           </section>

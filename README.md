@@ -6,9 +6,9 @@ The current private beta includes:
 
 - a concise dog-and-cat route search;
 - structured research for 24 jurisdictions;
-- streamed official-source verification progress;
-- bounded HTML and text-PDF retrieval from approved authority domains;
-- an optional small open-weight model for evidence comparison;
+- staged static-guide assembly progress;
+- source-linked research with checked dates and explicit gaps;
+- an optional developer-only evidence comparison endpoint;
 - printable preparation, veterinarian, document and source tools.
 
 Zurtex is a planning aid. It does not approve travel, replace a veterinarian or authority, verify an animal's records, or guarantee airline acceptance.
@@ -29,9 +29,9 @@ pnpm dev
 
 Open `http://localhost:3000`. Copy `.env.example` to `.env.local` when local configuration is needed. Keep all keys server-side and never commit an environment file.
 
-## Verification model
+## Optional developer verification model
 
-The application works without a connected model and labels its evidence comparison as limited. For local model-backed checks, run an OpenAI-compatible server and set:
+The customer route guide uses the static research library and does not require a model. Developers can still test the separate evidence-comparison endpoint locally by running an OpenAI-compatible server and setting:
 
 ```text
 ZURTEX_VERIFICATION_PROVIDER=openai-compatible
@@ -54,4 +54,4 @@ The current change set passes 91 automated tests, type checking, linting and a C
 
 ## Deployment
 
-Cloudflare configuration is defined in `wrangler.jsonc`. Deployment requires the intended Cloudflare account, its server-side secrets and an authorised Workers AI binding. Production deployment is a separate release action and is not performed by the local preparation workflow.
+Cloudflare configuration is defined in `wrangler.jsonc`. The normal production route guide has no Workers AI binding and incurs no model-inference charge. Production deployment is a separate release action and is not performed by the local preparation workflow.

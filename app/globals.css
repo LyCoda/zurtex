@@ -705,14 +705,10 @@ img {
   letter-spacing: -0.02em;
   text-decoration: none;
 }
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 37px;
-  height: 37px;
-  border-radius: 50%;
-  background: var(--teal);
-  color: white;
+.brand-logo {
+  display: block;
+  width: 164px;
+  height: auto;
 }
 .header-route,
 .text-link,
@@ -2314,9 +2310,8 @@ summary::-webkit-details-marker {
     font-size: 1.4rem;
     gap: 8px;
   }
-  .brand-mark {
-    width: 32px;
-    height: 32px;
+  .brand-logo {
+    width: 140px;
   }
   .header-route {
     font-size: 0.88rem;
@@ -2355,7 +2350,7 @@ summary::-webkit-details-marker {
     position: static;
     width: 100%;
     height: 190px;
-    object-position: 50% 42%;
+    object-position: 50% 20%;
   }
   .welcome-hero::after {
     display: none;

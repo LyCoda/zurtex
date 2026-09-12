@@ -1,5 +1,7 @@
 # Zurtex 2.0 — Canonical Product Definition
 
+**Static guide update (12 September 2026):** The customer route guide now assembles the maintained research library through a short staged progress sequence. It does not fetch or compare official pages during each customer search and has no production Workers AI binding. Checked dates, source links, evidence gaps and publication holds remain visible. The separate verification endpoint remains available for local editorial testing.
+
 **Results update (12 September 2026):** The owner requested substantive PetsCleared-inspired results in Zurtex's own identity, live official-source checks, a small open-weight evidence comparator and an honest loading journey. The implementation adds source-linked research previews behind the server-controlled `ZURTEX_RESEARCH_RESULTS_ENABLED` flag, enabled in the prepared deployment configuration. This supersedes the earlier development-only presentation restriction for this research-preview experience, while preserving draft status, null human approval, uncertain eligibility, and unchanged commercial controls. AI comparison does not approve or rewrite canonical rules. The current changes have not yet been deployed to production.
 
 **Document status:** Canonical product specification
@@ -31,6 +33,8 @@ Precedence is:
 This document does not approve a regulatory claim, settle an open legal question, or activate a blocked service.
 
 **Local preview scope (11 September 2026):** The implemented free beta is currently a two-stage route search and source-linked question dashboard. It supports editing flight details and US arrival region, but does not yet provide approved personalised requirements or calculated deadlines. The target requirements below remain the roadmap, not a claim of completed capability. The user-directed presentation restores the earlier zurtex.org identity; `DESIGN.md` and the home-route surface brief govern visual work.
+
+**Brand asset update (12 September 2026):** The owner requested a new logo, a replacement airport hero to address the former image's implausible kennel and ankles, and a minimal plane-and-map loading screen. The new original paw with a Z-shaped pad and outlined Afacad wordmark, plus `public/images/zurtex-airport-companion-v2.webp`, supersede the earlier circular mark and airport image. The hero is a generated brand image, not a real customer photograph; its provenance is recorded in `docs/design/2026-09-12-brand-photo-prompt.md`. The loading plane follows the current guide-assembly stage. `DESIGN.md` and the dated brand/loading direction records govern this narrow update; it adds no regulatory, airline-eligibility or service claims.
 
 ## 2. Product definition
 

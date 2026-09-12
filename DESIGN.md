@@ -105,16 +105,16 @@ components:
 
 **Creative North Star: "For the ones who come with us."**
 
-Zurtex feels familiar, caring and clear. Its established identity combines white and pale aqua surfaces, deep teal text, muted crimson actions, Afacad typography and a circular paw mark. Real photographs of pets and their people provide the emotional connection.
+Zurtex feels familiar, caring and clear. Its established identity combines white and pale aqua surfaces, deep teal text, muted crimson actions, Afacad typography and an original filled paw with a Z-shaped central pad. Natural pet-owner imagery provides the emotional connection; the current airport hero is a generated brand image in photographic style.
 
-This documents the user-directed restoration of the earlier Zurtex identity. The rejected navy grid, cream and orange direction is not visual authority. Tokens come from `app/globals.css`; typography is loaded in `app/layout.tsx`. Surface composition and task flow belong in `.impeccable/surfaces/app-page-tsx.md`.
+This documents the user-directed restoration of the earlier Zurtex identity and the subsequent requested logo, hero and minimal loader refresh on 12 September 2026. The rejected navy grid, cream and orange direction is not visual authority. Tokens come from `app/globals.css`; typography is loaded in `app/layout.tsx`. Surface composition and task flow belong in `.impeccable/surfaces/app-page-tsx.md`; the later asset and loading direction is recorded in `docs/design/2026-09-12-brand-refresh.md` and `docs/design/2026-09-12-minimal-loading.md`.
 
 **Key Characteristics:**
 
 - Spacious white and pale aqua surfaces.
-- Friendly Afacad typography and a circular paw mark.
+- Friendly Afacad typography and an original paw with a Z-shaped pad.
 - Crimson primary actions with teal navigation and selection.
-- Real pet-owner photography.
+- Natural pet-owner imagery with recorded provenance, including the generated airport hero.
 - Readable questions, visible sources and honest uncertainty.
 
 ## Colors
@@ -153,6 +153,8 @@ The implemented route form has four desktop columns, two below 1080px, and full-
 
 The route result is a single-column document capped at 940px, with Your plan, Flights and Sources tabs. Below 700px the route heading and editing action stack, the route wraps naturally, and purpose choices become a vertical list. Source entries stack below 600px.
 
+The guide-assembly loading screen uses a 1080px outer container and two columns separated by 64px, becoming one column at 760px. Its folded-map graphic is 216px wide, reducing to 180px on smaller screens. The heading tops out at 2.65rem and uses 2.35rem in the single-column layout. All five stage rows remain visible in the document.
+
 The header is sticky. CSS governs document scrolling and switches to automatic scrolling for reduced-motion preferences.
 
 ## Elevation & Depth
@@ -165,9 +167,9 @@ The observed shadow is `0 16px 45px rgba(12, 63, 62, 0.1)`. Preserve its low con
 
 Controls have gently curved corners using the control radius. Larger informational and search surfaces use the surface radius. Status labels are slightly tighter; disclosures use the intermediate radius.
 
-Circles belong to the paw mark and numbered progress or checklist markers. The brand mark is 37px on larger screens and 32px on phones. Keep the actual paw artwork and established wordmark treatment.
+The brand mark is an original filled paw: four rounded toe pads above a Z-shaped central pad, with no enclosing circle. The logo pairs it with outlined Afacad lettering at weight 650. Use the supplied SVG geometry in `public/brand/zurtex-logo.svg`, its white reversed variant, and `public/brand/zurtex-mark.svg`; do not rebuild the lettering as live text. The shared header/footer logo is 164px wide, reducing to 140px at 600px, with its 261:72 aspect ratio preserved. The standalone mark is also the configured favicon. Circles remain appropriate for numbered progress and checklist markers.
 
-Photography uses real subjects and modest cropping. The airport pet-owner image remains the established landing asset from the original repository. The supporting companionship photograph is credited to Thomas de Fretes / Unsplash on the About page. No new image generation was used for this restoration.
+The landing hero is `public/images/zurtex-airport-companion-v2.webp`, with the original generated PNG retained alongside it. It depicts a seated woman and an adult golden retriever at an airport window, with no carrier or crate and the woman's ankles outside the frame. Preserve believable anatomy and scale, natural texture and both faces in responsive crops; the phone crop uses `object-position: 50% 20%`. This is a built-in ImageGen brand image, not a real customer photograph or evidence of airline eligibility. Its exact prompt and provenance are recorded in `docs/design/2026-09-12-brand-photo-prompt.md`, with the prompt also saved as the adjacent `.txt` file, embedded in the PNG and carried by `public/images/zurtex-airport-companion-v2.webp.json` for the web asset. This requested replacement supersedes the former airport image. The supporting companionship photograph remains credited to Thomas de Fretes / Unsplash on the About page.
 
 ## Components
 
@@ -199,15 +201,22 @@ For researched results, use compact numbered disclosure rows separated by rules.
 
 Reduced-motion preferences disable smooth scrolling and reduce transition and animation durations to 0.01ms, with a single animation iteration.
 
+### Verification progress
+
+Use a small crimson plane over a pale aqua folded-map outline with teal route linework. The map is geometric, with no asserted geography. Quiet numbered stage rows use fine dividers and readable state labels; current activity, native progress, limitations and the cancellation control remain visible. Preserve all existing verification-process wording and dynamic server messages, including the existing limited-state message behavior.
+
+The plane advances along its curve as the static guide’s five assembly stages finish, using the same completed-stage count as the native progress element. A 650ms transition connects the plane positions; native progress updates immediately without a width transition. Motion does not loop. Reduced-motion preferences remove the plane transition while preserving the meaningful position. Heading focus and the polite activity announcement remain intact.
+
 ## Do's and Don'ts
 
 ### Do:
 
-- Do preserve white, pale aqua, deep teal, crimson, Afacad and the circular paw identity.
-- Do use the existing airport pet-owner photograph and real supporting pet imagery.
+- Do preserve white, pale aqua, deep teal, crimson, Afacad and the new paw with its Z-shaped pad.
+- Do use the replacement airport hero and retain its generated-image provenance alongside credited supporting photography.
 - Do keep both country fields full-width on phones.
 - Do retain visible labels, keyboard focus and reduced-motion support.
 - Do distinguish reading progress from confirmed requirements.
+- Do tie the loading plane to the visible guide-assembly stages and describe the static process accurately.
 
 ### Don't:
 

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   description:
     "A free, source-linked first-pass guide for international dog and cat journeys. No email, payment or document upload required.",
   robots: { index: true, follow: true },
+  icons: { icon: "/brand/zurtex-mark.svg" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
