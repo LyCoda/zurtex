@@ -191,7 +191,12 @@ function Checklist({
                 </ul>
                 <SourceLinks ids={item.sourceIds} sources={sources} />
                 <p className={`journey-evidence-note${needsAttention ? " needs-attention" : ""}`}>
-                  {allSupported ? (
+                  {!report ? (
+                    <>
+                      <CircleHelp size={14} aria-hidden="true" /> Recorded official sources are
+                      linked. No new live comparison was run for this search.
+                    </>
+                  ) : allSupported ? (
                     <>
                       <Check size={14} aria-hidden="true" /> Step details and timing supported by
                       retrieved text.
@@ -270,20 +275,31 @@ function EvidenceLedger({
         <span>{uniqueSources.length} sources</span>
       </div>
       <p>
-        Open a source to see what was retrieved and which statements the comparison supports. A page
-        being available does not confirm every rule in this guide.
+        {report
+          ? "Open a source to see what was retrieved and which statements the comparison supports. A page being available does not confirm every rule in this guide."
+          : "Open the official sources used to prepare this research. They were not retrieved again for this search, so confirm time-sensitive requirements before relying on them."}
       </p>
       <div className="journey-evidence-summary">
-        <span>
-          <strong>{fetchedCount}</strong> pages retrieved
-        </span>
-        <span>
-          <strong>
-            {supportedCount}
-            {report ? ` / ${report.claims.length}` : ""}
-          </strong>{" "}
-          statements supported
-        </span>
+        {report ? (
+          <>
+            <span>
+              <strong>{fetchedCount}</strong> pages retrieved
+            </span>
+            <span>
+              <strong>
+                {supportedCount} / {report.claims.length}
+              </strong>{" "}
+              statements supported
+            </span>
+          </>
+        ) : (
+          <>
+            <span>
+              <strong>{uniqueSources.length}</strong> recorded sources
+            </span>
+            <span>Static research guide</span>
+          </>
+        )}
         <span>
           {report
             ? `Checked ${formatDate(report.checkedAt, true)}`
@@ -362,7 +378,9 @@ function EvidenceLedger({
                   <span>{source.title}</span>
                 </span>
                 <span className="journey-source-state">
-                  {check?.status === "fetched"
+                  {!report
+                    ? "Recorded source"
+                    : check?.status === "fetched"
                     ? "Page retrieved"
                     : check?.status === "unsupported"
                       ? "Format not read"
@@ -385,9 +403,11 @@ function EvidenceLedger({
                   </p>
                 )}
                 <p>
-                  {claims.length
-                    ? `${supported} of ${claims.length} linked statements supported by retrieved text.`
-                    : "No statement-level comparison is available for this source."}
+                  {!report
+                    ? "Used in the maintained research library. No live retrieval or statement comparison was run for this search."
+                    : claims.length
+                      ? `${supported} of ${claims.length} linked statements supported by retrieved text.`
+                      : "No statement-level comparison is available for this source."}
                 </p>
                 {claims.map((claim) => (
                   <div className="journey-ledger-claim" key={claim.id}>
@@ -533,13 +553,15 @@ export function JourneyResults({
           <div className="journey-verification-line">
             <CircleHelp size={17} aria-hidden="true" />
             <p>
-              {report?.status === "supported"
+              {!report
+                ? "This guide was assembled from our maintained research library. Source links, research dates and known gaps are shown below."
+                : report.status === "supported"
                 ? "The automated comparison supports the checklist statements. Your pet’s records and eligibility still need checking."
                 : report?.status === "attention"
                   ? "The source comparison found statements to clarify. The affected steps are marked below."
-                  : report?.model.status === "failed"
+                  : report.model.status === "failed"
                     ? "Some live comparisons could not finish. Successful checks and unresolved statements are shown separately below."
-                    : report?.model.status !== "available"
+                    : report.model.status !== "available"
                       ? "Live claim verification is unavailable. This is a source-linked research draft; current requirements need confirmation."
                       : "The source check is incomplete. Unconfirmed statements remain marked in your guide."}{" "}
               <a href="#journey-sources">See the evidence</a>
@@ -682,7 +704,7 @@ export function JourneyResults({
               </div>
               <p>
                 Bring these document questions to your vet or the authority. Each links to the full
-                step, including its conditions and current source status.
+                step, including its conditions and recorded official sources.
               </p>
               {documentSteps.length ? (
                 <ul className="journey-document-list">
