@@ -26,7 +26,7 @@ Ordinary first entry uses the GB health certificate without the unlisted-origin 
 
 ### Unlisted selected origins
 
-Catalogue jurisdictions: CN, TH, PH.
+Catalogue jurisdictions: CN, TH, PH, BR.
 
 GB health certificate plus satisfactory rabies blood test and the prescribed wait, unless a documented return exception applies. [^5][^4]
 

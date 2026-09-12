@@ -1,5 +1,36 @@
 import { ChevronDown, ExternalLink } from "lucide-react";
 import type { DraftRequirement, DraftRouteAnswer } from "@/lib/route-answer-drafts";
+import type { VerificationReport } from "@/lib/source-verification-types";
+
+export function RequirementEvidenceWarnings({
+  item,
+  report,
+  section = "arrival",
+}: {
+  item: DraftRequirement;
+  report?: VerificationReport;
+  section?: "arrival" | "departure";
+}) {
+  const questions =
+    report?.claims.filter(
+      (claim) =>
+        claim.section === section &&
+        claim.requirementId === item.id &&
+        (claim.status === "changed" || claim.status === "unclear"),
+    ) ?? [];
+  if (!questions.length) return null;
+  return (
+    <div className="journey-claim-note">
+      <strong>Confirm before relying on this step</strong>
+      {questions.map((claim) => (
+        <p key={claim.id}>
+          {claim.id.endsWith(":timing") ? "Timing: " : ""}
+          {claim.note}
+        </p>
+      ))}
+    </div>
+  );
+}
 
 function dateLabel(value: string) {
   return new Intl.DateTimeFormat("en-GB", {
@@ -22,9 +53,13 @@ export function RequirementCalendar({ item }: { item: DraftRequirement }) {
 export function RequirementList({
   items,
   sources,
+  report,
+  section = "arrival",
 }: {
   items: DraftRequirement[];
   sources: DraftRouteAnswer["sources"];
+  report?: VerificationReport;
+  section?: "arrival" | "departure";
 }) {
   return (
     <ol className="compact-requirements">
@@ -41,6 +76,16 @@ export function RequirementList({
                   {item.kind === "conditional" && <em>If applicable · </em>}
                   {item.timing}
                 </span>
+                {report?.claims.some(
+                  (claim) =>
+                    claim.section === section &&
+                    claim.requirementId === item.id &&
+                    (claim.status === "changed" || claim.status === "unclear"),
+                ) && (
+                  <span className="compact-timing">
+                    Current sources raise a question — open this step
+                  </span>
+                )}
                 {item.calendar && (
                   <span className="compact-date">
                     {item.calendar.from === item.calendar.to
@@ -53,6 +98,7 @@ export function RequirementList({
               <ChevronDown className="requirement-chevron" size={19} aria-hidden="true" />
             </summary>
             <div className="requirement-detail">
+              <RequirementEvidenceWarnings item={item} report={report} section={section} />
               <RequirementCalendar item={item} />
               <ul className="requirement-bullets">
                 {item.bullets.map((bullet) => (

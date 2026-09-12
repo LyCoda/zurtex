@@ -163,6 +163,6 @@ test("US regional selection changes the next question without claiming local ass
 });
 
 test("source registry covers the whole supplied beta seed", () => {
-  assert.equal(Object.keys(countryResearch).length, 23);
+  assert.equal(Object.keys(countryResearch).length, 24);
   assert.equal(Object.keys(airlineResearch).length, 25);
 });

@@ -3,20 +3,20 @@
   "checkedOn": "2026-09-11",
   "publicationStatus": "draft",
   "approvedBy": null,
-  "jurisdictions": 23,
-  "importActions": 184,
-  "exportActions": 57,
-  "sourceRecords": 173,
-  "uniqueOfficialURLs": 129,
-  "orderedPairCombinations": 506,
-  "speciesPairCompositions": 1012,
+  "jurisdictions": 24,
+  "importActions": 191,
+  "exportActions": 60,
+  "sourceRecords": 182,
+  "uniqueOfficialURLs": 135,
+  "orderedPairCombinations": 552,
+  "speciesPairCompositions": 1104,
   "individuallyApprovedCorridors": 0,
   "claim": "Country-level research and conditional composition coverage, not comprehensive regulatory approval",
   "countries": [
     {
       "code": "AU",
       "name": "Australia",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -26,7 +26,7 @@
     {
       "code": "CA",
       "name": "Canada",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 7,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -36,7 +36,7 @@
     {
       "code": "FR",
       "name": "France",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -46,7 +46,7 @@
     {
       "code": "DE",
       "name": "Germany",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -56,7 +56,7 @@
     {
       "code": "GB",
       "name": "Great Britain",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -66,7 +66,7 @@
     {
       "code": "HK",
       "name": "Hong Kong",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -76,7 +76,7 @@
     {
       "code": "IE",
       "name": "Ireland",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 9,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -86,7 +86,7 @@
     {
       "code": "IT",
       "name": "Italy",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 7,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -96,7 +96,7 @@
     {
       "code": "JP",
       "name": "Japan",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -106,7 +106,7 @@
     {
       "code": "CN",
       "name": "Mainland China",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 7,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -116,7 +116,7 @@
     {
       "code": "NL",
       "name": "Netherlands",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 9,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -126,7 +126,7 @@
     {
       "code": "NZ",
       "name": "New Zealand",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -136,7 +136,7 @@
     {
       "code": "NO",
       "name": "Norway",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -146,7 +146,7 @@
     {
       "code": "MY",
       "name": "Peninsular Malaysia",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -156,7 +156,7 @@
     {
       "code": "PH",
       "name": "Philippines",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -166,7 +166,7 @@
     {
       "code": "PT",
       "name": "Portugal",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 9,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -176,7 +176,7 @@
     {
       "code": "SG",
       "name": "Singapore",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -186,7 +186,7 @@
     {
       "code": "ES",
       "name": "Spain",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 7,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -196,7 +196,7 @@
     {
       "code": "CH",
       "name": "Switzerland",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -206,7 +206,7 @@
     {
       "code": "TW",
       "name": "Taiwan",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -216,7 +216,7 @@
     {
       "code": "TH",
       "name": "Thailand",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 7,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
@@ -226,7 +226,7 @@
     {
       "code": "AE",
       "name": "United Arab Emirates",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 8,
       "exportActions": 2,
       "researchStatus": "researched_with_gaps",
@@ -236,12 +236,24 @@
     {
       "code": "US",
       "name": "United States",
-      "availableOtherDestinations": 22,
+      "availableOtherDestinations": 23,
       "importActions": 10,
       "exportActions": 3,
       "researchStatus": "researched_with_gaps",
       "gapCount": 3,
       "dossier": "docs/research/countries-2026-09-11/us.md"
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "availableOtherDestinations": 23,
+      "importActions": 7,
+      "exportActions": 3,
+      "researchStatus": "researched_with_gaps",
+      "gapCount": 3,
+      "dossier": "docs/research/countries-2026-09-11/br.md"
     }
-  ]
+  ],
+  "updatedOn": "2026-09-12",
+  "updateNote": "Brazil coverage added on 12 September 2026; historical manifest filename and original snapshot retained."
 }

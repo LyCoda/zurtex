@@ -1,0 +1,148 @@
+[
+  {
+    "code": "BR",
+    "name": "Brazil",
+    "overview": "Brazil's current MAPA certificate and health requirements are researched below. The Great Britain export specimen does not clearly align with the newer Brazilian model; that document conflict needs the authorities' confirmation before certification.",
+    "checkedOn": "2026-09-12",
+    "researchStatus": "researched_with_gaps",
+    "importRequirements": [
+      {
+        "id": "BR-import-certificate",
+        "title": "Confirm the current Brazilian certificate model",
+        "kind": "required",
+        "timing": "Before arranging the final veterinary appointment",
+        "bullets": [
+          "MAPA's entry page requires the CVI model under Portaria 741/2024 from 6 September 2025. Have the exporting veterinary authority confirm its accepted document for this journey.",
+          "An official passport is an alternative only when accepted by Brazil and containing the required information. A vaccination card alone is not the entry certificate."
+        ],
+        "sourceIds": ["BR-entry", "BR-portaria-741"]
+      },
+      {
+        "id": "BR-import-gb-conflict",
+        "title": "Resolve the Great Britain–Brazil document conflict",
+        "kind": "required",
+        "originCodes": ["GB"],
+        "timing": "Before certificate issue or confirming travel",
+        "bullets": [
+          "GOV.UK lists EHC 2906 as active for dogs and cats to Brazil, but its linked specimen predates MAPA's mandatory newer model. Ask your official vet to obtain APHA and MAPA confirmation of the certificate and conditions to use.",
+          "The older specimen includes an ambiguous 10-day border note. Do not use it to calculate a departure or arrival deadline. APHA's guidance specifically directs exporters to resolve mismatches with the importing authority.",
+          "In Great Britain, apply through EHC Online with an official veterinarian. Follow the current certificate's signing and correction instructions; do not complete a downloaded specimen as the final certificate."
+        ],
+        "sourceIds": ["BR-gb-ehc", "BR-gb-specimen", "BR-gb-guidance", "BR-entry"]
+      },
+      {
+        "id": "BR-import-rabies",
+        "title": "Check age and continuous rabies protection",
+        "kind": "required",
+        "timing": "Primary vaccination: at least 21 days before shipment",
+        "bullets": [
+          "Animals aged 90 days or more ordinarily need a currently valid rabies vaccination. A missed booster is treated as a new primary vaccination.",
+          "Younger animals and officially recognised rabies-free origins have specific certification exceptions. Do not assume an exception from the departure country alone."
+        ],
+        "sourceIds": ["BR-portaria-741"]
+      },
+      {
+        "id": "BR-import-identification",
+        "title": "Match the animal to all certificate records",
+        "kind": "required",
+        "timing": "Before preparation and certificate issue",
+        "bullets": [
+          "Record species, breed, sex, colour and age consistently. Where electronic identification is used, the regulation specifies ISO 11784 and/or ISO 11785 and the chip's anatomical location.",
+          "This research does not establish a universal Brazil microchip mandate. The return destination, carrier or particular permit may impose its own identification requirements."
+        ],
+        "sourceIds": ["BR-portaria-741"]
+      },
+      {
+        "id": "BR-import-parasites",
+        "title": "Arrange internal and external parasite treatment",
+        "kind": "required",
+        "timing": "Within 15 days before CVI issue",
+        "bullets": [
+          "Use approved broad-spectrum products according to their instructions and record the treatments for official certification. The window is measured to certificate issue.",
+          "Give the official veterinarian the treatment dates and product details; a receipt for purchasing the product does not document its administration."
+        ],
+        "sourceIds": ["BR-portaria-741"]
+      },
+      {
+        "id": "BR-import-examination",
+        "title": "Complete the examination and official certification",
+        "kind": "required",
+        "timing": "Clinical examination within 10 days before CVI issue",
+        "bullets": [
+          "A registered veterinarian examines the animal for infectious or parasitic disease and fitness for transport; the exporting authority issues the official certificate.",
+          "The current regulation gives the CVI 60 calendar days from issue while rabies vaccination remains valid. Have the authority settle any conflicting bilateral instructions before relying on this period."
+        ],
+        "sourceIds": ["BR-portaria-741", "BR-entry"]
+      },
+      {
+        "id": "BR-import-arrival",
+        "title": "Prepare the border documents and actual itinerary",
+        "kind": "planning",
+        "timing": "Before booking and at arrival",
+        "bullets": [
+          "Carry the original accepted CVI or passport and supporting records. Confirm the inspection arrangements for the actual airport or border point with Vigiagro and the carrier.",
+          "Ask separately about any connection, breed restrictions, prior leishmaniasis diagnosis, ownership transfer or local requirements. This guide does not establish a quarantine exemption or complete transit clearance."
+        ],
+        "sourceIds": ["BR-entry", "BR-portaria-741"]
+      }
+    ],
+    "exportRequirements": [
+      {
+        "id": "BR-export-prepare",
+        "title": "Prepare for the destination and any return to Brazil",
+        "kind": "required",
+        "timing": "Before arranging veterinary work or flights",
+        "bullets": [
+          "Use MAPA's destination-specific instructions together with the destination authority's current requirements. Complete the destination's identification, vaccination, tests, permits and treatments in sequence.",
+          "If returning to Brazil, check whether your exact MAPA-issued outward CVI is accepted for return. MAPA lists specific destinations and a 60-day return period subject to valid rabies vaccination; this is not a general right to reuse any foreign certificate."
+        ],
+        "sourceIds": ["BR-exit", "BR-entry"]
+      },
+      {
+        "id": "BR-export-cvi",
+        "title": "Obtain the destination-specific MAPA CVI",
+        "kind": "required",
+        "timing": "Use the destination's application and certification windows",
+        "bullets": [
+          "MAPA uses destination-specific online or in-person processes. Several online destinations require the application to be submitted by a veterinarian authorised in Gov.Br.",
+          "Submit the required health, vaccination and other records, then obtain the official CVI. Check whether the destination also requires physical endorsement; digital issue does not establish acceptance everywhere."
+        ],
+        "sourceIds": ["BR-exit"]
+      },
+      {
+        "id": "BR-export-gb",
+        "title": "Arrange the Brazilian export process for Great Britain",
+        "kind": "required",
+        "destinationCodes": ["GB"],
+        "timing": "MAPA application: 9 to 3 days before shipment",
+        "bullets": [
+          "The current MAPA page requires a Gov.Br-authorised veterinarian to submit the Great Britain e-CVI application and states that physical endorsement is needed.",
+          "Arrange that endorsement in advance. Separately complete Great Britain's rabies-test, travel-document and dog tapeworm conditions; the Brazilian application window does not replace them."
+        ],
+        "sourceIds": ["BR-exit", "BR-gb-return-documents", "BR-gb-return-titre", "BR-gb-return-tapeworm"]
+      }
+    ],
+    "originGroups": [],
+    "caveats": [
+      "Certificate-model conflict: MAPA requires its newer CVI, while the active Great Britain EHC page links an older specimen. Resolve this with APHA and MAPA before certificate issue; no automated model selection or date guarantee is justified.",
+      "This is a researched preparation guide, not an animal-specific clearance. Age, veterinary records, disease history, breed, purpose, exact border point and transit have not been assessed.",
+      "A current official source can be internally inconsistent or lag another authority. A successful source fetch alone does not verify these requirements."
+    ],
+    "gaps": [
+      "The UK–Brazil certificate-model discrepancy remains unresolved; the accepted operational certificate and any bilateral timing conditions need written authority confirmation.",
+      "Breed/local controls, commercial transfers, exact Vigiagro inspection arrangements and carrier restrictions are not exhaustively assessed.",
+      "Return eligibility must be evaluated separately. Brazil is not listed in Great Britain's current listed-country table; rabies testing and any documented return exception must be checked before leaving."
+    ],
+    "sources": [
+      { "id": "BR-entry", "title": "Entrar no Brasil", "authority": "Brazil MAPA / Vigiagro", "url": "https://www.gov.br/agricultura/pt-br/assuntos/vigilancia-agropecuaria/animais-estimacao/entrar-no-brasil", "publishedOn": null, "accessedOn": "2026-09-12", "claims": ["Current mandatory CVI model; official passport alternative; limited return-CVI arrangements."] },
+      { "id": "BR-portaria-741", "title": "Portaria MAPA 741/2024: entry and movement of dogs and cats", "authority": "Brazil MAPA / Diário Oficial da União", "url": "https://www.gov.br/agricultura/pt-br/assuntos/vigilancia-agropecuaria/animais-estimacao/portaria-mapa-no-741_2024-caninos-e-felinos-domesticos-1.pdf", "publishedOn": "2024-12-12", "accessedOn": "2026-09-12", "claims": ["Articles 5–17: certification, age, rabies, parasite treatment, examination and identification; general entry requirements."] },
+      { "id": "BR-gb-ehc", "title": "Export cats and dogs to Brazil: certificate 2906", "authority": "UK APHA", "url": "https://www.gov.uk/export-health-certificates/export-cats-and-dogs-to-brazil-certificate-2906", "publishedOn": "2026-05-06", "accessedOn": "2026-09-12", "claims": ["Active EHC 2906 listing and Great Britain online application process; does not settle compatibility with newer MAPA model."] },
+      { "id": "BR-gb-specimen", "title": "EHC 2906 version 4 specimen", "authority": "UK APHA / DEFRA", "url": "https://assets.publishing.service.gov.uk/media/63e65338e90e0706d1c007e0/2906EHC_V4.pdf", "publishedOn": null, "accessedOn": "2026-09-12", "claims": ["Older linked certificate specimen and conflicting/ambiguous border timing note; not authority confirmation of the current accepted model."] },
+      { "id": "BR-gb-guidance", "title": "EHC 2906 notes for guidance", "authority": "UK APHA / DEFRA", "url": "https://assets.publishing.service.gov.uk/media/654253a7d36c910012935ba2/2906NFG.pdf", "publishedOn": "2023-10-26", "accessedOn": "2026-09-12", "claims": ["Official-veterinarian certification, parasite records, correction restrictions and instruction to resolve certificate/import-condition mismatches."] },
+      { "id": "BR-exit", "title": "Sair do Brasil", "authority": "Brazil MAPA / Vigiagro", "url": "https://www.gov.br/agricultura/pt-br/assuntos/vigilancia-agropecuaria/animais-estimacao/sair-do-brasil", "publishedOn": null, "accessedOn": "2026-09-12", "claims": ["Destination-specific CVI workflows, authorised-veterinarian applications and physical endorsement requirements."] },
+      { "id": "BR-gb-return-documents", "title": "Great Britain: which pet travel document you need", "authority": "UK Government / APHA", "url": "https://www.gov.uk/bring-pet-to-great-britain/which-pet-travel-document", "publishedOn": null, "accessedOn": "2026-09-12", "claims": ["Brazil absent from listed-country table; unlisted-country document and rabies-test pathway."] },
+      { "id": "BR-gb-return-titre", "title": "Great Britain: blood tests for rabies", "authority": "UK Government / APHA", "url": "https://www.gov.uk/bring-pet-to-great-britain/rabies-blood-tests", "publishedOn": null, "accessedOn": "2026-09-12", "claims": ["Unlisted-country rabies blood testing and documented return-exemption conditions."] },
+      { "id": "BR-gb-return-tapeworm", "title": "Great Britain: tapeworm treatment for dogs", "authority": "UK Government / APHA", "url": "https://www.gov.uk/bring-pet-to-great-britain/tapeworm-treatment-dogs", "publishedOn": null, "accessedOn": "2026-09-12", "claims": ["Dog-specific treatment window of 24–120 hours before GB entry."] }
+    ]
+  }
+]

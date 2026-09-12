@@ -32,7 +32,7 @@ Requires approved-country history, rabies preparation, official documentation an
 
 ### No direct approved-country pathway in the published list
 
-Catalogue jurisdictions: CN, TH, MY, PH.
+Catalogue jurisdictions: CN, TH, MY, PH, BR.
 
 A move to an approved country and its preparation/residence pathway is necessary; do not present a direct-import checklist as eligible. [^1]
 

@@ -26,7 +26,7 @@ For the qualifying direct pathway, an EU rabies antibody test is not required. T
 
 ### Unlisted non-EU origin
 
-Catalogue jurisdictions: CN, TH, PH.
+Catalogue jurisdictions: CN, TH, PH, BR.
 
 Plan for an approved rabies antibody test and its waiting period unless a documented return exception applies. [^2][^1]
 

@@ -1,5 +1,7 @@
 # Zurtex 2.0 — Canonical Product Definition
 
+**Results update (12 September 2026):** The owner requested substantive PetsCleared-inspired results in Zurtex's own identity, live official-source checks, a small open-weight evidence comparator and an honest loading journey. The implementation adds source-linked research previews behind the server-controlled `ZURTEX_RESEARCH_RESULTS_ENABLED` flag, enabled in the prepared deployment configuration. This supersedes the earlier development-only presentation restriction for this research-preview experience, while preserving draft status, null human approval, uncertain eligibility, and unchanged commercial controls. AI comparison does not approve or rewrite canonical rules. The current changes have not yet been deployed to production.
+
 **Document status:** Canonical product specification
 
 **Product mode:** Local private beta; free travel tools and optional consultation booking

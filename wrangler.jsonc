@@ -3,6 +3,10 @@
   "name": "zurtex-site",
   "main": "vinext/server/fetch-handler",
   "workers_dev": true,
+  "ai": {
+    "binding": "AI",
+    "remote": true
+  },
   "compatibility_date": "2026-05-15",
   "compatibility_flags": [
     "nodejs_compat"
@@ -22,6 +26,8 @@
     "ZURTEX_LIVE_READY": "false",
     "ZURTEX_SITE_URL": "https://zurtex.org",
     "FREE_ROUTE_GUIDE_ENABLED": "true",
+    "ZURTEX_VERIFICATION_MODEL": "@cf/ibm-granite/granite-4.0-h-micro",
+    "ZURTEX_RESEARCH_RESULTS_ENABLED": "true",
     "PRIVATE_BETA_ENABLED": "true",
     "CONSULTATION_BOOKING_ENABLED": "true",
     "READY_PACK_WAITLIST_ENABLED": "true",

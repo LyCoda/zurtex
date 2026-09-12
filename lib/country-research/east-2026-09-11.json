@@ -531,7 +531,8 @@
           "TH",
           "MY",
           "PH",
-          "US"
+          "US",
+          "BR"
         ],
         "condition": "US excludes Hawaii and Guam when their designated-region conditions are met. Rabies vaccination, approved testing and the waiting period apply unless AQS confirms a specific return exception.",
         "sourceIds": [

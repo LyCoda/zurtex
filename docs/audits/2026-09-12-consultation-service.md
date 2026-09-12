@@ -4,7 +4,7 @@ Date: 12 September 2026. Scope: local implementation and bounded verification, n
 
 ## Source and decision precedence
 
-The complete three-page `C:/Users/Nate/Documents/zurtex-consultation-service-draft.pdf` was extracted, rendered and visually inspected. Its free-information / optional-human-support direction informed the build. The user's later explicit answer overrides the draft's unconfirmed pricing, call duration, recap timing and enquiry-first proposal:
+The complete three-page consultation-service reference PDF supplied for the review was extracted, rendered and visually inspected. Its free-information / optional-human-support direction informed the build. The user's later explicit answer overrides the draft's unconfirmed pricing, call duration, recap timing and enquiry-first proposal:
 
 - US$5 for one planned journey.
 - One call with no fixed time limit; written recap with no fixed delivery deadline.

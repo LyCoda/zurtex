@@ -14,13 +14,13 @@ This dossier records both entry requirements and departure procedures. Its origi
 
 ### CDC high-risk origins among the selected countries
 
-Catalogue jurisdictions: CN, TH, MY, PH.
+Catalogue jurisdictions: CN, TH, MY, PH, BR, AE.
 
 Any presence in one of these places within the preceding six months invokes the high-risk dog branch. Mainland China excludes Hong Kong, Macau and Taiwan. [^2]
 
 ### CDC low-risk or rabies-free selected origins
 
-Catalogue jurisdictions: CA, GB, IE, FR, DE, NL, ES, IT, PT, CH, NO, AE, SG, HK, JP, AU, NZ, TW.
+Catalogue jurisdictions: CA, GB, IE, FR, DE, NL, ES, IT, PT, CH, NO, SG, HK, JP, AU, NZ, TW.
 
 The simpler dog branch applies only if the entire preceding six months were spent in low-risk/rabies-free places. Spain's Ceuta and Melilla are separately listed high-risk places. [^2][^3]
 

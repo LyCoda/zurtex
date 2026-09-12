@@ -20,7 +20,7 @@ These country flags are insufficient alone: the designated-region residence and 
 
 ### Non-designated jurisdiction pathway
 
-Catalogue jurisdictions: CA, GB, IE, FR, DE, NL, ES, IT, PT, CH, NO, AE, SG, HK, CN, TW, TH, MY, PH, US.
+Catalogue jurisdictions: CA, GB, IE, FR, DE, NL, ES, IT, PT, CH, NO, AE, SG, HK, CN, TW, TH, MY, PH, US, BR.
 
 US excludes Hawaii and Guam when their designated-region conditions are met. Rabies vaccination, approved testing and the waiting period apply unless AQS confirms a specific return exception. [^3]
 

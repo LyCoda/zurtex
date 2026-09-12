@@ -43,7 +43,7 @@ export async function POST(request: Request) {
   }
 
   const assessment = evaluateRouteGuide(parsed.value);
-  if (draftAnswersAllowed(process.env.NODE_ENV)) {
+  if (draftAnswersAllowed(process.env.NODE_ENV, process.env.ZURTEX_RESEARCH_RESULTS_ENABLED)) {
     const draft = getDraftRouteAnswer(parsed.value);
     if (draft) assessment.draftAnswer = draft;
   }

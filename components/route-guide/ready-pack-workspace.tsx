@@ -7,7 +7,11 @@ import { NativeSelect } from "@/components/ui/native-select";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import type { RouteGuideAssessment } from "@/lib/route-intelligence";
 import type { DraftRequirement } from "@/lib/route-answer-drafts";
-import { RequirementCalendar, RequirementList } from "./researched-answer";
+import {
+  RequirementCalendar,
+  RequirementEvidenceWarnings,
+  RequirementList,
+} from "./researched-answer";
 import { purposeLabels } from "@/lib/journey-purpose";
 
 const documents = [
@@ -57,7 +61,7 @@ export function ReadyPackWorkspace({
       window.scrollTo({ top: 0, behavior: "instant" });
     }
   }, [active]);
-  const { route, draftAnswer } = assessment;
+  const { route, draftAnswer, verification } = assessment;
   const sources = draftAnswer
     ? draftAnswer.sources.map((s) => ({ ...s, checkedOn: draftAnswer.checkedOn }))
     : assessment.evidence;
@@ -75,7 +79,7 @@ export function ReadyPackWorkspace({
         sourceIds: f.sourceIds,
       }));
 
-  function stepList(items: DraftRequirement[]) {
+  function stepList(items: DraftRequirement[], section: "arrival" | "departure" = "arrival") {
     return (
       <ol className="pack-preparation">
         {items.map((step, i) => (
@@ -91,6 +95,7 @@ export function ReadyPackWorkspace({
               </span>
               <h3>{step.title}</h3>
               <strong>{step.timing}</strong>
+              <RequirementEvidenceWarnings item={step} report={verification} section={section} />
               <RequirementCalendar item={step} />
               <ul className="pack-step-bullets">
                 {step.bullets.map((bullet) => (
@@ -130,15 +135,24 @@ export function ReadyPackWorkspace({
           records.
         </p>
         <h3>For entering {route.destination}</h3>
-        {print ? stepList(steps) : <RequirementList items={steps} sources={sources} />}
+        {print ? (
+          stepList(steps)
+        ) : (
+          <RequirementList items={steps} sources={sources} report={verification} />
+        )}
         {draftAnswer && draftAnswer.departureRequirements.length > 0 && (
           <>
             <h3>Before leaving {route.origin}</h3>
             <p>Arrange these alongside the entry steps, not after completing them.</p>
             {print ? (
-              stepList(draftAnswer.departureRequirements)
+              stepList(draftAnswer.departureRequirements, "departure")
             ) : (
-              <RequirementList items={draftAnswer.departureRequirements} sources={sources} />
+              <RequirementList
+                items={draftAnswer.departureRequirements}
+                sources={sources}
+                report={verification}
+                section="departure"
+              />
             )}
           </>
         )}
@@ -291,7 +305,9 @@ export function ReadyPackWorkspace({
               <small>
                 Research recorded {s.checkedOn}
                 <br />
-                Not publication-approved
+                {verification?.sources.find((source) => source.id === s.id)?.status === "fetched"
+                  ? "Page retrieved; see guide for claim support"
+                  : "Current source text not retrieved"}
               </small>
             </article>
           ))}
@@ -331,6 +347,32 @@ export function ReadyPackWorkspace({
           This is your own preparation workspace, not confirmation that your pet can travel. It
           covers the outbound journey only.
         </p>
+      </div>
+      <div className="draft-notice">
+        <strong>
+          {verification?.status === "supported"
+            ? "Automated source comparison completed"
+            : verification?.status === "attention"
+              ? "Source questions need confirmation"
+              : "Live source verification is limited"}
+        </strong>
+        <p>
+          {verification?.summary ??
+            "This is stored research. Current source text has not been checked for this result."}{" "}
+          An available page is not proof that every statement is supported, and this automated check
+          is not human approval.
+        </p>
+        {verification?.claims.some(
+          (claim) => claim.status === "changed" || claim.status === "unclear",
+        ) && (
+          <p>
+            Source questions, including changed or unclear timing, remain marked in the affected
+            preparation steps and printed draft.
+          </p>
+        )}
+        <button type="button" className="journey-text-button no-print" onClick={onBack}>
+          Back to the guide and detailed source evidence <ArrowLeft size={15} aria-hidden="true" />
+        </button>
       </div>
       {draftAnswer?.blockingNotes.map((note) => (
         <p className="route-blocking-note" key={note}>

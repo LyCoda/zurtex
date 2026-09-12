@@ -26,8 +26,8 @@ export type DraftRouteAnswer = {
 };
 
 // Only the server environment can enable unapproved research, never request fields.
-export function draftAnswersAllowed(environment: string | undefined) {
-  return environment === "development";
+export function draftAnswersAllowed(environment: string | undefined, serverResearchPreview?: string) {
+  return environment === "development" || serverResearchPreview === "true";
 }
 
 export function shiftCalendarDate(value: string, days: number) {
@@ -217,9 +217,20 @@ export function getDraftRouteAnswer(input: RouteGuideRequest): DraftRouteAnswer 
       ? []
       : destination.originGroups.filter((group) => group.countryCodes.includes(input.origin));
   const unsupportedDirect =
-    (input.destination === "AU" && ["CN", "TH", "MY", "PH"].includes(input.origin)) ||
-    (input.destination === "NZ" && ["CN", "TH", "PH"].includes(input.origin));
+    (input.destination === "AU" && ["BR", "CN", "TH", "MY", "PH"].includes(input.origin)) ||
+    (input.destination === "NZ" && ["BR", "CN", "TH", "PH"].includes(input.origin));
+  // A newly offered origin is not automatically eligible for a destination's
+  // researched branches. This also protects future country-library additions.
+  const originNotClassified =
+    !unsupportedDirect &&
+    destination.originGroups.length > 0 &&
+    groups.length === 0 &&
+    !(input.destination === "US" && input.species === "cat");
   const blockingNotes: string[] = [];
+  if (input.origin === "GB" && input.destination === "BR")
+    blockingNotes.push(
+      "Certificate conflict needs confirmation: Brazil requires the newer MAPA CVI model, while APHA's active EHC 2906 page links an older specimen. Ask your official vet to reconcile the document and timing with APHA and MAPA before certificate issue or confirming travel.",
+    );
   if (input.travellerRelationship !== "owner")
     blockingNotes.push(
       "Confirm the owner’s travel dates and written authorisation for the accompanying person. Personal-pet rules may not apply when those conditions are not met.",
@@ -243,7 +254,29 @@ export function getDraftRouteAnswer(input: RouteGuideRequest): DraftRouteAnswer 
           "Ask the destination authority which approved country can complete the required residence, identity, tests and certification. A short connection or holiday does not establish eligibility.",
           "The standard direct-import steps are withheld here because they would not be a usable sequence for this route. The full country dossier retains those pathways for review.",
         ],
-        sourceIds: groups.flatMap((group) => group.sourceIds),
+        sourceIds: groups.length
+          ? groups.flatMap((group) => group.sourceIds)
+          : destination.sources
+              .filter((source) => source.id === "au-approved" || source.id === "nz-approvals")
+              .map((source) => source.id),
+      },
+    ];
+  }
+  if (originNotClassified) {
+    blockingNotes.push(
+      `${origin.name}'s origin classification for ${destination.name} has not been researched. Confirm its pathway before relying on country-specific preparation steps.`,
+    );
+    requirements = [
+      {
+        id: destination.code + "-origin-classification-needed",
+        kind: "required",
+        title: "Confirm the origin-specific entry pathway",
+        timing: "Before veterinary preparation or booking",
+        bullets: [
+          `Our ${destination.name} research does not yet classify arrivals from ${origin.name}. This is a research gap, not a finding that entry is prohibited.`,
+          "Ask the destination's animal-health authority to confirm the applicable origin group, residence history, permits and certificate. The standard steps are withheld until the pathway is established.",
+        ],
+        sourceIds: [...new Set(destination.originGroups.flatMap((group) => group.sourceIds))],
       },
     ];
   }
@@ -265,10 +298,10 @@ export function getDraftRouteAnswer(input: RouteGuideRequest): DraftRouteAnswer 
     ).values(),
   ];
   return {
-    version: "country-library-2026-09-11.draft-2",
+    version: "country-library-2026-09-12.draft-3",
     publicationStatus: "draft",
     approvedBy: null,
-    checkedOn: "2026-09-11",
+    checkedOn: [origin.checkedOn, destination.checkedOn].sort().at(-1)!,
     guideKind: "personal",
     originName: origin.name,
     destinationName: destination.name,
@@ -294,7 +327,7 @@ export function getDraftRouteAnswer(input: RouteGuideRequest): DraftRouteAnswer 
             "Your connection has not been assessed. Transit, first-border entry and cargo handling may change this checklist; calendar windows are withheld.",
           ]
         : ["Direct outbound journey assumed. A return journey requires a separate assessment."]),
-      "Research is dated 11 September 2026 and awaits owner approval. Government rules and the airline’s acceptance are separate.",
+      "This guide uses dated research and any live source checks shown in the evidence report. Government entry rules and the airline’s acceptance are separate.",
     ],
     routeFacts: groups.map((group) => `${group.label}: ${group.condition}`),
     blockingNotes,
@@ -316,7 +349,6 @@ export function getDraftRouteAnswer(input: RouteGuideRequest): DraftRouteAnswer 
       ...destination.caveats,
       ...origin.gaps.map((gap) => `${origin.name} research limitation: ${gap}`),
       "Pet records, residence history and the actual carrier/entry point still need checking. No earliest feasible travel date or permission to travel has been determined.",
-      "This dated research has not been approved by Zurtex’s owner for publication.",
     ],
     sources,
   };

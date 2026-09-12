@@ -8,9 +8,7 @@ import {
   Cat,
   ChevronDown,
   Dog,
-  ExternalLink,
   Heart,
-  Pencil,
   ShieldCheck,
 } from "lucide-react";
 import { type FormEvent, type ReactNode, useEffect, useRef, useState } from "react";
@@ -18,10 +16,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NativeSelect } from "@/components/ui/native-select";
 import { purposeLabels } from "@/lib/journey-purpose";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import type { RouteGuideAssessment, RouteGuideRequest } from "@/lib/route-intelligence";
-import { ResearchedAnswer } from "./researched-answer";
-import { ReadyPackWorkspace } from "./ready-pack-workspace";
+import type { VerificationProgress, VerificationStage } from "@/lib/source-verification-types";
+import { readVerificationStream } from "@/lib/verification-stream";
+import { JourneyResults } from "./journey-results";
+import { VerificationLoading } from "./verification-loading";
 
 type Option = { code: string; name: string };
 const modeLabels = { cabin: "In the cabin", hold: "In the hold", cargo: "As cargo" };
@@ -108,15 +107,16 @@ export function RouteWorkbench({
   const [step, setStep] = useState(1);
   const [assessment, setAssessment] = useState<RouteGuideAssessment | null>(null);
   const [loading, setLoading] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
+  const [progress, setProgress] = useState<Partial<Record<VerificationStage, VerificationProgress>>>({});
   const [error, setError] = useState("");
   const [announcement, setAnnouncement] = useState("");
-  const headingRef = useRef<HTMLHeadingElement>(null);
   const formHeadingRef = useRef<HTMLHeadingElement>(null);
+  const activeRequest = useRef<AbortController | null>(null);
   const requestSerial = useRef(0);
   const today = new Date().toLocaleDateString("en-CA");
-  useEffect(() => {
-    if (assessment) headingRef.current?.focus();
-  }, [assessment]);
+  useEffect(() => () => activeRequest.current?.abort(), []);
+  useEffect(() => { setHydrated(true); }, []);
   function update<K extends keyof RouteGuideRequest>(key: K, value: RouteGuideRequest[K]) {
     setForm((previous) => ({
       ...previous,
@@ -133,6 +133,7 @@ export function RouteWorkbench({
   }
   function editJourney(nextStep = 1) {
     requestSerial.current++;
+    activeRequest.current?.abort();
     setLoading(false);
     setAssessment(null);
     setStep(nextStep);
@@ -161,18 +162,26 @@ export function RouteWorkbench({
       return;
     }
     setLoading(true);
+    setProgress({});
+    window.scrollTo({ top: 0, behavior: "instant" });
+    activeRequest.current?.abort();
+    const controller = new AbortController();
+    activeRequest.current = controller;
+    const timeout = window.setTimeout(() => controller.abort(new Error("The check is taking too long. Please try again.")), 100_000);
     const serial = ++requestSerial.current;
     try {
-      const response = await fetch("/api/assess", {
+      const response = await fetch("/api/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
+        signal: controller.signal,
       });
-      const body = (await response.json()) as RouteGuideAssessment & { error?: string };
+      const body = await readVerificationStream(response, (update) => {
+        if (serial === requestSerial.current)
+          setProgress((previous) => ({ ...previous, [update.stage]: update }));
+      });
       if (serial !== requestSerial.current) return;
-      if (!response.ok)
-        throw new Error(body.error || "We could not prepare your guide. Please try again.");
-      setAssessment(body as RouteGuideAssessment);
+      setAssessment(body);
       setAnnouncement(
         "Your route guide is ready. Start with the journey summary and preparation steps.",
       );
@@ -183,6 +192,7 @@ export function RouteWorkbench({
           failure instanceof Error ? failure.message : "We could not connect. Please try again.",
         );
     } finally {
+      window.clearTimeout(timeout);
       if (serial === requestSerial.current) setLoading(false);
     }
   }
@@ -191,12 +201,19 @@ export function RouteWorkbench({
       <p className="sr-only" role="status" aria-live="polite">
         {announcement}
       </p>
-      {assessment ? (
-        <JourneyDashboard
+      {loading ? (
+        <VerificationLoading
+          form={form}
+          origin={countries.find((country) => country.code === form.origin)?.name ?? form.origin}
+          destination={countries.find((country) => country.code === form.destination)?.name ?? form.destination}
+          progress={progress}
+          onCancel={() => editJourney(2)}
+        />
+      ) : assessment ? (
+        <JourneyResults
           key={assessment.assessmentId}
           assessment={assessment}
-          headingRef={headingRef}
-          editJourney={editJourney}
+          onEdit={() => editJourney(1)}
         />
       ) : (
         <>
@@ -247,7 +264,7 @@ export function RouteWorkbench({
               </p>
             )}
             <form onSubmit={submit} aria-busy={loading}>
-              <fieldset disabled={loading} className="form-fields">
+              <fieldset disabled={loading || !hydrated} className="form-fields">
                 {step === 1 ? (
                   <>
                     <fieldset className="journey-purpose">
@@ -657,237 +674,5 @@ export function RouteWorkbench({
         </>
       )}
     </>
-  );
-}
-
-function JourneyDashboard({
-  assessment,
-  headingRef,
-  editJourney,
-}: {
-  assessment: RouteGuideAssessment;
-  headingRef: React.RefObject<HTMLHeadingElement | null>;
-  editJourney: (step?: number) => void;
-}) {
-  const [section, setSection] = useState("plan");
-  const [packOpen, setPackOpen] = useState(false);
-  const [packVisited, setPackVisited] = useState(false);
-  const packButton = useRef<HTMLButtonElement>(null);
-  const draft = assessment.draftAnswer;
-  const route = assessment.route;
-  const government = assessment.findings.filter((f) => f.group === "government");
-  const flightFindings = assessment.findings.filter((f) =>
-    ["airline", "itinerary"].includes(f.group),
-  );
-  const sources = draft ? draft.sources : assessment.evidence;
-  return (
-    <>
-      <div className="journey-dashboard compact-dashboard" hidden={packOpen}>
-        <header className="guide-header">
-          <div className="guide-toolbar">
-            <a href="/" className="text-link">
-              <ArrowLeft size={16} /> Start a new guide
-            </a>
-            <span>Free guide · Private beta</span>
-          </div>
-          <div className="guide-title-row">
-            <h1 ref={headingRef} tabIndex={-1}>
-              {route.origin} <ArrowRight aria-label="to" /> {route.destination}
-            </h1>
-            <Button variant="outline" className="secondary-button" onClick={() => editJourney(1)}>
-              <Pencil size={16} /> Edit journey
-            </Button>
-          </div>
-          <p className="trip-facts">
-            <span>
-              {route.species === "dog" ? <Dog size={17} /> : <Cat size={17} />}{" "}
-              {route.petCount ?? 1} {route.species}
-              {(route.petCount ?? 1) > 1 ? "s" : ""}
-            </span>
-            <span>
-              <CalendarDays size={17} /> {displayDate(route.intendedArrival)}
-            </span>
-            <span>{purposeLabels[route.movementPurpose]}</span>
-          </p>
-        </header>
-        <Tabs
-          value={section}
-          onValueChange={(value) => setSection(String(value))}
-          className="route-result-tabs"
-        >
-          <TabsList variant="line" aria-label="Route guide sections">
-            <TabsTrigger value="plan">Your plan</TabsTrigger>
-            <TabsTrigger value="flights">Flights</TabsTrigger>
-            <TabsTrigger value="sources">Sources</TabsTrigger>
-          </TabsList>
-          <TabsContent value="plan">
-            <section className="plan-introduction">
-              <h2>{draft?.headline ?? "Let’s work out what this journey needs."}</h2>
-              <p>{draft?.summary ?? assessment.explanation}</p>
-              <p className="plan-preview-note">
-                Research preview, not human reviewed or travel approval. Your pet’s records still
-                need checking.
-              </p>
-            </section>
-            {draft ? (
-              <ResearchedAnswer answer={draft} />
-            ) : (
-              <section className="guide-section">
-                <h2>Start with these questions</h2>
-                <ol className="travel-checklist">
-                  {government.map((finding, index) => (
-                    <li key={finding.id}>
-                      <details>
-                        <summary>
-                          <span className="checklist-number">{index + 1}</span>
-                          <strong>{finding.title}</strong>
-                          <ChevronDown size={19} aria-hidden="true" />
-                        </summary>
-                        <div className="checklist-detail">
-                          <p>{finding.summary}</p>
-                          <FindingSources assessment={assessment} ids={finding.sourceIds} />
-                        </div>
-                      </details>
-                    </li>
-                  ))}
-                </ol>
-              </section>
-            )}
-            <details className="plan-assumptions">
-              <summary>
-                Can we travel on {displayDate(route.intendedArrival)}?{" "}
-                <ChevronDown size={17} aria-hidden="true" />
-              </summary>
-              <p>
-                We can’t confirm that date yet. Any dates shown are conditional planning windows,
-                not a check of your pet’s records or permission to travel.
-              </p>
-              <p>
-                Ask your vet to check identification, vaccination and any tests before setting
-                certificate appointments. Confirm the entry point and actual airline before paying
-                for transport.
-              </p>
-            </details>
-            <aside className="compact-pack-offer">
-              <div>
-                <h2>Your plan, ready for the vet.</h2>
-                <p>Your vet brief, document checklist and print view. All free.</p>
-              </div>
-              <Button
-                ref={packButton}
-                className="primary-button"
-                onClick={() => {
-                  setPackVisited(true);
-                  setPackOpen(true);
-                }}
-              >
-                Open my travel tools <ArrowRight size={17} />
-              </Button>
-            </aside>
-            <aside className="consultation-inline">
-              <h2>Want to talk it through?</h2>
-              <p>
-                A US$5 Pet Travel Consultation gives you time with a person to look at your journey.
-                No fixed call-length limit, with a written recap and no fixed recap deadline.
-              </p>
-              <a className="text-link" href="/consultation">
-                See the consultation <ArrowRight size={17} />
-              </a>
-            </aside>
-            <p className="local-note">
-              This preview is free. Your guide and notes stay in this page; refreshing or leaving
-              clears them.
-            </p>
-          </TabsContent>
-          <TabsContent value="flights">
-            <section className="guide-section">
-              <h2>Check the flight as well as the destination.</h2>
-              <p>
-                {modeLabels[route.travelMode]} · {relationshipLabels[route.travellerRelationship]}.
-                Country entry and airline acceptance are separate checks. Cargo alone does not make
-                a journey commercial.
-              </p>
-              {flightFindings.map((finding) => (
-                <details className="plan-assumptions" key={finding.id}>
-                  <summary>
-                    {finding.title}
-                    <ChevronDown size={17} aria-hidden="true" />
-                  </summary>
-                  <p>{finding.summary}</p>
-                  <FindingSources assessment={assessment} ids={finding.sourceIds} />
-                </details>
-              ))}
-              <Button variant="outline" className="secondary-button" onClick={() => editJourney(2)}>
-                <Pencil size={16} /> Change flight details
-              </Button>
-            </section>
-          </TabsContent>
-          <TabsContent value="sources">
-            <section className="guide-section">
-              <h2>The guidance behind your plan.</h2>
-              <p>
-                Official sources for the route. Research is unapproved; the authority’s current
-                instructions and your pet’s circumstances take priority.
-              </p>
-              <div className="source-list">
-                {sources.map((source) => (
-                  <article key={source.id}>
-                    <div>
-                      <a href={source.url} target="_blank" rel="noreferrer">
-                        {source.title} <ExternalLink size={14} />
-                      </a>
-                      <p>{source.authority}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-              <details className="plan-assumptions">
-                <summary>
-                  Research scope and outstanding checks <ChevronDown size={17} aria-hidden="true" />
-                </summary>
-                <p>
-                  Research recorded {draft?.checkedOn ?? "2026-09-11"}. Publication approval has not
-                  been given.
-                </p>
-                <ul>
-                  {(draft?.unresolved ?? assessment.missingFacts).map((fact) => (
-                    <li key={fact}>{fact}</li>
-                  ))}
-                </ul>
-              </details>
-              <p className="section-footnote">
-                Found a problem?{" "}
-                <a href="mailto:help@zurtex.org?subject=Route%20guide%20correction">
-                  Tell us what to check.
-                </a>
-              </p>
-            </section>
-          </TabsContent>
-        </Tabs>
-      </div>
-      {packVisited && (
-        <ReadyPackWorkspace
-          assessment={assessment}
-          active={packOpen}
-          onBack={() => {
-            setPackOpen(false);
-            requestAnimationFrame(() => packButton.current?.focus());
-          }}
-        />
-      )}
-    </>
-  );
-}
-function FindingSources({ assessment, ids }: { assessment: RouteGuideAssessment; ids: string[] }) {
-  return (
-    <div className="finding-sources">
-      {assessment.evidence
-        .filter((source) => ids.includes(source.id))
-        .map((source) => (
-          <a key={source.id} href={source.url} target="_blank" rel="noreferrer">
-            {source.authority} <ExternalLink size={13} />
-          </a>
-        ))}
-    </div>
   );
 }

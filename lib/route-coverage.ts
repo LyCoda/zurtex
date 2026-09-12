@@ -2,6 +2,14 @@ export type ReviewTier = 'screen' | 'enhanced_review' | 'manual_only';
 
 export const countries = [
   {
+    code: 'BR',
+    name: 'Brazil',
+    tier: 'enhanced_review',
+    note: 'Current MAPA certificate rules apply; resolve any export-certificate conflict with both authorities.',
+    source:
+      'https://www.gov.br/agricultura/pt-br/assuntos/vigilancia-agropecuaria/animais-estimacao/entrar-no-brasil',
+  },
+  {
     code: 'US',
     name: 'United States',
     tier: 'screen',

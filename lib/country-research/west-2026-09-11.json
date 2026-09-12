@@ -48,7 +48,15 @@
         "sourceIds": [
           "us-cdc-low"
         ],
-        "species": "dog"
+        "species": "dog",
+        "excludedOriginCodes": [
+          "CN",
+          "TH",
+          "MY",
+          "PH",
+          "BR",
+          "AE"
+        ]
       },
       {
         "id": "us-import-dog-us-vacc",
@@ -209,7 +217,9 @@
           "CN",
           "TH",
           "MY",
-          "PH"
+          "PH",
+          "BR",
+          "AE"
         ],
         "condition": "Any presence in one of these places within the preceding six months invokes the high-risk dog branch. Mainland China excludes Hong Kong, Macau and Taiwan.",
         "sourceIds": [
@@ -230,7 +240,6 @@
           "PT",
           "CH",
           "NO",
-          "AE",
           "SG",
           "HK",
           "JP",
@@ -274,7 +283,7 @@
         "authority": "CDC",
         "url": "https://www.cdc.gov/importation/dogs/high-risk-countries.html",
         "publishedOn": "2026-04-15",
-        "accessedOn": "2026-09-11",
+        "accessedOn": "2026-09-12",
         "claims": [
           "Current high-risk list and territorial exceptions."
         ]
@@ -699,7 +708,8 @@
         "originCodes": [
           "CN",
           "TH",
-          "PH"
+          "PH",
+          "BR"
         ]
       },
       {
@@ -874,7 +884,8 @@
         "countryCodes": [
           "CN",
           "TH",
-          "PH"
+          "PH",
+          "BR"
         ],
         "condition": "GB health certificate plus satisfactory rabies blood test and the prescribed wait, unless a documented return exception applies.",
         "sourceIds": [

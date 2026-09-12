@@ -14,3 +14,12 @@ tsconfig.tsbuildinfo
 .dev.vars.*
 .agents/skills/impeccable/scripts/bin/
 .impeccable/review/
+.impeccable/critique/
+.agents/
+.codex/
+output/
+*.gguf
+*.safetensors
+*.ckpt
+*.pth
+*.onnx

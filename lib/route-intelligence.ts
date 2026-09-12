@@ -1,6 +1,7 @@
 import { airlineByCode, airlines, countries, countryByCode } from "./route-coverage.ts";
 import { airlineResearch, countryResearch, type ResearchSource } from "./route-research.ts";
 import type { DraftRouteAnswer } from "./route-answer-drafts.ts";
+import type { VerificationReport } from "./source-verification-types.ts";
 
 export type Species = "dog" | "cat";
 export type TravellerRelationship = "owner" | "family" | "authorised";
@@ -56,6 +57,7 @@ export type Finding = {
 };
 
 export type RouteGuideAssessment = {
+  verification?: VerificationReport;
   draftAnswer?: DraftRouteAnswer;
   assessmentId: string;
   createdAt: string;

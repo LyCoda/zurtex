@@ -15,6 +15,50 @@ export type ResearchCountry = {
   questions: { title: string; summary: string; species?: "dog" | "cat" }[];
 };
 export const countryResearch: Record<string, ResearchCountry> = {
+  BR: {
+    name: "Brazil",
+    held: false,
+    sources: [
+      {
+        title: "Entrar no Brasil",
+        authority: "Brazil MAPA / Vigiagro",
+        url: "https://www.gov.br/agricultura/pt-br/assuntos/vigilancia-agropecuaria/animais-estimacao/entrar-no-brasil",
+        status: "verified_official",
+        note: "Current model required from September 2025; reconcile older bilateral export specimens before certification.",
+        verifiedOn: "2026-09-12",
+      },
+      {
+        title: "Portaria MAPA 741/2024: dogs and cats",
+        authority: "Brazil MAPA / Diário Oficial da União",
+        url: "https://www.gov.br/agricultura/pt-br/assuntos/vigilancia-agropecuaria/animais-estimacao/portaria-mapa-no-741_2024-caninos-e-felinos-domesticos-1.pdf",
+        status: "verified_official",
+        note: "Primary requirements; animal history and the actual accepted export document still need assessment.",
+        verifiedOn: "2026-09-12",
+      },
+      {
+        title: "Sair do Brasil",
+        authority: "Brazil MAPA / Vigiagro",
+        url: "https://www.gov.br/agricultura/pt-br/assuntos/vigilancia-agropecuaria/animais-estimacao/sair-do-brasil",
+        status: "verified_official",
+        note: "Use the destination-specific application, certification and endorsement process.",
+        verifiedOn: "2026-09-12",
+      },
+    ],
+    questions: [
+      {
+        title: "Which certificate has the exporting authority confirmed?",
+        summary: "Brazil requires its current MAPA model. If leaving Great Britain, ask APHA and MAPA to reconcile the older EHC 2906 specimen before certificate issue.",
+      },
+      {
+        title: "What are your pet's age and rabies records?",
+        summary: "Confirm the actual age, continuous vaccination history and any claimed exception. Plan treatments against certificate issue, using the accepted document.",
+      },
+      {
+        title: "Will your pet return or connect through another country?",
+        summary: "Check every border separately. A Brazilian entry certificate does not establish eligibility to return to Great Britain or another home country.",
+      },
+    ],
+  },
   US: {
     name: "United States",
     held: false,

@@ -33,8 +33,16 @@ test("research never grants publication approval or changes core assessment", ()
   assert.equal(evaluateRouteGuide(trip).earliestFeasibleArrival, null);
   assert.ok(answer.assumptions.some((a) => a.includes("Northern Ireland")));
 });
+
+test("only an exact server-side opt-in exposes research previews outside development", () => {
+  assert.equal(draftAnswersAllowed("production", "true"), true);
+  for (const flag of [undefined, "false", "TRUE", "1", ""]) assert.equal(draftAnswersAllowed("production", flag), false);
+  const answer = getDraftRouteAnswer(trip)!;
+  assert.equal(answer.approvedBy, null);
+  assert.equal(answer.publicationStatus, "draft");
+});
 test("every offered jurisdiction has an import and export dossier", () => {
-  assert.equal(countryDossiers.length, 23);
+  assert.equal(countryDossiers.length, 24);
   assert.deepEqual(countryDossiers.map((c) => c.code).sort(), countries.map((c) => c.code).sort());
   for (const c of countryDossiers) {
     assert.ok(c.importRequirements.length >= 5, c.code);
@@ -53,7 +61,7 @@ test("every offered jurisdiction has an import and export dossier", () => {
     }
   }
 });
-test("all 506 ordered country pairs compose for both species without orphaned evidence", () => {
+test("all 552 ordered country pairs compose for both species without orphaned evidence", () => {
   for (const origin of countryDossiers)
     for (const destination of countryDossiers) {
       if (origin.code === destination.code) continue;

@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function MethodologyPage() {
   return (
     <MarketingPage
-      title="A clearer guide starts with better questions."
-      intro="We bring the official starting points together, explain what to ask next, and tell you where the answer still needs checking."
+      title="A clearer guide starts with the source."
+      intro="We bring the official guidance together, check what we can read today, and show you what still needs confirming."
       variant="methodology-page"
       aside={
         <div className="policy-summary">
@@ -26,37 +26,38 @@ export default function MethodologyPage() {
         <article>
           <h2>Where the information comes from</h2>
           <p>
-            Our starting research links to government authorities and airlines. The current set was
-            recorded in a research ledger dated 11 September 2026, with journey-purpose research
-            added on 12 September. The source dates shown in your result identify its evidence.
+            Your guide starts with dated research from government authorities and airlines. When
+            you submit a journey, Zurtex tries to open the relevant official pages and find related
+            guidance. The progress screen follows those checks as they happen.
           </p>
           <p>
-            That date records the research, not a promise that every rule is still current or
-            applies to your pet. Each result lets you open the original guidance.
+            An automated comparison checks the available source text against the checklist when
+            the evidence service is connected. Your result shows which pages could be read, what
+            the comparison found, and any gaps. Opening a page alone does not verify a rule.
           </p>
         </article>
         <article>
           <h2>What the labels mean</h2>
           <dl className="definition-list">
             <div>
-              <dt>Question to confirm</dt>
+              <dt>Supported by source</dt>
               <dd>
-                A useful question for the authority, your vet or your airline. It is not a confirmed
-                instruction for your pet.
+                The automated comparison found supporting text in a source read for this journey.
+                This is a research check, not human review or confirmation of your pet’s eligibility.
               </dd>
             </div>
             <div>
-              <dt>More checking needed</dt>
+              <dt>Needs another look</dt>
               <dd>
-                Our source coverage is incomplete. We withhold the detailed requirements and direct
-                you to the authority.
+                A source may disagree, be unclear or be unavailable. Read the explanation and
+                confirm that item with the relevant authority before relying on it.
               </dd>
             </div>
             <div>
-              <dt>Not yet assessed</dt>
+              <dt>Not checked live</dt>
               <dd>
-                We have not checked that part of the journey. An airline selection, for example,
-                does not confirm a pet reservation.
+                The evidence service could not complete this check. The research remains a starting
+                point, with its original source links available for you to inspect.
               </dd>
             </div>
           </dl>
@@ -73,10 +74,10 @@ export default function MethodologyPage() {
             </span>
           </li>
           <li>
-            <strong>Open your checklist</strong>
+            <strong>Follow the source check</strong>
             <span>
-              See questions chosen for the destination and your pet, with official-source links
-              beside them.
+              Watch the departure, arrival and evidence checks finish, then open your guide with
+              timing, practical tasks and official-source links.
             </span>
           </li>
           <li>
